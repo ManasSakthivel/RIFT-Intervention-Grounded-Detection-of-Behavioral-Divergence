@@ -1,0 +1,54 @@
+{
+  "gate": "3.5A",
+  "note": "The five intervention-validity checks that must pass. These are independent measurements — tc command success is NOT equivalent to do(X) success.",
+  "checks": [
+    {
+      "check_id": 1,
+      "name": "target_service_received_intervention",
+      "description": "The intended target destination IP received the netem delay.",
+      "measurement_method": "Measure RTT to dest_ip before and after apply(). Delta must match requested latency ±20%.",
+      "command": "ping -c 10 {dest_ip} | tail -1 | awk -F'/' '{print $5}'",
+      "pass_criterion": "|measured_rtt_delta - requested_latency_ms| / requested_latency_ms < 0.20",
+      "status": "PENDING_LINUX_EXECUTION"
+    },
+    {
+      "check_id": 2,
+      "name": "non_target_services_unaffected",
+      "description": "Other destination IPs did not receive the netem rule.",
+      "measurement_method": "Measure RTT to a non-target service IP before and after. Must not change beyond baseline noise.",
+      "command": "ping -c 10 {non_target_ip}",
+      "pass_criterion": "RTT delta < 2 * baseline_std (2-sigma)",
+      "status": "PENDING_LINUX_EXECUTION"
+    },
+    {
+      "check_id": 3,
+      "name": "metric_changed_in_expected_direction",
+      "description": "The service metric (latency) for the target service increased after intervention.",
+      "measurement_method": "Query Prometheus for boutique-{target}.http_request_duration_seconds p99 before and after.",
+      "pass_criterion": "post_latency_p99 > pre_latency_p99 * 1.5 (at least 50% increase for 100ms injection)",
+      "status": "PENDING_LINUX_EXECUTION"
+    },
+    {
+      "check_id": 4,
+      "name": "rollback_restored_intended_state",
+      "description": "After rollback(), target service RTT returns to baseline.",
+      "measurement_method": "Measure RTT to dest_ip after rollback(). Must return to within 2-sigma of pre-intervention baseline.",
+      "command": "tc -s qdisc show dev eth0 (must show no netem qdisc for that handle)",
+      "pass_criterion": "post_rollback_rtt within 2-sigma of pre_intervention_baseline AND tc output shows no remaining netem handle",
+      "status": "PENDING_LINUX_EXECUTION"
+    },
+    {
+      "check_id": 5,
+      "name": "no_unexpected_blast_radius",
+      "description": "No services outside the target destination IP were affected.",
+      "measurement_method": "Call verify_side_effect_isolation() with metrics for all non-target services.",
+      "pass_criterion": "len(affected_non_targets) == 0",
+      "status": "PENDING_LINUX_EXECUTION"
+    }
+  ],
+  "critical_distinction": {
+    "incorrect": "'tc command returned 0' means do(X) was successfully executed",
+    "correct": "'tc command returned 0' means the OS accepted the tc rule. The intervention is only valid after independent measurement confirms (1) target received expected effect AND (2) non-targets were unaffected.",
+    "why_this_matters": "The tc prio qdisc may already exist from a previous run, causing the add command to fail silently or produce unexpected behavior. The netem delay may be overridden by another tc rule. The destination IP may not route to the expected service inside the Docker bridge network."
+  }
+}

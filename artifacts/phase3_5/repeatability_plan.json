@@ -1,0 +1,41 @@
+{
+  "gate": "3.5L",
+  "title": "Closed-Loop Repeatability Plan",
+  "status": "PLAN_COMPLETE_EXECUTION_PENDING",
+  "target_scenario": "NL_01",
+  "scenario_description": "Network latency on frontend — tc netem 100ms to checkout and cart IPs",
+  "workload": "10 Locust users, fixed seed",
+  "n_runs": 5,
+  "run_seeds": [1001, 1002, 1003, 1004, 1005],
+  "metrics_per_run": [
+    "attribution_result",
+    "attribution_confidence",
+    "ebd_top_candidate",
+    "cid_value",
+    "total_duration_s",
+    "n_iterations",
+    "n_interventions",
+    "final_state",
+    "stop_reason"
+  ],
+  "statistics_to_compute": {
+    "precision_at_1": {"stat": ["mean", "count"], "note": "binary; report % correct across 5 runs"},
+    "total_duration_s": {"stat": ["mean", "median", "IQR", "min", "max"]},
+    "n_iterations": {"stat": ["mean", "median", "IQR"]},
+    "cid_value": {"stat": ["mean", "median", "IQR", "95_CI"]},
+    "confidence_intervals": "Wilson CI for precision_at_1; bootstrap CI for continuous metrics"
+  },
+  "variance_policy": {
+    "threshold": "IQR > 0.3 * median for any continuous metric → report as HIGH_VARIANCE",
+    "documentation": "All 5 runs must be reported. No selective exclusion. HIGH_VARIANCE is not a failure — it is documented.",
+    "cherry_picking_prevention": "Run IDs and seeds are pre-registered. Any excluded run must be logged with reason."
+  },
+  "execution_environment": {
+    "platform": "Linux (Ubuntu 22.04 or equivalent)",
+    "docker_compose": "docker/docker-compose.yml",
+    "fixed_workload": "USERS=10 in boutique-loadgen (fixed in docker-compose.yml)",
+    "fault_injection": "FaultInjector.inject(NL_01_scenario, namespace='rift-eval-default', dry_run=False)"
+  },
+  "honest_status": "PENDING_LIVE_EXECUTION. Cannot run on macOS. Variance cannot be measured on synthetic data.",
+  "artifact_to_produce": "artifacts/phase3_5/repeatability_results.json (5 run records + statistics)"
+}

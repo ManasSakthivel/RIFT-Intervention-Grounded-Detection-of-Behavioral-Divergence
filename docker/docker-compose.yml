@@ -1,0 +1,299 @@
+# RIFT — Docker Compose testbed
+#
+# Services:
+#   rift-eval           — RIFT evaluation harness (runs tests)
+#   boutique-frontend   — Online Boutique frontend
+#   boutique-cart       — Online Boutique cartservice
+#   boutique-product    — Online Boutique productcatalogservice
+#   boutique-checkout   — Online Boutique checkoutservice
+#   boutique-recommend  — Online Boutique recommendationservice
+#   boutique-currency   — Online Boutique currencyservice
+#   boutique-payment    — Online Boutique paymentservice
+#   boutique-email      — Online Boutique emailservice
+#   boutique-shipping   — Online Boutique shippingservice
+#   boutique-ad         — Online Boutique adservice
+#   boutique-loadgen    — Synthetic load generator (locust)
+#   prometheus          — Metrics scraper
+#   jaeger              — Distributed trace collector
+#
+# All services run on the isolated rift-eval-network.
+# No egress to production; no real user traffic; no persistent data.
+#
+# Usage:
+#   docker compose up -d
+#   docker compose run rift-eval make test-gate3a
+#   docker compose run rift-eval make reproduce-phase3
+#   docker compose down
+
+version: "3.9"
+
+# --------------------------------------------------------------------------
+# Shared network — isolated from host; no production access
+# --------------------------------------------------------------------------
+
+networks:
+  rift-eval-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.30.0.0/16
+
+# --------------------------------------------------------------------------
+# Shared volumes
+# --------------------------------------------------------------------------
+
+volumes:
+  rift-artifacts:
+  prometheus-data:
+  jaeger-data:
+
+# --------------------------------------------------------------------------
+# x-boutique-defaults: common settings for all boutique microservices
+# --------------------------------------------------------------------------
+
+x-boutique-defaults: &boutique-defaults
+  image: gcr.io/google-samples/microservices-demo/
+  restart: "no"
+  networks:
+    - rift-eval-network
+  environment:
+    DISABLE_TRACING: "0"
+    DISABLE_PROFILER: "1"
+    DISABLE_STATS: "1"
+    JAEGER_SERVICE_ADDR: "jaeger:14268"
+    # Route all OTLP telemetry through the OTel Collector
+    OTEL_EXPORTER_OTLP_ENDPOINT: "http://otel-collector:4317"
+    OTEL_RESOURCE_ATTRIBUTES: "service.namespace=rift-eval"
+
+# --------------------------------------------------------------------------
+# Services
+# --------------------------------------------------------------------------
+
+services:
+
+  # -------------------------------------------------------------------------
+  # RIFT evaluation harness
+  # -------------------------------------------------------------------------
+  rift-eval:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+      args:
+        BUILD_DATE: "${BUILD_DATE:-unknown}"
+        GIT_SHA: "${GIT_SHA:-unknown}"
+        HOST_KERNEL: "${HOST_KERNEL:-unknown}"
+        HOST_OS: "${HOST_OS:-unknown}"
+    image: rift-eval:latest
+    container_name: rift-eval
+    networks:
+      - rift-eval-network
+    volumes:
+      - rift-artifacts:/opt/rift/artifacts
+      # Mount source for iterative development (override image layer)
+      - ../src:/opt/rift/src:ro
+      - ../tests:/opt/rift/tests:ro
+    environment:
+      # Tell RIFT the sandbox namespace so the safety layer can verify targets
+      RIFT_SANDBOX_NAMESPACE: "rift-eval-default"
+      RIFT_PROMETHEUS_URL: "http://prometheus:9090"
+      RIFT_JAEGER_URL: "http://jaeger:16686"
+      PYTHONPATH: "/opt/rift"
+      # Reproducibility: fix Python hash seed
+      PYTHONHASHSEED: "0"
+    # tc netem requires NET_ADMIN capability for intervention tests
+    cap_add:
+      - NET_ADMIN
+    depends_on:
+      - prometheus
+      - jaeger
+      - boutique-frontend
+    # Default: run gate 3A on startup; override with `docker compose run`
+    command: ["python3.11", "-m", "pytest", "tests/unit/test_data_models.py", "-v"]
+
+  # -------------------------------------------------------------------------
+  # Online Boutique microservices
+  # -------------------------------------------------------------------------
+
+  boutique-redis:
+    image: redis:7-alpine
+    container_name: boutique-redis
+    networks:
+      - rift-eval-network
+    restart: "no"
+    command: ["redis-server", "--save", ""]  # no persistence
+
+  boutique-frontend:
+    image: gcr.io/google-samples/microservices-demo/frontend:v0.9.0
+    container_name: boutique-frontend
+    networks:
+      - rift-eval-network
+    restart: "no"
+    ports:
+      - "8080:8080"
+    environment:
+      PORT: "8080"
+      PRODUCT_CATALOG_SERVICE_ADDR: "boutique-product:3550"
+      CURRENCY_SERVICE_ADDR: "boutique-currency:7000"
+      CART_SERVICE_ADDR: "boutique-cart:7070"
+      RECOMMENDATION_SERVICE_ADDR: "boutique-recommend:8080"
+      SHIPPING_SERVICE_ADDR: "boutique-shipping:50051"
+      CHECKOUT_SERVICE_ADDR: "boutique-checkout:5050"
+      AD_SERVICE_ADDR: "boutique-ad:9555"
+      ENABLE_PROFILER: "0"
+    depends_on:
+      - boutique-product
+      - boutique-currency
+      - boutique-cart
+      - boutique-recommend
+      - boutique-shipping
+      - boutique-checkout
+      - boutique-ad
+
+  boutique-cart:
+    image: gcr.io/google-samples/microservices-demo/cartservice:v0.9.0
+    container_name: boutique-cart
+    networks:
+      - rift-eval-network
+    restart: "no"
+    environment:
+      REDIS_ADDR: "boutique-redis:6379"
+    depends_on:
+      - boutique-redis
+
+  boutique-product:
+    image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.9.0
+    container_name: boutique-product
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  boutique-checkout:
+    image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.9.0
+    container_name: boutique-checkout
+    networks:
+      - rift-eval-network
+    restart: "no"
+    environment:
+      PRODUCT_CATALOG_SERVICE_ADDR: "boutique-product:3550"
+      SHIPPING_SERVICE_ADDR: "boutique-shipping:50051"
+      PAYMENT_SERVICE_ADDR: "boutique-payment:50051"
+      EMAIL_SERVICE_ADDR: "boutique-email:8080"
+      CURRENCY_SERVICE_ADDR: "boutique-currency:7000"
+      CART_SERVICE_ADDR: "boutique-cart:7070"
+
+  boutique-recommend:
+    image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.9.0
+    container_name: boutique-recommend
+    networks:
+      - rift-eval-network
+    restart: "no"
+    environment:
+      PRODUCT_CATALOG_SERVICE_ADDR: "boutique-product:3550"
+
+  boutique-payment:
+    image: gcr.io/google-samples/microservices-demo/paymentservice:v0.9.0
+    container_name: boutique-payment
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  boutique-email:
+    image: gcr.io/google-samples/microservices-demo/emailservice:v0.9.0
+    container_name: boutique-email
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  boutique-shipping:
+    image: gcr.io/google-samples/microservices-demo/shippingservice:v0.9.0
+    container_name: boutique-shipping
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  boutique-currency:
+    image: gcr.io/google-samples/microservices-demo/currencyservice:v0.9.0
+    container_name: boutique-currency
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  boutique-ad:
+    image: gcr.io/google-samples/microservices-demo/adservice:v0.9.0
+    container_name: boutique-ad
+    networks:
+      - rift-eval-network
+    restart: "no"
+
+  # Synthetic load generator — no real user traffic
+  boutique-loadgen:
+    image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.9.0
+    container_name: boutique-loadgen
+    networks:
+      - rift-eval-network
+    restart: "no"
+    environment:
+      FRONTEND_ADDR: "boutique-frontend:8080"
+      USERS: "10"
+    depends_on:
+      - boutique-frontend
+
+  # -------------------------------------------------------------------------
+  # Observability stack
+  # -------------------------------------------------------------------------
+
+  # -------------------------------------------------------------------------
+  # OpenTelemetry Collector
+  # Receives OTLP from boutique services → exposes Prometheus metrics endpoint
+  # -------------------------------------------------------------------------
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.100.0
+    container_name: otel-collector
+    networks:
+      - rift-eval-network
+    restart: "no"
+    ports:
+      - "4317:4317"   # OTLP gRPC receiver
+      - "4318:4318"   # OTLP HTTP receiver
+      - "8889:8889"   # Prometheus metrics exporter (scraped by Prometheus)
+      - "13133:13133" # Health check
+    volumes:
+      - ./otel-collector-config.yaml:/etc/otelcol-contrib/config.yaml:ro
+    command: ["--config=/etc/otelcol-contrib/config.yaml"]
+    depends_on:
+      - jaeger
+
+  prometheus:
+    image: prom/prometheus:v2.52.0
+    # NOTE: pulled from quay.io/prometheus/prometheus:v2.52.0 and tagged locally
+    # due to Docker Hub rate limiting on IBM Fyre VM (infrastructure workaround, not a scientific change)
+    container_name: prometheus
+    networks:
+      - rift-eval-network
+    restart: "no"
+    ports:
+      - "9090:9090"
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+      - prometheus-data:/prometheus
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+      - "--storage.tsdb.retention.time=1h"
+      - "--storage.tsdb.path=/prometheus"
+    depends_on:
+      - otel-collector
+
+  jaeger:
+    image: jaegertracing/all-in-one:1.57
+    container_name: jaeger
+    networks:
+      - rift-eval-network
+    restart: "no"
+    ports:
+      - "16686:16686"   # Jaeger UI
+      - "14268:14268"   # HTTP collector
+    environment:
+      SPAN_STORAGE_TYPE: "memory"
+      MEMORY_MAX_TRACES: "50000"
+    volumes:
+      - jaeger-data:/tmp

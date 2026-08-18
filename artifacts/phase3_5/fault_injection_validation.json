@@ -1,0 +1,235 @@
+{
+  "_meta": {
+    "gate": "3.5D",
+    "agent": "D",
+    "title": "RIFT Fault Injection Framework Specification",
+    "authority": "docs/PHASE_3_SPEC_FREEZE.md §11 / RIFT GATE 3.5D",
+    "generated_at": "2025-01-01T00:00:00Z",
+    "status": "FRAMEWORK_SPECIFIED_EXECUTION_PENDING",
+    "honest_caveat": "Fault injection has not been executed on live Online Boutique. Framework is specified and ready for Linux deployment."
+  },
+  "manifest_verification": {
+    "manifest_path": "datasets/rift_faults/manifest.json",
+    "seed": 42,
+    "seed_matches_manifest": true,
+    "total_scenarios": 69,
+    "non_confounded": 21,
+    "confounded": 48,
+    "split_manifest": {
+      "DEVELOPMENT": 36,
+      "VALIDATION": 18,
+      "HELD_OUT_TEST": 15
+    },
+    "split_sum_check": 69,
+    "split_immutable": true,
+    "held_out_test_status": "UNTOUCHED — not inspected during tuning phases"
+  },
+  "by_fault_type_non_confounded": {
+    "NETWORK_LATENCY": {
+      "count": 3,
+      "target_service": "frontend",
+      "causal_mechanism": "tc netem per-destination latency injection increases RTT between source and target, propagating elevated lat_p99 upstream through the call graph",
+      "expected_affected_services": ["frontend", "checkout", "cart"],
+      "ground_truth_root_cause": "frontend",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 300.0,
+      "example_fault_ids": ["NL_01", "NL_02", "NL_03"]
+    },
+    "PACKET_LOSS": {
+      "count": 3,
+      "target_service": "cart",
+      "causal_mechanism": "tc netem per-destination packet loss on the cart↔redis_cart link causes retransmissions and elevated error rates, propagating to upstream callers",
+      "expected_affected_services": ["cart", "redis_cart", "frontend"],
+      "ground_truth_root_cause": "cart",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 360.0,
+      "example_fault_ids": ["PL_01", "PL_02", "PL_03"]
+    },
+    "SERVICE_DEGRADATION": {
+      "count": 3,
+      "target_service": "payment",
+      "causal_mechanism": "stress-ng CPU load (90%) on the payment pod increases processing latency, causing checkout and frontend to accumulate lat_p99 increases",
+      "expected_affected_services": ["payment", "checkout", "frontend"],
+      "ground_truth_root_cause": "payment",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 420.0,
+      "example_fault_ids": ["SD_01", "SD_02", "SD_03"]
+    },
+    "RESOURCE_CONTENTION": {
+      "count": 3,
+      "target_service": "redis_cart",
+      "causal_mechanism": "stress-ng memory pressure (80% of pod memory) on redis_cart pod causes evictions and increased response latency, propagating through cart, checkout, and frontend",
+      "expected_affected_services": ["redis_cart", "cart", "checkout", "frontend"],
+      "ground_truth_root_cause": "redis_cart",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 540.0,
+      "example_fault_ids": ["RC_01", "RC_02", "RC_03"]
+    },
+    "QUEUEING": {
+      "count": 3,
+      "target_service": "checkout",
+      "causal_mechanism": "hey flood (concurrency=200) saturates the checkout request queue, causing queue depth spike and lat_p99 propagation to payment, shipping, email, and frontend",
+      "expected_affected_services": ["checkout", "payment", "shipping", "email", "frontend"],
+      "ground_truth_root_cause": "checkout",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 480.0,
+      "example_fault_ids": ["QU_01", "QU_02", "QU_03"]
+    },
+    "DEPENDENCY_FAILURE": {
+      "count": 3,
+      "target_service": "product_catalog",
+      "causal_mechanism": "tc 100% packet drop to product_catalog IP simulates OOM crash / hard failure; recommendation and frontend cascade to elevated error rates",
+      "expected_affected_services": ["product_catalog", "recommendation", "frontend"],
+      "ground_truth_root_cause": "product_catalog",
+      "whether_confounded": false,
+      "whether_multi_cause": false,
+      "expected_identifiability_state": "IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 240.0,
+      "example_fault_ids": ["DF_01", "DF_02", "DF_03"]
+    },
+    "MULTI_CAUSE": {
+      "count": 3,
+      "target_service": "payment + shipping",
+      "causal_mechanism": "Simultaneous payment CPU spike (stress-ng) and shipping latency (tc netem); checkout receives degraded responses from both dependencies, causing frontend cascade. Requires compositional injection of two sub-faults.",
+      "expected_affected_services": ["payment", "shipping", "checkout", "frontend"],
+      "ground_truth_root_cause": "payment",
+      "whether_confounded": false,
+      "whether_multi_cause": true,
+      "expected_identifiability_state": "CONDITIONALLY_IDENTIFIABLE",
+      "injection_time_s": 60.0,
+      "duration_s": 540.0,
+      "example_fault_ids": ["MC_01", "MC_02", "MC_03"]
+    }
+  },
+  "confounded_scenarios": {
+    "count": 48,
+    "mechanism": "Latent host-level confounder U_host (shared physical CPU saturation) affects both services in a pair simultaneously; the correlation is spurious, not causal.",
+    "example_pairs": [
+      ["cart", "redis_cart"],
+      ["payment", "email"],
+      ["recommendation", "product_catalog"],
+      ["shipping", "currency"]
+    ],
+    "whether_confounded": true,
+    "whether_multi_cause": false,
+    "expected_identifiability_state": "NOT_IDENTIFIABLE",
+    "expected_fci_output": "bidirected edge (A ↔ B)",
+    "rift_expected_action": "abstain when CID score is below threshold (L1)",
+    "observable_by_rift": false,
+    "injection_approach": "OBSERVATION_ONLY — U_host is not directly injectable via tc/stress-ng; treat as passive observation scenarios"
+  },
+  "fault_injection_record_schema": {
+    "fault_id": "string — fault identifier from manifest (e.g. NL_01)",
+    "scenario_id": "string — scenario UUID assigned at runtime",
+    "injected_at": "float | null — unix timestamp of injection command; null in dry_run",
+    "verified_at": "float | null — unix timestamp of independent verification; null until verify_injection() runs",
+    "injection_verified": "bool — set ONLY by verify_injection(), never by inject(). False until verified.",
+    "verification_method": "string — description of the independent measurement method used",
+    "measured_delta": "float | null — independently measured change (ms, %, count)",
+    "expected_delta": "float | null — expected change from scenario spec",
+    "rollback_at": "float | null — unix timestamp of rollback; null until rollback() runs",
+    "status": "enum: PENDING | INJECTED | VERIFIED | VERIFICATION_FAILED | ROLLED_BACK | ABORTED | DRY_RUN",
+    "record_id": "string — UUID generated at record creation",
+    "notes": "string — human-readable audit trail",
+    "network_record_id": "string | null — reference to NetworkInterventionRecord for NETWORK_* faults"
+  },
+  "verification_requirement": {
+    "statement": "Fault injection MUST be independently verified — command success (returncode==0) is NOT sufficient evidence that a fault is measurably active. verify_injection() must be called after every inject() call, and its return value must be checked before using the record as experimental evidence.",
+    "pipeline_rule": "A FaultInjectionRecord with injection_verified=False MUST NOT be used as ground-truth evidence in RIFT evaluation. Such records are treated as ABORTED experiments.",
+    "independent_verification_methods": {
+      "NETWORK_LATENCY": {
+        "method": "ping/curl latency measurement before and after injection",
+        "tool": "ping -c 5 <target_host>",
+        "metric": "RTT delta (ms)",
+        "pass_criterion": "measured_rtt >= expected_latency_ms * 0.5",
+        "implementation": "FaultInjector._verify_latency()"
+      },
+      "PACKET_LOSS": {
+        "method": "tc packet drop counter before and after injection",
+        "tool": "tc -s qdisc show dev <interface>",
+        "metric": "drop counter delta",
+        "pass_criterion": "drop_counter_delta > 0",
+        "implementation": "FaultInjector._verify_packet_loss()"
+      },
+      "SERVICE_DEGRADATION": {
+        "method": "CPU metric measurement via kubectl top",
+        "tool": "kubectl top pod <pod> -n <namespace>",
+        "metric": "CPU percentage change",
+        "pass_criterion": "measured_cpu_pct >= 50.0",
+        "implementation": "FaultInjector._verify_service_degradation()"
+      },
+      "RESOURCE_CONTENTION": {
+        "method": "Memory metric measurement via kubectl top",
+        "tool": "kubectl top pod <pod> -n <namespace>",
+        "metric": "memory percentage spike",
+        "pass_criterion": "measured_mem_pct >= 40.0",
+        "implementation": "FaultInjector._verify_resource_contention()"
+      },
+      "QUEUEING": {
+        "method": "TCP socket queue depth via /proc/net/sockstat",
+        "tool": "kubectl exec <pod> -- cat /proc/net/sockstat",
+        "metric": "queue depth",
+        "pass_criterion": "queue_depth > 0",
+        "implementation": "FaultInjector._verify_queueing()"
+      },
+      "DEPENDENCY_FAILURE": {
+        "method": "Health endpoint reachability check via curl",
+        "tool": "kubectl exec <pod> -- curl -sf http://localhost:8080/health",
+        "metric": "health endpoint response (bool)",
+        "pass_criterion": "endpoint is UNREACHABLE (curl returns non-zero)",
+        "implementation": "FaultInjector._verify_dependency_failure()"
+      }
+    }
+  },
+  "split_immutability_check": {
+    "rule": "The manifest split (DEVELOPMENT=36, VALIDATION=18, HELD_OUT_TEST=15, seed=42) is verified at module import time in fault_injector.py. Any mismatch raises RuntimeError before any experiment proceeds.",
+    "check_location": "src/rift/fault_injection/fault_injector.py:_verify_manifest_split()",
+    "held_out_protection": "FaultInjector.inject() raises ValueError for HELD_OUT_TEST scenarios unless allow_held_out=True (reserved for final evaluation only)",
+    "manifest_constants": {
+      "MANIFEST_SEED": 42,
+      "MANIFEST_SPLIT_DEVELOPMENT": 36,
+      "MANIFEST_SPLIT_VALIDATION": 18,
+      "MANIFEST_SPLIT_HELD_OUT_TEST": 15
+    }
+  },
+  "network_intervention_engine_integration": {
+    "class": "NetworkInterventionEngine",
+    "import_path": "src.rift.intervention.network_intervention",
+    "used_for": ["NETWORK_LATENCY", "PACKET_LOSS", "DEPENDENCY_FAILURE"],
+    "tc_approach": "per-destination netem (u32 filter + child netem qdisc) — NOT global eth0 netem",
+    "isolation_guarantee": "Only traffic to the target destination IP is affected; other service traffic is unaffected (satisfies intervention isolation requirement A5)",
+    "dry_run_default": true,
+    "requires": ["CAP_NET_ADMIN", "Linux kernel tc/iproute2", "rift-eval-* namespace"]
+  },
+  "deployment_requirements": {
+    "os": "Linux (tc netem requires Linux kernel)",
+    "capabilities": ["CAP_NET_ADMIN for tc netem commands"],
+    "tools": ["iproute2 (tc)", "stress-ng", "kubectl", "ping", "curl"],
+    "namespace_pattern": "rift-eval-*",
+    "testbed": "Online Boutique on Kubernetes"
+  },
+  "files_created": [
+    "artifacts/phase3_5/fault_injection_validation.json",
+    "src/rift/fault_injection/__init__.py",
+    "src/rift/fault_injection/fault_injector.py"
+  ],
+  "execution_status": "PENDING_LINUX_DEPLOYMENT",
+  "manifest_split_verified": true,
+  "held_out_test_untouched": true
+}

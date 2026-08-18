@@ -1,0 +1,62 @@
+{
+  "gate": "3.5H",
+  "title": "Oracle PAG vs FCI-Estimated PAG Comparison",
+  "oracle_pag_results": {
+    "V1_precision_at_1": 0.5,
+    "n_non_confounded": 12,
+    "source": "artifacts/phase3/independent_validation_report.json",
+    "caveat": "Upper bound — oracle bypasses FCI estimation error entirely. Oracle PAG is constructed directly from ground-truth FaultScenario.causal_path. This is best-case performance.",
+    "key_failure_mode": "Leaf-node R3 failure: root causes that are sink nodes in the call-graph PAG fail R3 because they have no outgoing directed edges to diverging downstream services."
+  },
+  "fci_estimated_pag_results": {
+    "V1_precision_at_1": "NOT_YET_MEASURED",
+    "status": "PENDING_LIVE_DEPLOYMENT",
+    "reason": "FCI requires real time-series telemetry from Online Boutique. Cannot produce meaningful FCI-estimated PAG from synthetic oracle metrics."
+  },
+  "expected_direction_of_gap": {
+    "claim": "FCI-estimated PAG V1 <= Oracle PAG V1",
+    "reasoning": "FCI introduces additional error sources not present in the oracle",
+    "fci_error_sources": [
+      {
+        "source": "Finite-sample conditional independence errors",
+        "effect": "False edges (graph too dense) or missing edges (graph too sparse)",
+        "threshold": "n >= 50 samples per variable pair for reliable orientation (Phase 3 spec)"
+      },
+      {
+        "source": "Faithfulness violations",
+        "effect": "Cyclic dynamics in microservices approximate faithfulness via temporal edges, but exact faithfulness is not guaranteed",
+        "note": "Documented in docs/causal_assumptions.md"
+      },
+      {
+        "source": "Multiple independence tests without FDR correction",
+        "effect": "At 15 variables, ~105 pairwise tests; uncorrected alpha=0.05 expects ~5 false positives",
+        "note": "Phase 3 FCI uses alpha=0.05 by default; FDR not applied at the FCI level"
+      },
+      {
+        "source": "Ambiguous edge marks (circle endpoints in PAG)",
+        "effect": "FCI produces o-o and o-> edges where oracle has definite -> or <->; identifiability may be lower with FCI",
+        "note": "Ambiguous orientations expand the NOT_IDENTIFIABLE set"
+      }
+    ],
+    "potential_improvement_for_leaf_nodes": "FCI may orient some edges in the opposite direction relative to the call graph if temporal ordering evidence is strong. This could allow leaf-node services to satisfy R3 in some cases — but this is speculative and must not be assumed."
+  },
+  "comparison_plan": {
+    "required_setup": "Online Boutique deployed on Linux with real telemetry flowing",
+    "procedure": [
+      "Step 1: Run RIFT with oracle PAG on live Online Boutique scenario (NL_01)",
+      "Step 2: Run RIFT with FCI-estimated PAG on same scenario (same time window)",
+      "Step 3: Compare attribution, confidence, and identifiability state",
+      "Step 4: Repeat for at least 5 scenarios across different fault types"
+    ],
+    "metrics_to_compare": [
+      "precision_at_1",
+      "coverage",
+      "abstention_rate",
+      "false_attribution_rate",
+      "n_identifiable_cases",
+      "n_ambiguous_edges_in_PAG"
+    ],
+    "artifact_to_produce": "artifacts/phase3_5/oracle_vs_fci_live.json (Phase 4)"
+  },
+  "status": "SPECIFICATION_COMPLETE_EXECUTION_PENDING"
+}

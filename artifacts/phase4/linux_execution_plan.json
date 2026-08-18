@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-08-17T17:17:13Z",
+  "platform": "linux",
+  "host": "manas1.fyre.ibm.com",
+  "classification": {
+    "LINUX_REQUIRED": [
+      "4A_linux_environment_validation",
+      "4C_online_boutique_deployment",
+      "4D_live_telemetry_validation",
+      "4E_tc_netem_network_intervention",
+      "4F_live_fault_injection",
+      "4G_first_live_e2e_rift_run",
+      "4H_baseline_smoke_tests_live",
+      "4I_development_benchmark_live",
+      "4J_oracle_vs_fci_live",
+      "4K_confounded_scenarios_live",
+      "4L_repeatability_live",
+      "4M_performance_measurement_live",
+      "4N_safety_validation_live"
+    ],
+    "MACOS_ONLY": [
+      "analysis_and_statistics",
+      "paper_preparation",
+      "result_interpretation",
+      "held_out_final_benchmark",
+      "documentation_writing"
+    ],
+    "EITHER_ENVIRONMENT": [
+      "4B_test_suite",
+      "unit_tests",
+      "causal_graph_unit_tests",
+      "fci_unit_tests",
+      "safety_unit_tests"
+    ]
+  },
+  "environment": {
+    "os": "Red Hat Enterprise Linux 9.6 (Plow)",
+    "kernel": "5.14.0-570.62.1.el9_6.x86_64",
+    "architecture": "x86_64",
+    "cpu_model": "AMD EPYC Processor (with IBPB)",
+    "cpu_count": 8,
+    "ram_gb": "15Gi total, 13Gi available",
+    "disk_avail": "236G",
+    "docker_version": "29.7.2",
+    "docker_compose_version": "v5.5.0",
+    "python_version": "3.11.13",
+    "git_version": "2.47.3",
+    "iproute2_version": "iproute2-6.11.0",
+    "tc_version": "iproute2-6.11.0",
+    "netem_available": true,
+    "netem_functional": true,
+    "u32_available": true,
+    "cap_net_admin": true,
+    "network_namespaces_supported": true
+  }
+}

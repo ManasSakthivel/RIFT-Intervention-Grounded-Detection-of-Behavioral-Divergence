@@ -1,0 +1,197 @@
+{
+  "phase": "3.5O",
+  "title": "RIFT Phase 3.5O — Reproducibility Checklist",
+  "generated": "2026-08-17",
+  "manifest_reference": "artifacts/phase3/PHASE_3_MANIFEST.json",
+  "guide_reference": "docs/phase3_5/reproduction.md",
+
+  "tiers": {
+    "tier_1_python_only": {
+      "label": "Tier 1 — Python-only validation",
+      "platform": "macOS or Linux",
+      "requires": [
+        "Python 3.11 (CPython; pyproject.toml requires >=3.10, Makefile defaults to python3.11)",
+        "pip (latest recommended)",
+        "pip install -r requirements.txt (16 pinned packages)"
+      ],
+      "environment_variables": {
+        "PYTHONHASHSEED": "0",
+        "PYTHONPATH": "$(pwd)",
+        "RIFT_SANDBOX_NAMESPACE": "rift-eval-default"
+      },
+      "status": "EXECUTABLE",
+      "command": "make test",
+      "alt_command": "python3.11 -m pytest tests/ --cov=src/rift --cov-report=term-missing -v",
+      "expected": "453 tests PASS, 0 FAIL",
+      "gate3a_command": "make test-gate3a",
+      "gate3a_expected": "119 tests PASS",
+      "full_reproduce_command": "make reproduce-phase3",
+      "docker_not_required": true,
+      "linux_not_required": true,
+      "tc_not_required": true
+    },
+
+    "tier_2_full_testbed": {
+      "label": "Tier 2 — Full live testbed",
+      "platform": "Linux only",
+      "requires": [
+        "Linux kernel >= 4.9 (sch_netem ABI stable; >= 5.4 recommended)",
+        "Docker >= 24.0",
+        "Docker Compose >= v2.24 (plugin, 'docker compose' syntax — NOT 'docker-compose')",
+        "CAP_NET_ADMIN capability for rift-eval container",
+        "iproute2 (provides tc and ip commands)",
+        "sch_netem kernel module (modinfo sch_netem)",
+        "Git (for HEAD SHA in build labels)",
+        "8 GB RAM minimum (Online Boutique mesh)",
+        "10 GB free disk (image pulls: ~3 GB boutique + ~1 GB observability)"
+      ],
+      "build_args_required": {
+        "BUILD_DATE": "$(date -Iseconds)",
+        "GIT_SHA": "$(git rev-parse HEAD)",
+        "HOST_KERNEL": "$(uname -r)",
+        "HOST_OS": "$(uname -s)"
+      },
+      "status": "DOCUMENTED_NOT_YET_EXECUTED",
+      "command": "docker compose -f docker/docker-compose.yml up -d",
+      "expected": "All 15 services healthy; boutique-frontend at :8080, prometheus at :9090, jaeger at :16686",
+      "intervention_test_command": "docker compose -f docker/docker-compose.yml run --cap-add NET_ADMIN rift-eval python3.11 -m pytest tests/integration/intervention/ -v",
+      "intervention_test_expected": "PASS (live tc/netem on Linux)",
+      "e2e_command": "docker compose -f docker/docker-compose.yml run rift-eval python3.11 -m src.rift.pipeline.e2e_runner --scenario NL_01",
+      "e2e_expected": "RIFTRunRecord JSON artifact written to artifacts/phase3/"
+    }
+  },
+
+  "pinned_dependencies": {
+    "source": "requirements.txt",
+    "packages": {
+      "pydantic": "2.7.1",
+      "numpy": "1.26.4",
+      "scipy": "1.13.1",
+      "scikit-learn": "1.5.0",
+      "networkx": "3.3",
+      "pandas": "2.2.2",
+      "causal-learn": "0.1.3.8",
+      "pyarrow": "16.1.0",
+      "statsmodels": "0.14.2",
+      "hypothesis": "6.103.1",
+      "pytest": "8.2.1",
+      "pytest-cov": "5.0.0",
+      "matplotlib": "3.9.0",
+      "seaborn": "0.13.2",
+      "tqdm": "4.66.4",
+      "jsonschema": "4.22.0"
+    }
+  },
+
+  "docker_images": {
+    "rift_eval_base": "python:3.11-slim",
+    "prometheus": "prom/prometheus:v2.52.0",
+    "jaeger": "jaegertracing/all-in-one:1.57",
+    "boutique_version": "v0.9.0",
+    "boutique_registry": "gcr.io/google-samples/microservices-demo/",
+    "redis": "redis:7.2-alpine"
+  },
+
+  "current_host": "macOS darwin arm64",
+  "live_intervention_possible": false,
+
+  "explicit_macos_statement": "macOS cannot execute live tc/netem network interventions. The tc/netem mechanism requires a Linux kernel >= 4.9 with CAP_NET_ADMIN and the sch_netem module. Docker Desktop on macOS does not grant NET_ADMIN to guest containers by default. All intervention tests on macOS are dry-run only and are marked PARTIAL in PHASE_3_MANIFEST.json (component 3G_3H_intervention). Do not claim cross-platform support for live intervention.",
+
+  "phase3_manifest_python_version_note": "PHASE_3_MANIFEST.json records python_version=3.9.6 (the system Python of the development machine). This predates the requires-python>=3.10 constraint in pyproject.toml. Reproducers must use Python 3.11 as specified in the Makefile and ENVIRONMENT.md.",
+
+  "phase3_tests_reproducible": true,
+  "phase3_5_live_validation_reproducible": false,
+  "blocking_requirement": "Linux host with kernel >= 4.9 and CAP_NET_ADMIN",
+
+  "phase3_component_status": {
+    "3A_data_models":        { "tests": "119/119", "status": "VALIDATED" },
+    "3B_scm":                { "tests": "39/39",   "status": "VALIDATED" },
+    "3C_time_slice":         { "tests": "artifact", "status": "IMPLEMENTED" },
+    "3D_anomaly_subgraph":   { "far": "0.00",       "status": "VALIDATED" },
+    "3E_fci_pag":            { "tests": "44/44",   "status": "VALIDATED" },
+    "3F_identifiability":    { "tests": "37/37",   "status": "VALIDATED" },
+    "3G_3H_intervention":    { "tests": "—",       "status": "PARTIAL — macOS dry-run; Linux required" },
+    "3I_3J_cid_wasserstein": { "tests": "46/46",   "status": "VALIDATED" },
+    "3K_ebd":                { "tests": "28/28",   "status": "VALIDATED" },
+    "3L_cost_optimizer":     { "tests": "24/24",   "status": "VALIDATED" },
+    "3M_closed_loop":        { "tests": "49/49",   "status": "VALIDATED" },
+    "3N_safety":             { "tests": "37/37",   "status": "VALIDATED" },
+    "3P_fault_benchmark":    { "n_scenarios": 69,  "status": "GENERATED" },
+    "3R_ablations":          { "components": ["RIFT-RANDOM", "RIFT-OBS"], "status": "IMPLEMENTED" },
+    "3S_baseline_framework": { "status": "IMPLEMENTED" },
+    "3T_statistics":         { "tests": "46/46",   "status": "VALIDATED" },
+    "3U_reproducibility":    { "artifacts": ["Makefile", "Dockerfile", "docker-compose.yml"], "status": "IMPLEMENTED" },
+    "3W_independent_validation": { "V1": "50%", "V2": "100%", "V3": "PASS", "V4": "PASS", "status": "PARTIAL — oracle PAG; live testbed deferred to Phase 10" }
+  },
+
+  "known_issues": [
+    {
+      "id": "KI-1",
+      "title": "macOS: tc commands are dry-run only",
+      "severity": "BLOCKING for Tier 2",
+      "mitigation": "Run intervention tests on a Linux host or inside Docker on Linux"
+    },
+    {
+      "id": "KI-2",
+      "title": "Python version discrepancy: manifest records 3.9.6, project requires >=3.10",
+      "severity": "DOCUMENTATION",
+      "mitigation": "Use Python 3.11 as specified in Makefile and ENVIRONMENT.md"
+    },
+    {
+      "id": "KI-3",
+      "title": "Prometheus may not scrape gRPC-only boutique services",
+      "severity": "MINOR",
+      "mitigation": "OpenTelemetry Collector adaptation deferred to Phase 10"
+    },
+    {
+      "id": "KI-4",
+      "title": "boutique-loadgen may fail if frontend not ready at startup",
+      "severity": "MINOR",
+      "mitigation": "Wait 30s after docker compose up before expecting load; restart loadgen if needed"
+    },
+    {
+      "id": "KI-5",
+      "title": "docker-compose v1 syntax not supported",
+      "severity": "BREAKING",
+      "mitigation": "Use 'docker compose' (v2 plugin) not 'docker-compose' (v1 standalone)"
+    },
+    {
+      "id": "KI-6",
+      "title": "CAP_NET_ADMIN must be explicitly granted for tc tests",
+      "severity": "BLOCKING for intervention tests",
+      "mitigation": "The rift-eval service in docker-compose.yml already declares cap_add: [NET_ADMIN]; for standalone docker run, pass --cap-add NET_ADMIN"
+    }
+  ],
+
+  "verification_checklist": {
+    "tier_1": [
+      { "item": "Python 3.11 available (python3.11 --version)", "required": true },
+      { "item": "Virtual environment created and activated", "required": true },
+      { "item": "requirements.txt installed without errors", "required": true },
+      { "item": "PYTHONHASHSEED=0 exported", "required": true },
+      { "item": "PYTHONPATH=$(pwd) exported", "required": true },
+      { "item": "453 tests pass (make test)", "required": true },
+      { "item": "Gate 3A passes: 119/119 (make test-gate3a)", "required": true },
+      { "item": "Coverage HTML at artifacts/coverage/index.html", "required": false },
+      { "item": "make lint passes (no forbidden causal-claim phrases)", "required": true }
+    ],
+    "tier_2": [
+      { "item": "Linux kernel >= 4.9 (uname -r)", "required": true },
+      { "item": "sch_netem module present (modinfo sch_netem)", "required": true },
+      { "item": "tc available (tc -Version)", "required": true },
+      { "item": "Docker >= 24.0 (docker --version)", "required": true },
+      { "item": "Docker Compose v2 plugin (docker compose version)", "required": true },
+      { "item": "CAP_NET_ADMIN available to rift-eval container", "required": true },
+      { "item": ">= 8 GB RAM", "required": true },
+      { "item": ">= 10 GB free disk", "required": true },
+      { "item": "Build args exported (BUILD_DATE, GIT_SHA, HOST_KERNEL, HOST_OS)", "required": true },
+      { "item": "docker compose build succeeds", "required": true },
+      { "item": "All Online Boutique images pulled", "required": true },
+      { "item": "boutique-frontend accessible at http://localhost:8080", "required": true },
+      { "item": "Prometheus accessible at http://localhost:9090", "required": true },
+      { "item": "Jaeger accessible at http://localhost:16686", "required": true },
+      { "item": "Network intervention tests pass (make test-intervention inside container)", "required": true },
+      { "item": "E2E pipeline run produces RIFTRunRecord JSON artifact", "required": true }
+    ]
+  }
+}

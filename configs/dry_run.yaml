@@ -1,0 +1,68 @@
+# RIFT Configuration — Dry Run
+# Phase 3.6 §25
+# Use for: macOS CI, unit tests, integration tests without Linux
+# All tc commands are logged but NOT executed
+# MockTelemetry is used instead of Prometheus
+# All results are labeled DRY_RUN and are NOT evidence of live behavior
+
+config_id: "dry_run"
+description: "Dry-run configuration for CI and macOS development"
+dataset_split: "development"
+dry_run: true
+seed: 42
+
+telemetry:
+  source: "mock"
+  prometheus_url: null
+  scrape_interval_s: 15.0
+  delta_t_s: 10.0
+  max_forward_fill_windows: 1
+
+anomaly_detection:
+  theta_detect: 3.0
+  theta_persist: 2
+
+causal_discovery:
+  fci_alpha: 0.05
+  max_variables: 15
+  ci_test: "fisherz"
+
+cid:
+  n_permutations: 1000           # reduced for CI speed (not for publication)
+  n_bootstrap: 200               # reduced for CI speed
+  alpha: 0.05
+  n_min_insufficient: 20
+  n_min_candidate: 50
+
+ebd:
+  theta_cid: 0.1
+
+cost_model:
+  w_br: 0.25
+  w_slai: 0.25
+  w_rc: 0.25
+  w_sc: 0.25
+  t_budget_s: 600.0
+
+closed_loop:
+  theta_stop_entropy: 0.5
+  max_iterations: 5              # reduced for CI speed
+
+network_intervention:
+  backend: "dry_run"             # DRY_RUN: commands logged, not executed
+  label: "DRY_RUN"
+
+safety:
+  approved_namespaces:
+    - "rift-eval-default"
+    - "rift-eval-dev"
+
+dry_run_warnings:
+  - "All tc commands are logged but NOT executed"
+  - "MockTelemetry is used — NOT evidence of live system behavior"
+  - "DRY_RUN results MUST NOT be used in publication tables"
+
+logging:
+  level: "DEBUG"
+  provenance: true
+  artifact_dir: "artifacts/dry_run"

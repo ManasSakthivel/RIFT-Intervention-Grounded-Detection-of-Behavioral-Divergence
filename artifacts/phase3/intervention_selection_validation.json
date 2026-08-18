@@ -1,0 +1,32 @@
+{
+  "phase": "3L",
+  "component": "intervention_cost_optimizer",
+  "msis_objective": "min_cumulative_cost_subject_to_entropy",
+  "submodularity_claimed": false,
+  "utility_range": "[0,1]",
+  "cost_composite_range": "[0,1]",
+  "eig_normalized_range": "[0,1]",
+  "cases": [
+    {
+      "name": "utility_ordering_correct",
+      "result": true,
+      "note": "Higher EIG + lower cost \u2192 selected first"
+    },
+    {
+      "name": "budget_constraint_respected",
+      "result": true,
+      "note": "Total ED \u2264 T_budget enforced"
+    },
+    {
+      "name": "safety_denied_excluded",
+      "result": true,
+      "note": "authorized=False interventions never selected"
+    },
+    {
+      "name": "entropy_stopping_correct",
+      "result": true,
+      "note": "Stops when H(C) < theta_entropy"
+    }
+  ],
+  "gate": "PASS"
+}

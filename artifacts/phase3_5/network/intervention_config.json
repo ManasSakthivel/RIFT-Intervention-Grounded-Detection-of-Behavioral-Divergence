@@ -1,0 +1,24 @@
+{
+  "gate": "3.5A",
+  "mechanism": "tc u32 + per-destination netem",
+  "implementation_file": "src/rift/intervention/network_intervention.py",
+  "frozen_in_spec": "docs/PHASE_3_SPEC_FREEZE.md §11",
+  "config": {
+    "interface": "eth0 (inside rift-eval container)",
+    "root_qdisc": "1: prio (priomap all 0)",
+    "netem_child_handle": "10: (per intervention)",
+    "u32_filter_match": "ip dst {destination_ip}/32",
+    "latency_distribution": "normal",
+    "precision_threshold": "±20% of requested latency",
+    "isolation_method": "per-destination IP — only traffic to dest_ip is affected"
+  },
+  "apply_commands_template": [
+    "tc qdisc add dev eth0 root handle 1: prio priomap 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0",
+    "tc qdisc add dev eth0 parent 1:{handle} handle {handle}: netem delay {lat}ms {jitter}ms distribution normal loss {loss}%",
+    "tc filter add dev eth0 parent 1: protocol ip u32 match ip dst {dest_ip}/32 flowid 1:{handle}"
+  ],
+  "rollback_commands_template": [
+    "tc filter del dev eth0 parent 1: protocol ip u32 match ip dst {dest_ip}/32 flowid 1:{handle}",
+    "tc qdisc del dev eth0 parent 1:{handle} handle {handle}:"
+  ]
+}

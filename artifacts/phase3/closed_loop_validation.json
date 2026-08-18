@@ -1,0 +1,48 @@
+{
+  "phase": "3M",
+  "component": "closed_loop_state_machine",
+  "states": [
+    "OBSERVE",
+    "DISCOVER",
+    "IDENTIFY",
+    "SELECT",
+    "INTERVENE",
+    "VERIFY",
+    "UPDATE",
+    "STOP",
+    "SAFE_ABORT"
+  ],
+  "stopping_conditions": [
+    "ENTROPY_CONVERGED",
+    "BUDGET_EXHAUSTED",
+    "SAFETY_ABORT",
+    "ALL_CANDIDATES_NON_IDENTIFIABLE"
+  ],
+  "cases": [
+    {
+      "name": "correct_hypothesis_posterior_converges",
+      "result": true
+    },
+    {
+      "name": "incorrect_hypothesis_edge_weakens",
+      "result": true
+    },
+    {
+      "name": "abort_from_any_state",
+      "result": true
+    },
+    {
+      "name": "budget_exhaustion_stops",
+      "result": true
+    },
+    {
+      "name": "entropy_convergence_stops",
+      "result": true
+    },
+    {
+      "name": "conflicting_evidence_keeps_uncertainty",
+      "result": true
+    }
+  ],
+  "gate": "PASS"
+}

@@ -1,0 +1,5 @@
+Ablation,Description,Raw P@1,Cond. P@1,Wilcoxon p,Cliff's delta,Significant
+RIFT-FULL,Full system (all components),PENDING,PENDING,PENDING,PENDING,PENDING
+RIFT-OBS,No active intervention,PENDING,PENDING,PENDING,PENDING,PENDING
+RIFT-RANDOM,No MSIS (random selection),PENDING,PENDING,PENDING,PENDING,PENDING
+RIFT-ONE-SHOT,No closed-loop (single pass),PENDING,PENDING,PENDING,PENDING,PENDING

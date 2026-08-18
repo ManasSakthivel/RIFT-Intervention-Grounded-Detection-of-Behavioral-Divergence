@@ -1,0 +1,820 @@
+{
+  "phase": "3J",
+  "component": "cid_wasserstein",
+  "primary_metric": "W1_wasserstein",
+  "significance_test": "permutation_B10000",
+  "authority": {
+    "section_6": "CID definition, W1 primary, TV secondary diagnostic",
+    "section_7": "Sample tiers SPEC-AMEND-003: n<20 INSUFFICIENT, 20<=n<50 CANDIDATE, n>=50 RELIABLE",
+    "section_8": "Permutation test primary, bootstrap CI effect-size only"
+  },
+  "multi_cause_cross_contamination": {
+    "x1_y1_w1": 101.4142,
+    "x2_y2_w1": 3.8699,
+    "no_contamination": true
+  },
+  "cases": [
+    {
+      "name": "no_effect",
+      "true_w1": 0.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.6253346357394083
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.1242256587429256
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 6.637022182929829,
+          "w1_ci_lower": 5.209171622794394,
+          "w1_ci_upper": 14.904462773823278,
+          "pvalue": 0.37796220377962203,
+          "significant": false,
+          "tv_diagnostic": 0.9,
+          "exceeds_threshold": true,
+          "theta_cid": 3.573397640176961
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 4.144989473465311,
+          "w1_ci_lower": 3.0216554802972753,
+          "w1_ci_upper": 13.549501984605088,
+          "pvalue": 0.7797220277972203,
+          "significant": false,
+          "tv_diagnostic": 0.7000000000000001,
+          "exceeds_threshold": true,
+          "theta_cid": 2.1756235106906203
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 7.344109093058887,
+          "w1_ci_lower": 5.098556405252865,
+          "w1_ci_upper": 13.74740313367451,
+          "pvalue": 0.11348865113488651,
+          "significant": false,
+          "tv_diagnostic": 0.6599999999999999,
+          "exceeds_threshold": true,
+          "theta_cid": 2.9130369725460556
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 4.623887980191212,
+          "w1_ci_lower": 2.6839152028347866,
+          "w1_ci_upper": 10.770332173977165,
+          "pvalue": 0.21507849215078492,
+          "significant": false,
+          "tv_diagnostic": 0.5,
+          "exceeds_threshold": true,
+          "theta_cid": 2.970513381438491
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 2.237634041020934,
+          "w1_ci_lower": 1.708196108164285,
+          "w1_ci_upper": 5.318412228154644,
+          "pvalue": 0.40995900409959,
+          "significant": false,
+          "tv_diagnostic": 0.24333333333333332,
+          "exceeds_threshold": false,
+          "theta_cid": 2.8096568514153164
+        }
+      ],
+      "monotonic_check": true,
+      "null_type1_error_at_n50": 0.065
+    },
+    {
+      "name": "small_effect",
+      "true_w1": 10.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.927360452860478
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.4494613894573876
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 9.388029776708025,
+          "w1_ci_lower": 4.940204906044432,
+          "w1_ci_upper": 23.555067540462698,
+          "pvalue": 0.3183681631836816,
+          "significant": false,
+          "tv_diagnostic": 0.8,
+          "exceeds_threshold": true,
+          "theta_cid": 2.8911926282518325
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 7.347091576520403,
+          "w1_ci_lower": 3.853182159251286,
+          "w1_ci_upper": 15.929243832519738,
+          "pvalue": 0.24217578242175783,
+          "significant": false,
+          "tv_diagnostic": 0.7333333333333334,
+          "exceeds_threshold": true,
+          "theta_cid": 2.8089227321021855
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 4.096221655862273,
+          "w1_ci_lower": 3.4825552435586222,
+          "w1_ci_upper": 10.630542249091663,
+          "pvalue": 0.6523347665233477,
+          "significant": false,
+          "tv_diagnostic": 0.54,
+          "exceeds_threshold": true,
+          "theta_cid": 2.387568830795151
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 12.103931583109846,
+          "w1_ci_lower": 6.749428407206816,
+          "w1_ci_upper": 17.07641064030983,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.48,
+          "exceeds_threshold": true,
+          "theta_cid": 2.4922248880133853
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 10.665005673659849,
+          "w1_ci_lower": 7.421146799156002,
+          "w1_ci_upper": 13.722049402741607,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.29666666666666663,
+          "exceeds_threshold": true,
+          "theta_cid": 2.784507017254872
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "medium_effect",
+      "true_w1": 50.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 1.8361683196830172
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 1.6283700108675347
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 48.10286636394524,
+          "w1_ci_lower": 35.575329127928796,
+          "w1_ci_upper": 59.4921165666187,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.061826750337008
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 43.914901184125505,
+          "w1_ci_lower": 35.7190960588424,
+          "w1_ci_upper": 52.27353044214597,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.9333333333333333,
+          "exceeds_threshold": true,
+          "theta_cid": 1.9198660661248526
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 52.639370099672526,
+          "w1_ci_lower": 45.54084547018396,
+          "w1_ci_upper": 59.63518813560748,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8999999999999999,
+          "exceeds_threshold": true,
+          "theta_cid": 2.3928216948579233
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 48.61432657970906,
+          "w1_ci_lower": 43.07537697285021,
+          "w1_ci_upper": 53.98571140466588,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8200000000000001,
+          "exceeds_threshold": true,
+          "theta_cid": 2.696085667492062
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 51.18307213149755,
+          "w1_ci_lower": 47.985302832638986,
+          "w1_ci_upper": 54.32137873741007,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8033333333333335,
+          "exceeds_threshold": true,
+          "theta_cid": 2.8806898956138554
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "large_effect",
+      "true_w1": 100.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.346098033531067
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.8500796026370625
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 105.11552564248905,
+          "w1_ci_lower": 93.81767592208823,
+          "w1_ci_upper": 115.89374613695828,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.109248823287166
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 103.9151577680493,
+          "w1_ci_lower": 93.90445017056305,
+          "w1_ci_upper": 114.04270872109205,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.482030163731848
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 100.23614942014154,
+          "w1_ci_lower": 92.16110097344658,
+          "w1_ci_upper": 107.96085606637526,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.4162720894391003
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 103.7576625831415,
+          "w1_ci_lower": 98.07903636479902,
+          "w1_ci_upper": 109.5234710014825,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 3.004869042005116
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 100.69997463203198,
+          "w1_ci_lower": 97.37333627045943,
+          "w1_ci_upper": 103.65586333533956,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.9933333333333334,
+          "exceeds_threshold": true,
+          "theta_cid": 2.621449013116939
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "unimodal",
+      "true_w1": 50.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 3.3486571077015954
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 1.4171204095672438
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 63.86432275877777,
+          "w1_ci_lower": 53.12666505855681,
+          "w1_ci_upper": 74.99608230644411,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.4202042366192247
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 58.128961836764056,
+          "w1_ci_lower": 50.75952312584903,
+          "w1_ci_upper": 65.7609441655492,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.012444430429538
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 48.1117912288255,
+          "w1_ci_lower": 39.735533440790725,
+          "w1_ci_upper": 56.057477643616856,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.82,
+          "exceeds_threshold": true,
+          "theta_cid": 2.9544374985635415
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 47.333440951963404,
+          "w1_ci_lower": 41.653107986915494,
+          "w1_ci_upper": 53.278013487048675,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8,
+          "exceeds_threshold": true,
+          "theta_cid": 2.742773133250117
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 50.515724607239854,
+          "w1_ci_lower": 47.529216617074766,
+          "w1_ci_upper": 53.69531803639559,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8266666666666667,
+          "exceeds_threshold": true,
+          "theta_cid": 2.448823548443737
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "bimodal",
+      "true_w1": 100.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 7.572533056593116
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 8.015456390945694
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 94.56347422560789,
+          "w1_ci_lower": 63.61175903526086,
+          "w1_ci_upper": 127.28127255148003,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.85,
+          "exceeds_threshold": true,
+          "theta_cid": 11.054291190599793
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 98.06477685451291,
+          "w1_ci_lower": 75.54306160362394,
+          "w1_ci_upper": 123.0651153515805,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.8,
+          "exceeds_threshold": true,
+          "theta_cid": 8.056732664103171
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 97.96519363630274,
+          "w1_ci_lower": 77.74859650162048,
+          "w1_ci_upper": 117.40494649640844,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.78,
+          "exceeds_threshold": true,
+          "theta_cid": 9.388102000421062
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 99.91014446955583,
+          "w1_ci_lower": 84.83852575432276,
+          "w1_ci_upper": 114.28073630260187,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.71,
+          "exceeds_threshold": true,
+          "theta_cid": 9.677161461757114
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 99.8216729402393,
+          "w1_ci_lower": 91.44402371296736,
+          "w1_ci_upper": 108.75443818087308,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.64,
+          "exceeds_threshold": true,
+          "theta_cid": 10.048927558458352
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "heavy_tail",
+      "true_w1": null,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 0.13034374893995862
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 0.19419738825003102
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 0.961277210789752,
+          "w1_ci_lower": 0.41418059998641715,
+          "w1_ci_upper": 1.662904757917978,
+          "pvalue": 0.0059994000599940004,
+          "significant": true,
+          "tv_diagnostic": 0.65,
+          "exceeds_threshold": true,
+          "theta_cid": 0.05967749312623874
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 1.6699298559959352,
+          "w1_ci_lower": 0.9117892334215751,
+          "w1_ci_upper": 3.7928146050683953,
+          "pvalue": 0.1660833916608339,
+          "significant": false,
+          "tv_diagnostic": 0.6000000000000001,
+          "exceeds_threshold": true,
+          "theta_cid": 0.09626708098977421
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 1.5705740532308619,
+          "w1_ci_lower": 0.7585849431009138,
+          "w1_ci_upper": 3.0703789199034897,
+          "pvalue": 0.021097890210978902,
+          "significant": true,
+          "tv_diagnostic": 0.5800000000000001,
+          "exceeds_threshold": true,
+          "theta_cid": 0.14335091050516438
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 3.1044845952470888,
+          "w1_ci_lower": 1.9760353569547433,
+          "w1_ci_upper": 5.027842952570136,
+          "pvalue": 0.00019998000199980003,
+          "significant": true,
+          "tv_diagnostic": 0.41000000000000003,
+          "exceeds_threshold": true,
+          "theta_cid": 0.09273826363472125
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 1.6963320634170165,
+          "w1_ci_lower": 1.219710893452904,
+          "w1_ci_upper": 2.2394158819379957,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.3133333333333333,
+          "exceeds_threshold": true,
+          "theta_cid": 0.08836855794674861
+        }
+      ],
+      "monotonic_check": true
+    },
+    {
+      "name": "multi_cause",
+      "true_w1": 100.0,
+      "n_samples": [
+        5,
+        10,
+        20,
+        30,
+        50,
+        100,
+        300
+      ],
+      "results_per_n": [
+        {
+          "n": 5,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 0.5749729440698985
+        },
+        {
+          "n": 10,
+          "grade": "INSUFFICIENT",
+          "w1_estimated": null,
+          "w1_ci_lower": null,
+          "w1_ci_upper": null,
+          "pvalue": null,
+          "significant": null,
+          "tv_diagnostic": null,
+          "exceeds_threshold": null,
+          "theta_cid": 2.8181505709903494
+        },
+        {
+          "n": 20,
+          "grade": "CANDIDATE",
+          "w1_estimated": 110.15935545029512,
+          "w1_ci_lower": 98.80469483211817,
+          "w1_ci_upper": 120.35594274677061,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.0604123809636263
+        },
+        {
+          "n": 30,
+          "grade": "CANDIDATE",
+          "w1_estimated": 96.90082360749345,
+          "w1_ci_lower": 88.40169523279044,
+          "w1_ci_upper": 105.21661377483716,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 2.861166889258077
+        },
+        {
+          "n": 50,
+          "grade": "RELIABLE",
+          "w1_estimated": 107.27665007778324,
+          "w1_ci_lower": 99.6699927850709,
+          "w1_ci_upper": 115.51263721011853,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 3.582228122243474
+        },
+        {
+          "n": 100,
+          "grade": "RELIABLE",
+          "w1_estimated": 103.76852878071499,
+          "w1_ci_lower": 98.36894994369742,
+          "w1_ci_upper": 109.267601053435,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 1.0,
+          "exceeds_threshold": true,
+          "theta_cid": 3.143688951431052
+        },
+        {
+          "n": 300,
+          "grade": "RELIABLE",
+          "w1_estimated": 98.58719154353739,
+          "w1_ci_lower": 95.40556044087731,
+          "w1_ci_upper": 101.7522632178705,
+          "pvalue": 9.999000099990002e-05,
+          "significant": true,
+          "tv_diagnostic": 0.9933333333333334,
+          "exceeds_threshold": true,
+          "theta_cid": 2.5301990628145634
+        }
+      ],
+      "monotonic_check": true
+    }
+  ],
+  "gate": "PASS"
+}

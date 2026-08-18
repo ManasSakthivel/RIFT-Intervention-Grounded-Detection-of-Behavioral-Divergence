@@ -1,0 +1,29 @@
+{
+  "total_wall_s": 0.074,
+  "total_cpu_s": 0.1481,
+  "memory_mb": 224.7,
+  "n_stages": 17,
+  "stage_timings": {
+    "OBSERVE": 0.0016,
+    "ANOMALY_DETECTION": 0.0051,
+    "TIME_SLICED_GT": 0.0043,
+    "ANOMALY_SUBGRAPH": 0.0,
+    "FCI": 0.0082,
+    "PAG": 0.0,
+    "IDENTIFIABILITY": 0.0,
+    "INTERVENTION_CANDIDATES": 0.0,
+    "COST_SELECTION": 0.0007,
+    "DO_X": 0.0001,
+    "INTERVENTION_VALIDATION": 0.0,
+    "POST_OBSERVE": 0.0015,
+    "CID": 0.0019,
+    "EBD": 0.0489,
+    "GRAPH_UPDATE": 0.0001,
+    "ATTRIBUTION_ABSTENTION": 0.0,
+    "STOP": 0.0
+  },
+  "cpu_count": 8,
+  "ram_gb": 15,
+  "n_services": 9,
+  "n_graph_edges": 8
+}

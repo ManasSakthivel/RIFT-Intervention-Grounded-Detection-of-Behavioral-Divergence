@@ -1,0 +1,15 @@
+{
+  "test_id": "NET-4",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "10.0.0.1",
+  "intervention_applied": "tc netem delay 500ms on lo band 1:2, filter dst 10.0.0.1 flowid 1:2",
+  "effect_measured": {
+    "target_ip": "10.0.0.1",
+    "unaffected_destination": "127.0.0.1",
+    "unaffected_destination_rtt_ms": 0.106,
+    "note": "127.0.0.1 unmatched by filter flows to band 1:1 (no netem); correctly unaffected"
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "status": "PASS"
+}

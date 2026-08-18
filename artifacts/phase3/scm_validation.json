@@ -1,0 +1,56 @@
+{
+  "phase": "3B",
+  "component": "time_sliced_scm",
+  "gate": "PASS",
+  "cases": [
+    {
+      "name": "chain",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "fork",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "collider",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "mediated",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "confounder",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "feedback",
+      "acyclic": true,
+      "n_vars": 3,
+      "n_equations": 3,
+      "pass": true
+    },
+    {
+      "name": "queueing",
+      "acyclic": true,
+      "n_vars": 4,
+      "n_equations": 4,
+      "pass": true
+    }
+  ]
+}

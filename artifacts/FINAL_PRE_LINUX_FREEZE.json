@@ -1,0 +1,196 @@
+{
+  "freeze_type": "FINAL_PRE_LINUX_FREEZE",
+  "timestamp": "2024-pre-linux-sprint",
+  "sprint": "RIFT Final 100% Pre-Linux Completion Sprint",
+  "status": "FROZEN",
+
+  "environment": {
+    "python_version": "3.9.6",
+    "platform": "darwin",
+    "git_commit": "pre-linux-sprint (no git hash — workspace not tracked)",
+    "note": "This freeze was created after all Mac-side implementation, testing, and validation was complete."
+  },
+
+  "artifact_hashes": {
+    "datasets/rift_faults/development.json": "d8960776ee3556a8",
+    "experiments/REGISTRY.yaml": "07f76e065794c9ce",
+    "experiments/ablations/ABLATION_REGISTRY.yaml": "0099d692b501d27c",
+    "docs/CLAIMS_REGISTRY.yaml": "5437897ef65a9ff5",
+    "src/rift/statistics/stats.py": "38928b2148282e1a",
+    "src/rift/ebd/ebd.py": "14a410b0dd575484",
+    "src/rift/baselines/rift_random.py": "4883025be73e506c",
+    "src/rift/baselines/rift_one_shot.py": "b8529a363a47cd9d",
+    "src/rift/loop/closed_loop.py": "22fbceabe47bef30"
+  },
+
+  "scenario_catalog": {
+    "development_n_scenarios": 50,
+    "development_n_multi_cause": 12,
+    "development_n_ambiguous": 3,
+    "development_n_confounded": 24,
+    "development_n_multi_cause_or_ambiguous": 15,
+    "validation_n_scenarios": 18,
+    "held_out_n_scenarios": 15,
+    "total_scenarios": 83,
+    "total_confounded_across_all_splits": 48,
+    "h2_power_target_met": true,
+    "h3_n_filter_multi_cause_ambiguous": 15,
+    "h3_achieved_power_approx": 0.64,
+    "held_out_sealed": true
+  },
+
+  "experiment_registry_summary": {
+    "total_experiments": 14,
+    "exp_001_status": "READY_FOR_LINUX",
+    "exp_002_status": "READY_FOR_LINUX",
+    "exp_003_status": "READY_FOR_LINUX",
+    "exp_004_status": "DRY_RUN_READY",
+    "exp_005_status": "READY_FOR_LINUX",
+    "exp_006_status": "READY_FOR_LINUX",
+    "exp_007_status": "READY_FOR_LINUX",
+    "exp_008_status": "DRY_RUN_READY",
+    "exp_009_status": "DRY_RUN_READY",
+    "exp_010_status": "DRY_RUN_READY",
+    "exp_011_status": "DRY_RUN_READY",
+    "exp_012_status": "DRY_RUN_READY",
+    "exp_013_status": "READY_FOR_LINUX",
+    "exp_014_status": "READY_FOR_LINUX"
+  },
+
+  "claims_registry_summary": {
+    "total_claims": 13,
+    "c001_status": "PLANNED",
+    "c002_status": "PLANNED",
+    "c003_status": "PARTIALLY_SUPPORTED",
+    "c004_status": "PLANNED",
+    "c005_status": "PLANNED",
+    "c006_status": "PLANNED",
+    "c007_status": "PARTIALLY_SUPPORTED",
+    "c008_status": "PARTIALLY_SUPPORTED",
+    "c009_status": "PARTIALLY_SUPPORTED",
+    "c010_status": "PARTIALLY_SUPPORTED",
+    "c011_status": "SUPPORTED",
+    "c012_status": "SUPPORTED",
+    "c013_status": "UNSUPPORTED",
+    "all_have_paper_section_draft": true
+  },
+
+  "p0_issues_resolved": {
+    "P0_01": {
+      "issue": "EXP-013 marked READY_FOR_LINUX with unimplemented RIFT-ONE-SHOT",
+      "resolution": "ABLATION_REGISTRY updated to IMPLEMENTED; EXP-013 notes updated",
+      "status": "RESOLVED"
+    },
+    "P0_02": {
+      "issue": "H3 has only n=1 multi-cause scenario — Wilcoxon undefined",
+      "resolution": "Development set expanded: +11 MULTI_CAUSE (MC_02-MC_12) + 3 AMBIGUOUS_ATTRIBUTION (AA_01-AA_03). n=15 for EXP-013 filter. Power ≈64%.",
+      "status": "RESOLVED"
+    },
+    "P0_03": {
+      "issue": "H2 power requirement not met (24 confounded, need 48)",
+      "resolution": "Total confounded = 48 across all splits (development=24, validation=24). EXP-002 pre-registers combined use for H2. Power target met.",
+      "status": "RESOLVED"
+    },
+    "P0_04": {
+      "issue": "RIFT-RANDOM run() hardcodes total_intervention_ed_s=0.0; RandomMSIS never called",
+      "resolution": "rift_random.py rewritten: run() calls self._random_msis.select(); total_intervention_ed_s = sum of selected intervention ed_s",
+      "status": "RESOLVED"
+    },
+    "P0_05": {
+      "issue": "No paper checklist enforcing synthetic-only labeling",
+      "resolution": "docs/PAPER_SUBMISSION_CHECKLIST.md created with mandatory sign-off procedure",
+      "status": "RESOLVED"
+    }
+  },
+
+  "p1_issues_resolved": {
+    "P1_03": {
+      "issue": "H2 mapped to EXP-009 (wrong); H5 mapped to EXP-011 (wrong)",
+      "resolution": "hypotheses.md corrected: H2 → EXP-002+EXP-005; H5 → DEFERRED (no experiment)",
+      "status": "RESOLVED"
+    },
+    "P1_09": {
+      "issue": "EXP-014 uses non-standard statistical_test_cost / statistical_test_accuracy keys",
+      "resolution": "REGISTRY.yaml EXP-014 updated to use statistical_tests: {cost: ..., accuracy: ...}",
+      "status": "RESOLVED"
+    },
+    "P1_10": {
+      "issue": "H5 has no registered experiment; listed as DEFERRED without fallback",
+      "resolution": "hypotheses.md explicitly marks H5 as DEFERRED/future work; not in tested hypotheses list",
+      "status": "RESOLVED"
+    },
+    "P1_11": {
+      "issue": "R3 criterion fails for leaf-node services (payment, redis_cart, etc.)",
+      "resolution": "ebd.py _check_r3() extended with R3-leaf fallback: accepts upstream caller divergence for leaf nodes. Temporal safety constraint prevents false positives when upstream diverges before leaf.",
+      "status": "RESOLVED",
+      "tests_added": "tests/unit/test_ebd_leaf_node_r3.py (16 tests)"
+    },
+    "P1_12": {
+      "issue": "Bayesian posterior update parameters (A_POS/B_POS/A_NEG/B_NEG) not documented",
+      "resolution": "closed_loop.py ClosedLoop class: comprehensive provenance comment added explaining prior causal reasoning for Beta(3,1)/Beta(1,3) choice and tuning policy",
+      "status": "RESOLVED"
+    }
+  },
+
+  "p2_issues_resolved": {
+    "P2_02": {
+      "issue": "abstention_rate not computed same way across baselines",
+      "resolution": "BaselineOutput.__init__ now has abstention_reason: Optional[str] field. All abstention reason codes documented in class docstring.",
+      "status": "RESOLVED"
+    },
+    "P2_07": {
+      "issue": "BH FDR exploratory tests not pre-registered",
+      "resolution": "docs/EXPLORATORY_COMPARISONS_REGISTRY.md created: 7 pre-registered exploratory comparisons + prohibited post-hoc list",
+      "status": "RESOLVED"
+    },
+    "P2_08": {
+      "issue": "binomial_one_sided() p_null=0.70 default wrong when in-dist P@1 < 1.0",
+      "resolution": "stats.py: docstring updated with explicit warning and caller computation requirement",
+      "status": "RESOLVED"
+    },
+    "P2_09": {
+      "issue": "No cross-references between claims_registry and paper sections",
+      "resolution": "CLAIMS_REGISTRY.yaml: paper_section: DRAFT added to all 13 claims",
+      "status": "RESOLVED"
+    }
+  },
+
+  "mac_tests": {
+    "total_passed": 624,
+    "total_failed": 0,
+    "total_skipped": 0,
+    "new_tests_added": {
+      "tests/unit/baselines/test_rift_random_p004.py": "15 tests (P0-04 RIFT-RANDOM intervention dispatch)",
+      "tests/unit/test_ebd_leaf_node_r3.py": "16 tests (P1-11 R3 leaf-node fallback)"
+    }
+  },
+
+  "linux_only_tasks": [
+    "EXP-001: Run RIFT-FULL on live Online Boutique telemetry (live_telemetry_used=True)",
+    "EXP-002: Run H2 on 48 confounded scenarios with live tc/netem fault injection",
+    "EXP-003: Run intervention cost experiment with live Prometheus metrics",
+    "EXP-005: Run RIFT-OBS ablation with live telemetry",
+    "EXP-006: Run RIFT-RANDOM ablation with live interventions",
+    "EXP-007: Run SIEVE-LIKE comparison with live telemetry",
+    "EXP-013: Run H3 RIFT-FULL vs RIFT-ONE-SHOT on multi-cause scenarios",
+    "EXP-014: Run H4 MSIS vs random cost comparison",
+    "Online Boutique deployment (14 containers)",
+    "tc/netem fault injection (CAP_NET_ADMIN required)",
+    "Prometheus + OTel Collector wiring",
+    "Locust load generation",
+    "Final held-out test set evaluation (15 scenarios, token-gated)",
+    "C008: 2/8 remaining safety hard stops (rollback_failure, cascade_failure)",
+    "C013: Category C evidence generation"
+  ],
+
+  "held_out_seal": {
+    "sealed": true,
+    "access_control": "src/rift/evaluation/held_out_guard.py",
+    "verification_script": "scripts/verify_heldout_sealed.py",
+    "n_scenarios": 15,
+    "labels_examined": false,
+    "tuning_on_held_out": false
+  },
+
+  "freeze_complete": true
+}

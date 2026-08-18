@@ -1,0 +1,243 @@
+# RIFT Claims Registry
+# Phase 4.5 — Audited
+# Authority: Phase 3.6 specification §22, docs/phase4/PHASE4_EVIDENCE_RECONCILIATION.md
+#
+# Every paper claim must map to:
+#   claim_id, claim, status, experiment, artifact, metric, limitations, rq
+#
+# Statuses:
+#   SUPPORTED          — live E2E evidence (Category C) exists
+#   PARTIALLY_SUPPORTED — synthetic validation only (Category B)
+#   PLANNED            — implementation complete; awaits Linux execution
+#   UNSUPPORTED        — no evidence; MUST NOT appear in paper
+#
+# ABSOLUTE RULE: "SUPPORTED" status requires Category C evidence
+# (live_telemetry_used=True RIFTRunRecord). Category B evidence supports
+# PARTIALLY_SUPPORTED at most.
+#
+# See docs/phase4/PHASE4_EVIDENCE_RECONCILIATION.md for evidence categories.
+
+metadata:
+  version: "4.6"
+  last_updated: "2024"
+  note: >
+    Audited Phase 4.5. All statuses reviewed against evidence categories A/B/C.
+    Three blockers (T1/T2/T3) fixed on Mac; live validation pending Linux.
+    P2-09 fix: paper_section field added to all claims (DRAFT until paper sections finalized).
+    paper_section will be updated to actual section numbers once the paper draft is complete.
+
+claims:
+
+  C001:
+    claim: "RIFT performs causal attribution on live distributed microservice systems."
+    paper_section: DRAFT
+    status: PLANNED
+    rq: "RQ1"
+    experiment: EXP-001
+    artifact: "results/EXP-001/"
+    metric: "precision_at_1"
+    limitations:
+      - "Requires live Online Boutique on Linux with T1+T2+T3 fixes deployed"
+      - "Current evidence is synthetic only (Category B)"
+      - "P@1=0.50 (synthetic dev set) must not be presented as live system performance"
+    notes: >
+      Status upgrades to SUPPORTED after live Linux E2E with live_telemetry_used=True
+      and EXP-001 run on real telemetry.
+      Do NOT change status based on Category B evidence.
+
+  C002:
+    claim: "RIFT achieves higher Precision@1 than observational baselines on confounded incidents."
+    paper_section: DRAFT
+    status: PLANNED
+    rq: "RQ2"
+    experiment: EXP-002
+    artifact: "results/EXP-002/"
+    metric: "conditional_precision_at_1"
+    hypothesis: "H2"
+    limitations:
+      - "Requires n>=48 confounded scenarios for 80% power"
+      - "Requires live execution"
+      - "H2 is the CRITICAL hypothesis — if not confirmed, N2 claim collapses"
+    notes: >
+      PLANNED until H2 Wilcoxon test runs on live data.
+      RIFT-OBS must be run alongside RIFT-FULL for fair comparison.
+
+  C003:
+    claim: "RIFT correctly abstains on non-identifiable causal queries."
+    paper_section: DRAFT
+    status: PARTIALLY_SUPPORTED
+    rq: "RQ2"
+    experiment: EXP-002
+    artifact: "artifacts/phase3_5/v1_decomposition.json"
+    metric: "correct_abstention_rate"
+    limitations:
+      - "Synthetic validation only — not live"
+      - "Non-identifiable scenarios use synthetic confounders"
+    notes: >
+      Synthetic abstention validated on mock data (Category B).
+      Live validation PENDING_LINUX after T1+T2+T3 fixes deployed.
+
+  C004:
+    claim: "RIFT's greedy MSIS cost optimizer achieves lower detection latency than random selection."
+    paper_section: DRAFT
+    status: PLANNED
+    rq: "RQ6"
+    experiment: EXP-014
+    artifact: "results/EXP-014/"
+    metric: "total_ed_s, detection_latency_s"
+    hypothesis: "H4"
+    limitations:
+      - "Requires live execution"
+      - "H4 requires TOST equivalence on accuracy AND one-sided Wilcoxon on cost"
+      - "RIFT-RANDOM now dispatches real interventions (P0-04 fixed)"
+    notes: "PLANNED until H4 comparison runs on live data."
+
+  C005:
+    claim: "RIFT's intervention layer provides measurable information beyond observational analysis (RIFT > RIFT-OBS)."
+    paper_section: DRAFT
+    status: PLANNED
+    rq: "RQ1"
+    experiment: EXP-005
+    artifact: "results/EXP-005/"
+    metric: "precision_at_1 delta (RIFT-FULL vs RIFT-OBS)"
+    hypothesis: "H1"
+    limitations:
+      - "Requires live execution"
+      - "RIFT-OBS uses observational correlation proxy (PARTIAL implementation)"
+      - "This is the core novelty claim — if not confirmed, the paper's thesis is weakened"
+    notes: "PLANNED until live comparison is complete."
+
+  C006:
+    claim: "RIFT outperforms Sieve-like observational ranking on causal attribution accuracy."
+    paper_section: DRAFT
+    status: PLANNED
+    rq: "RQ1"
+    experiment: EXP-007
+    artifact: "results/EXP-007/"
+    metric: "precision_at_1"
+    hypothesis: "H1"
+    limitations:
+      - "Requires live execution"
+      - "Comparison is SIEVE-LIKE (methodological reimplementation), NOT original Sieve code"
+      - "Must be labeled SIEVE-LIKE in all tables — never 'Sieve'"
+    notes: "PLANNED until live comparison. SIEVE-LIKE labeling is mandatory."
+
+  C007:
+    claim: "RIFT's causal graph (FCI-PAG) approximates the true causal structure."
+    paper_section: DRAFT
+    status: PARTIALLY_SUPPORTED
+    rq: "RQ3"
+    experiment: EXP-004
+    artifact: "artifacts/phase3/fci_validation.json"
+    metric: "oracle_vs_fci comparison"
+    limitations:
+      - "Synthetic validation only"
+      - "FCI may produce cycles or empty PAGs on sparse data"
+      - "Faithfulness assumption may be violated in real microservice traffic"
+    notes: "Synthetic FCI vs Oracle validated (Category B). Boundary cases documented."
+
+  C008:
+    claim: "RIFT satisfies all 8 safety hard stops under adversarial conditions."
+    paper_section: DRAFT
+    status: PARTIALLY_SUPPORTED
+    rq: null
+    experiment: EXP-008
+    artifact: "artifacts/phase3_5/safety_validation.json"
+    metric: "safety_abort_rate, rollback_success_rate"
+    limitations:
+      - "Rollback_failure hard stop requires live tc environment (Category A infrastructure confirmed)"
+      - "Cascade_failure hard stop requires live error rate measurement"
+    notes: >
+      6/8 hard stops validated in dry-run (Category B).
+      tc infrastructure confirmed on Linux (Category A: artifacts/phase4/safety/live_safety_results.json).
+      2/8 PENDING_LINUX for full Category C validation.
+
+  C009:
+    claim: "RIFT can run reproducibly with the same seed producing identical results."
+    paper_section: DRAFT
+    status: PARTIALLY_SUPPORTED
+    rq: null
+    experiment: EXP-010
+    artifact: "artifacts/phase3_5/reproducibility_checklist.json"
+    metric: "result_hash_consistency"
+    limitations:
+      - "Reproducibility depends on causal-learn version and OS"
+      - "Live execution introduces timing non-determinism in timestamps"
+      - "Synthetic reproducibility only (Category B)"
+    notes: "Synthetic reproducibility validated. Live validation PENDING_LINUX."
+
+  C010:
+    claim: "RIFT raw Precision@1 = 50%, Conditional Precision@1 = 60% on development set."
+    paper_section: DRAFT
+    status: PARTIALLY_SUPPORTED
+    rq: "RQ1"
+    experiment: null
+    artifact: "artifacts/phase3_5/v1_decomposition.json"
+    metric: "raw_precision_at_1=0.50, conditional_precision_at_1=0.60"
+    limitations:
+      - "SYNTHETIC BENCHMARK ONLY — Category B evidence"
+      - "Development set (36 scenarios), MockTelemetry"
+      - "These are FROZEN HISTORICAL EVIDENCE — not final publication results"
+      - "Must NEVER be presented as live system performance"
+    notes: >
+      FROZEN HISTORICAL EVIDENCE from Phase 3.5.
+      Do NOT update these values.
+      In paper: may be cited only as synthetic pre-validation baseline.
+      Final publication results come from held-out test set after Linux execution.
+      Any paper that presents these as live results is committing scientific error.
+
+  C011:
+    claim: "tc/netem works correctly for per-destination latency injection on Linux."
+    paper_section: DRAFT
+    status: SUPPORTED
+    rq: null
+    experiment: null
+    artifact:
+      - "artifacts/phase4/intervention/net1_latency.json"
+      - "artifacts/phase4/intervention/net2_packet_loss.json"
+      - "artifacts/phase4/intervention/net3_rollback.json"
+      - "artifacts/phase4/intervention/net5_destination_isolation.json"
+    metric: "tc_netem_200ms_verified, per_destination_isolation_confirmed"
+    limitations:
+      - "tc band bug (handle '10:' → '1:10' invalid) fixed in Phase 4.5 (T3)"
+      - "Per-destination netem verified on Linux kernel 5.14"
+      - "Reproducible only on Linux with CAP_NET_ADMIN"
+    notes: >
+      SUPPORTED by Category A evidence (Linux Phase 4 execution).
+      tc netem 200ms verified, rollback clean, isolation confirmed.
+      tc band fix (T3) deployed on Mac and ready for Linux.
+
+  C012:
+    claim: "Online Boutique infrastructure deploys successfully (14 containers healthy)."
+    paper_section: DRAFT
+    status: SUPPORTED
+    rq: null
+    experiment: null
+    artifact: "artifacts/phase4/testbed/health.json"
+    metric: "n_healthy_containers=14, frontend_http_200"
+    limitations:
+      - "Linux-only — not reproducible on Mac"
+      - "Phase 4 specific environment (Docker 29.7.2, RHEL 9.6)"
+    notes: >
+      SUPPORTED by Category A evidence (Linux Phase 4 execution).
+      All 14 boutique containers healthy; frontend HTTP 200 confirmed.
+
+  C013:
+    claim: "RIFT operates on a live production-like microservice system."
+    paper_section: DRAFT
+    status: UNSUPPORTED
+    rq: "RQ1"
+    experiment: null
+    artifact: null
+    metric: null
+    limitations:
+      - "PrometheusClient.collect() stub prevented live telemetry ingestion (T1 fix)"
+      - "OTel Collector not wired (T2 fix)"
+      - "tc band bug blocked live interventions (T3 fix)"
+      - "No RIFTRunRecord with live_telemetry_used=True has been produced"
+    notes: >
+      UNSUPPORTED until Category C evidence exists.
+      T1+T2+T3 fixes are implemented and MAC_TESTED.
+      After Linux deployment and one full E2E run, upgrade to PLANNED.
+      After EXP-001 live run, upgrade to SUPPORTED.
+      DO NOT use this claim in paper drafts until status = SUPPORTED.

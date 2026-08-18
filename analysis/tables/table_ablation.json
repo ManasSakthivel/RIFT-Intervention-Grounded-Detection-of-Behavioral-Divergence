@@ -1,0 +1,30 @@
+[
+  {
+    "Ablation": "RIFT-FULL",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Wilcoxon p": "PENDING",
+    "Cliff's \u03b4": "PENDING"
+  },
+  {
+    "Ablation": "RIFT-OBS (no intervention)",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Wilcoxon p": "PENDING",
+    "Cliff's \u03b4": "PENDING"
+  },
+  {
+    "Ablation": "RIFT-RANDOM (no MSIS)",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Wilcoxon p": "PENDING",
+    "Cliff's \u03b4": "PENDING"
+  },
+  {
+    "Ablation": "RIFT-ONE-SHOT (no closed-loop)",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Wilcoxon p": "PENDING",
+    "Cliff's \u03b4": "PENDING"
+  }
+]

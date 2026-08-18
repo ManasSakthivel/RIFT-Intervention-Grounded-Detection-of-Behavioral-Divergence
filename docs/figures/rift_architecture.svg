@@ -1,0 +1,127 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 900" width="700" height="900" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <!-- Background -->
+  <rect width="700" height="900" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="350" y="36" text-anchor="middle" font-size="15" font-weight="600" fill="#1f2328">RIFT Pipeline Architecture</text>
+
+  <!-- Helper: box x=175 w=350 -->
+  <!-- Row spacing: each box h=38, gap=14, total step=52 -->
+
+  <!-- 1: Telemetry Ingestion -->
+  <rect x="175" y="55" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="78" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Telemetry Ingestion</text>
+  <text x="350" y="92" text-anchor="middle" font-size="10" fill="#57606a">Prometheus / Jaeger / OTLP</text>
+
+  <!-- Arrow -->
+  <line x1="350" y1="93" x2="350" y2="109" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 2: Time-sliced Causal Graph -->
+  <rect x="175" y="110" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="133" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Time-sliced Causal Graph G_T</text>
+  <text x="350" y="148" text-anchor="middle" font-size="10" fill="#57606a">Sliding Δt windows over metric time-series</text>
+
+  <line x1="350" y1="148" x2="350" y2="164" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 3: FCI / PAG -->
+  <rect x="175" y="165" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="188" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">FCI Causal Discovery → PAG</text>
+  <text x="350" y="203" text-anchor="middle" font-size="10" fill="#57606a">Partial Ancestral Graph with latent confounder marks</text>
+
+  <line x1="350" y1="203" x2="350" y2="219" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 4: Anomaly Subgraph -->
+  <rect x="175" y="220" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="243" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Anomaly Subgraph</text>
+  <text x="350" y="258" text-anchor="middle" font-size="10" fill="#57606a">Strategy D expansion — diverging services</text>
+
+  <line x1="350" y1="258" x2="350" y2="274" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 5: Identifiability -->
+  <rect x="175" y="275" width="350" height="38" rx="6" fill="#fff8ee" stroke="#d97706" stroke-width="1.5"/>
+  <text x="350" y="298" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Identifiability Check</text>
+  <text x="350" y="313" text-anchor="middle" font-size="10" fill="#57606a">Backdoor / frontdoor / IV — NOT_IDENTIFIABLE → abstain</text>
+
+  <line x1="350" y1="313" x2="350" y2="329" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 6: EBD Candidates -->
+  <rect x="175" y="330" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="353" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">EBD — Candidate Phase (R1–R3)</text>
+  <text x="350" y="368" text-anchor="middle" font-size="10" fill="#57606a">Earliest Behavioral Divergence — CANDIDATE confidence</text>
+
+  <line x1="350" y1="368" x2="350" y2="384" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 7: MSIS Cost Selection -->
+  <rect x="175" y="385" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="408" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">MSIS — Cost-aware Intervention Selection</text>
+  <text x="350" y="423" text-anchor="middle" font-size="10" fill="#57606a">Greedy minimisation of expected disruption cost</text>
+
+  <line x1="350" y1="423" x2="350" y2="439" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 8: Runtime Intervention -->
+  <rect x="175" y="440" width="350" height="38" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="350" y="463" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Runtime Intervention  do(X)</text>
+  <text x="350" y="478" text-anchor="middle" font-size="10" fill="#57606a">tc/netem latency injection — Linux CAP_NET_ADMIN</text>
+
+  <line x1="350" y1="478" x2="350" y2="494" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 9: Post-intervention Observation -->
+  <rect x="175" y="495" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="518" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Post-intervention Observation</text>
+  <text x="350" y="533" text-anchor="middle" font-size="10" fill="#57606a">Collect Δt telemetry window after do(X)</text>
+
+  <line x1="350" y1="533" x2="350" y2="549" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 10: CID -->
+  <rect x="175" y="550" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="573" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">CID — Causal Intervention Divergence</text>
+  <text x="350" y="588" text-anchor="middle" font-size="10" fill="#57606a">Wasserstein W1 pre/post distribution shift</text>
+
+  <line x1="350" y1="588" x2="350" y2="604" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 11: EBD Definitive -->
+  <rect x="175" y="605" width="350" height="38" rx="6" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="350" y="628" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">EBD — Definitive Phase (R4)</text>
+  <text x="350" y="643" text-anchor="middle" font-size="10" fill="#57606a">CID evidence upgrades CANDIDATE → DEFINITIVE</text>
+
+  <line x1="350" y1="643" x2="350" y2="659" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 12: Closed-loop Update -->
+  <rect x="175" y="660" width="350" height="38" rx="6" fill="#f5f0ff" stroke="#7c5cd8" stroke-width="1.5"/>
+  <text x="350" y="683" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="500">Closed-loop Bayesian Update</text>
+  <text x="350" y="698" text-anchor="middle" font-size="10" fill="#57606a">Beta posterior over edge confidence — next iteration</text>
+
+  <line x1="350" y1="698" x2="350" y2="714" stroke="#57606a" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- 13: Attribution / Abstention -->
+  <rect x="175" y="715" width="350" height="44" rx="6" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="350" y="740" text-anchor="middle" font-size="13" fill="#1f2328" font-weight="600">Attribution  /  Abstention</text>
+  <text x="350" y="757" text-anchor="middle" font-size="10" fill="#57606a">Root-cause candidate with confidence + provenance</text>
+
+  <!-- Safety side-label -->
+  <rect x="548" y="440" width="120" height="38" rx="6" fill="#fef2f2" stroke="#dc2626" stroke-width="1"/>
+  <text x="608" y="456" text-anchor="middle" font-size="10" fill="#dc2626" font-weight="600">Safety Controller</text>
+  <text x="608" y="469" text-anchor="middle" font-size="9" fill="#57606a">8 hard stops</text>
+  <line x1="548" y1="459" x2="525" y2="459" stroke="#dc2626" stroke-width="1" stroke-dasharray="4 2"/>
+
+  <!-- Legend -->
+  <rect x="38" y="790" width="624" height="95" rx="6" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1"/>
+  <text x="350" y="812" text-anchor="middle" font-size="11" font-weight="600" fill="#1f2328">Legend</text>
+  <rect x="55" y="822" width="12" height="12" rx="2" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="74" y="833" font-size="10" fill="#57606a">Core pipeline stage</text>
+  <rect x="200" y="822" width="12" height="12" rx="2" fill="#fff8ee" stroke="#d97706" stroke-width="1.5"/>
+  <text x="219" y="833" font-size="10" fill="#57606a">Identifiability gate (may abstain)</text>
+  <rect x="400" y="822" width="12" height="12" rx="2" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="419" y="833" font-size="10" fill="#57606a">Live intervention (Linux)</text>
+  <rect x="55" y="844" width="12" height="12" rx="2" fill="#f5f0ff" stroke="#7c5cd8" stroke-width="1.5"/>
+  <text x="74" y="855" font-size="10" fill="#57606a">Closed-loop / iterative</text>
+  <rect x="200" y="844" width="12" height="12" rx="2" fill="#f0fdf4" stroke="#16a34a" stroke-width="2"/>
+  <text x="219" y="855" font-size="10" fill="#57606a">Final output</text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arr" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#57606a"/>
+    </marker>
+  </defs>
+</svg>

@@ -1,0 +1,167 @@
+{
+  "gate": "3.5C",
+  "component": "telemetry_pipeline",
+  "status": "SPECIFICATION_COMPLETE_LIVE_VALIDATION_PENDING",
+  "telemetry_sources": [
+    {
+      "source": "Prometheus",
+      "type": "metrics",
+      "endpoint": "http://prometheus:9090",
+      "env_var": "RIFT_PROMETHEUS_URL",
+      "scrape_interval": "15s",
+      "data_format": "OpenMetrics / Prometheus exposition format"
+    },
+    {
+      "source": "Jaeger",
+      "type": "distributed_traces",
+      "endpoint": "http://jaeger:16686",
+      "collector": "http://jaeger:14268 (HTTP collector)",
+      "env_var": "RIFT_JAEGER_URL",
+      "data_format": "Jaeger Thrift / OpenTelemetry"
+    }
+  ],
+  "p1_risk": {
+    "id": "P1-TELEMETRY-001",
+    "description": "Prometheus scrape targets in docker/prometheus.yml point to gRPC service ports (e.g., boutique-cart:7070, boutique-product:3550). Online Boutique v0.9.0 uses gRPC over HTTP/2 on these ports — they do NOT serve Prometheus /metrics endpoints. Prometheus will fail to scrape all boutique service targets.",
+    "evidence": "docker/prometheus.yml scrapes boutique-cart:7070 but cart uses REDIS_ADDR=boutique-redis:6379 and is a gRPC server. The JAEGER_SERVICE_ADDR env var confirms observability goes via Jaeger, not Prometheus.",
+    "severity": "P1",
+    "resolution_options": [
+      "Add OpenTelemetry Collector with Prometheus exporter to bridge OTEL → Prometheus metrics",
+      "Add a per-service Prometheus exporter sidecar",
+      "Use Jaeger trace data as the primary telemetry source and derive latency/error metrics from traces",
+      "Use cadvisor for container-level metrics (CPU, memory, network bytes)"
+    ],
+    "status": "UNRESOLVED — requires live testbed deployment to confirm"
+  },
+  "required_metrics": [
+    {
+      "rift_variable": "lat_p99",
+      "description": "p99 request latency",
+      "prometheus_query": "histogram_quantile(0.99, rate(http_request_duration_seconds_bucket[10s]))",
+      "source": "Prometheus (requires HTTP /metrics on service)",
+      "alternative": "Derived from Jaeger trace span durations",
+      "units": "seconds"
+    },
+    {
+      "rift_variable": "lat_p50",
+      "description": "p50 request latency",
+      "prometheus_query": "histogram_quantile(0.50, rate(http_request_duration_seconds_bucket[10s]))",
+      "source": "Prometheus (requires HTTP /metrics on service)",
+      "alternative": "Derived from Jaeger trace span durations",
+      "units": "seconds"
+    },
+    {
+      "rift_variable": "err_rate",
+      "description": "Error rate (fraction of requests returning 5xx)",
+      "prometheus_query": "rate(http_requests_total{code=~'5..'}[10s]) / rate(http_requests_total[10s])",
+      "source": "Prometheus",
+      "alternative": "Jaeger spans with error=true tag",
+      "units": "fraction [0,1]"
+    },
+    {
+      "rift_variable": "rps",
+      "description": "Requests per second",
+      "prometheus_query": "rate(http_requests_total[10s])",
+      "source": "Prometheus",
+      "alternative": "Jaeger span count / window",
+      "units": "req/s"
+    },
+    {
+      "rift_variable": "cpu_pct",
+      "description": "CPU utilization percentage",
+      "prometheus_query": "rate(container_cpu_usage_seconds_total[10s]) * 100",
+      "source": "cadvisor (not currently in docker-compose)",
+      "units": "percent"
+    },
+    {
+      "rift_variable": "mem_pct",
+      "description": "Memory utilization percentage",
+      "prometheus_query": "container_memory_usage_bytes / container_spec_memory_limit_bytes * 100",
+      "source": "cadvisor (not currently in docker-compose)",
+      "units": "percent"
+    }
+  ],
+  "pipeline_stages": [
+    {
+      "stage": 1,
+      "name": "raw_collection",
+      "description": "Query Prometheus /api/v1/query_range and Jaeger /api/traces for each Δt window",
+      "output": "List[Metric] objects with service_id, metric_name, value, timestamp, collection_lag_s",
+      "latency_budget_s": 5.0,
+      "note": "collection_lag_s must be < Δt/2 = 5s to avoid window misassignment"
+    },
+    {
+      "stage": 2,
+      "name": "normalization",
+      "description": "Map raw metric names to RIFT variable names (lat_p99, err_rate, rps, cpu_pct, mem_pct)",
+      "output": "Dict[service_id, Dict[metric_name, float]] per Δt window",
+      "validation": "NaN/Inf values must be flagged and handled (current gap: Metric.value has no NaN guard)"
+    },
+    {
+      "stage": 3,
+      "name": "time_slice_alignment",
+      "description": "Assign each observation to time window: window_id = floor(timestamp / delta_t). If collection_lag_s > delta_t/2, assign to window N+1.",
+      "output": "TimeSlicedGraph with CausalVariable nodes var_id='service.metric.tN'",
+      "implementation": "src/rift/graph/time_slice.py"
+    },
+    {
+      "stage": 4,
+      "name": "g_t_construction",
+      "description": "Build G_T from aligned observations. Add CALL_GRAPH edges from service topology. Add AUTOREGRESSIVE self-edges.",
+      "output": "G_T: NetworkX DiGraph with CausalVariable nodes",
+      "provenance": "Each node carries service_id + metric_name + time_index traceable to source query"
+    }
+  ],
+  "provenance_requirement": {
+    "description": "Every CausalVariable in G_T must be traceable to its source telemetry.",
+    "var_id_format": "service.metric_name.tN  (e.g., frontend.lat_p99.t3)",
+    "provenance_chain": "CausalVariable.var_id → metric_name → prometheus_query → scrape_job → service endpoint",
+    "implementation_note": "src/rift/models/data_models.py CausalVariable has service_id + metric_name + time_index fields"
+  },
+  "validation_tests": [
+    {
+      "test_id": "TEL-1",
+      "condition": "missing_telemetry",
+      "trigger": "Service unreachable; Prometheus returns no data for that service",
+      "expected_behavior": "No CausalVariable nodes created for that service in G_T; anomaly subgraph may be empty for that service; RIFT abstains if no anomaly detected",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "test_id": "TEL-2",
+      "condition": "delayed_telemetry",
+      "trigger": "collection_lag_s > Δt/2 = 5s",
+      "expected_behavior": "Observation reassigned to window N+1; alignment_log entry written; causal edges may span incorrect windows",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "test_id": "TEL-3",
+      "condition": "malformed_telemetry",
+      "trigger": "NaN or Inf in metric value",
+      "expected_behavior": "KNOWN GAP: Metric.value: float has no NaN guard in data_models.py. NaN will propagate to anomaly detection. Should be handled with explicit guard.",
+      "status": "KNOWN_GAP_P2"
+    },
+    {
+      "test_id": "TEL-4",
+      "condition": "clock_skew",
+      "trigger": "System time offset > 5s between containers",
+      "expected_behavior": "window_id = floor(t/delta_t) is miscomputed; causal edges connect wrong temporal slices; G_T structure invalid",
+      "mitigation": "Use NTP or Docker clock sharing (--pid host or chrony container)",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "test_id": "TEL-5",
+      "condition": "service_restart",
+      "trigger": "Service container restarts; telemetry disappears for 1-3 windows then returns",
+      "expected_behavior": "Gap windows have no CausalVariable nodes; AUTOREGRESSIVE edges skip gap; anomaly detection triggered on return if metrics spike",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "test_id": "TEL-6",
+      "condition": "temporary_telemetry_loss",
+      "trigger": "30s gap (3 × Δt) in all metrics",
+      "expected_behavior": "Three consecutive windows with no observations; G_T has structural holes; anomaly subgraph may be empty; RIFT should abstain rather than attribute based on stale data",
+      "status": "PENDING_LIVE_EXECUTION"
+    }
+  ],
+  "honest_caveat": "Telemetry pipeline specification is complete. Live validation requires Online Boutique deployment on Linux. The P1 Prometheus/gRPC port mismatch must be resolved before real metrics can flow."
+}

@@ -1,0 +1,18 @@
+{
+  "gate": "3.5A",
+  "component": "linux_network_intervention_tc_netem",
+  "mechanism": "tc u32 classifier + per-destination netem",
+  "status": "PARTIAL",
+  "current_host": "macOS darwin arm64",
+  "linux_required": true,
+  "environment_info": {
+    "required_kernel": ">=4.9",
+    "required_packages": ["iproute2 (tc)", "linux kernel module: sch_netem"],
+    "required_capability": "CAP_NET_ADMIN",
+    "docker_image_provides": "python:3.11-slim + iproute2 + iptables (docker/Dockerfile)",
+    "docker_compose_cap_add": "NET_ADMIN (docker/docker-compose.yml rift-eval service)",
+    "current_host_tc": "NOT AVAILABLE (macOS does not ship iproute2/tc)",
+    "current_host_netem": "NOT AVAILABLE (macOS kernel has no sch_netem)",
+    "linux_target": "Ubuntu 22.04 LTS or Debian 11+ recommended"
+  }
+}

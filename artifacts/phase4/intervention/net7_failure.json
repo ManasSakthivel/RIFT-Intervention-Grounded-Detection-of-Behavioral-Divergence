@@ -1,0 +1,17 @@
+{
+  "test_id": "NET-7",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "lo",
+  "intervention_applied": "conflicting tc qdisc add on same handle 1:",
+  "effect_measured": {
+    "first_rule_exit": 0,
+    "conflict_exit_code": 2,
+    "error_message": "Error: Exclusivity flag on, cannot modify.",
+    "failure_detected": true,
+    "state_after_conflict": "only first rule survived"
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "failure_detected": true,
+  "status": "PASS"
+}

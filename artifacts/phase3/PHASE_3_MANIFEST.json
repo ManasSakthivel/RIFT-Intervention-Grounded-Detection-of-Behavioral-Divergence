@@ -1,0 +1,168 @@
+{
+  "phase": "3",
+  "title": "RIFT Phase 3 \u2014 Core Implementation",
+  "status": "CONDITIONAL_PASS",
+  "generated": "2026-08-17T14:15:31.496687Z",
+  "python_version": "3.9.6",
+  "total_tests": 453,
+  "tests_passing": 453,
+  "tests_failing": 0,
+  "spec_freeze": "docs/PHASE_3_SPEC_FREEZE.md",
+  "spec_amendments": [
+    "SPEC-AMEND-001",
+    "SPEC-AMEND-002",
+    "SPEC-AMEND-003"
+  ],
+  "components": {
+    "3A_data_models": {
+      "status": "VALIDATED",
+      "tests": "119/119",
+      "gate": "PASS"
+    },
+    "3B_scm": {
+      "status": "VALIDATED",
+      "tests": "39/39",
+      "gate": "PASS"
+    },
+    "3C_time_slice": {
+      "status": "IMPLEMENTED",
+      "tests": "artifact",
+      "gate": "PASS"
+    },
+    "3D_anomaly_subgraph": {
+      "status": "VALIDATED",
+      "far": "0.00",
+      "gate": "PASS"
+    },
+    "3E_fci_pag": {
+      "status": "VALIDATED",
+      "tests": "44/44",
+      "gate": "PASS"
+    },
+    "3F_identifiability": {
+      "status": "VALIDATED",
+      "tests": "37/37",
+      "gate": "PASS"
+    },
+    "3G_3H_intervention": {
+      "status": "PARTIAL",
+      "note": "macOS dry-run; needs Linux",
+      "gate": "PARTIAL"
+    },
+    "3I_3J_cid_wasserstein": {
+      "status": "VALIDATED",
+      "tests": "46/46",
+      "gate": "PASS"
+    },
+    "3K_ebd": {
+      "status": "VALIDATED",
+      "tests": "28/28",
+      "gate": "PASS"
+    },
+    "3L_cost_optimizer": {
+      "status": "VALIDATED",
+      "tests": "24/24",
+      "gate": "PASS"
+    },
+    "3M_closed_loop": {
+      "status": "VALIDATED",
+      "tests": "49/49",
+      "gate": "PASS"
+    },
+    "3N_safety": {
+      "status": "VALIDATED",
+      "tests": "37/37",
+      "gate": "PASS"
+    },
+    "3P_fault_benchmark": {
+      "status": "GENERATED",
+      "n_scenarios": 69,
+      "gate": "PASS"
+    },
+    "3R_ablations": {
+      "status": "IMPLEMENTED",
+      "components": [
+        "RIFT-RANDOM",
+        "RIFT-OBS"
+      ],
+      "gate": "PASS"
+    },
+    "3S_baseline_framework": {
+      "status": "IMPLEMENTED",
+      "gate": "PASS"
+    },
+    "3T_statistics": {
+      "status": "VALIDATED",
+      "tests": "46/46",
+      "gate": "PASS"
+    },
+    "3U_reproducibility": {
+      "status": "IMPLEMENTED",
+      "artifacts": [
+        "Makefile",
+        "Dockerfile",
+        "docker-compose.yml"
+      ],
+      "gate": "PASS"
+    },
+    "3W_independent_validation": {
+      "status": "PARTIAL",
+      "V1": "50%",
+      "V2": "100%",
+      "V3": "PASS",
+      "V4": "PASS",
+      "gate": "PARTIAL"
+    }
+  },
+  "frozen_decisions": {
+    "primary_cid_metric": "Wasserstein W1",
+    "significance_test": "permutation (B=10000)",
+    "bootstrap": "effect-size CI only",
+    "sample_tiers": {
+      "insufficient": "n<20",
+      "candidate": "20<=n<50",
+      "reliable": "n>=50"
+    },
+    "fci_max_variables": 15,
+    "anomaly_subgraph": "Strategy D (1-hop ancestor + bidirected expansion)",
+    "network_intervention": "tc u32 + per-destination netem",
+    "ebd_phases": [
+      "CANDIDATE (R1-R3)",
+      "DEFINITIVE (R1-R4)"
+    ],
+    "wasserstein_theta_cid": "0.1 * IQR_baseline",
+    "closed_loop": {
+      "alpha_confirm": 0.2,
+      "alpha_weaken": 0.1,
+      "conf_range": "[0.05, 0.95]",
+      "theta_stop": "0.5 nats",
+      "T_budget": "600s"
+    }
+  },
+  "artifacts": [
+    "artifacts/phase3/scm_validation.json",
+    "artifacts/phase3/anomaly_subgraph_validation.json",
+    "artifacts/phase3/cid_validation.json",
+    "artifacts/phase3/identifiability_validation.json",
+    "artifacts/phase3/closed_loop_validation.json",
+    "artifacts/phase3/network_intervention_validation.json",
+    "artifacts/phase3/time_slice_validation.json",
+    "artifacts/phase3/ebd_validation.json",
+    "artifacts/phase3/intervention_selection_validation.json",
+    "artifacts/phase3/independent_validation_report.json",
+    "datasets/rift_faults/manifest.json",
+    "datasets/rift_faults/development.json",
+    "datasets/rift_faults/validation.json",
+    "datasets/rift_faults/held_out_test.json"
+  ],
+  "gate_decision": "CONDITIONAL_PASS",
+  "gate_conditions": [
+    "PASS: All 453 tests pass",
+    "PASS: All core algorithm components validated on synthetic ground truth",
+    "PASS: No forbidden causal claims in code or documentation",
+    "PASS: All spec amendments documented and applied",
+    "PARTIAL: Network intervention requires Linux for full validation",
+    "PARTIAL: Independent validation V1=50% (oracle PAG; live testbed deferred to Phase 10)"
+  ],
+  "next_phase": "Phase 8 (Baselines) + Phase 10 (Full Evaluation)"
+}

@@ -1,0 +1,28 @@
+{
+  "run_id": "2fec0af8-c569-4d27-960f-75542b370967",
+  "scenario": "NL_01",
+  "final_state": "PASS",
+  "attribution": null,
+  "confidence": "NONE",
+  "live_telemetry_used": false,
+  "synthetic_substitution": true,
+  "is_valid_for_gate": false,
+  "n_stages": 2,
+  "duration_s": 0.008,
+  "n_interventions": 0,
+  "n_ebd_candidates": 0,
+  "stages": [
+    {
+      "stage": "OBSERVE",
+      "status": "COMPLETE",
+      "dur_s": 0.0017
+    },
+    {
+      "stage": "ANOMALY_DETECTION",
+      "status": "COMPLETE",
+      "dur_s": 0.0058
+    }
+  ],
+  "note": "live_telemetry_used=False because PrometheusClient.collect() is unimplemented stub \u2014 testbed IS running, implementation fix required on Mac",
+  "timestamp": 1786989105.7108395
+}

@@ -1,0 +1,115 @@
+{
+  "phase": "3.5I",
+  "component": "safety_controller",
+  "generated": "2026-08-17T00:00:00Z",
+  "implementation_file": "src/rift/safety/safety.py",
+  "test_file_phase3": "tests/ (various)",
+  "test_file_phase35": "tests/integration/safety/test_safety_35.py",
+  "hard_stops": [
+    {
+      "stop": "KILL_SWITCH",
+      "enum": "HardStopReason.KILL_SWITCH",
+      "status": "PASS",
+      "tested_in": "Phase3 + Phase3.5",
+      "test_method": "adversarial — activate_kill_switch() + verify subsequent blocks",
+      "invariant": "kill_switch cannot be reset after activation",
+      "phase35_covered": true
+    },
+    {
+      "stop": "PRODUCTION_NAMESPACE",
+      "enum": "HardStopReason.PRODUCTION_NAMESPACE",
+      "status": "PASS",
+      "tested_in": "Phase3",
+      "test_method": "adversarial — non-rift-eval namespace + rift-eval namespace boundary",
+      "invariant": "only rift-eval-* pattern permitted",
+      "phase35_covered": false
+    },
+    {
+      "stop": "UNAUTHORIZED_TARGET",
+      "enum": "HardStopReason.UNAUTHORIZED_TARGET",
+      "status": "PASS",
+      "tested_in": "Phase3",
+      "test_method": "adversarial — service not in approved_targets set",
+      "invariant": "human_override does not bypass unauthorized target",
+      "phase35_covered": false
+    },
+    {
+      "stop": "BUDGET_EXCEEDED",
+      "enum": "HardStopReason.BUDGET_EXCEEDED",
+      "status": "PASS",
+      "tested_in": "Phase3",
+      "test_method": "cumulative_ed + proposed_ed > T_budget",
+      "invariant": "budget check before blast_radius check",
+      "phase35_covered": false
+    },
+    {
+      "stop": "CASCADE_FAILURE",
+      "enum": "HardStopReason.CASCADE_FAILURE",
+      "status": "PASS",
+      "tested_in": "Phase3",
+      "test_method": "system_error_rate > 50% for > 30s during assess_during_intervention",
+      "invariant": "cascade duration threshold required to avoid false positives on transient spikes",
+      "phase35_covered": false
+    },
+    {
+      "stop": "UNEXPECTED_BLAST_RADIUS",
+      "enum": "HardStopReason.UNEXPECTED_BLAST_RADIUS",
+      "status": "PASS",
+      "tested_in": "Phase3",
+      "test_method": "non-target service anomaly_score > non_target_sigma_threshold",
+      "invariant": "mid-intervention monitoring catches blast radius expansion",
+      "phase35_covered": false
+    },
+    {
+      "stop": "DATA_MUTATION_ATTEMPT",
+      "enum": "HardStopReason.DATA_MUTATION_ATTEMPT",
+      "status": "PASS",
+      "tested_in": "Phase3.5 — NEWLY ADDED",
+      "test_method": "adversarial — candidate.mutates_data=True and intervention_type='DATA_WRITE'",
+      "invariant": "human_override cannot bypass; fires before soft checks",
+      "phase35_covered": true,
+      "added_in": "Phase3.5",
+      "tests": [
+        "test_data_mutation_triggers_safe_abort",
+        "test_data_mutation_via_intervention_type",
+        "test_human_override_cannot_bypass_data_mutation",
+        "test_non_mutating_candidate_passes_data_check"
+      ],
+      "test_results": "4/4 PASS"
+    },
+    {
+      "stop": "ROLLBACK_FAILURE",
+      "enum": "HardStopReason.ROLLBACK_FAILURE",
+      "status": "PASS",
+      "tested_in": "Phase3.5 — NEWLY ADDED",
+      "test_method": "adversarial — assess_post_rollback(rollback_succeeded=False) + subsequent pre_intervention blocked",
+      "invariant": "rollback failure activates kill-switch; human_override cannot unblock; > 3 attempts also triggers abort",
+      "phase35_covered": true,
+      "added_in": "Phase3.5",
+      "tests": [
+        "test_rollback_failure_triggers_safe_abort",
+        "test_rollback_failure_activates_kill_switch",
+        "test_rollback_failure_blocks_subsequent_interventions",
+        "test_human_override_cannot_bypass_rollback_failure",
+        "test_successful_rollback_returns_approved",
+        "test_excessive_rollback_attempts_triggers_abort"
+      ],
+      "test_results": "6/6 PASS"
+    }
+  ],
+  "invariants_verified": [
+    "human_override cannot bypass any hard stop",
+    "kill_switch cannot be reset after activation",
+    "rollback_failure activates kill_switch atomically",
+    "data_mutation always triggers safe_abort regardless of namespace or authorization level",
+    "excessive rollback attempts (> 3) treated as rollback failure",
+    "successful rollback returns APPROVED and does not activate kill_switch"
+  ],
+  "phase35_test_run": {
+    "command": "python3 -m pytest tests/integration/safety/test_safety_35.py -v",
+    "result": "10/10 PASS",
+    "platform": "macOS darwin arm64 Python 3.9.6"
+  },
+  "gate_status": "PASS",
+  "note": "All 8 hard stops are now adversarially tested. DATA_MUTATION and ROLLBACK_FAILURE were added in Phase 3.5. The phase35 tests run on macOS and do not require Linux/tc/Docker."
+}

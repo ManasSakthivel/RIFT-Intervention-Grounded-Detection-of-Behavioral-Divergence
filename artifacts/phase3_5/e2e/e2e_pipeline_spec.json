@@ -1,0 +1,303 @@
+{
+  "schema_version": "1.0",
+  "pipeline_name": "RIFT End-to-End Pipeline",
+  "phase": "3.5E",
+  "authority": "docs/PHASE_3_SPEC_FREEZE.md",
+  "generated": "2026-08-17",
+  "total_stages": 17,
+  "latency_targets": {
+    "CANDIDATE": {
+      "description": "R1-R3 satisfied, no intervention required",
+      "target_seconds": 30,
+      "grade_required": "CANDIDATE (n>=20)"
+    },
+    "DEFINITIVE": {
+      "description": "R1-R4 satisfied, intervention confirmed via CID W1",
+      "target_seconds_min": 120,
+      "target_seconds_max": 300,
+      "grade_required": "RELIABLE (n>=50)"
+    }
+  },
+  "stages": [
+    {
+      "stage_number": 1,
+      "stage_name": "OBSERVE",
+      "description": "Collect telemetry from Prometheus (metrics) and Jaeger (traces)",
+      "input": "PrometheusClient endpoint or MockTelemetry; list of service IDs; observation window in seconds",
+      "output": "Dict[service_id -> DataFrame(columns=['time','value'])] containing raw metric time series",
+      "latency_target": "Wall-clock ~2-5s per scrape cycle (Prometheus 15s default interval)",
+      "implementation_module": "src/rift/pipeline/e2e_runner.py :: PrometheusClient.collect()",
+      "validation_check": "len(metrics) == len(services) AND each DataFrame is non-empty AND live_telemetry_used=True",
+      "provenance_key": "OBSERVE",
+      "notes": "BLOCKED on macOS without running cluster. Raises NotImplementedError when no Prometheus endpoint is reachable."
+    },
+    {
+      "stage_number": 2,
+      "stage_name": "ANOMALY_DETECTION",
+      "description": "Z-score anomaly detection over Δt=10s time windows to identify anomalous services",
+      "input": "Raw metric DataFrames from OBSERVE; per-service baseline statistics (mean, std)",
+      "output": "Dict[service_id -> z_score_max]; set of anomalous services exceeding theta_detect=3.0",
+      "latency_target": "< 1s (vectorised pandas)",
+      "implementation_module": "src/rift/pipeline/e2e_runner.py :: RIFTEndToEndRunner._compute_anomaly_scores()",
+      "validation_check": "At least one service with z_score > theta_detect=3.0; pipeline returns PASS with no anomalies detected",
+      "provenance_key": "ANOMALY_DETECTION",
+      "notes": "theta_detect=3.0 sigma default; configurable. Baseline derived from first half of observation window if not provided."
+    },
+    {
+      "stage_number": 3,
+      "stage_name": "TIME_SLICED_GT",
+      "description": "Build time-sliced causal graph G_T with Δt=10s windows; guarantees acyclicity by construction",
+      "input": "Raw metric DataFrames; call graph topology (nx.DiGraph); TimeSliceConfig(delta_t=10.0)",
+      "output": "TimeSlicedGraph with nodes (service, t) and forward-only temporal edges; collapsed service graph",
+      "latency_target": "< 1s",
+      "implementation_module": "src/rift/graph/time_slice.py :: build_time_sliced_graph(), collapse_to_service_graph()",
+      "validation_check": "tsg.is_acyclic() == True; all edges are strictly forward in time (lag >= 1)",
+      "provenance_key": "TIME_SLICED_GT",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §2",
+      "notes": "Δt must satisfy: Δt >= 2×p99_inter_service_latency AND Δt <= min_anomaly_duration"
+    },
+    {
+      "stage_number": 4,
+      "stage_name": "ANOMALY_SUBGRAPH",
+      "description": "Construct anomaly subgraph via Adaptive Expansion Strategy D (1-hop ancestor + bidirected expansion); enforce k<=15",
+      "input": "Anomaly scores from ANOMALY_DETECTION; collapsed service graph from TIME_SLICED_GT; PAG bidirected pairs (if available)",
+      "output": "AnomalySubgraphResult with subgraph_services (k<=15), boundary_limited flag, pruned_services list",
+      "latency_target": "< 1s",
+      "implementation_module": "src/rift/graph/anomaly_subgraph.py :: build_anomaly_subgraph()",
+      "validation_check": "k <= 15; boundary_limited=True iff k was pruned; false_attribution_rate=0.00 on synthetic cases A-F",
+      "provenance_key": "ANOMALY_SUBGRAPH",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §10",
+      "algorithm": {
+        "step1": "Seed: anomalous services (score > theta_detect)",
+        "step2": "1-hop ancestor closure: add direct parents in G_T",
+        "step3": "Bidirected expansion: add both endpoints of bidirected PAG edges",
+        "step4": "k<=15 enforcement: prune by anomaly score if over limit"
+      }
+    },
+    {
+      "stage_number": 5,
+      "stage_name": "FCI",
+      "description": "Run Fast Causal Inference (FCI) on anomaly subgraph data to produce a Partial Ancestral Graph (PAG)",
+      "input": "Pivoted metric DataFrame for subgraph services (rows=time, cols=service); alpha=0.05",
+      "output": "PAGResult with variables, edges (DIRECTED/BIDIRECTED/PARTIALLY_DIRECTED/UNDIRECTED), adjacency_matrix, runtime_seconds",
+      "latency_target": "< 30s for k<=15 services (Fisher Z CI test)",
+      "implementation_module": "src/rift/fci/fci_runner.py :: run_fci()",
+      "validation_check": "PAGResult.n_variables == k; PAGResult is INTERVENTION-CONSISTENT (not causally accurate); SubgraphTooLargeError if k>15",
+      "provenance_key": "FCI",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §3",
+      "constraint": "k <= max_variables=15; FCI is NOT run online for larger subgraphs",
+      "notes": "Uses causal-learn library. PAG is an equivalence class, not the true causal graph."
+    },
+    {
+      "stage_number": 6,
+      "stage_name": "PAG",
+      "description": "Extract directed, bidirected, and partially-directed edges from PAGResult for downstream stages",
+      "input": "PAGResult from FCI stage",
+      "output": "List[PAGEdge] partitioned into DIRECTED, BIDIRECTED, PARTIALLY_DIRECTED sets; hidden_confounder_pairs",
+      "latency_target": "< 0.1s",
+      "implementation_module": "src/rift/fci/fci_runner.py :: _decode_pag_edges()",
+      "validation_check": "All PAGEdge objects have valid edge_type; bidirected edges are flagged as potential hidden confounders",
+      "provenance_key": "PAG",
+      "edge_types": {
+        "DIRECTED": "V_i → V_j (causal path candidate)",
+        "BIDIRECTED": "V_i ↔ V_j (hidden confounder signal)",
+        "PARTIALLY_DIRECTED": "V_i o→ V_j (orientation ambiguous)",
+        "UNDIRECTED": "V_i o-o V_j (no orientation information)"
+      }
+    },
+    {
+      "stage_number": 7,
+      "stage_name": "IDENTIFIABILITY",
+      "description": "Check causal identifiability for each directed PAG edge using backdoor/front-door criteria; RIFT abstains on NOT_IDENTIFIABLE pairs",
+      "input": "PAGResult; source/target variable pairs from directed PAG edges",
+      "output": "Dict[pair -> IdentifiabilityResult] with status IDENTIFIABLE/CONDITIONALLY_IDENTIFIABLE/REQUIRES_INTERVENTION/NOT_IDENTIFIABLE",
+      "latency_target": "< 1s per pair",
+      "implementation_module": "src/rift/identifiability/identifiability.py :: identify_query()",
+      "validation_check": "NOT_IDENTIFIABLE pairs are excluded from intervention queue; RIFT abstains on those pairs",
+      "provenance_key": "IDENTIFIABILITY",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §4",
+      "fallback_chain": "backdoor → front-door → REQUIRES_INTERVENTION → NOT_IDENTIFIABLE",
+      "notes": "Full MAG-ID deferred. Phase 3 scope: backdoor + front-door only."
+    },
+    {
+      "stage_number": 8,
+      "stage_name": "INTERVENTION_CANDIDATES",
+      "description": "Build InterventionCandidate objects for each identifiable service in anomaly subgraph",
+      "input": "Identifiable service list from IDENTIFIABILITY; anomaly scores; call graph",
+      "output": "List[InterventionCandidate] with service_id, variable, intervention_type, target_value, nominal_value",
+      "latency_target": "< 0.5s",
+      "implementation_module": "src/rift/optimizer/cost_model.py :: compute_intervention_costs()",
+      "validation_check": "Each candidate has authorized=True or authorized=False; DENIED candidates excluded from MSIS input",
+      "provenance_key": "INTERVENTION_CANDIDATES"
+    },
+    {
+      "stage_number": 9,
+      "stage_name": "COST_SELECTION",
+      "description": "Greedy MSIS (Minimum Safe Intervention Set) approximation to select interventions minimising cumulative cost",
+      "input": "List[InterventionCost] from cost computation; candidate_posterior; theta_entropy=0.5; t_budget=600s",
+      "output": "MSISResult with selected_interventions, entropy_before/after, entropy_reduction, submodularity_verified, stopped_reason",
+      "latency_target": "< 1s",
+      "implementation_module": "src/rift/optimizer/cost_model.py :: greedy_msis()",
+      "validation_check": "All selected interventions are authorized; cumulative ED <= t_budget; submodularity_note records guarantee status",
+      "provenance_key": "COST_SELECTION",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §12",
+      "stopping_reasons": ["ENTROPY_CONVERGED", "BUDGET_EXHAUSTED", "NO_ELIGIBLE", "EMPTY"],
+      "notes": "(1-1/e) guarantee claimed ONLY when submodularity_verified=True"
+    },
+    {
+      "stage_number": 10,
+      "stage_name": "DO_X",
+      "description": "Execute network interventions via tc u32 + per-destination netem; each intervention targets one destination IP",
+      "input": "MSISResult.selected_interventions; NetworkInterventionEngine(dry_run=True|False)",
+      "output": "List[NetworkInterventionRecord] with status APPLIED|FAILED|DRY_RUN; tc_handle, destination_ip",
+      "latency_target": "< 2s per intervention (tc command execution)",
+      "implementation_module": "src/rift/intervention/network_intervention.py :: NetworkInterventionEngine.apply()",
+      "validation_check": "record.status == APPLIED (or DRY_RUN); tc commands logged; rollback path registered",
+      "provenance_key": "DO_X",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §11",
+      "prerequisite": "CAP_NET_ADMIN capability; Linux kernel; rift-eval-* namespace",
+      "notes": "dry_run=True on macOS. NEVER run against production without rift-eval-* namespace.",
+      "tc_commands": {
+        "apply": [
+          "tc qdisc add dev {iface} root handle 1: prio priomap ...",
+          "tc qdisc add dev {iface} parent 1:{handle} handle {handle}: netem delay {lat}ms {jitter}ms",
+          "tc filter add dev {iface} parent 1: protocol ip u32 match ip dst {dest_ip}/32 flowid 1:{handle}"
+        ],
+        "rollback": [
+          "tc filter del dev {iface} parent 1: protocol ip u32 match ip dst {dest_ip}/32 flowid 1:{handle}",
+          "tc qdisc del dev {iface} parent 1:{handle} handle {handle}:"
+        ]
+      }
+    },
+    {
+      "stage_number": 11,
+      "stage_name": "INTERVENTION_VALIDATION",
+      "description": "Run 5 validity checks on applied interventions to confirm clean experimental conditions",
+      "input": "NetworkInterventionRecord after apply(); measured_latency_ms (if available)",
+      "output": "Per-record validity check results: precision_check, clean_window, concurrent_event_free, recovery_confirmed, isolation_verified",
+      "latency_target": "< 5s (includes measurement round-trip)",
+      "implementation_module": "src/rift/intervention/network_intervention.py :: NetworkInterventionEngine.verify()",
+      "validation_check": "All 5 checks pass; precision = |achieved - requested| / requested < 0.20; isolation_verified=True",
+      "provenance_key": "INTERVENTION_VALIDATION",
+      "validity_checks": {
+        "1_precision": "| achieved_latency - requested_latency | / requested_latency < 0.20",
+        "2_clean_window": "No concurrent incidents in observation window",
+        "3_concurrent_event_free": "No other experiments active in cluster",
+        "4_recovery_confirmed": "Rollback path confirmed; nominal state restored",
+        "5_isolation_verified": "Non-target services unaffected (delta < 2-sigma)"
+      }
+    },
+    {
+      "stage_number": 12,
+      "stage_name": "POST_OBSERVE",
+      "description": "Collect post-intervention metrics from Prometheus for CID baseline comparison",
+      "input": "Same PrometheusClient or MockTelemetry; post-intervention window=60s",
+      "output": "Dict[service_id -> DataFrame] for post-intervention metric time series",
+      "latency_target": "~5s (Prometheus scrape latency)",
+      "implementation_module": "src/rift/pipeline/e2e_runner.py :: PrometheusClient.collect() [post-intervention call]",
+      "validation_check": "n_post >= 20 (CANDIDATE grade floor) for CID to produce output; n_post >= 50 for RELIABLE grade",
+      "provenance_key": "POST_OBSERVE",
+      "sample_tiers": {
+        "INSUFFICIENT": "n < 20 — RIFT abstains",
+        "CANDIDATE": "20 <= n < 50 — directional claim only, wide CI",
+        "RELIABLE": "n >= 50 — definitive effect-size estimation"
+      }
+    },
+    {
+      "stage_number": 13,
+      "stage_name": "CID",
+      "description": "Compute Causal Intervention Divergence CID(X→Y, t) = W1(P(Y|baseline), P(Y|do(X:=x_nominal)))",
+      "input": "baseline_samples (from OBSERVE); post_intervention_samples (from POST_OBSERVE); intervention_record_id",
+      "output": "CIDResult with w1_estimate, w1_ci_lower/upper, tv_diagnostic, permutation_pvalue, grade, exceeds_threshold",
+      "latency_target": "~30s for CANDIDATE (n=20-50, B=1000 permutations); ~120-300s for RELIABLE (n>=50, B=10000 permutations)",
+      "implementation_module": "src/rift/cid/cid.py :: compute_cid()",
+      "validation_check": "grade != INSUFFICIENT; permutation_pvalue computed; exceeds_threshold = (w1_estimate > theta_cid); theta_cid = 0.1 * IQR_baseline",
+      "provenance_key": "CID",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §6,7,8",
+      "primary_metric": "Wasserstein W1",
+      "secondary_diagnostic": "Total Variation (TV) — never used for attribution",
+      "significance_test": "Permutation test B=10000 alpha=0.05 (primary); bootstrap CI is effect-size only",
+      "critical_note": "CID > theta_cid does NOT by itself constitute causal attribution. EBD R1-R4 are all required."
+    },
+    {
+      "stage_number": 14,
+      "stage_name": "EBD",
+      "description": "Evaluate Earliest Behavioral Divergence (R1-R4 criteria) for each candidate service",
+      "input": "Metric DataFrames; baselines; PAGResult; CID results; incident_window; delta_t=10s; theta_detect=3.0",
+      "output": "List[EBDResult] sorted by (DEFINITIVE first, earliest t_star, highest anomaly_score); confidence DEFINITIVE|CANDIDATE|NONE",
+      "latency_target": "< 5s (after CID is available)",
+      "implementation_module": "src/rift/ebd/ebd.py :: compute_ebd()",
+      "validation_check": "DEFINITIVE requires r1+r2+r3+r4 all True; CANDIDATE requires r1+r2+r3; temporal precedence (R2) is primary sort key",
+      "provenance_key": "EBD",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §9",
+      "criteria": {
+        "R1": "Observed behavioral deviation: delta_ik(t) > theta_detect for >= 2*delta_t",
+        "R2": "Temporal precedence: t* < t_j for all j != i diverging (ties resolved by R3)",
+        "R3": "Causal relevance: exists j s.t. V_j diverges AND V_i ->...-> V_j in G_T",
+        "R4": "Intervention evidence: CID(V_i -> V_j, t*) > theta_cid for some downstream V_j"
+      },
+      "critical_guarantee": "A later large anomaly does NOT override an earlier causal divergence. R2 temporal precedence checked strictly."
+    },
+    {
+      "stage_number": 15,
+      "stage_name": "GRAPH_UPDATE",
+      "description": "Update edge confidences and root-cause posterior using CID results (3-component closed-loop update)",
+      "input": "ClosedLoopState; CID result per (source, target) pair; alpha_confirm=0.2; alpha_weaken=0.1",
+      "output": "Updated ClosedLoopState with new edge_confidences, candidate_posterior, structure_changed flag",
+      "latency_target": "< 0.5s",
+      "implementation_module": "src/rift/loop/closed_loop.py :: ClosedLoop.update_edge_confidence(), update_candidate_posterior(), update_graph_structure()",
+      "validation_check": "edge_confidences in [0.05, 0.95]; posterior sums to 1.0; structure_changed correctly reflects edge add/remove",
+      "provenance_key": "GRAPH_UPDATE",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §13",
+      "components": {
+        "component1": "Edge confidence update: CID > theta_cid strengthens edge; CID <= theta_cid weakens",
+        "component2": "Bayesian posterior update: Beta(3,1) for true cause, Beta(1,3) for non-cause",
+        "component3": "Threshold-gated structure update: add/remove edges based on CID + confidence threshold"
+      },
+      "hyperparameters": {
+        "alpha_confirm": 0.2,
+        "alpha_weaken": 0.1,
+        "conf_min": 0.05,
+        "conf_max": 0.95,
+        "conf_new_edge": 0.5,
+        "conf_remove_threshold": 0.3,
+        "theta_stop_entropy": "0.5 nats"
+      }
+    },
+    {
+      "stage_number": 16,
+      "stage_name": "ATTRIBUTION_ABSTENTION",
+      "description": "Determine final attribution from top EBD candidate; apply identifiability constraints; RIFT abstains if confidence=NONE",
+      "input": "List[EBDResult] from EBD; identifiability results; boundary_limited flags",
+      "output": "attribution (service_id or None); attribution_confidence (DEFINITIVE|CANDIDATE|NONE); abstained (bool)",
+      "latency_target": "< 0.1s",
+      "implementation_module": "src/rift/pipeline/e2e_runner.py :: RIFTEndToEndRunner.run() [stage 16 block]",
+      "validation_check": "If abstained: attribution=None AND confidence=NONE; if DEFINITIVE: r1+r2+r3+r4 all True in top EBD",
+      "provenance_key": "ATTRIBUTION_ABSTENTION",
+      "abstention_conditions": [
+        "attribution_confidence == NONE (no EBD candidate satisfies R1-R3)",
+        "boundary_limited=True AND r4_pass=False (root may be outside subgraph, no CID confirmation)",
+        "NOT_IDENTIFIABLE from identifiability check"
+      ]
+    },
+    {
+      "stage_number": 17,
+      "stage_name": "STOP",
+      "description": "Evaluate four stopping conditions and decide whether to loop back to OBSERVE or terminate",
+      "input": "ClosedLoopState after GRAPH_UPDATE; iteration count; budget_remaining",
+      "output": "should_stop (bool); stop_reason (ENTROPY_CONVERGED|BUDGET_EXHAUSTED|SAFETY_ABORT|ALL_CANDIDATES_NON_IDENTIFIABLE|ITERATION_COMPLETE)",
+      "latency_target": "< 0.1s",
+      "implementation_module": "src/rift/loop/closed_loop.py :: ClosedLoop.check_stopping()",
+      "validation_check": "stop_reason is set when should_stop=True; budget exhaustion checked FIRST (hard safety limit)",
+      "provenance_key": "STOP",
+      "authority": "docs/PHASE_3_SPEC_FREEZE.md §13",
+      "stopping_conditions": {
+        "1_entropy": "H(posterior) < 0.5 nats AND nonzero_candidates >= 2",
+        "2_budget": "cumulative_ed >= 600s OR budget_remaining <= 0 (checked FIRST)",
+        "3_safety_abort": "SAFE_ABORT state reached",
+        "4_non_identifiable": "All candidates have posterior = 0.0"
+      },
+      "next_state": "OBSERVE (loop) if not stopping; STOP (terminal) if any condition met"
+    }
+  ]
+}

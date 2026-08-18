@@ -1,0 +1,16 @@
+{
+  "test_id": "NET-1",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "127.0.0.1",
+  "intervention_applied": "tc netem delay 200ms 10ms on lo via prio band 1:1",
+  "effect_measured": {
+    "pre_latency_ms": 0.086,
+    "post_latency_ms": 400.717,
+    "delta_ms": 400.631,
+    "note": "200ms one-way netem = ~400ms round-trip RTT as expected"
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "tc_state_after_rollback": "qdisc noqueue 0: root refcnt 2",
+  "status": "PASS"
+}

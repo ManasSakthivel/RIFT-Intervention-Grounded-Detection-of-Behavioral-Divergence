@@ -1,0 +1,15 @@
+{
+  "test_id": "NET-5",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "10.0.0.1",
+  "intervention_applied": "u32 per-destination filter dst 10.0.0.1/32 → netem band; 127.0.0.1 unmatched → clean band",
+  "effect_measured": {
+    "target_ip_filtered": "10.0.0.1",
+    "non_target_ip": "127.0.0.1",
+    "non_target_rtt_ms": 0.106,
+    "isolation_method": "u32 match ip dst 10.0.0.1/32 flowid 1:2; 127.0.0.1 takes prio default to 1:1"
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "status": "PASS"
+}

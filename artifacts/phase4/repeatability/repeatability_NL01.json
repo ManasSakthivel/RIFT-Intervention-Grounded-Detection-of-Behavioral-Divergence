@@ -1,0 +1,58 @@
+{
+  "scenario": "NL_01",
+  "n_runs": 5,
+  "runs": [
+    {
+      "run": 1,
+      "final_state": "ABSTAINED",
+      "attribution": null,
+      "confidence": "NONE",
+      "n_ebd": 0,
+      "duration_s": 0.08
+    },
+    {
+      "run": 2,
+      "final_state": "ABSTAINED",
+      "attribution": null,
+      "confidence": "NONE",
+      "n_ebd": 0,
+      "duration_s": 0.079
+    },
+    {
+      "run": 3,
+      "final_state": "PASS",
+      "attribution": null,
+      "confidence": "NONE",
+      "n_ebd": 0,
+      "duration_s": 0.007
+    },
+    {
+      "run": 4,
+      "final_state": "ABSTAINED",
+      "attribution": null,
+      "confidence": "NONE",
+      "n_ebd": 0,
+      "duration_s": 0.068
+    },
+    {
+      "run": 5,
+      "final_state": "ABSTAINED",
+      "attribution": null,
+      "confidence": "NONE",
+      "n_ebd": 0,
+      "duration_s": 0.066
+    }
+  ],
+  "mean_s": 0.06,
+  "median_s": 0.068,
+  "stdev_s": 0.0303,
+  "iqr_s": 0.013,
+  "all_same_state": false,
+  "final_states": [
+    "ABSTAINED",
+    "ABSTAINED",
+    "PASS",
+    "ABSTAINED",
+    "ABSTAINED"
+  ]
+}

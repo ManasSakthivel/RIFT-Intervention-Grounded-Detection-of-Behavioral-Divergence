@@ -1,0 +1,23 @@
+{
+  "split_filter": "DEVELOPMENT",
+  "n_scenarios": 36,
+  "n_non_confounded": 12,
+  "n_confounded": 24,
+  "V1_precision_at_1": 0.5,
+  "V1_status": "PARTIAL",
+  "V2_confounded_correct_rate": 1.0,
+  "V2_status": "PASS",
+  "V3_r2_violations": 0,
+  "V3_status": "PASS",
+  "V4_r4_violations": 0,
+  "V4_status": "PASS",
+  "V5_far": 0.3333,
+  "notes": [
+    "V1 PARTIAL: P@1=50.00% < 70% (synthetic oracle only)",
+    "V2 PASS: confounded_correct_rate=100.00% \u2265 80%",
+    "V3 PASS: R2 temporal invariant holds on all scenarios",
+    "V4 PASS: R4 invariant holds on all scenarios",
+    "V5 FAR=33.33% (False Attribution Rate on non-confounded)"
+  ],
+  "caveat": "Validation uses oracle PAG (direct from ground truth causal path), not FCI-estimated PAG. Results are upper-bound estimates. Live testbed validation is Phase 10."
+}

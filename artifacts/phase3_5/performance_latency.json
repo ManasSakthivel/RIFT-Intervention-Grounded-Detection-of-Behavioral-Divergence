@@ -1,0 +1,26 @@
+{
+  "gate": "3.5M",
+  "title": "RIFT Pipeline Latency Specification",
+  "candidate_phase_target_s": 30,
+  "definitive_phase_target_s_min": 120,
+  "definitive_phase_target_s_max": 300,
+  "source": "docs/PHASE_3_SPEC_FREEZE.md §9 (EBD phases)",
+  "stages": [
+    {"stage": "telemetry_processing", "description": "Query Prometheus/Jaeger; normalize; align to Δt windows", "target_s": 5, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "anomaly_detection", "description": "Compute anomaly scores; Strategy D subgraph expansion", "target_s": 2, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "fci_estimation", "description": "Run FCI on G_T variables (≤15 variables per spec)", "target_s": 10, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "identifiability_check", "description": "Backdoor/frontdoor/IV check on PAG", "target_s": 1, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "ebd_r1_r2_r3", "description": "EBD CANDIDATE phase (R1-R3)", "target_s": 10, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "intervention_selection", "description": "MSIS greedy selection from candidate set", "target_s": 2, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "intervention_execution", "description": "tc apply + 5-validity-check measurement window", "target_s": 30, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "post_intervention_collection", "description": "Collect post-intervention telemetry (1 Δt window)", "target_s": 10, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "cid_computation", "description": "Wasserstein W1 with permutation test B=10000", "target_s": 30, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "ebd_r4", "description": "EBD DEFINITIVE upgrade (R4 CID check)", "target_s": 5, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "graph_update", "description": "Edge confidence + posterior update in closed loop", "target_s": 1, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "total_candidate_phase", "description": "telemetry + anomaly + FCI + identifiability + EBD CANDIDATE", "target_s": 30, "actual_s": "NOT_MEASURED", "status": "PENDING"},
+    {"stage": "total_definitive_phase", "description": "CANDIDATE + intervention + post-collection + CID + EBD DEFINITIVE + graph_update", "target_s_min": 120, "target_s_max": 300, "actual_s": "NOT_MEASURED", "status": "PENDING"}
+  ],
+  "measurement_procedure": "RIFTRunRecord.pipeline_stages records PipelineStageRecord.duration_s for each stage. Latency is measured as wall-clock time from stage start to stage complete.",
+  "status": "SPECIFICATION_COMPLETE_MEASUREMENT_PENDING",
+  "honest_note": "Latency cannot be measured without live Online Boutique execution on Linux. Targets are from Phase 2/3 spec. Actual values MUST be reported after live run and MUST NOT be artificially tuned to match targets. If actual values differ from targets, report the actual values and investigate the cause."
+}

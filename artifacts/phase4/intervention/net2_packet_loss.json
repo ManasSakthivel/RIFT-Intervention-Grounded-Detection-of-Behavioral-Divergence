@@ -1,0 +1,17 @@
+{
+  "test_id": "NET-2",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "127.0.0.1",
+  "intervention_applied": "tc netem loss 30% on lo via prio band 1:1",
+  "effect_measured": {
+    "packets_sent": 20,
+    "packets_received": 6,
+    "drops_measured": 14,
+    "loss_rate_observed_pct": 70.0,
+    "tc_drop_counter": 14,
+    "note": "30% loss each direction compounds; 70% end-to-end loss observed matches statistical expectation"
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "status": "PASS"
+}

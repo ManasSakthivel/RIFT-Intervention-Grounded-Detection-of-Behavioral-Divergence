@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "rift:RIFTRunRecord:1.0",
+  "title": "RIFTRunRecord",
+  "description": "JSON Schema for the artifact produced by one complete RIFTEndToEndRunner.run() call. A run is valid for Gate 3.5E iff live_telemetry_used=true AND synthetic_substitution=false.",
+  "type": "object",
+  "required": [
+    "run_id",
+    "started_at",
+    "pipeline_stages",
+    "final_state",
+    "attribution_confidence",
+    "live_telemetry_used",
+    "synthetic_substitution",
+    "intervention_records",
+    "ebd_results",
+    "total_duration_s",
+    "provenance",
+    "notes"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "run_id": {
+      "type": "string",
+      "format": "uuid",
+      "description": "Unique identifier for this run (UUID v4).",
+      "minLength": 1
+    },
+    "started_at": {
+      "type": "number",
+      "description": "Unix epoch seconds when the run began (time.time()).",
+      "exclusiveMinimum": 0
+    },
+    "pipeline_stages": {
+      "type": "array",
+      "description": "Ordered list of PipelineStageRecord objects, one per pipeline stage transition. MUST contain exactly 17 entries for a complete run.",
+      "items": { "$ref": "#/$defs/PipelineStageRecord" },
+      "minItems": 1
+    },
+    "final_state": {
+      "type": "string",
+      "description": "Final pipeline outcome.",
+      "enum": ["PASS", "ABSTAINED", "FAILED"]
+    },
+    "attribution": {
+      "type": ["string", "null"],
+      "description": "Attributed root-cause service ID, or null if RIFT abstains or no attribution is made."
+    },
+    "attribution_confidence": {
+      "type": "string",
+      "description": "Confidence level of the attribution. DEFINITIVE requires R1-R4. CANDIDATE requires R1-R3. NONE means RIFT abstains.",
+      "enum": ["DEFINITIVE", "CANDIDATE", "NONE"]
+    },
+    "live_telemetry_used": {
+      "type": "boolean",
+      "description": "True iff all metric data was sourced from a live PrometheusClient endpoint. MUST be true for Gate 3.5E validity. A run sourced from MockTelemetry sets this to false."
+    },
+    "synthetic_substitution": {
+      "type": "boolean",
+      "description": "True iff any synthetic or mock metric data was substituted at any stage. MUST be false for Gate 3.5E validity. Even a single MockTelemetry substitution invalidates the run for evaluation purposes."
+    },
+    "intervention_records": {
+      "type": "array",
+      "description": "Serialised summaries of NetworkInterventionRecord objects produced at stage DO_X.",
+      "items": { "$ref": "#/$defs/InterventionRecordSummary" }
+    },
+    "ebd_results": {
+      "type": "array",
+      "description": "Serialised summaries of EBDResult objects produced at stage EBD.",
+      "items": { "$ref": "#/$defs/EBDResultSummary" }
+    },
+    "total_duration_s": {
+      "type": "number",
+      "description": "Wall-clock duration of the entire run in seconds.",
+      "minimum": 0
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Maps each stage name to its provenance descriptor. A researcher must be able to trace every variable in the final attribution back to a specific Prometheus scrape, Jaeger span, or tc measurement by following provenance[stage_name].upstream chains to provenance['OBSERVE'].telemetry_ref.",
+      "additionalProperties": { "$ref": "#/$defs/ProvenanceEntry" },
+      "propertyNames": {
+        "enum": [
+          "OBSERVE",
+          "ANOMALY_DETECTION",
+          "TIME_SLICED_GT",
+          "ANOMALY_SUBGRAPH",
+          "FCI",
+          "PAG",
+          "IDENTIFIABILITY",
+          "INTERVENTION_CANDIDATES",
+          "COST_SELECTION",
+          "DO_X",
+          "INTERVENTION_VALIDATION",
+          "POST_OBSERVE",
+          "CID",
+          "EBD",
+          "GRAPH_UPDATE",
+          "ATTRIBUTION_ABSTENTION",
+          "STOP"
+        ]
+      }
+    },
+    "notes": {
+      "type": "string",
+      "description": "Free-form annotation. Must include synthetic_substitution reason if synthetic_substitution=true."
+    }
+  },
+  "$defs": {
+    "PipelineStageRecord": {
+      "title": "PipelineStageRecord",
+      "description": "Record of one stage execution in the RIFT 17-stage pipeline. Produced for every stage regardless of success or failure.",
+      "type": "object",
+      "required": ["stage", "started_at", "completed_at", "duration_s", "status", "output_summary", "provenance", "notes"],
+      "additionalProperties": false,
+      "properties": {
+        "stage": {
+          "type": "string",
+          "description": "Stage identifier matching the e2e_pipeline_spec.json stage_name.",
+          "enum": [
+            "OBSERVE",
+            "ANOMALY_DETECTION",
+            "TIME_SLICED_GT",
+            "ANOMALY_SUBGRAPH",
+            "FCI",
+            "PAG",
+            "IDENTIFIABILITY",
+            "INTERVENTION_CANDIDATES",
+            "COST_SELECTION",
+            "DO_X",
+            "INTERVENTION_VALIDATION",
+            "POST_OBSERVE",
+            "CID",
+            "EBD",
+            "GRAPH_UPDATE",
+            "ATTRIBUTION_ABSTENTION",
+            "STOP"
+          ]
+        },
+        "started_at": {
+          "type": "number",
+          "description": "Unix epoch seconds when this stage began.",
+          "exclusiveMinimum": 0
+        },
+        "completed_at": {
+          "type": "number",
+          "description": "Unix epoch seconds when this stage completed.",
+          "exclusiveMinimum": 0
+        },
+        "duration_s": {
+          "type": "number",
+          "description": "Stage duration in seconds (completed_at - started_at). Used for Gate 3.5M latency measurement.",
+          "minimum": 0
+        },
+        "status": {
+          "type": "string",
+          "description": "Execution outcome for this stage.",
+          "enum": ["COMPLETE", "SKIPPED", "FAILED", "ABORTED"]
+        },
+        "output_summary": {
+          "type": "object",
+          "description": "Stage-specific key-value summary of the stage output. Schema varies per stage.",
+          "additionalProperties": true
+        },
+        "provenance": {
+          "type": "string",
+          "description": "Human-readable description of what data source or upstream stage fed this stage. Must link back to telemetry_ref in the run's provenance map."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Free-form annotation for this stage (warnings, fallbacks, errors)."
+        }
+      }
+    },
+    "InterventionRecordSummary": {
+      "title": "InterventionRecordSummary",
+      "description": "Serialised summary of a NetworkInterventionRecord produced at stage DO_X.",
+      "type": "object",
+      "required": ["record_id", "source_service", "latency_ms", "status", "dry_run"],
+      "additionalProperties": true,
+      "properties": {
+        "record_id": {
+          "type": "string",
+          "format": "uuid",
+          "description": "UUID matching NetworkInterventionRecord.record_id."
+        },
+        "source_service": {
+          "type": "string",
+          "description": "Service on which the intervention was applied."
+        },
+        "latency_ms": {
+          "type": "number",
+          "description": "Requested additional latency in milliseconds.",
+          "minimum": 0
+        },
+        "status": {
+          "type": "string",
+          "description": "NetworkInterventionStatus value.",
+          "enum": ["PENDING", "APPLIED", "VERIFIED", "ROLLED_BACK", "FAILED", "CONFOUNDED"]
+        },
+        "precision_check_pass": {
+          "type": ["boolean", "null"],
+          "description": "True if |achieved - requested| / requested < 0.20."
+        },
+        "dry_run": {
+          "type": "boolean",
+          "description": "True if tc commands were only logged, not executed."
+        }
+      }
+    },
+    "EBDResultSummary": {
+      "title": "EBDResultSummary",
+      "description": "Serialised summary of an EBDResult produced at stage EBD.",
+      "type": "object",
+      "required": ["result_id", "service_id", "t_star", "confidence", "r1_pass", "r2_pass", "r3_pass", "r4_pass"],
+      "additionalProperties": true,
+      "properties": {
+        "result_id": {
+          "type": "string",
+          "description": "EBD result identifier (e.g. ebd_0001)."
+        },
+        "service_id": {
+          "type": "string",
+          "description": "Service ID of the EBD candidate."
+        },
+        "t_star": {
+          "type": "number",
+          "description": "Timestamp of first divergence (unix seconds or window-relative seconds).",
+          "exclusiveMinimum": 0
+        },
+        "confidence": {
+          "type": "string",
+          "description": "EBD confidence level.",
+          "enum": ["DEFINITIVE", "CANDIDATE", "NONE"]
+        },
+        "r1_pass": {
+          "type": "boolean",
+          "description": "Observed behavioral deviation: delta_ik(t) > theta_detect for >= 2*delta_t."
+        },
+        "r2_pass": {
+          "type": "boolean",
+          "description": "Temporal precedence: t* < t_j for all other diverging services."
+        },
+        "r3_pass": {
+          "type": "boolean",
+          "description": "Causal relevance: causal path exists in G_T from this service to a downstream diverging service."
+        },
+        "r4_pass": {
+          "type": "boolean",
+          "description": "Intervention evidence: CID(V_i -> V_j, t*) > theta_cid confirmed by do(X)."
+        },
+        "boundary_limited": {
+          "type": "boolean",
+          "description": "True if the true root cause may lie outside the k<=15 subgraph boundary."
+        },
+        "anomaly_score": {
+          "type": "number",
+          "description": "Maximum z-score observed for this service in the incident window.",
+          "minimum": 0
+        }
+      }
+    },
+    "ProvenanceEntry": {
+      "title": "ProvenanceEntry",
+      "description": "Links one pipeline stage to its data source and upstream stage. A researcher must be able to trace any variable in the final attribution to raw telemetry by following upstream chains to OBSERVE.telemetry_ref.",
+      "type": "object",
+      "required": ["source", "upstream", "telemetry_ref"],
+      "additionalProperties": true,
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Python module and function that produced this stage's output (e.g. 'cid/cid.py compute_cid()')."
+        },
+        "upstream": {
+          "type": ["string", "null"],
+          "description": "Name of the upstream stage(s) that fed this stage, or null for OBSERVE (root stage)."
+        },
+        "telemetry_ref": {
+          "type": "string",
+          "description": "Reference to the raw telemetry source (e.g. 'PrometheusClient:http://prometheus:9090' or 'MockTelemetry:seed=42'). This is the terminal node in the provenance chain."
+        }
+      }
+    }
+  }
+}

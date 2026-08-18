@@ -1,0 +1,66 @@
+# RIFT Configuration — Held-Out Test
+# Phase 3.6 §25
+# CRITICAL: This configuration accesses the HELD-OUT TEST SET.
+# It MUST NOT be used during development or tuning.
+# It MUST ONLY be used for the final publication evaluation.
+# Any results from this config must be archived as final_benchmark/.
+#
+# The HeldOutGuard will raise HeldOutLeakageError if this config
+# is used without an active oracle token.
+
+config_id: "held_out"
+description: "HELD-OUT TEST SET — final publication evaluation only"
+dataset_split: "HELD_OUT_TEST"
+dry_run: false
+seed: 42
+
+# WARNING: These thresholds are FROZEN at development-config values.
+# Do NOT tune these values against the held-out set.
+# Any change after reading held-out results is P-hacking.
+
+telemetry:
+  source: "prometheus"
+  scrape_interval_s: 15.0
+  delta_t_s: 10.0
+  max_forward_fill_windows: 1
+
+anomaly_detection:
+  theta_detect: 3.0              # FROZEN — do not change
+  theta_persist: 2               # FROZEN — do not change
+
+causal_discovery:
+  fci_alpha: 0.05                # FROZEN — do not change
+  max_variables: 15
+  ci_test: "fisherz"
+
+cid:
+  n_permutations: 10000
+  n_bootstrap: 1000
+  alpha: 0.05
+  n_min_insufficient: 20
+  n_min_candidate: 50
+
+ebd:
+  theta_cid: 0.1                 # FROZEN — do not change
+
+cost_model:
+  w_br: 0.25
+  w_slai: 0.25
+  w_rc: 0.25
+  w_sc: 0.25
+  t_budget_s: 600.0
+
+closed_loop:
+  theta_stop_entropy: 0.5        # FROZEN — do not change
+  max_iterations: 10
+
+held_out_access:
+  required: true
+  oracle_token_required: true
+  # Token must be set at runtime — never hardcoded here
+  oracle_token: null
+
+logging:
+  level: "INFO"
+  provenance: true
+  artifact_dir: "results/final_benchmark"

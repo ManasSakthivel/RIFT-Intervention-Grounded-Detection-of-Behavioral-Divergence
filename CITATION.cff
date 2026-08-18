@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use RIFT in your research, please cite it as below."
+type: software
+title: "RIFT: Intervention-Grounded Detection of Behavioral Divergence"
+version: "0.1.0-phase4"
+date-released: "2026-08-17"
+abstract: >
+  RIFT is a research prototype for causal attribution of behavioral divergence
+  in distributed microservice systems. It combines causal discovery (FCI/PAG),
+  explicit do-calculus intervention semantics, Wasserstein-based divergence
+  analysis (CID), earliest behavioral divergence detection (EBD), and
+  closed-loop Bayesian graph updates into one experimental pipeline.
+  Designed for empirical evaluation on the Online Boutique microservice testbed
+  with real tc/netem fault injection.
+authors:
+  - family-names: Sakthivel
+    given-names: Manas
+repository-code: "https://github.com/ManasSakthivel/RIFT-Intervention-Grounded-Detection-of-Behavioral-Divergence"
+license: MIT
+keywords:
+  - causal inference
+  - root cause analysis
+  - distributed systems
+  - microservices
+  - fault injection
+  - causal discovery
+  - FCI
+  - behavioral divergence
+  - intervention
+  - do-calculus

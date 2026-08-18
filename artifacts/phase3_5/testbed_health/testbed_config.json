@@ -1,0 +1,259 @@
+{
+  "_meta": {
+    "document": "RIFT Gate 3.5B — Online Boutique Testbed Configuration",
+    "source_file": "docker/docker-compose.yml",
+    "compose_version": "3.9",
+    "online_boutique_version": "v0.9.0",
+    "image_registry": "gcr.io/google-samples/microservices-demo",
+    "status": "PENDING_DEPLOYMENT",
+    "note": "Configuration is documented from source files. No containers have been started on this macOS host."
+  },
+
+  "network": {
+    "name": "rift-eval-network",
+    "driver": "bridge",
+    "subnet": "172.30.0.0/16",
+    "isolation": "No egress to production; no real user traffic; no persistent data"
+  },
+
+  "volumes": {
+    "rift-artifacts": "Named volume — RIFT evaluation output artifacts",
+    "prometheus-data": "Named volume — Prometheus TSDB (retention: 1h)",
+    "jaeger-data": "Named volume — Jaeger in-memory trace staging (/tmp)"
+  },
+
+  "x_boutique_defaults_template": {
+    "_note": "This YAML anchor is a template only. The 'image' key is intentionally incomplete (no tag, no service name suffix). Each service overrides it with a fully-qualified tagged image. Do not treat this as a deployable image reference.",
+    "image_placeholder": "gcr.io/google-samples/microservices-demo/",
+    "restart": "no",
+    "network": "rift-eval-network",
+    "env_defaults": {
+      "DISABLE_TRACING": "0",
+      "DISABLE_PROFILER": "1",
+      "DISABLE_STATS": "1",
+      "JAEGER_SERVICE_ADDR": "jaeger:14268"
+    }
+  },
+
+  "services": {
+    "rift-eval": {
+      "role": "RIFT evaluation harness",
+      "image": "rift-eval:latest",
+      "build": {
+        "context": "..",
+        "dockerfile": "docker/Dockerfile",
+        "build_args": ["BUILD_DATE", "GIT_SHA", "HOST_KERNEL", "HOST_OS"]
+      },
+      "container_name": "rift-eval",
+      "ports": [],
+      "volumes": [
+        "rift-artifacts:/opt/rift/artifacts",
+        "../src:/opt/rift/src:ro",
+        "../tests:/opt/rift/tests:ro"
+      ],
+      "environment": {
+        "RIFT_SANDBOX_NAMESPACE": "rift-eval-default",
+        "RIFT_PROMETHEUS_URL": "http://prometheus:9090",
+        "RIFT_JAEGER_URL": "http://jaeger:16686",
+        "PYTHONPATH": "/opt/rift",
+        "PYTHONHASHSEED": "0"
+      },
+      "cap_add": ["NET_ADMIN"],
+      "depends_on": ["prometheus", "jaeger", "boutique-frontend"],
+      "default_command": ["python3.11", "-m", "pytest", "tests/unit/test_data_models.py", "-v"]
+    },
+
+    "boutique-redis": {
+      "role": "Cart session store",
+      "image": "redis:7.2-alpine",
+      "container_name": "boutique-redis",
+      "ports": [],
+      "internal_port": 6379,
+      "command": ["redis-server", "--save", ""],
+      "note": "Persistence disabled (--save '')"
+    },
+
+    "boutique-frontend": {
+      "role": "Online Boutique HTTP frontend",
+      "image": "gcr.io/google-samples/microservices-demo/frontend:v0.9.0",
+      "container_name": "boutique-frontend",
+      "ports": [{"host": 8080, "container": 8080}],
+      "environment": {
+        "PORT": "8080",
+        "PRODUCT_CATALOG_SERVICE_ADDR": "boutique-product:3550",
+        "CURRENCY_SERVICE_ADDR": "boutique-currency:7000",
+        "CART_SERVICE_ADDR": "boutique-cart:7070",
+        "RECOMMENDATION_SERVICE_ADDR": "boutique-recommend:8080",
+        "SHIPPING_SERVICE_ADDR": "boutique-shipping:50051",
+        "CHECKOUT_SERVICE_ADDR": "boutique-checkout:5050",
+        "AD_SERVICE_ADDR": "boutique-ad:9555",
+        "ENABLE_PROFILER": "0"
+      },
+      "depends_on": [
+        "boutique-product", "boutique-currency", "boutique-cart",
+        "boutique-recommend", "boutique-shipping", "boutique-checkout", "boutique-ad"
+      ]
+    },
+
+    "boutique-cart": {
+      "role": "Shopping cart service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/cartservice:v0.9.0",
+      "container_name": "boutique-cart",
+      "ports": [],
+      "internal_port": 7070,
+      "environment": {
+        "REDIS_ADDR": "boutique-redis:6379"
+      },
+      "depends_on": ["boutique-redis"]
+    },
+
+    "boutique-product": {
+      "role": "Product catalog service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/productcatalogservice:v0.9.0",
+      "container_name": "boutique-product",
+      "ports": [],
+      "internal_port": 3550,
+      "environment": {}
+    },
+
+    "boutique-checkout": {
+      "role": "Checkout orchestration service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/checkoutservice:v0.9.0",
+      "container_name": "boutique-checkout",
+      "ports": [],
+      "internal_port": 5050,
+      "environment": {
+        "PRODUCT_CATALOG_SERVICE_ADDR": "boutique-product:3550",
+        "SHIPPING_SERVICE_ADDR": "boutique-shipping:50051",
+        "PAYMENT_SERVICE_ADDR": "boutique-payment:50051",
+        "EMAIL_SERVICE_ADDR": "boutique-email:8080",
+        "CURRENCY_SERVICE_ADDR": "boutique-currency:7000",
+        "CART_SERVICE_ADDR": "boutique-cart:7070"
+      },
+      "depends_on": []
+    },
+
+    "boutique-recommend": {
+      "role": "Recommendation service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/recommendationservice:v0.9.0",
+      "container_name": "boutique-recommend",
+      "ports": [],
+      "internal_port": 8080,
+      "environment": {
+        "PRODUCT_CATALOG_SERVICE_ADDR": "boutique-product:3550"
+      }
+    },
+
+    "boutique-payment": {
+      "role": "Payment processing service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/paymentservice:v0.9.0",
+      "container_name": "boutique-payment",
+      "ports": [],
+      "internal_port": 50051,
+      "environment": {}
+    },
+
+    "boutique-email": {
+      "role": "Email notification service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/emailservice:v0.9.0",
+      "container_name": "boutique-email",
+      "ports": [],
+      "internal_port": 8080,
+      "environment": {}
+    },
+
+    "boutique-shipping": {
+      "role": "Shipping cost/quote service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/shippingservice:v0.9.0",
+      "container_name": "boutique-shipping",
+      "ports": [],
+      "internal_port": 50051,
+      "environment": {}
+    },
+
+    "boutique-currency": {
+      "role": "Currency conversion service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/currencyservice:v0.9.0",
+      "container_name": "boutique-currency",
+      "ports": [],
+      "internal_port": 7000,
+      "environment": {}
+    },
+
+    "boutique-ad": {
+      "role": "Ad serving service (gRPC)",
+      "image": "gcr.io/google-samples/microservices-demo/adservice:v0.9.0",
+      "container_name": "boutique-ad",
+      "ports": [],
+      "internal_port": 9555,
+      "environment": {}
+    },
+
+    "boutique-loadgen": {
+      "role": "Synthetic load generator (Locust)",
+      "image": "gcr.io/google-samples/microservices-demo/loadgenerator:v0.9.0",
+      "container_name": "boutique-loadgen",
+      "ports": [],
+      "environment": {
+        "FRONTEND_ADDR": "boutique-frontend:8080",
+        "USERS": "10"
+      },
+      "depends_on": ["boutique-frontend"],
+      "known_issue": "depends_on lists boutique-frontend but uses no condition (service_healthy or service_started). Frontend may not be fully ready when loadgen starts, causing initial connection errors."
+    },
+
+    "prometheus": {
+      "role": "Metrics collection (Prometheus TSDB)",
+      "image": "prom/prometheus:v2.52.0",
+      "container_name": "prometheus",
+      "ports": [{"host": 9090, "container": 9090}],
+      "volumes": [
+        "./prometheus.yml:/etc/prometheus/prometheus.yml:ro",
+        "prometheus-data:/prometheus"
+      ],
+      "command_flags": [
+        "--config.file=/etc/prometheus/prometheus.yml",
+        "--storage.tsdb.retention.time=1h",
+        "--storage.tsdb.path=/prometheus"
+      ],
+      "scrape_interval_seconds": 15,
+      "retention": "1h"
+    },
+
+    "jaeger": {
+      "role": "Distributed trace collector and UI",
+      "image": "jaegertracing/all-in-one:1.57",
+      "container_name": "jaeger",
+      "ports": [
+        {"host": 16686, "container": 16686, "purpose": "Jaeger UI"},
+        {"host": 14268, "container": 14268, "purpose": "HTTP Thrift collector (services send traces here)"}
+      ],
+      "environment": {
+        "SPAN_STORAGE_TYPE": "memory",
+        "MEMORY_MAX_TRACES": "50000"
+      },
+      "volumes": ["jaeger-data:/tmp"]
+    }
+  },
+
+  "known_issues": [
+    {
+      "id": "KI-001",
+      "component": "x-boutique-defaults",
+      "severity": "informational",
+      "description": "The YAML anchor x-boutique-defaults declares image: 'gcr.io/google-samples/microservices-demo/' with no service suffix and no version tag. This is intentional template scaffolding. Each service must (and does) override the image key with a fully-qualified tagged image. The anchor's image value is never used directly."
+    },
+    {
+      "id": "KI-002",
+      "component": "boutique-loadgen",
+      "severity": "timing",
+      "description": "boutique-loadgen depends_on boutique-frontend uses no health condition. Docker Compose will start loadgen as soon as the frontend container is created, not when it is ready to accept connections. This can cause initial HTTP errors from Locust at startup. Mitigation: add depends_on condition: service_healthy with a healthcheck on boutique-frontend, or accept transient errors in the first 30s."
+    },
+    {
+      "id": "KI-003",
+      "component": "prometheus scrape targets",
+      "severity": "observability gap",
+      "description": "Online Boutique microservices (v0.9.0) expose gRPC ports, not Prometheus /metrics HTTP endpoints. Prometheus scraping the gRPC ports (e.g. boutique-cart:7070, boutique-product:3550) will result in scrape failures — those ports do not serve Prometheus-format text metrics. Only boutique-frontend (port 8080) may serve HTTP, but it also does not expose /metrics natively in v0.9.0 without the OpenTelemetry Collector sidecar. Prometheus self-scrape (localhost:9090) will succeed. RIFT telemetry should be sourced from Jaeger traces and HTTP-level instrumentation rather than Prometheus pull metrics."
+    }
+  ]
+}

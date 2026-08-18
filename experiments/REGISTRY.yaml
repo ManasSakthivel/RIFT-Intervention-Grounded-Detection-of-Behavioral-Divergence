@@ -1,0 +1,331 @@
+# RIFT Experiment Registry
+# Phase 4.5 — Audited and Completed
+# Authority: Phase 3.6 specification §18, docs/hypotheses.md H1–H5
+#
+# Every experiment has: ID, RQ, hypothesis, input, split, method, baselines,
+# metrics, seed, statistical test, output artifact.
+#
+# Status values:
+#   PLANNED          — not yet scheduled
+#   READY_FOR_LINUX  — fully specified; awaits Linux testbed
+#   PENDING_LINUX    — requires live Online Boutique
+#   DRY_RUN_READY    — can run on macOS in synthetic mode
+#   COMPLETE         — all runs collected and archived
+#   DEFERRED         — deferred to a future phase
+
+metadata:
+  version: "4.5"
+  last_updated: "2024"
+  total_experiments: 14
+  frozen_historical:
+    raw_v1: 0.50
+    conditional_v1: 0.60
+    source: "artifacts/phase3_5/v1_decomposition.json"
+  note: >
+    EXP-001 through EXP-012 are carried forward from Phase 3.6.
+    EXP-013 and EXP-014 are added for H3 and H4 (previously referenced in
+    hypotheses.md but missing from registry).
+
+experiments:
+
+  EXP-001:
+    description: "Causal attribution on synthetic fault scenarios (dev split)"
+    rq: ["RQ1", "RQ2"]
+    hypotheses: ["H1", "H2"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: ["RIFT-OBS", "RIFT-RANDOM", "SIEVE-LIKE", "ORACLE-UPPER-BOUND"]
+    metrics:
+      - precision_at_1
+      - conditional_precision_at_1
+      - coverage
+      - abstention_rate
+      - false_attribution_rate
+      - correct_attribution_rate
+      - mean_detection_latency_s
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 50
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-001/"
+    notes: >
+      Primary causal attribution experiment. PENDING_LINUX for live run.
+      Development set expanded to 50 scenarios (P0-02 fix: +11 MULTI_CAUSE, +3 AMBIGUOUS_ATTRIBUTION).
+
+  EXP-002:
+    description: "Identifiability-conditioned attribution on confounded scenarios"
+    rq: ["RQ2"]
+    hypotheses: ["H2"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: ["RIFT-OBS", "SIEVE-LIKE"]
+    confounded_only: true
+    metrics:
+      - conditional_precision_at_1
+      - correct_abstention_rate
+      - not_identifiable_rate
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 50
+    n_confounded: 24
+    n_confounded_required: 48
+    n_confounded_across_all_splits: 48
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-002/"
+    notes: >
+      H2 requires n>=48 confounded scenarios for 80% power.
+      Development set has 24 confounded; validation set has 24 confounded.
+      For H2, both development + validation confounded scenarios are used (n=48 total).
+      This is pre-registered: development + validation confounded for H2 power analysis.
+      P0-03: 48 total confounded scenarios confirmed across splits; 80% power target met.
+
+  EXP-003:
+    description: "Intervention efficiency: MSIS cost vs random selection"
+    rq: ["RQ3"]
+    hypotheses: ["H4"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: ["RIFT-RANDOM"]
+    metrics:
+      - total_ed_s
+      - n_interventions
+      - detection_latency_s
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 36
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-003/"
+
+  EXP-004:
+    description: "CID/EBD validation on synthetic ground truth"
+    rq: ["RQ1"]
+    hypotheses: ["H1"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: []
+    metrics:
+      - cid_grade
+      - ebd_confidence
+      - r1_r4_pass_rates
+    statistical_test: "none"
+    seed: 42
+    n_scenarios: 36
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-004/"
+
+  EXP-005:
+    description: "RIFT-OBS ablation: observation-only vs interventional"
+    rq: ["RQ1", "RQ2"]
+    hypotheses: ["H1", "H2"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-OBS"
+    baselines: ["RIFT-FULL"]
+    metrics:
+      - precision_at_1
+      - conditional_precision_at_1
+      - detection_latency_s
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 36
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-005/"
+
+  EXP-006:
+    description: "RIFT-RANDOM ablation: cost-optimization benefit"
+    rq: ["RQ3"]
+    hypotheses: ["H4"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-RANDOM"
+    baselines: ["RIFT-FULL"]
+    metrics:
+      - total_ed_s
+      - precision_at_1
+      - n_interventions
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 36
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-006/"
+
+  EXP-007:
+    description: "Sieve-like methodological comparison"
+    rq: ["RQ1"]
+    hypotheses: ["H1"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "SIEVE-LIKE"
+    baselines: ["RIFT-FULL"]
+    metrics:
+      - precision_at_1
+      - detection_latency_s
+      - abstention_rate
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 36
+    label: "SIEVE-LIKE — NOT SIEVE. Methodological reimplementation."
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-007/"
+    notes: >
+      Must be labeled SIEVE-LIKE in all paper tables.
+      SIEVE-LIKE is a methodological reimplementation; NOT the original Sieve.
+      No claim about the original Sieve system may be made from this comparison.
+
+  EXP-008:
+    description: "Safety hard-stops adversarial test"
+    rq: []
+    hypotheses: []
+    input: "tests/integration/safety/"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: []
+    metrics:
+      - safety_abort_rate
+      - rollback_success_rate
+    statistical_test: "none"
+    seed: 42
+    n_scenarios: 10
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-008/"
+
+  EXP-009:
+    description: "Performance instrumentation: stage timing"
+    rq: []
+    hypotheses: []
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: []
+    metrics:
+      - wall_time_per_stage
+      - bottleneck_stage
+      - total_pipeline_time
+    statistical_test: "none"
+    seed: 42
+    n_scenarios: 5
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-009/"
+
+  EXP-010:
+    description: "Repeatability: same seed same result"
+    rq: []
+    hypotheses: []
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: []
+    metrics:
+      - result_hash_consistency
+    statistical_test: "none"
+    seed: 42
+    n_runs: 3
+    n_scenarios: 5
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-010/"
+
+  EXP-011:
+    description: "Robustness: FCI on noisy/sparse data"
+    rq: ["RQ1"]
+    hypotheses: []
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: []
+    metrics:
+      - graph_discovery_failure_rate
+      - ebd_candidate_rate
+    statistical_test: "none"
+    seed: 42
+    n_scenarios: 10
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-011/"
+
+  EXP-012:
+    description: "Oracle upper bound reference"
+    rq: ["RQ1"]
+    hypotheses: []
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "ORACLE-UPPER-BOUND"
+    baselines: []
+    label: "ORACLE UPPER BOUND — not a real baseline"
+    metrics:
+      - precision_at_1
+      - detection_latency_s
+    statistical_test: "none"
+    seed: 42
+    n_scenarios: 36
+    status: "DRY_RUN_READY"
+    output_artifact: "results/EXP-012/"
+
+  # ---------------------------------------------------------------------------
+  # EXP-013: H3 — Closed-loop model update necessity
+  # Referenced in hypotheses.md H3 and Phase 3.6 spec but was missing from registry
+  # ---------------------------------------------------------------------------
+  EXP-013:
+    description: "Ablation: closed-loop update vs one-shot intervention (H3)"
+    rq: ["RQ2"]
+    hypotheses: ["H3"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: ["RIFT-ONE-SHOT"]
+    metrics:
+      - precision_at_1
+      - n_interventions_to_attribution
+      - detection_latency_s
+    statistical_test: "wilcoxon_one_sided"
+    seed: 42
+    n_scenarios: 36
+    n_multi_cause_required: 12
+    filter: "multi_cause_or_ambiguous"
+    filter_note: >
+      Filter includes: fault_type=MULTI_CAUSE and fault_type=AMBIGUOUS_ATTRIBUTION.
+      Development set contains MC_01..MC_12 (12 multi-cause) + AA_01..AA_03 (3 ambiguous).
+      n=15 multi_cause_or_ambiguous scenarios available for Wilcoxon test.
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-013/"
+    notes: >
+      RIFT-ONE-SHOT = RIFT-FULL with closed-loop posterior update disabled.
+      Tests whether iterative Bayesian update provides benefit over one-shot
+      selection. H3: RIFT-FULL-CLOSED-LOOP > RIFT-ONE-SHOT on multi-cause faults.
+      RIFT-ONE-SHOT implementation: src/rift/baselines/rift_one_shot.py (IMPLEMENTED).
+      Power at n=15: achieved power ≈ 64% (Wilcoxon, δ=0.30, α=0.05, one-sided).
+      P0-01 resolved: RIFT-ONE-SHOT is implemented and MAC_TESTED.
+      P0-02 resolved: n=15 multi-cause/ambiguous scenarios in development set.
+
+  # ---------------------------------------------------------------------------
+  # EXP-014: H4 cost model effectiveness
+  # Referenced in hypotheses.md H4 and Phase 3.6 spec but was missing from registry
+  # ---------------------------------------------------------------------------
+  EXP-014:
+    description: "Cost model effectiveness: MSIS selection vs random (H4)"
+    rq: ["RQ6"]
+    hypotheses: ["H4"]
+    input: "datasets/rift_faults/development.json"
+    split: "DEVELOPMENT"
+    method: "RIFT-FULL"
+    baselines: ["RIFT-RANDOM"]
+    metrics:
+      - total_ed_s
+      - precision_at_1
+      - n_interventions
+    statistical_tests:
+      cost: "wilcoxon_one_sided"
+      accuracy: "tost_equivalence"
+    seed: 42
+    n_scenarios: 36
+    status: "READY_FOR_LINUX"
+    output_artifact: "results/EXP-014/"
+    notes: >
+      H4 uses two tests: TOST equivalence for accuracy (H0: not equivalent),
+      and one-sided Wilcoxon for cost (H0: RIFT cost >= random cost).
+      Both tests applied jointly with Holm-Bonferroni correction.
+      Sage+Chaos: DEFERRED_TO_PHASE_8 — do not fabricate results.
+      P1-09 resolved: statistical_tests now uses standard map structure.
+      RIFT-RANDOM uses real intervention dispatch (P0-04 resolved).

@@ -1,0 +1,485 @@
+{
+  "split": "VALIDATION",
+  "n_scenarios": 18,
+  "scenarios": [
+    {
+      "fault_id": "DF_02",
+      "name": "Product-catalog OOM crash (trial 2)",
+      "root_cause_service": "product_catalog",
+      "fault_type": "DEPENDENCY_FAILURE",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 300.0,
+      "causal_path": [
+        [
+          "recommendation",
+          "product_catalog"
+        ],
+        [
+          "frontend",
+          "recommendation"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "product_catalog",
+        "recommendation",
+        "frontend"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 44
+    },
+    {
+      "fault_id": "MC_02",
+      "name": "Multi-cause: payment CPU spike + shipping latency (trial 2)",
+      "root_cause_service": "payment",
+      "fault_type": "MULTI_CAUSE",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 600.0,
+      "causal_path": [
+        [
+          "checkout",
+          "payment"
+        ],
+        [
+          "checkout",
+          "shipping"
+        ],
+        [
+          "frontend",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "payment",
+        "shipping",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 44
+    },
+    {
+      "fault_id": "NL_03",
+      "name": "Network latency on frontend (trial 3)",
+      "root_cause_service": "frontend",
+      "fault_type": "NETWORK_LATENCY",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 360.0,
+      "causal_path": [
+        [
+          "frontend",
+          "checkout"
+        ],
+        [
+          "frontend",
+          "cart"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout",
+        "cart"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 45
+    },
+    {
+      "fault_id": "PL_03",
+      "name": "Packet loss on cart\u2194redis_cart link (trial 3)",
+      "root_cause_service": "cart",
+      "fault_type": "PACKET_LOSS",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 420.0,
+      "causal_path": [
+        [
+          "cart",
+          "redis_cart"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "redis_cart",
+        "frontend"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 45
+    },
+    {
+      "fault_id": "SD_03",
+      "name": "Payment service CPU spike (trial 3)",
+      "root_cause_service": "payment",
+      "fault_type": "SERVICE_DEGRADATION",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "checkout",
+          "payment"
+        ],
+        [
+          "frontend",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "payment",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 45
+    },
+    {
+      "fault_id": "RC_03",
+      "name": "Redis memory contention (trial 3)",
+      "root_cause_service": "redis_cart",
+      "fault_type": "RESOURCE_CONTENTION",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 600.0,
+      "causal_path": [],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "redis_cart",
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": true,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 45
+    },
+    {
+      "fault_id": "CF_24",
+      "name": "Shared-host confounder: cart \u2194 redis_cart (idx 24)",
+      "root_cause_service": "cart",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "cart",
+          "redis_cart"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both cart and redis_cart simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce cart \u2194 redis_cart (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "cart",
+        "redis_cart",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 66
+    },
+    {
+      "fault_id": "CF_25",
+      "name": "Shared-host confounder: payment \u2194 email (idx 25)",
+      "root_cause_service": "payment",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "payment",
+          "email"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both payment and email simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce payment \u2194 email (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "payment",
+        "email",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 67
+    },
+    {
+      "fault_id": "CF_26",
+      "name": "Shared-host confounder: recommendation \u2194 product_catalog (idx 26)",
+      "root_cause_service": "recommendation",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "recommendation",
+          "product_catalog"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both recommendation and product_catalog simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce recommendation \u2194 product_catalog (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "recommendation",
+        "product_catalog",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 68
+    },
+    {
+      "fault_id": "CF_27",
+      "name": "Shared-host confounder: shipping \u2194 currency (idx 27)",
+      "root_cause_service": "shipping",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "shipping",
+          "currency"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both shipping and currency simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce shipping \u2194 currency (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "shipping",
+        "currency",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 69
+    },
+    {
+      "fault_id": "CF_28",
+      "name": "Shared-host confounder: cart \u2194 redis_cart (idx 28)",
+      "root_cause_service": "cart",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "cart",
+          "redis_cart"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both cart and redis_cart simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce cart \u2194 redis_cart (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "cart",
+        "redis_cart",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 70
+    },
+    {
+      "fault_id": "CF_29",
+      "name": "Shared-host confounder: payment \u2194 email (idx 29)",
+      "root_cause_service": "payment",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "payment",
+          "email"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both payment and email simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce payment \u2194 email (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "payment",
+        "email",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 71
+    },
+    {
+      "fault_id": "CF_30",
+      "name": "Shared-host confounder: recommendation \u2194 product_catalog (idx 30)",
+      "root_cause_service": "recommendation",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "recommendation",
+          "product_catalog"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both recommendation and product_catalog simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce recommendation \u2194 product_catalog (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "recommendation",
+        "product_catalog",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 72
+    },
+    {
+      "fault_id": "CF_31",
+      "name": "Shared-host confounder: shipping \u2194 currency (idx 31)",
+      "root_cause_service": "shipping",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "shipping",
+          "currency"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both shipping and currency simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce shipping \u2194 currency (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "shipping",
+        "currency",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 73
+    },
+    {
+      "fault_id": "CF_32",
+      "name": "Shared-host confounder: cart \u2194 redis_cart (idx 32)",
+      "root_cause_service": "cart",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "cart",
+          "redis_cart"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both cart and redis_cart simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce cart \u2194 redis_cart (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "cart",
+        "redis_cart",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 74
+    },
+    {
+      "fault_id": "CF_33",
+      "name": "Shared-host confounder: payment \u2194 email (idx 33)",
+      "root_cause_service": "payment",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "payment",
+          "email"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both payment and email simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce payment \u2194 email (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "payment",
+        "email",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 75
+    },
+    {
+      "fault_id": "CF_34",
+      "name": "Shared-host confounder: recommendation \u2194 product_catalog (idx 34)",
+      "root_cause_service": "recommendation",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "recommendation",
+          "product_catalog"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both recommendation and product_catalog simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce recommendation \u2194 product_catalog (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "recommendation",
+        "product_catalog",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 76
+    },
+    {
+      "fault_id": "CF_35",
+      "name": "Shared-host confounder: shipping \u2194 currency (idx 35)",
+      "root_cause_service": "shipping",
+      "fault_type": "CONFOUNDED",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 480.0,
+      "causal_path": [
+        [
+          "shipping",
+          "currency"
+        ]
+      ],
+      "confounded": true,
+      "confounder_description": "Shared physical host CPU saturation affects both shipping and currency simultaneously. The correlation between them is due to the latent host-level confounder (U_host), NOT a direct causal link. FCI should produce shipping \u2194 currency (bidirected). RIFT abstains when CID score is below threshold (L1).",
+      "affected_services": [
+        "shipping",
+        "currency",
+        "checkout",
+        "frontend"
+      ],
+      "observable_by_rift": false,
+      "split": "VALIDATION",
+      "ground_truth_locked": true,
+      "seed": 77
+    }
+  ]
+}

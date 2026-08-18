@@ -1,0 +1,87 @@
+{
+  "gate": "3.5J",
+  "title": "Live Fault Classes Evaluation",
+  "status": "EVALUATION_PLAN_COMPLETE_EXECUTION_PENDING",
+  "fault_classes": [
+    {
+      "fault_class": "network_latency",
+      "example_scenarios": ["NL_01", "NL_02"],
+      "mechanism": "tc netem adds artificial delay to inter-service traffic (per-destination u32 filter)",
+      "expected_rift_behavior": "IDENTIFIED — frontend is a non-leaf node with downstream paths to checkout and cart; R3 satisfied",
+      "identifiability_state": "IDENTIFIABLE (no confounders; directed edges only in oracle PAG)",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "A_correct_attribution (NL_01, NL_02 both PASS in Phase 3.5 V1 analysis)"
+    },
+    {
+      "fault_class": "packet_loss",
+      "example_scenarios": ["PL_01", "PL_02"],
+      "mechanism": "tc netem adds packet drop percentage to inter-service link",
+      "expected_rift_behavior": "IDENTIFIED — cart→redis_cart path; cart has downstream diverging service (redis_cart spikes)",
+      "identifiability_state": "IDENTIFIABLE",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "A_correct_attribution (PL_01, PL_02 both PASS)"
+    },
+    {
+      "fault_class": "service_degradation",
+      "example_scenarios": ["SD_01", "SD_02"],
+      "mechanism": "CPU stress on payment service; degrades processing rate",
+      "expected_rift_behavior": "PARTIALLY_SUPPORTED — payment is a leaf node; RIFT currently misattributes to checkout due to R3 leaf-node limitation",
+      "identifiability_state": "IDENTIFIABLE in principle; MISATTRIBUTED in practice (H_intervention_failure class)",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "H_intervention_failure — known R3 leaf-node issue",
+      "known_limitation": "R3 leaf-node failure: payment has no outgoing edges in call-graph PAG"
+    },
+    {
+      "fault_class": "resource_contention",
+      "example_scenarios": ["RC_01", "RC_02"],
+      "mechanism": "Memory pressure on redis_cart; causes cart latency spike via shared resource",
+      "expected_rift_behavior": "ABSTAINED (confidence=NONE) — redis_cart correctly identified but R3 fails due to cart not independently diverging",
+      "identifiability_state": "IDENTIFIABLE but R3-limited",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "C_incorrect_attribution (top_candidate correct but confidence=NONE)"
+    },
+    {
+      "fault_class": "dependency_failure",
+      "example_scenarios": ["DF_01"],
+      "mechanism": "product_catalog becomes unavailable; recommendation and frontend degrade",
+      "expected_rift_behavior": "PARTIALLY_SUPPORTED — same leaf-node R3 issue as SD; product_catalog is a sink",
+      "identifiability_state": "IDENTIFIABLE in principle; MISATTRIBUTED in practice",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "H_intervention_failure — R3 leaf-node"
+    },
+    {
+      "fault_class": "queueing",
+      "example_scenarios": ["QU_01", "QU_02"],
+      "mechanism": "Overload checkout service; queue depth grows; latency spikes propagate to shipping and payment",
+      "expected_rift_behavior": "IDENTIFIED — checkout is a non-leaf node (has downstream shipping and payment); R3 satisfied",
+      "identifiability_state": "IDENTIFIABLE",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "A_correct_attribution (QU_01, QU_02 both PASS)"
+    },
+    {
+      "fault_class": "confounded_scenario",
+      "example_scenarios": ["CF_00", "CF_01", "CF_02"],
+      "mechanism": "Shared upstream resource causes correlated anomalies in two independent services",
+      "expected_rift_behavior": "ABSTAINED — bidirected edge detected; identifiability_state=NOT_IDENTIFIABLE; RIFT correctly abstains",
+      "identifiability_state": "NOT_IDENTIFIABLE (latent confounder present)",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "B_correct_abstention (all 24 confounded dev scenarios PASS — V2=100%)"
+    },
+    {
+      "fault_class": "multi_cause_scenario",
+      "example_scenarios": ["MC_01"],
+      "mechanism": "Two independent faults occur simultaneously or sequentially; both contribute to system degradation",
+      "expected_rift_behavior": "PARTIALLY_SUPPORTED — primary root cause (payment) is a leaf node; RIFT misattributes to checkout. Multi-cause attribution requires R4 (intervention data).",
+      "identifiability_state": "IDENTIFIABLE in principle but requires intervention to disambiguate co-causes",
+      "status": "PENDING_LIVE_EXECUTION",
+      "oracle_result": "H_intervention_failure — R3 leaf-node + multi-cause ambiguity"
+    }
+  ],
+  "summary_by_outcome": {
+    "IDENTIFIED": ["network_latency", "packet_loss", "queueing", "confounded_scenario"],
+    "PARTIALLY_SUPPORTED": ["service_degradation", "dependency_failure", "multi_cause_scenario"],
+    "ABSTAINED": ["confounded_scenario"],
+    "R3_LEAF_NODE_LIMITATION": ["service_degradation", "dependency_failure", "multi_cause_scenario", "resource_contention"]
+  },
+  "note": "Results above are from oracle PAG analysis (Phase 3.5 V1 decomposition). Live testbed results may differ — especially for fault classes where FCI orientation could help leaf-node cases."
+}

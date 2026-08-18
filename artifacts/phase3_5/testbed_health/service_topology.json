@@ -1,0 +1,444 @@
+{
+  "_meta": {
+    "document": "RIFT Gate 3.5B — Online Boutique Service Topology",
+    "source_file": "docker/docker-compose.yml",
+    "status": "PENDING_DEPLOYMENT",
+    "note": "Dependency graph derived from compose environment variables and depends_on declarations. Not validated by live traffic."
+  },
+
+  "nodes": [
+    {
+      "id": "boutique-frontend",
+      "container": "boutique-frontend",
+      "image": "gcr.io/google-samples/microservices-demo/frontend:v0.9.0",
+      "protocol": "HTTP",
+      "internal_port": 8080,
+      "host_port": 8080,
+      "description": "HTTP frontend; entry point for user traffic and loadgen"
+    },
+    {
+      "id": "boutique-cart",
+      "container": "boutique-cart",
+      "image": "gcr.io/google-samples/microservices-demo/cartservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 7070,
+      "host_port": null
+    },
+    {
+      "id": "boutique-product",
+      "container": "boutique-product",
+      "image": "gcr.io/google-samples/microservices-demo/productcatalogservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 3550,
+      "host_port": null
+    },
+    {
+      "id": "boutique-checkout",
+      "container": "boutique-checkout",
+      "image": "gcr.io/google-samples/microservices-demo/checkoutservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 5050,
+      "host_port": null
+    },
+    {
+      "id": "boutique-recommend",
+      "container": "boutique-recommend",
+      "image": "gcr.io/google-samples/microservices-demo/recommendationservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 8080,
+      "host_port": null
+    },
+    {
+      "id": "boutique-payment",
+      "container": "boutique-payment",
+      "image": "gcr.io/google-samples/microservices-demo/paymentservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 50051,
+      "host_port": null
+    },
+    {
+      "id": "boutique-email",
+      "container": "boutique-email",
+      "image": "gcr.io/google-samples/microservices-demo/emailservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 8080,
+      "host_port": null
+    },
+    {
+      "id": "boutique-shipping",
+      "container": "boutique-shipping",
+      "image": "gcr.io/google-samples/microservices-demo/shippingservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 50051,
+      "host_port": null
+    },
+    {
+      "id": "boutique-currency",
+      "container": "boutique-currency",
+      "image": "gcr.io/google-samples/microservices-demo/currencyservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 7000,
+      "host_port": null
+    },
+    {
+      "id": "boutique-ad",
+      "container": "boutique-ad",
+      "image": "gcr.io/google-samples/microservices-demo/adservice:v0.9.0",
+      "protocol": "gRPC",
+      "internal_port": 9555,
+      "host_port": null
+    },
+    {
+      "id": "boutique-redis",
+      "container": "boutique-redis",
+      "image": "redis:7.2-alpine",
+      "protocol": "Redis",
+      "internal_port": 6379,
+      "host_port": null
+    },
+    {
+      "id": "boutique-loadgen",
+      "container": "boutique-loadgen",
+      "image": "gcr.io/google-samples/microservices-demo/loadgenerator:v0.9.0",
+      "protocol": "HTTP (Locust client)",
+      "internal_port": null,
+      "host_port": null,
+      "description": "Synthetic load generator; simulates 10 concurrent users"
+    },
+    {
+      "id": "prometheus",
+      "container": "prometheus",
+      "image": "prom/prometheus:v2.52.0",
+      "protocol": "HTTP",
+      "internal_port": 9090,
+      "host_port": 9090
+    },
+    {
+      "id": "jaeger",
+      "container": "jaeger",
+      "image": "jaegertracing/all-in-one:1.57",
+      "protocol": "HTTP",
+      "internal_port_ui": 16686,
+      "internal_port_collector": 14268,
+      "host_port_ui": 16686,
+      "host_port_collector": 14268
+    }
+  ],
+
+  "edges": [
+    {
+      "from": "boutique-loadgen",
+      "to": "boutique-frontend",
+      "protocol": "HTTP",
+      "address": "boutique-frontend:8080",
+      "edge_type": "workload",
+      "note": "Locust simulates user browsing; depends_on uses no health condition (KI-002)"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-product",
+      "protocol": "gRPC",
+      "address": "boutique-product:3550",
+      "env_var": "PRODUCT_CATALOG_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-currency",
+      "protocol": "gRPC",
+      "address": "boutique-currency:7000",
+      "env_var": "CURRENCY_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-cart",
+      "protocol": "gRPC",
+      "address": "boutique-cart:7070",
+      "env_var": "CART_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-recommend",
+      "protocol": "gRPC",
+      "address": "boutique-recommend:8080",
+      "env_var": "RECOMMENDATION_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-shipping",
+      "protocol": "gRPC",
+      "address": "boutique-shipping:50051",
+      "env_var": "SHIPPING_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-checkout",
+      "protocol": "gRPC",
+      "address": "boutique-checkout:5050",
+      "env_var": "CHECKOUT_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "boutique-ad",
+      "protocol": "gRPC",
+      "address": "boutique-ad:9555",
+      "env_var": "AD_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-product",
+      "protocol": "gRPC",
+      "address": "boutique-product:3550",
+      "env_var": "PRODUCT_CATALOG_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-shipping",
+      "protocol": "gRPC",
+      "address": "boutique-shipping:50051",
+      "env_var": "SHIPPING_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-payment",
+      "protocol": "gRPC",
+      "address": "boutique-payment:50051",
+      "env_var": "PAYMENT_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-email",
+      "protocol": "gRPC",
+      "address": "boutique-email:8080",
+      "env_var": "EMAIL_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-currency",
+      "protocol": "gRPC",
+      "address": "boutique-currency:7000",
+      "env_var": "CURRENCY_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "boutique-cart",
+      "protocol": "gRPC",
+      "address": "boutique-cart:7070",
+      "env_var": "CART_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-cart",
+      "to": "boutique-redis",
+      "protocol": "Redis",
+      "address": "boutique-redis:6379",
+      "env_var": "REDIS_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "boutique-recommend",
+      "to": "boutique-product",
+      "protocol": "gRPC",
+      "address": "boutique-product:3550",
+      "env_var": "PRODUCT_CATALOG_SERVICE_ADDR",
+      "edge_type": "runtime_call"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-frontend",
+      "protocol": "HTTP scrape",
+      "address": "boutique-frontend:8080",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — frontend:8080 does not expose /metrics in v0.9.0; scrape will fail"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-cart",
+      "protocol": "HTTP scrape",
+      "address": "boutique-cart:7070",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-product",
+      "protocol": "HTTP scrape",
+      "address": "boutique-product:3550",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-checkout",
+      "protocol": "HTTP scrape",
+      "address": "boutique-checkout:5050",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-recommend",
+      "protocol": "HTTP scrape",
+      "address": "boutique-recommend:8080",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-payment",
+      "protocol": "HTTP scrape",
+      "address": "boutique-payment:50051",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-shipping",
+      "protocol": "HTTP scrape",
+      "address": "boutique-shipping:50051",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-currency",
+      "protocol": "HTTP scrape",
+      "address": "boutique-currency:7000",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "prometheus",
+      "to": "boutique-ad",
+      "protocol": "HTTP scrape",
+      "address": "boutique-ad:9555",
+      "edge_type": "observability_scrape",
+      "known_issue": "KI-003 — gRPC port; no Prometheus /metrics endpoint"
+    },
+    {
+      "from": "boutique-frontend",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-cart",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-product",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-checkout",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-recommend",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-payment",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-email",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-shipping",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-currency",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    },
+    {
+      "from": "boutique-ad",
+      "to": "jaeger",
+      "protocol": "HTTP Thrift",
+      "address": "jaeger:14268",
+      "env_var": "JAEGER_SERVICE_ADDR (via x-boutique-defaults)",
+      "edge_type": "trace_export"
+    }
+  ],
+
+  "critical_paths": [
+    {
+      "name": "purchase_flow",
+      "description": "Full purchase: user browses, adds to cart, and checks out",
+      "path": [
+        "boutique-loadgen",
+        "boutique-frontend",
+        "boutique-cart",
+        "boutique-redis"
+      ],
+      "then": [
+        "boutique-frontend",
+        "boutique-checkout",
+        "boutique-product",
+        "boutique-currency",
+        "boutique-shipping",
+        "boutique-payment",
+        "boutique-email"
+      ]
+    },
+    {
+      "name": "product_page",
+      "description": "User views a product listing page",
+      "path": [
+        "boutique-loadgen",
+        "boutique-frontend",
+        "boutique-product",
+        "boutique-currency",
+        "boutique-recommend",
+        "boutique-ad"
+      ]
+    }
+  ]
+}

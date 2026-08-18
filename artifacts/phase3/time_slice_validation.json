@@ -1,0 +1,27 @@
+{
+  "phase": "3C",
+  "component": "time_sliced_graph",
+  "acyclicity_guaranteed_by_construction": true,
+  "cases": [
+    {
+      "name": "chain_lag1",
+      "acyclic": true,
+      "edges_forward_in_time": true
+    },
+    {
+      "name": "autoregressive_no_cycle",
+      "acyclic": true
+    },
+    {
+      "name": "feedback_across_slices",
+      "acyclic": true,
+      "note": "X[t]->Y[t+1]->X[t+2] is acyclic"
+    },
+    {
+      "name": "alignment_lag_assignment",
+      "correct": true,
+      "note": "Collection lag > \u0394t/2 assigned to next window"
+    }
+  ],
+  "gate": "PASS"
+}

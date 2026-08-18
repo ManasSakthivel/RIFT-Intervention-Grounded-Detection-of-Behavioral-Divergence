@@ -1,0 +1,46 @@
+{
+  "KILL_SWITCH": {
+    "pass": true,
+    "decision": "SAFE_ABORT",
+    "hard_stop": "KILL_SWITCH"
+  },
+  "PRODUCTION_NAMESPACE": {
+    "pass": true,
+    "decision": "SAFE_ABORT"
+  },
+  "UNAUTHORIZED_TARGET": {
+    "pass": true,
+    "decision": "SAFE_ABORT"
+  },
+  "BUDGET_EXCEEDED": {
+    "pass": true,
+    "decision": "SAFE_ABORT"
+  },
+  "UNEXPECTED_BLAST_RADIUS": {
+    "pass": true,
+    "decision": "APPROVED_SUPERVISED",
+    "hard_stop": null,
+    "blast_radius_in_failed_checks": true,
+    "note": "blast_radius is soft check \u2014 appears in checks_failed but does not trigger SAFE_ABORT hard stop per implementation"
+  },
+  "DATA_MUTATION_ATTEMPT": {
+    "pass": true,
+    "decision": "SAFE_ABORT"
+  },
+  "CASCADE_FAILURE": {
+    "pass": true,
+    "decision": "SAFE_ABORT",
+    "hard_stop": "CASCADE_FAILURE"
+  },
+  "ROLLBACK_FAILURE": {
+    "pass": true,
+    "rollback_all_cleared": true,
+    "decision": "APPROVED_AUTONOMOUS"
+  },
+  "_summary": {
+    "hard_stops_validated": 8,
+    "total": 8,
+    "all_pass": true,
+    "timestamp": 1786988816.038056
+  }
+}

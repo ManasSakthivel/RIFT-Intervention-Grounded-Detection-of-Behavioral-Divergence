@@ -1,0 +1,192 @@
+{
+  "manifest_version": "3.6",
+  "generated_at": "2026-08-17T16:22:05.529823Z",
+  "phase": "3.6",
+  "phase_3_6_verdict": "PRE-LINUX READY",
+  "macos_tests": {
+    "passed": 513,
+    "failed": 0,
+    "skipped": 0,
+    "total": 513,
+    "result": "PASS"
+  },
+  "pre_linux_gate": "PASS",
+  "component_check": {
+    "total_checks": 44,
+    "passed": 44,
+    "failed": 0
+  },
+  "security_scan": "PASS",
+  "gitignore_present": true,
+  "frozen_historical": {
+    "raw_precision_at_1": 0.5,
+    "conditional_precision_at_1": 0.6,
+    "source": "artifacts/phase3_5/v1_decomposition.json",
+    "must_not_modify": true
+  },
+  "phase_4_authorized": false,
+  "linux_execution_required": true,
+  "pending_linux": [
+    "Live Prometheus/OTEL telemetry collection",
+    "Online Boutique deployment on Linux",
+    "tc netem per-destination interventions (CAP_NET_ADMIN)",
+    "kubectl-based fault injection",
+    "Live E2E RIFTRunRecord with live_telemetry_used=True",
+    "Final hypothesis tests H1-H5 (require live data)",
+    "Final Precision@1 measurement on held-out test set"
+  ],
+  "missing_files": [],
+  "p0_issues": 0,
+  "p1_issues": 0,
+  "sage_chaos_status": "DEFERRED_TO_PHASE_8",
+  "files": {
+    "src/rift/pipeline/e2e_runner.py": {
+      "sha256_prefix": "9c10114eeb582d7c",
+      "exists": true
+    },
+    "src/rift/cid/cid.py": {
+      "sha256_prefix": "8282c6758614f642",
+      "exists": true
+    },
+    "src/rift/ebd/ebd.py": {
+      "sha256_prefix": "dfb9273926d9e523",
+      "exists": true
+    },
+    "src/rift/safety/safety.py": {
+      "sha256_prefix": "3dee990fdcd8c320",
+      "exists": true
+    },
+    "src/rift/loop/closed_loop.py": {
+      "sha256_prefix": "8141179b799cb3d9",
+      "exists": true
+    },
+    "src/rift/fci/fci_runner.py": {
+      "sha256_prefix": "a861a100b56b655c",
+      "exists": true
+    },
+    "src/rift/identifiability/identifiability.py": {
+      "sha256_prefix": "8eff5f06eca2b20f",
+      "exists": true
+    },
+    "src/rift/optimizer/cost_model.py": {
+      "sha256_prefix": "4f3431285fd73819",
+      "exists": true
+    },
+    "src/rift/intervention/network_intervention.py": {
+      "sha256_prefix": "c05b4408442d1756",
+      "exists": true
+    },
+    "src/rift/intervention/intervention_lifecycle.py": {
+      "sha256_prefix": "650555774d88eeaf",
+      "exists": true
+    },
+    "src/rift/intervention/backends/dry_run.py": {
+      "sha256_prefix": "c393c2cccede68f2",
+      "exists": true
+    },
+    "src/rift/intervention/backends/linux_tc_netem.py": {
+      "sha256_prefix": "02f58602f61175f3",
+      "exists": true
+    },
+    "src/rift/fault_injection/fault_injector.py": {
+      "sha256_prefix": "c40ca091f910a3a3",
+      "exists": true
+    },
+    "src/rift/baselines/rift_obs.py": {
+      "sha256_prefix": "df5a5ce6fa38c35c",
+      "exists": true
+    },
+    "src/rift/baselines/rift_random.py": {
+      "sha256_prefix": "79909301273a03ae",
+      "exists": true
+    },
+    "src/rift/baselines/sieve_like.py": {
+      "sha256_prefix": "2e5e07d0bd6a943d",
+      "exists": true
+    },
+    "src/rift/baselines/sage_chaos.py": {
+      "sha256_prefix": "5d3b8fe3fe47851e",
+      "exists": true
+    },
+    "src/rift/baselines/oracle.py": {
+      "sha256_prefix": "0825b825f23e2cd5",
+      "exists": true
+    },
+    "src/rift/evaluation/attribution_metrics.py": {
+      "sha256_prefix": "5a1a632e798b6110",
+      "exists": true
+    },
+    "src/rift/evaluation/divergence_metrics.py": {
+      "sha256_prefix": "fc2a9d6a21cf1d96",
+      "exists": true
+    },
+    "src/rift/evaluation/ebd_metrics.py": {
+      "sha256_prefix": "efa3b83baec1f395",
+      "exists": true
+    },
+    "src/rift/evaluation/power.py": {
+      "sha256_prefix": "d8a80fb9fcd8e13f",
+      "exists": true
+    },
+    "src/rift/evaluation/held_out_guard.py": {
+      "sha256_prefix": "6d964fce022f8d6c",
+      "exists": true
+    },
+    "src/rift/statistics/stats.py": {
+      "sha256_prefix": "0b79641013203f37",
+      "exists": true
+    },
+    "src/rift/artifacts/writer.py": {
+      "sha256_prefix": "2e6b8001e4846ad8",
+      "exists": true
+    },
+    "src/rift/provenance/logger.py": {
+      "sha256_prefix": "e63de8ec6b38d2de",
+      "exists": true
+    },
+    "src/rift/models/failure_codes.py": {
+      "sha256_prefix": "809c65c32945edb1",
+      "exists": true
+    },
+    "src/rift/models/data_models.py": {
+      "sha256_prefix": "b6bfa901536d46ed",
+      "exists": true
+    },
+    "src/rift/telemetry/normalizer.py": {
+      "sha256_prefix": "ffa110203fc1d822",
+      "exists": true
+    },
+    "src/rift/telemetry/instrumentation.py": {
+      "sha256_prefix": "c1bb3e29fbd5e29e",
+      "exists": true
+    },
+    "src/rift/graph/time_slice.py": {
+      "sha256_prefix": "9a4f30b2daa4cafa",
+      "exists": true
+    },
+    "src/rift/graph/anomaly_subgraph.py": {
+      "sha256_prefix": "f77253602d3a44f5",
+      "exists": true
+    },
+    "src/rift/scm/scm.py": {
+      "sha256_prefix": "d4a08c90fa65cf7f",
+      "exists": true
+    },
+    "src/rift/experiments/run.py": {
+      "sha256_prefix": "b62ac8261e702355",
+      "exists": true
+    },
+    "experiments/REGISTRY.yaml": {
+      "sha256_prefix": "c52de77aa0907881",
+      "exists": true
+    },
+    "docs/CLAIMS_REGISTRY.yaml": {
+      "sha256_prefix": "a443794c18c9a2dc",
+      "exists": true
+    },
+    ".gitignore": {
+      "sha256_prefix": "4cb6beada5a883ad",
+      "exists": true
+    }
+  }
+}

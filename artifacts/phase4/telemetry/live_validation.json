@@ -1,0 +1,112 @@
+{
+  "validation_timestamp": "2026-08-17T17:38:34.696881Z",
+  "query_window_start": 1786988014,
+  "query_window_end": 1786988314,
+  "prometheus_endpoint": "http://localhost:9090",
+  "jaeger_endpoint": "http://localhost:16686",
+  "boutique_frontend": "http://localhost:8080",
+  "findings": {
+    "prometheus_operational": true,
+    "prometheus_self_metrics_real": true,
+    "prometheus_timeseries_available": 10,
+    "prometheus_http_requests": 104.0,
+    "boutique_scrape_targets_down": true,
+    "boutique_scrape_target_reason": "Online Boutique v0.9.0 services do not expose Prometheus /metrics endpoints. Services use OpenTelemetry/OTLP protocol sending traces to Jaeger. Prometheus config scrapes gRPC ports which do not serve HTTP /metrics.",
+    "jaeger_operational": true,
+    "jaeger_services": [
+      "jaeger-all-in-one"
+    ],
+    "jaeger_traces_collected": 5,
+    "boutique_traffic_active": true,
+    "boutique_traffic_evidence": "docker logs boutique-checkout: orders being placed, payments processed. docker logs boutique-cart: GetCart/AddItem/EmptyCart operations active. Frontend HTTP 200 confirmed.",
+    "frontend_accessible": true,
+    "frontend_http_code": 200,
+    "prometheus_client_collect_implemented": false,
+    "prometheus_client_collect_status": "PrometheusClient.collect() raises NotImplementedError \u2014 implementation pending for live execution. This is the blocking issue for live_telemetry_used=True.",
+    "live_telemetry_used": false,
+    "live_telemetry_used_reason": "PrometheusClient.collect() not yet implemented. Prometheus has real metrics (self-monitoring + scrape timing). live_telemetry_used will be set True after PrometheusClient.collect() is implemented and RIFT pipeline successfully ingests Prometheus data."
+  },
+  "raw_metrics": {
+    "scrape_duration_seconds": {
+      "timeseries_count": 10,
+      "samples": [
+        {
+          "job": "boutique-ad",
+          "instance": "boutique-ad:9555",
+          "n_samples": 21,
+          "latest_val": 0.005253018,
+          "latest_ts": 1786988314
+        },
+        {
+          "job": "boutique-cart",
+          "instance": "boutique-cart:7070",
+          "n_samples": 21,
+          "latest_val": 0.002351046,
+          "latest_ts": 1786988314
+        },
+        {
+          "job": "boutique-checkout",
+          "instance": "boutique-checkout:5050",
+          "n_samples": 21,
+          "latest_val": 0.003688561,
+          "latest_ts": 1786988314
+        },
+        {
+          "job": "boutique-currency",
+          "instance": "boutique-currency:7000",
+          "n_samples": 21,
+          "latest_val": 0.003828773,
+          "latest_ts": 1786988314
+        },
+        {
+          "job": "boutique-frontend",
+          "instance": "boutique-frontend:8080",
+          "n_samples": 21,
+          "latest_val": 0.001146984,
+          "latest_ts": 1786988314
+        }
+      ],
+      "status": "REAL"
+    },
+    "go_goroutines": {
+      "timeseries_count": 1,
+      "samples": [
+        {
+          "n_samples": 21,
+          "latest": [
+            1786988314,
+            "41"
+          ]
+        }
+      ],
+      "status": "REAL"
+    },
+    "prometheus_http_requests_total": {
+      "series_count": 52,
+      "total_requests": 104.0
+    },
+    "up_metric": {
+      "total_targets": 10,
+      "prometheus_self_up": true,
+      "boutique_targets_total": 9,
+      "boutique_targets_up": 0,
+      "note": "Boutique services do not expose Prometheus /metrics endpoints; targets expected down"
+    },
+    "jaeger": {
+      "services": [
+        "jaeger-all-in-one"
+      ],
+      "trace_count_jaeger_self": 5,
+      "note": "Boutique services configured for OTLP tracing to Jaeger; frontend lacks OTEL env vars"
+    },
+    "frontend_http": {
+      "status_code": 200,
+      "content_length": 10190,
+      "available": true
+    },
+    "jaeger_ui": {
+      "status_code": 200,
+      "available": true
+    }
+  }
+}

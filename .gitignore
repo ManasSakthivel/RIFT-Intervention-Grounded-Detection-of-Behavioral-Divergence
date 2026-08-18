@@ -1,0 +1,132 @@
+# ============================================================
+# RIFT — .gitignore
+# Phase 3.6 — Security Audit §31
+# ============================================================
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+.eggs/
+wheels/
+*.egg-link
+.installed.cfg
+lib/
+lib64/
+sdist/
+var/
+*.manifest
+
+# ── Virtual environments ────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# ── Test artefacts ──────────────────────────────────────────
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+artifacts/coverage/
+artifacts/logs/
+*.log
+*.log.*
+nosetests.xml
+test-results/
+.tox/
+
+# ── Secrets / credentials ───────────────────────────────────
+.env
+.env.*
+*.env
+secrets/
+credentials/
+credentials.json
+secrets.yaml
+secrets.json
+*.pem
+*.key
+*.cert
+*.crt
+*.pfx
+*.p12
+token.txt
+auth.json
+kubeconfig
+
+# ── Local/runtime artefacts ────────────────────────────────
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.sublime-project
+*.sublime-workspace
+
+# ── Experiment outputs (large/machine-generated) ────────────
+# Keep schema and metadata; exclude raw/bulk result files
+results/*/raw_results.json
+results/*/inputs.json
+artifacts/phase*/logs/
+artifacts/logs/
+
+# ── Jupyter ─────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Docker volumes / compose overrides ──────────────────────
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ── OS-specific ─────────────────────────────────────────────
+*.orig
+*.rej
+
+# ── Build / mypy / pytype cache ─────────────────────────────
+.mypy_cache/
+.pytype/
+.ruff_cache/
+.dmypy.json
+dmypy.json
+
+# ── Profiling ───────────────────────────────────────────────
+*.prof
+*.lprof
+
+# ── Heap snapshots / traces ─────────────────────────────────
+*.heapsnapshot
+*.trace
+
+# NOTE: configs/, docs/, src/, tests/, experiments/, datasets/
+# are ALL tracked. Do not add blanket ignores for those directories.
+
+# ── Bob / IDE internal state ────────────────────────────────
+.bob/
+
+# ── Credentials / VM access files ───────────────────────────
+env.txt
+*.ppk
+id_rsa*
+id_ed25519*

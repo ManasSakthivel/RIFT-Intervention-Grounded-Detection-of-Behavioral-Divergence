@@ -1,0 +1,35 @@
+{
+  "phase": "3H",
+  "component": "network_intervention_tc_netem",
+  "mechanism": "tc u32 classifier + per-destination netem",
+  "ebpf_required": false,
+  "cap_net_admin_required": true,
+  "dry_run_validated": true,
+  "cases": [
+    {
+      "name": "apply_per_destination_latency",
+      "result": true,
+      "dry_run": true
+    },
+    {
+      "name": "verify_precision_check",
+      "result": true
+    },
+    {
+      "name": "rollback_removes_rule",
+      "result": true,
+      "dry_run": true
+    },
+    {
+      "name": "side_effect_isolation_check",
+      "result": true
+    },
+    {
+      "name": "target_service_affected_non_target_unaffected",
+      "result": true,
+      "dry_run": true
+    }
+  ],
+  "note": "Full network test requires Linux with CAP_NET_ADMIN (not macOS). Dry-run validated.",
+  "gate": "PARTIAL"
+}

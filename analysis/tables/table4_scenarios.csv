@@ -1,0 +1,10 @@
+Fault Type,Total,Confounded,Dev Split,Val Split,Test Split
+Network Latency,3,0,2,1,0
+Packet Loss,3,0,2,1,0
+Service Degradation,3,0,2,1,0
+Resource Contention,3,0,2,1,0
+Queueing,3,0,2,0,1
+Dependency Failure,3,0,1,1,1
+Multi-cause,3,0,1,1,1
+Confounded (all types),48,48,24,12,12
+TOTAL,69,48,36,18,15

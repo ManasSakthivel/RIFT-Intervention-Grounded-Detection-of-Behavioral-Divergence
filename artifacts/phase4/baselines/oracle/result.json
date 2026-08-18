@@ -1,0 +1,9 @@
+{
+  "baseline": "ORACLE_UPPER_BOUND",
+  "label": "ORACLE UPPER BOUND \u2014 NOT a practical baseline",
+  "top1": "frontend",
+  "score": 1.0,
+  "abstained": false,
+  "p1_correct": true,
+  "duration_s": 0.0
+}

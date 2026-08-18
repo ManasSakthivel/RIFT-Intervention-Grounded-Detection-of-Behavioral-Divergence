@@ -1,0 +1,15 @@
+{
+  "test_id": "NET-3",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "127.0.0.1",
+  "intervention_applied": "tc netem delay 150ms 5ms on lo",
+  "effect_measured": {
+    "pre_rollback_latency_ms": 298.340,
+    "post_rollback_latency_ms": 0.100,
+    "delta_restored_ms": 298.240
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "state_restored": true,
+  "status": "PASS"
+}

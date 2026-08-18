@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 340" width="700" height="340" font-family="-apple-system, 'Segoe UI', system-ui, sans-serif">
+  <rect width="700" height="340" fill="#ffffff"/>
+
+  <!-- Title -->
+  <text x="350" y="30" text-anchor="middle" font-size="14" font-weight="600" fill="#1f2328">Observational vs Interventional Reasoning</text>
+
+  <!-- LEFT panel: Observational -->
+  <rect x="30" y="50" width="300" height="255" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="180" y="76" text-anchor="middle" font-size="12" font-weight="600" fill="#57606a">OBSERVATIONAL</text>
+
+  <!-- Services X and Y -->
+  <rect x="80" y="95" width="80" height="34" rx="5" fill="#fff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="120" y="117" text-anchor="middle" font-size="12" fill="#1f2328">Service X</text>
+  <rect x="180" y="95" width="80" height="34" rx="5" fill="#fff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="220" y="117" text-anchor="middle" font-size="12" fill="#1f2328">Service Y</text>
+
+  <!-- Bidirected arrow (correlation only) -->
+  <line x1="162" y1="112" x2="178" y2="112" stroke="#d97706" stroke-width="2"/>
+  <path d="M155,112 l7,-4 l0,8 z" fill="#d97706"/>
+  <path d="M185,112 l-7,-4 l0,8 z" fill="#d97706"/>
+
+  <text x="172" y="153" text-anchor="middle" font-size="10" fill="#d97706" font-style="italic">correlated</text>
+  <text x="172" y="167" text-anchor="middle" font-size="10" fill="#d97706" font-style="italic">X ↔ Y</text>
+
+  <!-- Question mark box -->
+  <rect x="80" y="185" width="170" height="50" rx="5" fill="#fff8ee" stroke="#d97706" stroke-width="1"/>
+  <text x="165" y="208" text-anchor="middle" font-size="11" fill="#d97706" font-weight="600">Did X cause Y?</text>
+  <text x="165" y="224" text-anchor="middle" font-size="10" fill="#57606a">Or Y cause X? Or shared cause?</text>
+
+  <text x="165" y="268" text-anchor="middle" font-size="10" fill="#dc2626">Cannot distinguish without</text>
+  <text x="165" y="282" text-anchor="middle" font-size="10" fill="#dc2626">additional information.</text>
+
+  <!-- RIGHT panel: Interventional -->
+  <rect x="370" y="50" width="300" height="255" rx="8" fill="#f7f8fa" stroke="#e5e7eb" stroke-width="1.5"/>
+  <text x="520" y="76" text-anchor="middle" font-size="12" font-weight="600" fill="#3b82d4">INTERVENTIONAL</text>
+
+  <!-- do(X) -->
+  <rect x="415" y="93" width="90" height="36" rx="5" fill="#fef2f2" stroke="#dc2626" stroke-width="1.5"/>
+  <text x="460" y="113" text-anchor="middle" font-size="12" fill="#1f2328" font-weight="500">do(X)</text>
+  <text x="460" y="126" text-anchor="middle" font-size="9" fill="#57606a">inject latency</text>
+
+  <line x1="507" y1="111" x2="533" y2="111" stroke="#57606a" stroke-width="1.5" marker-end="url(#a2)"/>
+
+  <!-- Observe Y -->
+  <rect x="535" y="93" width="90" height="36" rx="5" fill="#f0fdf4" stroke="#16a34a" stroke-width="1.5"/>
+  <text x="580" y="113" text-anchor="middle" font-size="12" fill="#1f2328">Observe Y</text>
+  <text x="580" y="126" text-anchor="middle" font-size="9" fill="#57606a">measure response</text>
+
+  <!-- Compare -->
+  <rect x="430" y="153" width="180" height="38" rx="5" fill="#f5f0ff" stroke="#7c5cd8" stroke-width="1.5"/>
+  <text x="520" y="174" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="500">Compare P(Y | do(X)) vs P(Y)</text>
+
+  <!-- Update belief -->
+  <rect x="430" y="210" width="180" height="38" rx="5" fill="#f0f6ff" stroke="#3b82d4" stroke-width="1.5"/>
+  <text x="520" y="227" text-anchor="middle" font-size="11" fill="#1f2328" font-weight="500">Update causal belief</text>
+  <text x="520" y="242" text-anchor="middle" font-size="9" fill="#57606a">Bayesian posterior over edge</text>
+
+  <text x="520" y="278" text-anchor="middle" font-size="10" fill="#16a34a">Attribution or abstention</text>
+  <text x="520" y="292" text-anchor="middle" font-size="10" fill="#16a34a">with explicit confidence.</text>
+
+  <!-- Defs -->
+  <defs>
+    <marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L0,6 L8,3 z" fill="#57606a"/>
+    </marker>
+  </defs>
+</svg>

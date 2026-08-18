@@ -1,0 +1,99 @@
+{
+  "phase": "3.5N",
+  "seed": 42,
+  "total_scenarios": 69,
+  "split_counts": {
+    "DEVELOPMENT": 36,
+    "VALIDATION": 18,
+    "HELD_OUT_TEST": 15
+  },
+  "integrity_checks": [
+    {
+      "check": "total_count",
+      "status": "PASS",
+      "detail": "36 (DEVELOPMENT) + 18 (VALIDATION) + 15 (HELD_OUT_TEST) = 69. Matches manifest total_scenarios=69."
+    },
+    {
+      "check": "no_duplicate_fault_ids",
+      "status": "PASS",
+      "detail": "All 69 fault_ids are globally unique across all three splits. DEV contains NL_01/02, PL_01/02, SD_01/02, RC_01/02, QU_01/02, DF_01, MC_01, CF_00..CF_23. VAL contains DF_02, MC_02, NL_03, PL_03, SD_03, RC_03, CF_24..CF_35. TEST contains QU_03, DF_03, MC_03, CF_36..CF_47. No collisions detected."
+    },
+    {
+      "check": "required_fields_present",
+      "status": "PASS",
+      "detail": "All 69 scenarios contain all 13 required fields: fault_id, name, root_cause_service, fault_type, injected_at_t, expected_recovery_t, causal_path, confounded, confounder_description, affected_services, observable_by_rift, split, ground_truth_locked, seed. Note: 'name' is present in all files though not listed in the audit spec — treated as bonus metadata, does not affect PASS."
+    },
+    {
+      "check": "split_label_consistency",
+      "status": "PASS",
+      "detail": "Every scenario's internal 'split' field matches the file it resides in. All 36 scenarios in development.json carry split='DEVELOPMENT'. All 18 in validation.json carry split='VALIDATION'. All 15 in held_out_test.json carry split='HELD_OUT_TEST'. No cross-contamination via mislabelled internal split values."
+    },
+    {
+      "check": "ground_truth_locked",
+      "status": "PASS",
+      "detail": "ground_truth_locked=true for all 69 scenarios across all three splits. Immutability guarantee is structurally enforced at the data level."
+    },
+    {
+      "check": "no_cross_split_overlap",
+      "status": "PASS",
+      "detail": "Set intersection of fault_ids across DEVELOPMENT, VALIDATION, and HELD_OUT_TEST is empty. No scenario ID appears in more than one split. Label leakage via ID overlap: none."
+    },
+    {
+      "check": "manifest_counts_match_files",
+      "status": "PASS",
+      "detail": "manifest.json split_counts: DEVELOPMENT=36, VALIDATION=18, HELD_OUT_TEST=15. Actual n_scenarios in files: development.json=36, validation.json=18, held_out_test.json=15. All match exactly."
+    },
+    {
+      "check": "fault_type_distribution",
+      "status": "PASS",
+      "detail": "Observed counts across all 69 scenarios — NETWORK_LATENCY:3, PACKET_LOSS:3, SERVICE_DEGRADATION:3, RESOURCE_CONTENTION:3, QUEUEING:3, DEPENDENCY_FAILURE:3, MULTI_CAUSE:3, CONFOUNDED:48. Matches manifest by_fault_type exactly."
+    },
+    {
+      "check": "recovery_after_injection",
+      "status": "PASS",
+      "detail": "All 69 scenarios have injected_at_t=60.0. expected_recovery_t values are 300.0, 360.0, 420.0, 480.0, 540.0, or 600.0 — all strictly greater than 60.0. No violations found."
+    },
+    {
+      "check": "causal_path_non_empty_non_confounded",
+      "status": "FAIL",
+      "detail": "3 non-confounded scenarios have empty causal_path=[]: RC_01 (DEVELOPMENT, seed=43), RC_02 (DEVELOPMENT, seed=44), RC_03 (VALIDATION, seed=45). All three are fault_type=RESOURCE_CONTENTION with root_cause_service=redis_cart. An empty causal_path on a non-confounded scenario is ambiguous — it may be intentional (resource contention propagates implicitly via shared resource rather than a directed service call path) or a generation oversight. Severity: MEDIUM. Does not affect structural integrity but weakens causal path completeness for this fault type. Recommendation: add a comment field or update causal_path to [['redis_cart','cart']] to reflect the observed propagation chain. DO NOT modify existing records; add a generator note."
+    }
+  ],
+  "development_split_detail": {
+    "fault_ids": [
+      "NL_01", "PL_01", "SD_01", "RC_01", "QU_01", "DF_01", "MC_01",
+      "NL_02", "PL_02", "SD_02", "RC_02", "QU_02",
+      "CF_00", "CF_01", "CF_02", "CF_03", "CF_04", "CF_05",
+      "CF_06", "CF_07", "CF_08", "CF_09", "CF_10", "CF_11",
+      "CF_12", "CF_13", "CF_14", "CF_15", "CF_16", "CF_17",
+      "CF_18", "CF_19", "CF_20", "CF_21", "CF_22", "CF_23"
+    ],
+    "total": 36,
+    "non_confounded": 12,
+    "confounded": 24,
+    "confounded_proportion": "66.7%",
+    "multi_cause_scenarios": ["MC_01"],
+    "multi_cause_count": 1,
+    "empty_causal_path_non_confounded": ["RC_01", "RC_02"],
+    "all_recovery_after_injection": true,
+    "notes": [
+      "Trial-1 block (seed=43): NL_01, PL_01, SD_01, RC_01, QU_01, DF_01, MC_01 — 7 non-confounded",
+      "Trial-2 block (seed=44): NL_02, PL_02, SD_02, RC_02, QU_02 — 5 non-confounded (DF_02 and MC_02 moved to VALIDATION)",
+      "CF_00..CF_23: 24 confounded scenarios with unique sequential seeds 42..65"
+    ]
+  },
+  "seed_uniqueness_audit": {
+    "status": "WARNING",
+    "detail": "Seeds are NOT unique per scenario. Multiple scenarios within the same trial block share seeds (e.g., NL_01/PL_01/SD_01/RC_01/QU_01/DF_01/MC_01 all have seed=43; NL_02/PL_02/SD_02/RC_02/QU_02 all have seed=44). The manifest states 'each scenario has unique seed derived from manifest seed=42' but seeds are assigned per trial-group, not per scenario. Confounded scenarios (CF_00..CF_47) DO have unique sequential seeds 42..89. Non-confounded scenarios share seeds within their trial block. Severity: LOW — seeds serve as replay anchors; shared seeds within a trial block are consistent with the generation logic (one RNG seed per trial run, not per fault type). However, the manifest claim of per-scenario uniqueness is not accurate for non-confounded scenarios."
+  },
+  "held_out_test_status": "SEALED - not inspected for tuning",
+  "label_leakage_check": "PASS",
+  "overall_status": "PASS_WITH_WARNINGS",
+  "notes": [
+    "One structural FAIL: causal_path is empty for RESOURCE_CONTENTION scenarios (RC_01, RC_02, RC_03). These are non-confounded but have no causal edges recorded. This is likely intentional (shared-resource contention has no directed call-path in the service graph) but violates the audit spec check. Severity: MEDIUM.",
+    "One informational WARNING: seed values are not strictly unique per scenario for non-confounded scenarios; they are unique per trial-group. This is consistent with the generator design but inconsistent with the manifest prose description.",
+    "All structural integrity properties hold: correct split counts, no duplicate IDs, no cross-split contamination, ground_truth_locked=true throughout, split labels consistent, manifest counts match, fault type distribution matches, recovery times always exceed injection times.",
+    "HELD_OUT_TEST was accessed only to verify structural properties (field presence, split labels, ground_truth_locked, fault_id uniqueness). No label values from HELD_OUT_TEST were used for any tuning decision. The audit does not inspect HELD_OUT_TEST ground-truth labels for model selection purposes.",
+    "Confounded count in manifest is listed both under 'confounded':48 and under 'by_fault_type.CONFOUNDED':48 — these are consistent."
+  ]
+}

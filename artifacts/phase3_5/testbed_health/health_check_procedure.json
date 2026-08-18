@@ -1,0 +1,226 @@
+{
+  "_meta": {
+    "document": "RIFT Gate 3.5B — Health Check Procedure",
+    "version": "1.0",
+    "applies_to": "docker/docker-compose.yml",
+    "target_environment": "Linux host with Docker Engine and Docker Compose v2",
+    "purpose": "Define the steps a fresh Linux environment must complete before any RIFT Gate 3 experiment is run. Completing all steps with all checks passing constitutes a 'clean environment'."
+  },
+
+  "prerequisites": {
+    "host_requirements": [
+      "Linux kernel 5.x+ (required for tc netem used by rift-eval NET_ADMIN cap)",
+      "Docker Engine 24+ or Docker Desktop on Linux",
+      "Docker Compose v2 (compose plugin, not standalone docker-compose)",
+      "Sufficient disk for image pulls: ~3–4 GB estimated",
+      "Ports 8080, 9090, 16686, 14268 available on host"
+    ],
+    "network_requirements": [
+      "Internet access to gcr.io and hub.docker.com for image pulls",
+      "No firewall blocking outbound 443 to gcr.io"
+    ],
+    "working_directory": "Repository root (parent of docker/)"
+  },
+
+  "phases": [
+    {
+      "phase": 1,
+      "name": "Pull all images",
+      "description": "Pull all images before attempting to start containers. This separates pull failures from startup failures.",
+      "commands": [
+        {
+          "cmd": "docker compose -f docker/docker-compose.yml pull --ignore-buildable",
+          "purpose": "Pull all non-built service images (excludes rift-eval which is built)",
+          "timeout_seconds": 600,
+          "expected_output_contains": "Pulled",
+          "failure_if": "Any image returns 'not found' or 'manifest unknown' — indicates image tag mismatch"
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "name": "Build RIFT evaluation harness image",
+      "description": "Build the rift-eval image from docker/Dockerfile",
+      "commands": [
+        {
+          "cmd": "BUILD_DATE=$(date -u +%Y-%m-%dT%H:%M:%SZ) GIT_SHA=$(git rev-parse --short HEAD) HOST_OS=$(uname -s) HOST_KERNEL=$(uname -r) docker compose -f docker/docker-compose.yml build rift-eval",
+          "purpose": "Build rift-eval:latest with reproducibility metadata",
+          "timeout_seconds": 300,
+          "expected_output_contains": "Successfully built",
+          "failure_if": "Build exits non-zero"
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "name": "Start all containers",
+      "description": "Bring up the full stack in detached mode",
+      "commands": [
+        {
+          "cmd": "docker compose -f docker/docker-compose.yml up -d",
+          "purpose": "Start all services",
+          "timeout_seconds": 120,
+          "expected_output_contains": "Started",
+          "failure_if": "Any service exits immediately (check with 'docker compose ps')"
+        },
+        {
+          "cmd": "sleep 15",
+          "purpose": "Allow services time to initialize before health checks"
+        },
+        {
+          "cmd": "docker compose -f docker/docker-compose.yml ps",
+          "purpose": "Verify all containers are in 'running' or 'Up' state",
+          "expected_output_does_not_contain": "Exit",
+          "failure_if": "Any service shows state 'Exit' or 'Restarting'"
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "name": "Service port connectivity checks",
+      "description": "Verify each service is accepting connections on its expected port within the Docker network, and verify host-exposed ports from outside.",
+      "commands": [
+        {
+          "cmd": "curl -sf http://localhost:8080/ -o /dev/null && echo 'frontend:OK'",
+          "purpose": "Verify boutique-frontend HTTP on host port 8080",
+          "timeout_seconds": 30,
+          "expected_output": "frontend:OK",
+          "failure_if": "Connection refused or non-200 HTTP status"
+        },
+        {
+          "cmd": "curl -sf http://localhost:9090/-/healthy && echo 'prometheus:OK'",
+          "purpose": "Verify Prometheus health on host port 9090",
+          "timeout_seconds": 15,
+          "expected_output": "prometheus:OK",
+          "failure_if": "Connection refused"
+        },
+        {
+          "cmd": "curl -sf http://localhost:16686/ -o /dev/null && echo 'jaeger-ui:OK'",
+          "purpose": "Verify Jaeger UI on host port 16686",
+          "timeout_seconds": 15,
+          "expected_output": "jaeger-ui:OK",
+          "failure_if": "Connection refused"
+        },
+        {
+          "cmd": "docker exec boutique-cart sh -c 'nc -z boutique-redis 6379 && echo redis:OK'",
+          "purpose": "Verify cart can reach Redis on internal network",
+          "timeout_seconds": 10,
+          "expected_output": "redis:OK",
+          "failure_if": "Connection refused or nc not available in container"
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "name": "Prometheus targets check",
+      "description": "Query Prometheus API to inspect scrape target status. Note: most boutique service targets are expected to show 'down' (see KI-003 — gRPC ports do not expose /metrics). Prometheus self-scrape and any HTTP-serving targets should be UP.",
+      "commands": [
+        {
+          "cmd": "curl -sf 'http://localhost:9090/api/v1/targets' | python3 -c \"import sys,json; d=json.load(sys.stdin); up=[t['labels']['job'] for t in d['data']['activeTargets'] if t['health']=='up']; print('UP targets:', up)\"",
+          "purpose": "List all Prometheus targets currently in UP state",
+          "timeout_seconds": 15,
+          "expected_output_contains": "prometheus",
+          "note": "Only 'prometheus' (self-scrape) is expected UP. Boutique service scrapes will show 'down' due to KI-003."
+        },
+        {
+          "cmd": "curl -sf 'http://localhost:9090/api/v1/targets' | python3 -c \"import sys,json; d=json.load(sys.stdin); down=[t['labels']['job'] for t in d['data']['activeTargets'] if t['health']!='up']; print('DOWN targets:', down)\"",
+          "purpose": "List DOWN targets for awareness",
+          "note": "All boutique service jobs will appear here. This is expected and documented in KI-003."
+        }
+      ],
+      "pass_criteria": "Prometheus is reachable and self-scrape target 'prometheus' is UP. DOWN boutique targets are acceptable given KI-003.",
+      "fail_criteria": "Prometheus itself is unreachable, or the API returns an error"
+    },
+    {
+      "phase": 6,
+      "name": "Jaeger trace ingestion check",
+      "description": "Verify Jaeger is receiving spans. After the loadgen has been running for ~60s, at least one service should appear in Jaeger.",
+      "commands": [
+        {
+          "cmd": "sleep 60",
+          "purpose": "Wait for loadgen to generate sufficient traffic for traces to appear"
+        },
+        {
+          "cmd": "curl -sf 'http://localhost:16686/api/services' | python3 -c \"import sys,json; d=json.load(sys.stdin); print('Jaeger services:', d.get('data', []))\"",
+          "purpose": "List services that have sent traces to Jaeger",
+          "timeout_seconds": 15,
+          "expected_output_does_not_contain": "[]",
+          "failure_if": "Service list is empty after 60s of loadgen traffic"
+        }
+      ]
+    },
+    {
+      "phase": 7,
+      "name": "Load generator activity check",
+      "description": "Verify boutique-loadgen is actively generating requests.",
+      "commands": [
+        {
+          "cmd": "docker logs boutique-loadgen --tail 20",
+          "purpose": "Check recent loadgen log output for request activity",
+          "timeout_seconds": 10,
+          "expected_output_contains": "GET",
+          "note": "Look for Locust HTTP request log lines. Absence of requests after 30s indicates loadgen startup failure (see KI-002)."
+        }
+      ]
+    },
+    {
+      "phase": 8,
+      "name": "Startup error rate check",
+      "description": "After 2 minutes of running, inspect frontend and loadgen logs for sustained error rates. Transient errors in the first 30s are expected due to KI-002.",
+      "commands": [
+        {
+          "cmd": "docker logs boutique-frontend --since 1m 2>&1 | grep -i 'error\\|panic\\|fatal' | wc -l",
+          "purpose": "Count error/panic/fatal lines in the last minute of frontend logs",
+          "expected_output": "0",
+          "note": "A count of 0 indicates a clean steady-state. Counts > 0 warrant log inspection."
+        },
+        {
+          "cmd": "docker logs boutique-loadgen --since 1m 2>&1 | grep -c 'Failure\\|Error' || true",
+          "purpose": "Count Locust failure lines in the last minute",
+          "expected_output": "0",
+          "note": "Transient startup failures (first 30s) are excluded by --since 1m."
+        }
+      ]
+    }
+  ],
+
+  "clean_environment_definition": {
+    "description": "A 'clean environment' for RIFT Gate 3 experiments satisfies ALL of the following:",
+    "criteria": [
+      "All 14 containers listed in docker-compose.yml are in state 'Up' (not 'Exit', not 'Restarting')",
+      "boutique-frontend responds HTTP 200 at localhost:8080",
+      "Prometheus is reachable and returning 200 at localhost:9090/-/healthy",
+      "Jaeger UI is reachable at localhost:16686",
+      "Jaeger API /api/services returns at least one service name after 60s of loadgen traffic",
+      "boutique-loadgen logs show active Locust HTTP request lines",
+      "No sustained error rate in boutique-frontend logs after the 30s startup window",
+      "RIFT harness (rift-eval) can reach Prometheus and Jaeger via internal network names"
+    ],
+    "explicitly_acceptable_states": [
+      "Prometheus targets for boutique services show 'down' (KI-003 — expected, not a gate failure)",
+      "Transient loadgen connection errors in the first 30s (KI-002 — expected, not a gate failure)"
+    ]
+  },
+
+  "teardown": {
+    "commands": [
+      {
+        "cmd": "docker compose -f docker/docker-compose.yml down -v",
+        "purpose": "Stop and remove all containers and named volumes. Run between experiments to ensure clean state.",
+        "note": "-v removes named volumes (rift-artifacts, prometheus-data, jaeger-data); omit -v to preserve artifacts"
+      }
+    ]
+  },
+
+  "total_estimated_duration_seconds": {
+    "image_pull": 300,
+    "build_rift_eval": 120,
+    "container_startup": 30,
+    "port_checks": 15,
+    "prometheus_check": 15,
+    "jaeger_warmup_wait": 60,
+    "log_checks": 30,
+    "total_estimated": 570,
+    "note": "~10 minutes on a fast Linux host with warm Docker layer cache; ~20 minutes on first pull on slow connection"
+  }
+}

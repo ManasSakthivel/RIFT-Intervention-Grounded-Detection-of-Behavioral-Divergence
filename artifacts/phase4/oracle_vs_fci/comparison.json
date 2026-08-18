@@ -1,0 +1,10 @@
+{
+  "scenario": "NL_01",
+  "oracle_top1": "frontend",
+  "oracle_p1_correct": true,
+  "fci_n_edges": 0,
+  "fci_n_variables": 3,
+  "fci_runtime_s": 0.006,
+  "fci_hidden_confounders": 0,
+  "separation": "oracle=ground_truth_PAG; fci=estimated_from_observational_data"
+}

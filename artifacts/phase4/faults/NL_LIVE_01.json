@@ -1,0 +1,7 @@
+{
+  "status": "ROLLED_BACK",
+  "verified": false,
+  "measured_delta": null,
+  "method": "PENDING",
+  "notes": "NETWORK_LATENCY injected via tc netem on lo \u2192 127.0.0.1 | tc apply failed: Command failed: tc qdisc add dev lo root handle 1: prio priomap 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0\nstderr: Cannot open network namespace \"rift-eval-dev\": No such file or directory\n [verify_injection: skipped \u2014 record is ABORTED or DRY_RUN] [rollback: NetworkInterventionRecord not found in engine; may have been already rolled back]"
+}

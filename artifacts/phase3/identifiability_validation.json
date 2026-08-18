@@ -1,0 +1,52 @@
+{
+  "phase": "3F",
+  "component": "mag_id_scoped",
+  "scope": "backdoor + frontdoor + IV (simple)",
+  "full_mag_id": "DEFERRED",
+  "abstention_correctly_triggered": true,
+  "cases": [
+    {
+      "name": "chain_no_confounder",
+      "status": "IDENTIFIABLE",
+      "method": "BACKDOOR",
+      "abstains": false,
+      "correct": true
+    },
+    {
+      "name": "backdoor_observed_Z",
+      "status": "IDENTIFIABLE",
+      "method": "BACKDOOR",
+      "abstains": false,
+      "correct": true
+    },
+    {
+      "name": "hidden_confounder_bidirected_only",
+      "status": "NOT_IDENTIFIABLE",
+      "method": "ABSTAIN",
+      "abstains": true,
+      "correct": true
+    },
+    {
+      "name": "mediated_X_M_Y_with_hidden_XY",
+      "status": "IDENTIFIABLE",
+      "method": "FRONT_DOOR",
+      "abstains": false,
+      "correct": true
+    },
+    {
+      "name": "pag_ambiguity_partial",
+      "status": "CONDITIONALLY_IDENTIFIABLE",
+      "method": "BACKDOOR",
+      "abstains": false,
+      "correct": true
+    },
+    {
+      "name": "full_non_identifiable",
+      "status": "NOT_IDENTIFIABLE",
+      "method": "ABSTAIN",
+      "abstains": true,
+      "correct": true
+    }
+  ],
+  "gate": "PASS"
+}

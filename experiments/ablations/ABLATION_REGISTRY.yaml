@@ -1,0 +1,162 @@
+# RIFT Ablation Framework — Configuration Registry
+# File: experiments/ablations/ABLATION_REGISTRY.yaml
+#
+# Defines all ablation conditions for RIFT.
+# Each ablation disables one component to test its contribution.
+#
+# Authority: docs/experiments/ABLATION_PLAN.md, docs/hypotheses.md H2, H3
+
+ablations:
+
+  RIFT-FULL:
+    description: "Full RIFT pipeline — all components enabled"
+    is_baseline: false
+    is_full_system: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: true
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: true
+      closed_loop_update: true
+    status: "IMPLEMENTED"
+    experiment: "EXP-001"
+
+  RIFT-OBS:
+    description: "No intervention — observation-only causal model"
+    is_baseline: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: false   # ← disabled
+      network_intervention: false  # ← disabled (key ablation for H2)
+      cid_scoring: false           # ← disabled (no interventions)
+      ebd_scoring: true
+      closed_loop_update: false    # ← disabled
+    tests_novelty: "N2"
+    hypothesis: "H2"
+    status: "IMPLEMENTED"
+    experiment: "EXP-005"
+    notes: >
+      If RIFT-OBS ≈ RIFT-FULL in accuracy, the intervention layer adds no value.
+      This is the critical H2 ablation.
+
+  RIFT-RANDOM:
+    description: "Random intervention selection — no MSIS cost optimization"
+    is_baseline: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: false   # ← replaced with uniform random
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: true
+      closed_loop_update: true
+    tests_novelty: "N3"
+    hypothesis: "H4"
+    status: "IMPLEMENTED"
+    experiment: "EXP-006"
+    notes: >
+      MSIS replaced with RandomMSIS (uniform random selection).
+      Same eligibility rules, same budget, same stopping conditions.
+      Tests whether greedy utility maximization adds value over random.
+
+  RIFT-ONE-SHOT:
+    description: "No closed-loop update — posterior not updated between interventions"
+    is_baseline: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: true
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: true
+      closed_loop_update: false    # ← disabled (key ablation for H3)
+    tests_novelty: "N5"
+    hypothesis: "H3"
+    status: "IMPLEMENTED"
+    experiment: "EXP-013"
+    implementation_file: "src/rift/baselines/rift_one_shot.py"
+    test_file: "tests/unit/baselines/test_rift_one_shot.py"
+    notes: >
+      Initial candidate ranking used for all intervention selections (no Bayesian update).
+      Tests whether the closed-loop update mechanism adds benefit on multi-cause faults.
+      Implementation complete: frozen posterior semantics enforced.
+      RIFTOneShotBaseline.run() sets self._frozen_posterior once after EBD; never mutated.
+      MAC_TESTED: test_rift_one_shot.py passes. EXP-013 is READY_FOR_LINUX.
+      P0-01 resolved: was NOT_IMPLEMENTED, now IMPLEMENTED and tested.
+
+  RIFT-NO-CID:
+    description: "No CID scoring — skip Wasserstein divergence measurement"
+    is_baseline: false
+    is_ablation: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: true
+      network_intervention: true
+      cid_scoring: false           # ← disabled
+      ebd_scoring: true
+      closed_loop_update: true
+    tests_novelty: "N4"
+    hypothesis: null
+    status: "NOT_IMPLEMENTED"
+    implementation_required: "src/rift/baselines/rift_no_cid.py"
+    notes: >
+      Tests contribution of CID (W1 Wasserstein) to attribution accuracy.
+      Falls back to anomaly score only for EBD R4 criterion.
+
+  RIFT-NO-EBD:
+    description: "No EBD — skip behavioral divergence detection"
+    is_baseline: false
+    is_ablation: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: true
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: false           # ← disabled
+      closed_loop_update: true
+    tests_novelty: "N4"
+    hypothesis: null
+    status: "NOT_IMPLEMENTED"
+    implementation_required: "src/rift/baselines/rift_no_ebd.py"
+
+  RIFT-NO-MSIS:
+    description: "No MSIS cost selection — random intervention selection"
+    is_baseline: false
+    is_ablation: true
+    components:
+      fci_graph_learning: true
+      identifiability_check: true
+      msis_cost_selection: false   # ← disabled
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: true
+      closed_loop_update: true
+    tests_novelty: "N3"
+    hypothesis: "H4"
+    status: "IMPLEMENTED"  # same as RIFT-RANDOM
+    notes: "Equivalent to RIFT-RANDOM. Use EXP-006 results."
+
+  RIFT-ALT-GRAPH:
+    description: "Alternative graph learning — no FCI, use correlation-based DAG"
+    is_baseline: false
+    is_ablation: true
+    components:
+      fci_graph_learning: false    # ← replaced with correlation-based DAG
+      identifiability_check: true
+      msis_cost_selection: true
+      network_intervention: true
+      cid_scoring: true
+      ebd_scoring: true
+      closed_loop_update: true
+    tests_novelty: "N1"
+    hypothesis: null
+    status: "NOT_IMPLEMENTED"
+    implementation_required: "src/rift/baselines/rift_alt_graph.py"
+    notes: >
+      Tests contribution of FCI-PAG causal graph vs simpler correlation DAG.
+      Deferred to Phase 9.

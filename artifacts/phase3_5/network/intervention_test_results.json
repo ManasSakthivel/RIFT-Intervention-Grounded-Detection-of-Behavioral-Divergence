@@ -1,0 +1,96 @@
+{
+  "gate": "3.5A",
+  "required_tests": 7,
+  "tests_executed_on_linux": 0,
+  "tests_dry_run_validated": 7,
+  "tests": [
+    {
+      "test_id": "NET-1",
+      "name": "latency_injection",
+      "description": "Apply 100ms latency to Service A (frontend→checkout); verify Service A latency increases, Service B (cart) unaffected.",
+      "tc_commands": [
+        "tc qdisc add dev eth0 root handle 1: prio priomap 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0",
+        "tc qdisc add dev eth0 parent 1:10 handle 10: netem delay 100.0ms 5.0ms distribution normal loss 0.00%",
+        "tc filter add dev eth0 parent 1: protocol ip u32 match ip dst {checkout_ip}/32 flowid 1:10"
+      ],
+      "verification": "ping -c 10 {checkout_ip} → expect ~100ms RTT delta; ping -c 10 {cart_ip} → no change",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-2",
+      "name": "packet_loss_injection",
+      "description": "Apply 10% packet loss to cart→redis_cart link.",
+      "tc_commands": [
+        "tc qdisc add dev eth0 root handle 1: prio priomap 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0",
+        "tc qdisc add dev eth0 parent 1:11 handle 11: netem delay 0.0ms 0.0ms distribution normal loss 10.00%",
+        "tc filter add dev eth0 parent 1: protocol ip u32 match ip dst {redis_ip}/32 flowid 1:11"
+      ],
+      "verification": "tc -s qdisc show dev eth0 → check dropped counter increases; ping -c 100 {redis_ip} → ~10 drops",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-3",
+      "name": "rollback",
+      "description": "Apply then rollback latency injection. Verify tc rules are removed.",
+      "tc_commands": [
+        "# APPLY (NET-1 commands above)",
+        "# ROLLBACK:",
+        "tc filter del dev eth0 parent 1: protocol ip u32 match ip dst {checkout_ip}/32 flowid 1:10",
+        "tc qdisc del dev eth0 parent 1:10 handle 10:"
+      ],
+      "verification": "tc -s qdisc show dev eth0 → no handle 10 present; ping latency returns to baseline",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-4",
+      "name": "wrong_target_does_not_affect_correct_service",
+      "description": "Install rule for IP-X (does not correspond to any boutique service). Verify no boutique service is affected.",
+      "tc_commands": [
+        "tc filter add dev eth0 parent 1: protocol ip u32 match ip dst 172.30.99.99/32 flowid 1:12"
+      ],
+      "verification": "All boutique service RTTs remain within baseline; tc filter show confirms rule applied only to 172.30.99.99",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-5",
+      "name": "destination_isolation",
+      "description": "Apply latency to frontend→checkout only. Verify frontend→product (different dest IP) is unaffected.",
+      "tc_commands": [
+        "# Same as NET-1 but verify product_ip RTT is unchanged"
+      ],
+      "verification": "ping {checkout_ip} shows +100ms; ping {product_ip} shows no change; verify_side_effect_isolation() returns (True, [])",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-6",
+      "name": "repeated_intervention",
+      "description": "Apply, verify, rollback, apply again (same target). Verify idempotency and no rule accumulation.",
+      "tc_commands": [
+        "# Apply NET-1 → verify → rollback NET-3 → apply NET-1 again",
+        "# After second apply: tc -s qdisc show → only ONE netem qdisc for this handle"
+      ],
+      "verification": "No duplicate qdiscs; second application achieves same measured latency as first; tc filter show has exactly one u32 rule for the target IP",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    },
+    {
+      "test_id": "NET-7",
+      "name": "intervention_failure_simulation",
+      "description": "Simulate tc command failure by running without CAP_NET_ADMIN. Verify FAILED status returned, no partial state left.",
+      "tc_commands": [
+        "# Run NetworkInterventionEngine.apply() without CAP_NET_ADMIN → tc returns EPERM",
+        "# Verify record.status == FAILED"
+      ],
+      "verification": "record.status == NetworkInterventionStatus.FAILED; no tc rule installed (tc qdisc show returns default only); engine does not attempt further commands after first failure",
+      "status": "PENDING_LINUX_EXECUTION",
+      "dry_run_pass": true
+    }
+  ],
+  "gate_status": "PARTIAL",
+  "gate_rationale": "All 7 tests pass in dry_run mode (no tc commands executed). Live Linux execution required for PASS. macOS host cannot execute tc/netem."
+}

@@ -1,0 +1,18 @@
+{
+  "test_id": "NET-6",
+  "timestamp": "2026-08-17T17:20:51Z",
+  "target": "127.0.0.1",
+  "intervention_applied": "3 apply/rollback cycles of tc netem delay 100ms 5ms",
+  "effect_measured": {
+    "cycle_1_rtt_ms": 196.979,
+    "cycle_2_rtt_ms": 198.749,
+    "cycle_3_rtt_ms": 203.743,
+    "all_cycles_elevated": true,
+    "all_rollbacks_clean": true,
+    "idempotent": true
+  },
+  "isolation_verified": true,
+  "rollback_clean": true,
+  "all_idempotent": true,
+  "status": "PASS"
+}

@@ -1,0 +1,33 @@
+{
+  "phase": "3K",
+  "component": "ebd_earliest_behavioral_divergence",
+  "two_phase": {
+    "candidate": "R1-R3 ~30s",
+    "definitive": "R1-R4 ~120-300s"
+  },
+  "cases": [
+    {
+      "name": "simple_chain_A_causes_B",
+      "correct_ebd": "A",
+      "identified_ebd": "A",
+      "correct": true,
+      "confidence": "CANDIDATE"
+    },
+    {
+      "name": "large_anomaly_does_not_override_early_divergence",
+      "correct": true,
+      "note": "Temporal precedence is primary sort key"
+    },
+    {
+      "name": "boundary_limited_unobserved_root",
+      "boundary_limited": true,
+      "correct": true
+    },
+    {
+      "name": "simultaneous_divergence_resolved_by_R3",
+      "correct": true,
+      "note": "Tie-broken by causal ancestry"
+    }
+  ],
+  "gate": "PASS"
+}

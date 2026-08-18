@@ -1,0 +1,67 @@
+{
+  "gate": "3.5K",
+  "title": "Confounded Scenario Evaluation Plan",
+  "status": "SCENARIOS_SPECIFIED_EXECUTION_PENDING",
+  "online_boutique_confounded_scenarios": [
+    {
+      "scenario_id": "LIVE-CONF-1",
+      "name": "shared_redis_pressure",
+      "confounder": "boutique-redis",
+      "description": "Redis memory pressure causes both cart latency and checkout latency to spike simultaneously. Both depend on Redis but through different call paths.",
+      "affected_services": ["boutique-cart", "boutique-checkout"],
+      "observational_attribution_error": "Naive RCA would attribute to cart OR checkout depending on which shows higher anomaly score. It cannot distinguish whether cart caused checkout to degrade or vice versa.",
+      "confounding_mechanism": "H = redis_memory_pressure → cart_latency AND redis_memory_pressure → checkout_via_cart_latency. Observationally: cart_latency ↔ checkout_latency (correlated) with no directed path identifiable.",
+      "rift_expected_behavior": "ABSTAINED_OR_NOT_IDENTIFIABLE — bidirected edge between cart and checkout in FCI-estimated PAG; identifiability_state=NOT_IDENTIFIABLE; RIFT correctly abstains.",
+      "intervention_that_disambiguates": "do(reduce_redis_memory_pressure): if BOTH cart and checkout latency drop → redis is the confounder. do(add_latency_to_cart_only): if checkout latency drops → cart→checkout is causal path.",
+      "injection_method": "docker exec boutique-redis redis-cli config set maxmemory 50mb (forces eviction pressure)",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "scenario_id": "LIVE-CONF-2",
+      "name": "shared_product_catalog",
+      "confounder": "boutique-product",
+      "description": "Product catalog slowdown causes both recommendation service and frontend to degrade simultaneously. Both call product_catalog independently.",
+      "affected_services": ["boutique-recommend", "boutique-frontend"],
+      "observational_attribution_error": "Observational RCA sees recommend and frontend degrade together. May attribute to frontend (higher traffic) or recommend (first to show latency) without correct causal analysis.",
+      "confounding_mechanism": "H = product_latency → recommend_latency AND product_latency → frontend_latency. Observationally: recommend ↔ frontend (shared cause, bidirected in FCI).",
+      "rift_expected_behavior": "NOT_IDENTIFIABLE for recommend↔frontend edge. RIFT should identify product_catalog as the common cause via intervention: do(add_latency_to_product) causes both to degrade.",
+      "intervention_that_disambiguates": "do(add_latency_to_product_catalog): observe both recommend AND frontend degrade → product_catalog is the common cause.",
+      "injection_method": "tc netem 200ms to boutique-product container",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "scenario_id": "LIVE-CONF-3",
+      "name": "network_bridge_congestion",
+      "confounder": "rift-eval-network bridge",
+      "description": "Shared Docker bridge network becomes congested (simulated by high-bandwidth background traffic). All services show increased latency simultaneously.",
+      "affected_services": ["all services on rift-eval-network"],
+      "observational_attribution_error": "All services degrade together. Observational RCA cannot identify the root cause — it looks like a system-wide incident. Any single service could be falsely attributed.",
+      "confounding_mechanism": "Network bandwidth is a latent shared resource. All service-to-service latencies increase proportionally. FCI will see many bidirected edges.",
+      "rift_expected_behavior": "NOT_IDENTIFIABLE for most pairs. RIFT should produce high abstention rate. This is a system-wide confounder that exceeds RIFT's intervention scope.",
+      "intervention_that_disambiguates": "No single per-destination tc rule can target network bandwidth. RIFT should correctly report this as non-identifiable.",
+      "injection_method": "Background iperf3 flood within network namespace",
+      "status": "PENDING_LIVE_EXECUTION"
+    },
+    {
+      "scenario_id": "LIVE-CONF-4",
+      "name": "common_downstream_currency",
+      "confounder": "boutique-currency",
+      "description": "Currency service slowdown causes both checkout and frontend to degrade (both call currency). Observationally correlated.",
+      "affected_services": ["boutique-checkout", "boutique-frontend"],
+      "observational_attribution_error": "checkout and frontend degrade together → naive RCA attributes to checkout (higher observed anomaly score) or frontend (entry point).",
+      "confounding_mechanism": "currency_latency → checkout_latency AND currency_latency → frontend_latency (frontend calls currency for price display).",
+      "rift_expected_behavior": "ABSTAINED on checkout↔frontend edge (NOT_IDENTIFIABLE). RIFT intervention on currency should disambiguate: do(add_latency_to_currency) → both checkout and frontend degrade → currency is common cause.",
+      "intervention_that_disambiguates": "do(add_latency_to_currency): if BOTH checkout and frontend degrade → currency is the common cause. RIFT can identify this with intervention data.",
+      "injection_method": "tc netem 300ms to boutique-currency container",
+      "status": "PENDING_LIVE_EXECUTION"
+    }
+  ],
+  "evaluation_criteria": {
+    "IDENTIFIED": "RIFT correctly identifies the confounder or common cause AND abstains on the confounded pair",
+    "ABSTAINED": "RIFT correctly abstains on the confounded pair (NOT_IDENTIFIABLE) — this is CORRECT behavior",
+    "NOT_IDENTIFIABLE": "RIFT correctly reports identifiability_state=NOT_IDENTIFIABLE — also CORRECT behavior",
+    "INCORRECT": "RIFT incorrectly attributes one of the confounded services as the root cause without intervention evidence"
+  },
+  "key_claim": "RIFT must NOT claim to solve all hidden confounding. Correct outcomes are IDENTIFIED, ABSTAINED, and NOT_IDENTIFIABLE. The contribution is that RIFT explicitly distinguishes these cases rather than producing silent false attributions.",
+  "honest_caveat": "These scenarios have not been run on live Online Boutique. Expected behaviors are based on the oracle PAG analysis and the FCI/identifiability theory."
+}

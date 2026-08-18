@@ -1,0 +1,38 @@
+# Prometheus scrape config for RIFT testbed
+# Mounted read-only into the prometheus container by docker-compose.yml
+#
+# Architecture:
+#   Online Boutique → OTLP → OTel Collector → Prometheus metrics (port 8889)
+#   Prometheus scrapes otel-collector:8889 for all boutique service metrics.
+#
+# Do NOT scrape boutique services directly — they export OTLP (gRPC), not
+# Prometheus text format.  The OTel Collector handles the translation.
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+
+  - job_name: "prometheus"
+    static_configs:
+      - targets: ["localhost:9090"]
+
+  # ---------------------------------------------------------------------------
+  # OTel Collector Prometheus exporter — aggregated boutique metrics
+  # This is the primary source of Online Boutique telemetry for RIFT.
+  # The collector scrapes boutique services via its internal prometheus receiver
+  # and re-exposes them here in Prometheus text format with a "boutique_" prefix.
+  # ---------------------------------------------------------------------------
+  - job_name: "otel-collector"
+    static_configs:
+      - targets: ["otel-collector:8889"]
+    honor_labels: true   # preserve the 'service' label set by the collector
+
+  # ---------------------------------------------------------------------------
+  # OTel Collector health check (operational monitoring only; not used by RIFT)
+  # ---------------------------------------------------------------------------
+  - job_name: "otel-collector-health"
+    static_configs:
+      - targets: ["otel-collector:13133"]
+    metrics_path: "/metrics"

@@ -1,0 +1,14 @@
+[
+  {
+    "Method": "RIFT-FULL",
+    "Mean total_ed_s": "PENDING",
+    "Mean n_interventions": "PENDING",
+    "P@1 (TOST equiv.)": "PENDING"
+  },
+  {
+    "Method": "RIFT-RANDOM",
+    "Mean total_ed_s": "PENDING",
+    "Mean n_interventions": "PENDING",
+    "P@1 (TOST equiv.)": "PENDING"
+  }
+]

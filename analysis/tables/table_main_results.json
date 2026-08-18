@@ -1,0 +1,42 @@
+[
+  {
+    "Method": "RIFT-FULL",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Coverage": "PENDING",
+    "Abstention": "PENDING",
+    "Latency (s)": "PENDING"
+  },
+  {
+    "Method": "RIFT-OBS",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Coverage": "PENDING",
+    "Abstention": "PENDING",
+    "Latency (s)": "PENDING"
+  },
+  {
+    "Method": "RIFT-RANDOM",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Coverage": "PENDING",
+    "Abstention": "PENDING",
+    "Latency (s)": "PENDING"
+  },
+  {
+    "Method": "SIEVE-LIKE",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Coverage": "PENDING",
+    "Abstention": "PENDING",
+    "Latency (s)": "PENDING"
+  },
+  {
+    "Method": "ORACLE-UPPER-BOUND\u2020",
+    "Raw P@1": "PENDING",
+    "Cond. P@1": "PENDING",
+    "Coverage": "PENDING",
+    "Abstention": "PENDING",
+    "Latency (s)": "PENDING"
+  }
+]

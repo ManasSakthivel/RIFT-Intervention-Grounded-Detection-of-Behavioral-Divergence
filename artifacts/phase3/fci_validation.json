@@ -1,0 +1,32 @@
+{
+  "phase": "3E",
+  "component": "fci_pag",
+  "note": "PAG is intervention-consistent, not causally accurate.",
+  "cases": [
+    {
+      "name": "chain_no_confounding",
+      "hidden_confounders_detected": false,
+      "adjacency_recall": 1.0,
+      "adjacency_precision": 1.0
+    },
+    {
+      "name": "latent_confounder",
+      "hidden_confounders_detected": true,
+      "bidirected_edge": true
+    },
+    {
+      "name": "collider",
+      "adjacency_recall": 1.0
+    },
+    {
+      "name": "mediated_path",
+      "adjacency_recall": 1.0
+    },
+    {
+      "name": "ambiguous_orientation",
+      "undirected_edges_present": true
+    }
+  ],
+  "gate": "PASS",
+  "validated_on": "synthetic_ground_truth_scenarios_only"
+}

@@ -1,0 +1,110 @@
+{
+  "captured_at": "2026-08-17T17:17:13Z",
+  "host": "manas1.fyre.ibm.com",
+  "os": {
+    "name": "Red Hat Enterprise Linux",
+    "version": "9.6 (Plow)",
+    "id": "rhel",
+    "id_like": "fedora",
+    "version_id": "9.6",
+    "platform_id": "platform:el9",
+    "pretty_name": "Red Hat Enterprise Linux 9.6 (Plow)",
+    "cpe_name": "cpe:/o:redhat:enterprise_linux:9::baseos"
+  },
+  "kernel": {
+    "full": "Linux manas1.fyre.ibm.com 5.14.0-570.62.1.el9_6.x86_64 #1 SMP PREEMPT_DYNAMIC Mon Nov 3 10:38:50 EST 2025 x86_64 x86_64 x86_64 GNU/Linux",
+    "version": "5.14.0-570.62.1.el9_6.x86_64",
+    "type": "SMP PREEMPT_DYNAMIC"
+  },
+  "architecture": "x86_64",
+  "cpu": {
+    "model": "AMD EPYC Processor (with IBPB)",
+    "bios_model": "pc-i440fx-jammy",
+    "architecture": "x86_64",
+    "cpu_count": 8,
+    "threads_per_core": 1,
+    "cores_per_socket": 1,
+    "sockets": 8,
+    "numa_nodes": 1
+  },
+  "memory": {
+    "total": "15Gi",
+    "used": "1.6Gi",
+    "free": "6.8Gi",
+    "available": "13Gi",
+    "swap_total": "2.0Gi",
+    "swap_used": "0B"
+  },
+  "disk": {
+    "filesystem": "/dev/mapper/rhel-root",
+    "size": "247G",
+    "used": "12G",
+    "available": "236G",
+    "use_percent": "5%",
+    "mount": "/"
+  },
+  "software": {
+    "docker": {
+      "version": "29.7.2",
+      "build": "a7dcaa6"
+    },
+    "docker_compose": {
+      "version": "v5.5.0"
+    },
+    "python": {
+      "version": "3.11.13",
+      "executable": "/usr/local/bin/python3.11",
+      "pip_version": "26.2.1",
+      "pip_location": "/usr/local/lib/python3.11/site-packages/pip"
+    },
+    "git": {
+      "version": "2.47.3"
+    },
+    "iproute2": {
+      "version": "6.11.0",
+      "libbpf": "1.5.0"
+    },
+    "tc": {
+      "version": "iproute2-6.11.0",
+      "libbpf": "1.5.0"
+    }
+  },
+  "networking": {
+    "netem_module": {
+      "available": true,
+      "functional": true,
+      "kernel_module": "/lib/modules/5.14.0-570.62.1.el9_6.x86_64/kernel/net/sched/sch_netem.ko.xz",
+      "rhelversion": "9.6"
+    },
+    "u32_filter": {
+      "available": true,
+      "functional": true,
+      "note": "requires root qdisc to be attached first before adding filters"
+    },
+    "cap_net_admin": true,
+    "network_namespaces_supported": true,
+    "running_as": "root",
+    "uid": 0,
+    "gid": 0
+  },
+  "rift": {
+    "installed": true,
+    "location": "/opt/rift/src/rift/__init__.py"
+  },
+  "python_deps": {
+    "causallearn_fci": true,
+    "numpy": true,
+    "scipy": true,
+    "sklearn": true,
+    "networkx": true,
+    "pandas": true,
+    "pydantic": true,
+    "all_deps_ok": true
+  },
+  "ports": {
+    "8080": "free",
+    "9090": "free",
+    "16686": "free",
+    "14268": "free"
+  }
+}

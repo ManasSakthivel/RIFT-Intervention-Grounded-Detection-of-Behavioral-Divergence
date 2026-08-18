@@ -1,0 +1,355 @@
+{
+  "generated_at": "2026-08-17T16:15:07.118976Z",
+  "git_commit": "unknown",
+  "platform": "Darwin",
+  "python_version": "3.9.6",
+  "phase": "3.6",
+  "pre_linux_ready": true,
+  "macos_test_results": {
+    "total_collected": 513,
+    "passed": 513,
+    "failed": 0,
+    "skipped": 0,
+    "warnings": 14,
+    "summary": "513/513 passed (0 failed, 0 skipped)",
+    "note": "All macOS-runnable tests pass. Linux-only tests are marked READY_FOR_LINUX and not collected on macOS.",
+    "gitignore_present": true
+  },
+  "components": {
+    "RIFT-FULL pipeline": {
+      "path": "src/rift/pipeline/e2e_runner.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "CID evaluator": {
+      "path": "src/rift/cid/cid.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "EBD evaluator": {
+      "path": "src/rift/ebd/ebd.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Safety controller": {
+      "path": "src/rift/safety/safety.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Closed-loop machine": {
+      "path": "src/rift/loop/closed_loop.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "FCI runner": {
+      "path": "src/rift/fci/fci_runner.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Identifiability": {
+      "path": "src/rift/identifiability/identifiability.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Cost model/MSIS": {
+      "path": "src/rift/optimizer/cost_model.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Network intervention": {
+      "path": "src/rift/intervention/network_intervention.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Intervention lifecycle": {
+      "path": "src/rift/intervention/intervention_lifecycle.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "DryRun backend": {
+      "path": "src/rift/intervention/backends/dry_run.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "LinuxTcNetem backend": {
+      "path": "src/rift/intervention/backends/linux_tc_netem.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Fault injector": {
+      "path": "src/rift/fault_injection/fault_injector.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "RIFT-OBS baseline": {
+      "path": "src/rift/baselines/rift_obs.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "RIFT-RANDOM baseline": {
+      "path": "src/rift/baselines/rift_random.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Sieve-like baseline": {
+      "path": "src/rift/baselines/sieve_like.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Sage+Chaos stub": {
+      "path": "src/rift/baselines/sage_chaos.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Oracle upper bound": {
+      "path": "src/rift/baselines/oracle.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Attribution metrics": {
+      "path": "src/rift/evaluation/attribution_metrics.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Divergence metrics": {
+      "path": "src/rift/evaluation/divergence_metrics.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "EBD metrics": {
+      "path": "src/rift/evaluation/ebd_metrics.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Statistical framework": {
+      "path": "src/rift/statistics/stats.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Power analysis": {
+      "path": "src/rift/evaluation/power.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Held-out guard": {
+      "path": "src/rift/evaluation/held_out_guard.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Artifact writer": {
+      "path": "src/rift/artifacts/writer.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Provenance logger": {
+      "path": "src/rift/provenance/logger.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Experiment runner": {
+      "path": "src/rift/experiments/run.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Failure taxonomy": {
+      "path": "src/rift/models/failure_codes.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Telemetry normalizer": {
+      "path": "src/rift/telemetry/normalizer.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Instrumentation": {
+      "path": "src/rift/telemetry/instrumentation.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Data models": {
+      "path": "src/rift/models/data_models.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "SCM": {
+      "path": "src/rift/scm/scm.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Time-sliced G_T": {
+      "path": "src/rift/graph/time_slice.py",
+      "exists": true,
+      "status": "PASS"
+    },
+    "Anomaly subgraph": {
+      "path": "src/rift/graph/anomaly_subgraph.py",
+      "exists": true,
+      "status": "PASS"
+    }
+  },
+  "security": {
+    "gitignore": {
+      "path": ".gitignore",
+      "exists": true,
+      "status": "PASS"
+    },
+    "audit_doc": {
+      "path": "docs/SECURITY_AUDIT.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "no_secrets_in_source": true
+  },
+  "documentation": {
+    "SYSTEM_COMPLETENESS_MATRIX": {
+      "path": "docs/SYSTEM_COMPLETENESS_MATRIX.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "CLAIMS_REGISTRY": {
+      "path": "docs/CLAIMS_REGISTRY.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "PAPER_EVIDENCE_MATRIX": {
+      "path": "docs/PAPER_EVIDENCE_MATRIX.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "SECURITY_AUDIT": {
+      "path": "docs/SECURITY_AUDIT.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "TELEMETRY_ARCHITECTURE": {
+      "path": "docs/telemetry/ARCHITECTURE.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "RIFT_OBS_DOC": {
+      "path": "docs/baselines/RIFT_OBS.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "RIFT_RANDOM_DOC": {
+      "path": "docs/baselines/RIFT_RANDOM.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "SIEVE_LIKE_DOC": {
+      "path": "docs/baselines/SIEVE_LIKE.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "SAGE_CHAOS_DOC": {
+      "path": "docs/baselines/SAGE_CHAOS.md",
+      "exists": true,
+      "status": "PASS"
+    },
+    "ORACLE_DOC": {
+      "path": "docs/baselines/ORACLE.md",
+      "exists": true,
+      "status": "PASS"
+    }
+  },
+  "configurations": {
+    "development": {
+      "path": "configs/development.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "validation": {
+      "path": "configs/validation.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "held_out": {
+      "path": "configs/held_out.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "live": {
+      "path": "configs/live.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "dry_run": {
+      "path": "configs/dry_run.yaml",
+      "exists": true,
+      "status": "PASS"
+    }
+  },
+  "deployment": {
+    "docker-compose": {
+      "path": "docker/docker-compose.yml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "prometheus": {
+      "path": "docker/prometheus.yml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "otel-collector": {
+      "path": "docker/otel-collector-config.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "start_testbed": {
+      "path": "scripts/start_testbed.sh",
+      "exists": true,
+      "status": "PASS"
+    },
+    "stop_testbed": {
+      "path": "scripts/stop_testbed.sh",
+      "exists": true,
+      "status": "PASS"
+    },
+    "health_check": {
+      "path": "scripts/health_check_testbed.sh",
+      "exists": true,
+      "status": "PASS"
+    },
+    "cleanup": {
+      "path": "scripts/cleanup_testbed.sh",
+      "exists": true,
+      "status": "PASS"
+    }
+  },
+  "experiment_registry": {
+    "REGISTRY.yaml": {
+      "path": "experiments/REGISTRY.yaml",
+      "exists": true,
+      "status": "PASS"
+    },
+    "total_experiments": 12,
+    "dry_run_ready": 5,
+    "ready_for_linux": 7
+  },
+  "linux_pending": [
+    "Live Prometheus/OTEL telemetry collection",
+    "Online Boutique deployment on Linux",
+    "tc netem per-destination interventions (CAP_NET_ADMIN)",
+    "kubectl-based fault injection",
+    "Live E2E RIFTRunRecord with live_telemetry_used=True",
+    "Final hypothesis tests H1-H5 (require live data)",
+    "Final Precision@1 measurement on held-out test set"
+  ],
+  "linux_validation_status": "PENDING_LINUX",
+  "frozen_historical_results": {
+    "raw_precision_at_1": 0.5,
+    "conditional_precision_at_1": 0.6,
+    "source": "artifacts/phase3_5/v1_decomposition.json",
+    "note": "Synthetic only. NOT final publication results. MUST NOT be modified."
+  },
+  "phase_4_authorized": false,
+  "phase_4_note": "Phase 4 NOT authorized until live Linux E2E validation is complete.",
+  "phase_3_6_verdict": "PRE-LINUX READY",
+  "p0_issues": 0,
+  "p1_issues": 0,
+  "missing": [
+    "Sage+Chaos pre-labeled trace data (DEFERRED_TO_PHASE_8)",
+    "Live Online Boutique deployment (PENDING_LINUX)",
+    "Final H1-H5 hypothesis test results (PENDING_LINUX)"
+  ]
+}

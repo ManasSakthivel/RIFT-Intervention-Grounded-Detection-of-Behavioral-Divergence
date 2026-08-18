@@ -1,0 +1,11 @@
+{
+  "fault_id": "NL_TEST_01",
+  "dry_run_status": "DRY_RUN",
+  "live_inject_status": "ROLLED_BACK",
+  "injection_verified": false,
+  "verification_method": "PENDING",
+  "measured_delta": null,
+  "expected_delta": 200.0,
+  "rollback_status": "ROLLED_BACK",
+  "notes": "NETWORK_LATENCY injected via tc netem on lo \u2192 127.0.0.1 | tc apply failed: Command failed: tc qdisc add dev lo parent 1:10 handle 10: netem delay 200.0ms 10.0ms distribution normal loss 0.00%\nstderr: Error: Specified class not found.\n [verify_injection: skipped \u2014 record is ABORTED or DRY_RUN] [rollback: NetworkInterventionRecord not found in engine; may have been already rolled back]"
+}
