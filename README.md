@@ -164,7 +164,7 @@ artifacts/          # frozen state manifests
 - Services at the leaves of the call graph (sinks in the PAG) can't satisfy the causal relevance criterion (R3), which limits attribution to non-leaf root causes.
 - SIEVE-LIKE is a methodological reimplementation for baseline purposes — no claims about the original Sieve system.
 
-Full detail: [docs/limitations.md](docs/limitations.md) and [docs/causal_assumptions.md](docs/causal_assumptions.md)
+Full detail: [docs/missing_capabilities.md](docs/missing_capabilities.md) and [docs/causal_assumptions.md](docs/causal_assumptions.md)
 
 ---
 
