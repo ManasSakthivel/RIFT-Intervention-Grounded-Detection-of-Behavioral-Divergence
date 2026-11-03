@@ -1,0 +1,145 @@
+{
+ "note": "Cross-environment evidence gathered in Sprint 4.4.2 on dev/val only. Environments tested: (A) py3.9.6 numpy2.0.2 sklearn1.6.1 nx3.2.1 pandas2.3.3 causal-learn0.1.4.8 [canonical]; (B) py3.11.15 with requirements.txt pins (numpy1.26.4 sklearn1.5.0 nx3.3 pandas2.2.2 causal-learn0.1.3.8); (C) py3.11.15 + requirements.txt pins but causal-learn upgraded to 0.1.4.8 (+momentchi2 0.1.8, joblib 1.6.0). No other environments were tested.",
+ "fci_pag_comparison_over_dev_val": {
+  "scenarios": 252,
+  "scenarios_with_pag": 213,
+  "A_vs_B_differing": [
+   {
+    "scenario_id": "V2D-0117",
+    "only_in_py39": [
+     [
+      "juniper",
+      "violet",
+      "TAIL_TAIL"
+     ],
+     [
+      "thorn",
+      "violet",
+      "PARTIALLY_DIRECTED"
+     ],
+     [
+      "violet",
+      "nettle",
+      "TAIL_TAIL"
+     ],
+     [
+      "wisteria",
+      "juniper",
+      "TAIL_TAIL"
+     ],
+     [
+      "wisteria",
+      "nettle",
+      "TAIL_TAIL"
+     ]
+    ],
+    "only_in_py311": [
+     [
+      "juniper",
+      "violet",
+      "UNDIRECTED"
+     ],
+     [
+      "thorn",
+      "violet",
+      "UNDIRECTED"
+     ],
+     [
+      "violet",
+      "nettle",
+      "UNDIRECTED"
+     ],
+     [
+      "wisteria",
+      "juniper",
+      "UNDIRECTED"
+     ],
+     [
+      "wisteria",
+      "nettle",
+      "UNDIRECTED"
+     ]
+    ]
+   },
+   {
+    "scenario_id": "V2V-0022",
+    "only_in_py39": [
+     [
+      "olive",
+      "dill",
+      "DIRECTED"
+     ],
+     [
+      "pine",
+      "dill",
+      "DIRECTED"
+     ]
+    ],
+    "only_in_py311": [
+     [
+      "olive",
+      "dill",
+      "UNDIRECTED"
+     ],
+     [
+      "pine",
+      "dill",
+      "UNDIRECTED"
+     ]
+    ]
+   }
+  ],
+  "A_vs_C_differing": [],
+  "B_vs_C_differing_scenarios": [
+   "V2D-0117",
+   "V2V-0022"
+  ]
+ },
+ "v3_all_six_variants_vs_committed_artifacts": {
+  "B_requirements_txt_env": {
+   "dev": {
+    "n_scenarios": 180,
+    "variants": 6,
+    "records_differing": 6,
+    "records_with_score_difference": 0,
+    "differing_fields": {
+     "ident_status": 6
+    },
+    "differing_records": [
+     "V2D-0117:V3-FULL",
+     "V2D-0117:V3-DEFINITIVE-ONLY",
+     "V2D-0117:V3-NO-MANIPULATION-CHECK",
+     "V2D-0117:V3-NO-EARLIER-GUARD",
+     "V2D-0117:V3-R3-CANDIDATES",
+     "V2D-0117:V3-NO-SYMMETRY-CHECK"
+    ]
+   },
+   "val": {
+    "n_scenarios": 72,
+    "variants": 6,
+    "records_differing": 0,
+    "records_with_score_difference": 0,
+    "differing_fields": {},
+    "differing_records": []
+   }
+  },
+  "C_py311_numerics_pinned_causal_learn_0.1.4.8": {
+   "dev": {
+    "n_scenarios": 180,
+    "variants": 6,
+    "records_differing": 0,
+    "records_with_score_difference": 0,
+    "differing_fields": {},
+    "differing_records": []
+   },
+   "val": {
+    "n_scenarios": 72,
+    "variants": 6,
+    "records_differing": 0,
+    "records_with_score_difference": 0,
+    "differing_fields": {},
+    "differing_records": []
+   }
+  }
+ }
+}

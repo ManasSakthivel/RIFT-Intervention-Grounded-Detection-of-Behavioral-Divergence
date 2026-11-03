@@ -64,7 +64,7 @@ def capture() -> dict:
     return {
         "python": platform.python_version(),
         "python_implementation": platform.python_implementation(),
-        "executable": sys.executable,
+        "executable": Path(sys.executable).name,  # file name only: no local paths / user names recorded
         "platform": platform.platform(),
         "machine": platform.machine(),
         "packages": {p: _version(p) for p in PACKAGES},
