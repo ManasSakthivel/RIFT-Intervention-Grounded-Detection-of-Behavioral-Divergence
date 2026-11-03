@@ -80,6 +80,7 @@ def main(argv) -> int:
     info = capture()
     text = json.dumps(info, indent=1, sort_keys=True)
     if len(argv) > 1:
+        Path(argv[1]).parent.mkdir(parents=True, exist_ok=True)
         Path(argv[1]).write_text(text + "\n")
     print(text)
     return 0
