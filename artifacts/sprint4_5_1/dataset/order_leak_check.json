@@ -1,0 +1,14 @@
+{
+ "purpose": "sensitivity of method outputs to the insertion order of observe()['metrics'] (dev only)",
+ "n_dev_scenarios": 180,
+ "first_metric_key_is_true_root": 148,
+ "n_scenarios_where_output_changed_after_reversing_order": {
+  "B0E": 28,
+  "B0H": 0,
+  "B1": 0,
+  "B3": 0,
+  "B5": 0,
+  "B7": 0,
+  "V3-FULL": 0
+ }
+}

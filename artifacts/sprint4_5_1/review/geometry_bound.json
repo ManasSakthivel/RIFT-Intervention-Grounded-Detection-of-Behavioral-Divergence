@@ -1,0 +1,23 @@
+{
+ "distinct_topology_hashes_per_motif": {
+  "S01": 181,
+  "S02": 106,
+  "S03": 366,
+  "S04": 282,
+  "S05": 334,
+  "S06": 111,
+  "S07": 120,
+  "S08": 95,
+  "S09": 95,
+  "S10": 140,
+  "S11": 73,
+  "S12": 68,
+  "S13": 89,
+  "S14": 51,
+  "S15": 214,
+  "S16": 190
+ },
+ "distinct_total_all_16_motifs": 2354,
+ "scenarios_planned": 2000,
+ "min_distinct_needed_for_90pct_unique_and_none_shared_by_more_than_3": 1800
+}

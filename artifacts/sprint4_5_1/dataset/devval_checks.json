@@ -1,0 +1,31 @@
+{
+ "purpose": "readable-set properties (dev, val): drift stratum prevalence, library completeness",
+ "dev_drift_stratum_scenarios": {
+  "n": 180,
+  "none_lt_0.1": 0.761,
+  "mild": 0.033,
+  "substantial_ge_0.3": 0.206,
+  "n_substantial": 37
+ },
+ "val_drift_stratum_scenarios": {
+  "n": 72,
+  "none_lt_0.1": 0.778,
+  "mild": 0.014,
+  "substantial_ge_0.3": 0.208,
+  "n_substantial": 15
+ },
+ "adv_drift_stratum_scenarios": {
+  "n": 112,
+  "none_lt_0.1": 1.0,
+  "mild": 0.0,
+  "substantial_ge_0.3": 0.0,
+  "n_substantial": 0
+ },
+ "frozen_library_size": 2168,
+ "library_completeness_on_dev_val": {
+  "dev_val_scenarios_with_topology_in_library": 252,
+  "of": 252,
+  "note": "dev/val use extra 0..2; completeness of the extra=3 (sealed) band is by identical code path, not measured"
+ },
+ "library_misses_by_structure": {}
+}

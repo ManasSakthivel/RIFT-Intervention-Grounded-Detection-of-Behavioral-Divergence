@@ -1,0 +1,120 @@
+{
+ "library_size": 55,
+ "motif_periphery0_hits": {
+  "S01": [],
+  "S02": [],
+  "S03": [],
+  "S04": [],
+  "S05": [],
+  "S06": [],
+  "S07": [
+   [
+    "converging",
+    1
+   ]
+  ],
+  "S08": [],
+  "S09": [],
+  "S10": [],
+  "S11": [],
+  "S12": [],
+  "S13": [
+   [
+    "ambiguous",
+    1
+   ]
+  ],
+  "S14": [],
+  "S15": [],
+  "S16": []
+ },
+ "with_periphery": {
+  "S01": {
+   "variants_enumerated": 1676,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S02": {
+   "variants_enumerated": 3019,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S03": {
+   "variants_enumerated": 1676,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S04": {
+   "variants_enumerated": 3019,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S05": {
+   "variants_enumerated": 1676,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S06": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S07": {
+   "variants_enumerated": 837,
+   "isomorphic_to_frozen_skeleton": 1,
+   "which": [
+    "converging/extra1"
+   ]
+  },
+  "S08": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S09": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S10": {
+   "variants_enumerated": 837,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S11": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S12": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S13": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 4,
+   "which": [
+    "ambiguous/extra1",
+    "ambiguous/extra2",
+    "ambiguous/extra3",
+    "ambiguous/extra4"
+   ]
+  },
+  "S14": {
+   "variants_enumerated": 358,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S15": {
+   "variants_enumerated": 837,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  },
+  "S16": {
+   "variants_enumerated": 837,
+   "isomorphic_to_frozen_skeleton": 0,
+   "which": []
+  }
+ }
+}

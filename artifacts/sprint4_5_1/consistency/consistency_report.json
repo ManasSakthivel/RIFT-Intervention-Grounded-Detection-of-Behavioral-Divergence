@@ -1,0 +1,1701 @@
+{
+ "A_paths": {
+  "AUD": {
+   "exists": 34,
+   "missing": 0,
+   "planned": 1,
+   "protected_not_stat": 1,
+   "skipped": 0
+  },
+  "CID": {
+   "exists": 10,
+   "missing": 0,
+   "planned": 7,
+   "protected_not_stat": 0,
+   "skipped": 0
+  },
+  "DATA": {
+   "exists": 8,
+   "missing": 0,
+   "planned": 3,
+   "protected_not_stat": 4,
+   "skipped": 0
+  },
+  "PLAN": {
+   "exists": 49,
+   "missing": 0,
+   "planned": 14,
+   "protected_not_stat": 0,
+   "skipped": 0
+  },
+  "PRE": {
+   "exists": 80,
+   "missing": 0,
+   "planned": 7,
+   "protected_not_stat": 2,
+   "skipped": 0
+  },
+  "SAP": {
+   "exists": 19,
+   "missing": 0,
+   "planned": 3,
+   "protected_not_stat": 0,
+   "skipped": 0
+  }
+ },
+ "B_hashes": {
+  "AUD": {
+   "full": 2,
+   "known": 2,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 0,
+   "trunc": 0,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  },
+  "CID": {
+   "full": 0,
+   "known": 0,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 0,
+   "trunc": 0,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  },
+  "DATA": {
+   "full": 0,
+   "known": 0,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 0,
+   "trunc": 0,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  },
+  "PLAN": {
+   "full": 23,
+   "known": 23,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 22,
+   "trunc": 6,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  },
+  "PRE": {
+   "full": 46,
+   "known": 46,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 44,
+   "trunc": 8,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  },
+  "SAP": {
+   "full": 0,
+   "known": 0,
+   "line_pair_mismatch": 0,
+   "line_pairs_checked": 0,
+   "trunc": 0,
+   "trunc_unmatched": 0,
+   "unknown": 0
+  }
+ },
+ "C_claims": {
+  "-0.338 CI": {
+   "description": "V3 mean U -0.338 CI [-0.465,-0.219]",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 158,
+     "n": 3,
+     "regex": "-0\\.338"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 158,
+     "n": 1,
+     "regex": "-0\\.465,\\s*-0\\.219"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 219,
+     "n": 1,
+     "regex": "-0\\.465,\\s*-0\\.219"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 79,
+     "n": 3,
+     "regex": "-0\\.338"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 79,
+     "n": 1,
+     "regex": "-0\\.46,\\s*-0\\.22"
+    }
+   ],
+   "stale": []
+  },
+  "17 pairs": {
+   "description": "17 pairs per split (V2 pair set)",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 35,
+     "n": 5,
+     "regex": "17 "
+    },
+    {
+     "doc": "AUD",
+     "first_line": 27,
+     "n": 7,
+     "regex": "17 "
+    },
+    {
+     "doc": "DATA",
+     "first_line": 143,
+     "n": 2,
+     "regex": "17 "
+    }
+   ],
+   "stale": []
+  },
+  "218 cells": {
+   "description": "218 = 214 + 4",
+   "missing": [],
+   "present": [
+    {
+     "doc": "CID",
+     "first_line": 165,
+     "n": 4,
+     "regex": "218"
+    },
+    {
+     "doc": "CID",
+     "first_line": 167,
+     "n": 4,
+     "regex": "214"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 153,
+     "n": 2,
+     "regex": "218 cells"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 16,
+     "n": 1,
+     "regex": "218 cells"
+    }
+   ],
+   "stale": []
+  },
+  "250 groups": {
+   "description": ">= 250 groups, max 25",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 184,
+     "n": 2,
+     "regex": "250 groups"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 114,
+     "n": 1,
+     "regex": "250 groups"
+    },
+    {
+     "doc": "DATA",
+     "first_line": 111,
+     "n": 4,
+     "regex": "K\\s*(\u2265|>=)\\s*250|250 groups"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 19,
+     "n": 4,
+     "regex": "250 groups"
+    }
+   ],
+   "stale": []
+  },
+  "40% / 800 / 1200": {
+   "description": "ATTRIBUTE quota 40% = 800 of 2000; 1200 ABSTAIN_REQUIRED",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 185,
+     "n": 2,
+     "regex": "800 ATTRIBUTE"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 185,
+     "n": 1,
+     "regex": "1200 ABSTAIN_REQUIRED"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 269,
+     "n": 2,
+     "regex": "40%"
+    },
+    {
+     "doc": "DATA",
+     "first_line": 128,
+     "n": 1,
+     "regex": "800 \\(40\\.0%\\)"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 227,
+     "n": 1,
+     "regex": "40%"
+    }
+   ],
+   "stale": []
+  },
+  "51 files": {
+   "description": "51 frozen files",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 52,
+     "n": 2,
+     "regex": "51 files"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 16,
+     "n": 20,
+     "regex": "51"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 11,
+     "n": 6,
+     "regex": "51"
+    }
+   ],
+   "stale": []
+  },
+  "DEFF 1.37 / K=21": {
+   "description": "empirical group DEFF",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 188,
+     "n": 2,
+     "regex": "1\\.37"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 80,
+     "n": 1,
+     "regex": "1\\.37"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 125,
+     "n": 1,
+     "regex": "1\\.37"
+    }
+   ],
+   "stale": []
+  },
+  "N=2000": {
+   "description": "confirmatory sample size 2000",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 184,
+     "n": 5,
+     "regex": "2000 scenarios|N = 2000"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 25,
+     "n": 11,
+     "regex": "N = 2000"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 19,
+     "n": 7,
+     "regex": "N = 2000"
+    },
+    {
+     "doc": "DATA",
+     "first_line": 111,
+     "n": 4,
+     "regex": "N = 2000|\\*\\*2000\\*\\*"
+    }
+   ],
+   "stale": []
+  },
+  "_lambda_kappa_pairs": {
+   "AUD": [
+    {
+     "line": 18,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 48,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 56,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 56,
+     "pair": "\u03bb=1,\u03ba=0.05",
+     "primary": false
+    },
+    {
+     "line": 56,
+     "pair": "\u03bb=2,\u03ba=0",
+     "primary": false
+    },
+    {
+     "line": 59,
+     "pair": "\u03bb=2,\u03b3=1",
+     "primary": true
+    },
+    {
+     "line": 83,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 87,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 185,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 226,
+     "pair": "\u03bb=2.0,\u03b3=1.0",
+     "primary": true
+    }
+   ],
+   "PLAN": [
+    {
+     "line": 13,
+     "pair": "\u03bb=2,\u03b3=1",
+     "primary": true
+    },
+    {
+     "line": 45,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 132,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 149,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 318,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    }
+   ],
+   "PRE": [
+    {
+     "line": 161,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 168,
+     "pair": "\u03bb=2.0,\u03b3=1.0",
+     "primary": true
+    },
+    {
+     "line": 173,
+     "pair": "\u03bb=2,\u03b3=1",
+     "primary": true
+    },
+    {
+     "line": 216,
+     "pair": "\u03bb=2,\u03ba=0.05",
+     "primary": true
+    },
+    {
+     "line": 311,
+     "pair": "\u03bb=2.0,\u03b3=1.0",
+     "primary": true
+    }
+   ],
+   "SAP": [
+    {
+     "line": 30,
+     "pair": "\u03bb=2.0,\u03b3=1.0",
+     "primary": true
+    },
+    {
+     "line": 75,
+     "pair": "\u03bb=2,\u03b3=1",
+     "primary": true
+    }
+   ]
+  },
+  "_symbol_census": {
+   "AUD": {
+    "gamma": 7,
+    "kappa": 44
+   },
+   "CID": {
+    "gamma": 0,
+    "kappa": 0
+   },
+   "DATA": {
+    "gamma": 0,
+    "kappa": 0
+   },
+   "PLAN": {
+    "gamma": 2,
+    "kappa": 11
+   },
+   "PRE": {
+    "gamma": 15,
+    "kappa": 28
+   },
+   "SAP": {
+    "gamma": 7,
+    "kappa": 7
+   }
+  },
+  "break-even 0.938": {
+   "description": "break-even lambda at kappa=0",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 159,
+     "n": 1,
+     "regex": "0\\.938"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 85,
+     "n": 2,
+     "regex": "0\\.938"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 53,
+     "n": 2,
+     "regex": "0\\.938"
+    }
+   ],
+   "stale": []
+  },
+  "delta=0.10": {
+   "description": "minimum useful effect 0.10",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 150,
+     "n": 8,
+     "regex": "\u03b4 = 0\\.10"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 18,
+     "n": 9,
+     "regex": "\u03b4 = 0\\.10"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 92,
+     "n": 8,
+     "regex": "\u03b4"
+    }
+   ],
+   "stale": []
+  },
+  "gamma=1": {
+   "description": "gamma = 1.0 with c = n_do/20",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 137,
+     "n": 4,
+     "regex": "\u03b3 = 1\\.0"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 30,
+     "n": 1,
+     "regex": "\u03b3 = 1\\.0"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 52,
+     "n": 3,
+     "regex": "\u03b3 = 1"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 136,
+     "n": 2,
+     "regex": "n_do,i\\s*/\\s*20|n_do\\s*/\\s*20"
+    }
+   ],
+   "stale": []
+  },
+  "kappa=0.05": {
+   "description": "kappa = 0.05 per do() == gamma 1",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 137,
+     "n": 9,
+     "regex": "\u03ba = 0\\.05"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 18,
+     "n": 15,
+     "regex": "\u03ba = 0\\.05"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 197,
+     "n": 2,
+     "regex": "\u03b3 = 20\u03ba|\u03ba and \u03b3 are related"
+    }
+   ],
+   "stale": []
+  },
+  "lambda=2": {
+   "description": "lambda = 2.0 primary",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 137,
+     "n": 3,
+     "regex": "\u03bb = 2\\.0"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 30,
+     "n": 1,
+     "regex": "\u03bb = 2\\.0"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 18,
+     "n": 14,
+     "regex": "\u03bb = 2"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 13,
+     "n": 5,
+     "regex": "\u03bb = 2"
+    }
+   ],
+   "stale": []
+  },
+  "power 0.90/0.76": {
+   "description": "H1 power at N=2000, DEFF 2 / 3",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 190,
+     "n": 2,
+     "regex": "0\\.90"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 188,
+     "n": 3,
+     "regex": "0\\.76"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 96,
+     "n": 5,
+     "regex": "0\\.90"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 105,
+     "n": 3,
+     "regex": "0\\.76"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 23,
+     "n": 6,
+     "regex": "0\\.90"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 112,
+     "n": 1,
+     "regex": "0\\.76"
+    }
+   ],
+   "stale": []
+  },
+  "seven estimators": {
+   "description": "seven core estimators E0-E6 (+ E7 diagnostic)",
+   "missing": [],
+   "present": [
+    {
+     "doc": "CID",
+     "first_line": 64,
+     "n": 2,
+     "regex": "seven core estimators"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 3,
+     "n": 3,
+     "regex": "seven|E0\u2013E6|E0-E6"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 3,
+     "n": 4,
+     "regex": "seven|E0\u2013E6|E0-E6"
+    }
+   ],
+   "stale": []
+  },
+  "tests": {
+   "description": "663 reproducible (clean export); 886 + 2 = 888 (full tree, 4.4.2)",
+   "missing": [],
+   "present": [
+    {
+     "doc": "PRE",
+     "first_line": 121,
+     "n": 1,
+     "regex": "663"
+    },
+    {
+     "doc": "PRE",
+     "first_line": 121,
+     "n": 1,
+     "regex": "886"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 29,
+     "n": 6,
+     "regex": "663"
+    },
+    {
+     "doc": "AUD",
+     "first_line": 38,
+     "n": 1,
+     "regex": "886"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 217,
+     "n": 1,
+     "regex": "663"
+    },
+    {
+     "doc": "SAP",
+     "first_line": 217,
+     "n": 1,
+     "regex": "886"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 12,
+     "n": 2,
+     "regex": "663"
+    },
+    {
+     "doc": "PLAN",
+     "first_line": 12,
+     "n": 3,
+     "regex": "886"
+    }
+   ],
+   "stale": []
+  }
+ },
+ "D_language": {
+  "AUD": {
+   "affirmative": 0,
+   "rule_statements": 3
+  },
+  "CID": {
+   "affirmative": 0,
+   "rule_statements": 1
+  },
+  "DATA": {
+   "affirmative": 0,
+   "rule_statements": 0
+  },
+  "PLAN": {
+   "affirmative": 0,
+   "rule_statements": 3
+  },
+  "PRE": {
+   "affirmative": 0,
+   "rule_statements": 6
+  },
+  "SAP": {
+   "affirmative": 0,
+   "rule_statements": 0
+  }
+ },
+ "E_manifest": {
+  "doc_sha256_current": {
+   "AUD": "ec5e0aea98274ecd230156efc18753356ed315f873140529351856f2ccd8fde4",
+   "CID": "85f23f5a363d8b0990bfa040f855c8cc2745af0466790dbc87b45dfc08c0aa35",
+   "DATA": "9a13693d6be2ecc5617053ed81fdf50ca1d8eff8c9f3bd76111999428f6e89e8",
+   "PLAN": "e2163e99d6fec737e3057ef34839a0df6d62a0ea8b4d1608b719661e2115bc05",
+   "PRE": "b6c8b372ec2144cbd59e23e771e1ad7902b56893f41e16dfe2736c1eca63e6dc",
+   "SAP": "1ed607f34bbd8981cd51c339668f7f4929b9e5b41c3eabc8c66944661dd3634a"
+  },
+  "docs_in_manifest": [
+   "docs/EVALUATION_PROTOCOL_V2.md"
+  ],
+  "frozen_mismatches": [],
+  "manifest_sha256": "609bcb9d8a9786492f045e4fe13e10e1d17518f3111814a91e5ca73b6902aeb6",
+  "n_files": 51,
+  "pre_states_manifest_sha256": "609bcb9d8a9786492f045e4fe13e10e1d17518f3111814a91e5ca73b6902aeb6"
+ },
+ "F_evidence": {
+  "checks": [
+   {
+    "doc": -0.338,
+    "name": "V3 mean U (\u03bb=2,\u03ba=0.05)",
+    "ok": true,
+    "recomputed": -0.3376984126984128
+   },
+   {
+    "doc": -0.465,
+    "name": "V3 CI lo",
+    "ok": true,
+    "recomputed": -0.4653550878255603
+   },
+   {
+    "doc": -0.219,
+    "name": "V3 CI hi",
+    "ok": true,
+    "recomputed": -0.21889674551866
+   },
+   {
+    "doc": -0.562,
+    "name": "V2 mean U",
+    "ok": true,
+    "recomputed": -0.5619047619047619
+   },
+   {
+    "doc": 0.224,
+    "name": "V3-V2",
+    "ok": true,
+    "recomputed": 0.22420634920634924
+   },
+   {
+    "doc": 0.085,
+    "name": "V3-V2 CI lo",
+    "ok": true,
+    "recomputed": 0.08548620563928049
+   },
+   {
+    "doc": 0.365,
+    "name": "V3-V2 CI hi",
+    "ok": true,
+    "recomputed": 0.3649024943310658
+   },
+   {
+    "doc": 0.938,
+    "name": "\u03bb* kappa=0.0",
+    "ok": true,
+    "recomputed": 0.9375
+   },
+   {
+    "doc": 0.61,
+    "name": "\u03bb* kappa=0.0 lo",
+    "ok": true,
+    "recomputed": 0.6101694915254238
+   },
+   {
+    "doc": 1.42,
+    "name": "\u03bb* kappa=0.0 hi",
+    "ok": true,
+    "recomputed": 1.4186658506731948
+   },
+   {
+    "doc": 0.582,
+    "name": "\u03bb* kappa=0.025",
+    "ok": true,
+    "recomputed": 0.5822916666666667
+   },
+   {
+    "doc": 0.31,
+    "name": "\u03bb* kappa=0.025 lo",
+    "ok": true,
+    "recomputed": 0.3054311245819398
+   },
+   {
+    "doc": 0.97,
+    "name": "\u03bb* kappa=0.025 hi",
+    "ok": true,
+    "recomputed": 0.971670366795367
+   },
+   {
+    "doc": 0.227,
+    "name": "\u03bb* kappa=0.05",
+    "ok": true,
+    "recomputed": 0.2270833333333333
+   },
+   {
+    "doc": 0.0,
+    "name": "\u03bb* kappa=0.05 lo",
+    "ok": true,
+    "recomputed": -0.004366249078850461
+   },
+   {
+    "doc": 0.54,
+    "name": "\u03bb* kappa=0.05 hi",
+    "ok": true,
+    "recomputed": 0.543067876344086
+   },
+   {
+    "doc": 1.37,
+    "name": "DEFF union-find",
+    "ok": true,
+    "recomputed": 1.3733379930589151
+   },
+   {
+    "doc": 1.07,
+    "name": "DEFF topology",
+    "ok": true,
+    "recomputed": 1.0668963190023697
+   },
+   {
+    "doc": 0.027,
+    "name": "ICC template",
+    "ok": true,
+    "recomputed": 0.027320382214602375
+   },
+   {
+    "doc": 1.06,
+    "name": "DEFF template",
+    "ok": true,
+    "recomputed": 1.0584148575310777
+   },
+   {
+    "doc": 2.21,
+    "name": "DEFF structure",
+    "ok": true,
+    "recomputed": 2.2075189948925833
+   },
+   {
+    "doc": 0.043,
+    "name": "P(U>0) \u03bb=0.5",
+    "ok": true,
+    "recomputed": 0.04275
+   },
+   {
+    "doc": 0.002,
+    "name": "P(U>0) \u03bb=0.75",
+    "ok": true,
+    "recomputed": 0.00175
+   },
+   {
+    "doc": 0.885,
+    "name": "break-even prevalence (2,0.05)",
+    "ok": true,
+    "recomputed": 0.8851450844521439
+   },
+   {
+    "doc": 0.666,
+    "name": "break-even prevalence (1,0.05)",
+    "ok": true,
+    "recomputed": 0.666188637617209
+   },
+   {
+    "doc": 0.663,
+    "name": "break-even prevalence (2,0)",
+    "ok": true,
+    "recomputed": 0.6629659000793021
+   },
+   {
+    "doc": -0.076,
+    "name": "operational V3 \u03bb=1",
+    "ok": true,
+    "recomputed": -0.0757936507936508
+   },
+   {
+    "doc": -0.195,
+    "name": "operational V3 \u03bb=2",
+    "ok": true,
+    "recomputed": -0.19484126984126987
+   },
+   {
+    "doc": -0.433,
+    "name": "operational V3 \u03bb=4",
+    "ok": true,
+    "recomputed": -0.4329365079365079
+   },
+   {
+    "doc": 0.83,
+    "name": "power N=800 DEFF1",
+    "ok": true,
+    "recomputed": 0.831086765939441
+   },
+   {
+    "doc": 0.66,
+    "name": "power N=800 DEFF1.5",
+    "ok": true,
+    "recomputed": 0.6638254915262297
+   },
+   {
+    "doc": 0.54,
+    "name": "power N=800 DEFF2",
+    "ok": true,
+    "recomputed": 0.5412881744394122
+   },
+   {
+    "doc": 0.9,
+    "name": "power N=2000 DEFF2",
+    "ok": true,
+    "recomputed": 0.9037028801919365
+   },
+   {
+    "doc": 0.76,
+    "name": "power N=2000 DEFF3",
+    "ok": true,
+    "recomputed": 0.7593422638085938
+   },
+   {
+    "doc": 0.96,
+    "name": "power N=2000 DEFF1.5 (2 d.p.)",
+    "ok": true,
+    "recomputed": 0.9646746752410933
+   },
+   {
+    "doc": 0.4,
+    "name": "power SD1.17 N=800 DEFF2",
+    "ok": true,
+    "recomputed": 0.4010762757397484
+   },
+   {
+    "doc": 0.77,
+    "name": "power SD1.17 N=2000 DEFF2",
+    "ok": true,
+    "recomputed": 0.771209945745597
+   },
+   {
+    "doc": 0.78,
+    "name": "power Holm m4 N=2000 DEFF2",
+    "ok": true,
+    "recomputed": 0.7779242045015247
+   },
+   {
+    "doc": 0.086,
+    "name": "MDE80 N=2000 DEFF2",
+    "ok": true,
+    "recomputed": 0.08586163428013338
+   },
+   {
+    "doc": 0.105,
+    "name": "MDE80 N=2000 DEFF3",
+    "ok": true,
+    "recomputed": 0.10515859623389362
+   },
+   {
+    "doc": 0.136,
+    "name": "MDE80 N=800 DEFF2",
+    "ok": true,
+    "recomputed": 0.13575916397480667
+   },
+   {
+    "doc": 738,
+    "name": "N req \u03b4=0.1 DEFF=1.0 power=0.8",
+    "ok": true,
+    "recomputed": 738
+   },
+   {
+    "doc": 1106,
+    "name": "N req \u03b4=0.1 DEFF=1.5 power=0.8",
+    "ok": true,
+    "recomputed": 1106
+   },
+   {
+    "doc": 1475,
+    "name": "N req \u03b4=0.1 DEFF=2.0 power=0.8",
+    "ok": true,
+    "recomputed": 1475
+   },
+   {
+    "doc": 2212,
+    "name": "N req \u03b4=0.1 DEFF=3.0 power=0.8",
+    "ok": true,
+    "recomputed": 2212
+   },
+   {
+    "doc": 987,
+    "name": "N req \u03b4=0.1 DEFF=1.0 power=0.9",
+    "ok": true,
+    "recomputed": 987
+   },
+   {
+    "doc": 1481,
+    "name": "N req \u03b4=0.1 DEFF=1.5 power=0.9",
+    "ok": true,
+    "recomputed": 1481
+   },
+   {
+    "doc": 1974,
+    "name": "N req \u03b4=0.1 DEFF=2.0 power=0.9",
+    "ok": true,
+    "recomputed": 1974
+   },
+   {
+    "doc": 130,
+    "name": "N to exclude 0 (DEFF 2)",
+    "ok": true,
+    "recomputed": 129.29158457408406
+   },
+   {
+    "doc": 77,
+    "name": "N to exclude \u03b4 (DEFF 2)",
+    "ok": true,
+    "recomputed": 76.96235589259675
+   },
+   {
+    "doc": 1.0,
+    "name": "H2 full DEFF2",
+    "ok": true,
+    "recomputed": 0.9999656363860109
+   },
+   {
+    "doc": 0.79,
+    "name": "H2 half DEFF2",
+    "ok": true,
+    "recomputed": 0.7862086195083058
+   },
+   {
+    "doc": 0.67,
+    "name": "H2 0.10 DEFF2",
+    "ok": true,
+    "recomputed": 0.6743067384238408
+   },
+   {
+    "doc": 0.17,
+    "name": "H2 0.05 DEFF2",
+    "ok": true,
+    "recomputed": 0.1657563432313205
+   },
+   {
+    "doc": 0.58,
+    "name": "H2 half DEFF3",
+    "ok": true,
+    "recomputed": 0.5825618576103708
+   },
+   {
+    "doc": 0.47,
+    "name": "H2 0.10 DEFF3",
+    "ok": true,
+    "recomputed": 0.4719455099670147
+   },
+   {
+    "doc": 0.85,
+    "name": "H4 full (DEFF2 on n_attr)",
+    "ok": true,
+    "recomputed": 0.8450703718219322
+   },
+   {
+    "doc": 0.23,
+    "name": "H4 half (DEFF2 on n_attr)",
+    "ok": true,
+    "recomputed": 0.23482138668424857
+   }
+  ],
+  "n_checks": 58,
+  "n_failed": 0,
+  "power_table_cells": [
+   {
+    "N": 800,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.66,
+    "line": 109,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.6638
+   },
+   {
+    "N": 800,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.54,
+    "line": 109,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.5413
+   },
+   {
+    "N": 800,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.39,
+    "line": 109,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.3917
+   },
+   {
+    "N": 1200,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.83,
+    "line": 110,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 1200,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.71,
+    "line": 110,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.7148
+   },
+   {
+    "N": 1200,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.54,
+    "line": 110,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.5413
+   },
+   {
+    "N": 1600,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.92,
+    "line": 111,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9207
+   },
+   {
+    "N": 1600,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.83,
+    "line": 111,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 1600,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.66,
+    "line": 111,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.6638
+   },
+   {
+    "N": 2000,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.96,
+    "line": 112,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9647
+   },
+   {
+    "N": 2000,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.9,
+    "line": 112,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9037
+   },
+   {
+    "N": 2000,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.76,
+    "line": 112,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.7593
+   },
+   {
+    "N": 2400,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.985,
+    "line": 113,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9849
+   },
+   {
+    "N": 2400,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.947,
+    "line": 113,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9468
+   },
+   {
+    "N": 2400,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.83,
+    "line": 113,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 3000,
+    "deff": 1.5,
+    "doc": "AUD",
+    "doc_value": 0.996,
+    "line": 114,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.996
+   },
+   {
+    "N": 3000,
+    "deff": 2.0,
+    "doc": "AUD",
+    "doc_value": 0.979,
+    "line": 114,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9791
+   },
+   {
+    "N": 3000,
+    "deff": 3.0,
+    "doc": "AUD",
+    "doc_value": 0.9,
+    "line": 114,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9037
+   },
+   {
+    "N": 800,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.66,
+    "line": 102,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.6638
+   },
+   {
+    "N": 800,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.54,
+    "line": 102,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.5413
+   },
+   {
+    "N": 800,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.39,
+    "line": 102,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.3917
+   },
+   {
+    "N": 1200,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.83,
+    "line": 103,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 1200,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.71,
+    "line": 103,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.7148
+   },
+   {
+    "N": 1200,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.54,
+    "line": 103,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.5413
+   },
+   {
+    "N": 1600,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.92,
+    "line": 104,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9207
+   },
+   {
+    "N": 1600,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.83,
+    "line": 104,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 1600,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.66,
+    "line": 104,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.6638
+   },
+   {
+    "N": 2000,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.965,
+    "line": 105,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9647
+   },
+   {
+    "N": 2000,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.9,
+    "line": 105,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9037
+   },
+   {
+    "N": 2000,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.76,
+    "line": 105,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.7593
+   },
+   {
+    "N": 2400,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.985,
+    "line": 106,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9849
+   },
+   {
+    "N": 2400,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.947,
+    "line": 106,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9468
+   },
+   {
+    "N": 2400,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.83,
+    "line": 106,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.8311
+   },
+   {
+    "N": 3000,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.996,
+    "line": 107,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.996
+   },
+   {
+    "N": 3000,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.979,
+    "line": 107,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9791
+   },
+   {
+    "N": 3000,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.9,
+    "line": 107,
+    "mu": 0.1,
+    "ok": true,
+    "recomputed": 0.9037
+   },
+   {
+    "N": 2000,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.81,
+    "line": 108,
+    "mu": 0.075,
+    "ok": true,
+    "recomputed": 0.8067
+   },
+   {
+    "N": 2000,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.69,
+    "line": 108,
+    "mu": 0.075,
+    "ok": true,
+    "recomputed": 0.6869
+   },
+   {
+    "N": 2000,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.52,
+    "line": 108,
+    "mu": 0.075,
+    "ok": true,
+    "recomputed": 0.5152
+   },
+   {
+    "N": 2000,
+    "deff": 1.5,
+    "doc": "SAP",
+    "doc_value": 0.47,
+    "line": 109,
+    "mu": 0.05,
+    "ok": true,
+    "recomputed": 0.4697
+   },
+   {
+    "N": 2000,
+    "deff": 2.0,
+    "doc": "SAP",
+    "doc_value": 0.37,
+    "line": 109,
+    "mu": 0.05,
+    "ok": true,
+    "recomputed": 0.3713
+   },
+   {
+    "N": 2000,
+    "deff": 3.0,
+    "doc": "SAP",
+    "doc_value": 0.27,
+    "line": 109,
+    "mu": 0.05,
+    "ok": true,
+    "recomputed": 0.265
+   }
+  ],
+  "power_table_cells_checked": 42
+ },
+ "G_labels_question": {
+  "label_logic": {
+   "examples": [],
+   "grid_points": 3146,
+   "violations": 0
+  },
+  "question_by_doc": {
+   "PLAN": "Does frozen RIFT-FULL-V3 provide useful and safe root-cause attribution beyond always-abstain, using intervention evidence robust to unrelated temporal changes?",
+   "PRE": "Does frozen RIFT-FULL-V3 provide useful and safe root-cause attribution beyond always-abstain, using intervention evidence robust to unrelated temporal changes?"
+  }
+ },
+ "G_register": {
+  "classification_counts_from_AUD_register": {
+   "ACCEPTED LIMITATION": 2,
+   "BLOCKER": 2,
+   "INFORMATIONAL": 5,
+   "MUST FIX": 1,
+   "REQUIRES RESEARCHER APPROVAL": 25
+  },
+  "register_ids": {
+   "AUD": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "D18",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8",
+    "X9",
+    "X10",
+    "X11",
+    "X12"
+   ],
+   "PRE": [
+    "D1",
+    "D2",
+    "D3",
+    "D4",
+    "D5",
+    "D6",
+    "D7",
+    "D8",
+    "D9",
+    "D10",
+    "D11",
+    "D12",
+    "D13",
+    "D14",
+    "D15",
+    "D16",
+    "D17",
+    "D18",
+    "D19",
+    "D20",
+    "D21",
+    "D22",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "X1",
+    "X2",
+    "X3",
+    "X4",
+    "X5",
+    "X6",
+    "X7",
+    "X8",
+    "X9",
+    "X10",
+    "X11",
+    "X12"
+   ]
+  },
+  "register_rows": 35
+ },
+ "docs": {
+  "AUD": "docs/SPRINT4_5_0_FINAL_PREREGISTRATION_AUDIT.md",
+  "CID": "docs/SPRINT4_5_0_CID_EXPERIMENT_DESIGN.md",
+  "DATA": "docs/SPRINT4_5_0_DATASET_PROTOCOL.md",
+  "PLAN": "docs/SPRINT4_5_0_EXECUTION_PLAN.md",
+  "PRE": "docs/SPRINT4_5_0_PREREGISTRATION.md",
+  "SAP": "docs/SPRINT4_5_0_STATISTICAL_ANALYSIS_PLAN.md"
+ },
+ "findings": [],
+ "git_head": "be5e0318fcd9cb17285ce6b8dff632cb68274b65",
+ "manifest": "artifacts/sprint4_5_0/prereg/freeze_manifest.json",
+ "totals": {
+  "FAIL": 0,
+  "INFO": 0,
+  "WARN": 0
+ }
+}

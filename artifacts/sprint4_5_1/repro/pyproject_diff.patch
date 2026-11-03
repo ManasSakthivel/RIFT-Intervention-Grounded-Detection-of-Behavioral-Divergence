@@ -1,0 +1,13 @@
+diff --git a/pyproject.toml b/pyproject.toml
+index 2474827..7ca9672 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -5,7 +5,7 @@ build-backend = "setuptools.backends.legacy:build"
+ [project]
+ name = "rift"
+ version = "0.1.0-phase3"
+-requires-python = ">=3.10"
++requires-python = ">=3.9"
+ 
+ [tool.setuptools.packages.find]
+ where = ["src"]

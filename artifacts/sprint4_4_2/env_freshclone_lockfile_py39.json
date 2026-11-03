@@ -1,0 +1,60 @@
+{
+ "env": {
+  "MKL_NUM_THREADS": null,
+  "OMP_NUM_THREADS": null,
+  "OPENBLAS_NUM_THREADS": null,
+  "PYTHONHASHSEED": null,
+  "VECLIB_MAXIMUM_THREADS": null
+ },
+ "executable": "<redacted: venv built from reproducibility/requirements-canonical-py39.lock.txt>",
+ "git": {
+  "branch": "sprint-4.4.2-reproducibility-hardening",
+  "commit": "24b6e25c9cf80d37348caead14d32c5695c3bf8e"
+ },
+ "machine": "arm64",
+ "packages": {
+  "causal-learn": "0.1.4.8",
+  "joblib": "1.5.3",
+  "momentchi2": "0.1.8",
+  "networkx": "3.2.1",
+  "numpy": "2.0.2",
+  "pandas": "2.3.3",
+  "pytest": "8.4.2",
+  "scikit-learn": "1.6.1",
+  "scipy": "1.13.1",
+  "statsmodels": "0.14.6"
+ },
+ "platform": "macOS-26.6.2-arm64-arm-64bit",
+ "protected_materials_present": {
+  "artifacts/sprint4_3_0/heldout_opened.json": {
+   "present": false
+  },
+  "artifacts/sprint4_3_0/results/held_out": {
+   "present": false
+  },
+  "artifacts/stage4_intervention_results.json": {
+   "present": false
+  },
+  "datasets/rift_v2/heldout_candidate.json": {
+   "present": false
+  },
+  "datasets/rift_v2/heldout_status.json": {
+   "present": false
+  }
+ },
+ "python": "3.9.6",
+ "python_implementation": "CPython",
+ "seeds": {
+  "adversarial_generator": "sha256('rift-v3-adversarial|<tag>|<k>')[:8] & 0x7FFFFFFF",
+  "cid": "seed=(scenario_seed*1000003+crc32('x->y')) & 0x7FFFFFFF",
+  "fci": "np.random.seed(scenario['seed']) inside run_fci (src/rift/fci/fci_runner.py)",
+  "simulator.intervene": "np.random.default_rng(seed_do), seed_do=(scenario_seed*7919+crc32(node)) & 0x7FFFFFFF",
+  "simulator.observe": "np.random.default_rng(scenario['seed'])",
+  "sprint430 statistics": {
+   "bootstrap_B": 2000,
+   "permutations": 10000,
+   "stat_seed": 430
+  },
+  "sprint440_analyze / sprint440_cid_audit Monte Carlo": 440
+ }
+}

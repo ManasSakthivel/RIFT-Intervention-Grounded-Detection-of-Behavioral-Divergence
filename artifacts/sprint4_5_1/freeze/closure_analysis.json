@@ -1,0 +1,472 @@
+{
+ "purpose": "static import closure of confirmatory comparators; analysis only",
+ "entry_points": [
+  "scripts/sprint440_run_v3.py",
+  "src/rift/evaluation/benchmark_v2.py",
+  "src/rift/evaluation/rift_v2.py",
+  "src/rift/attribution_v3/rift_v3.py",
+  "scripts/run_adversarial_benchmark.py",
+  "scripts/run_reproducible_evaluation.py"
+ ],
+ "closure_size": 40,
+ "in_manifest": 22,
+ "not_in_manifest": 18,
+ "not_in_manifest_untracked": [
+  "src/rift/benchmark/adversarial_generator.py",
+  "src/rift/evaluation/dataset_registry.py"
+ ],
+ "rows": [
+  {
+   "path": "scripts/run_adversarial_benchmark.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/baselines/latency_correlation.py",
+    "src/rift/baselines/oracle.py",
+    "src/rift/baselines/rift_obs.py",
+    "src/rift/baselines/rift_one_shot.py",
+    "src/rift/baselines/rift_random.py",
+    "src/rift/baselines/sieve_like.py",
+    "src/rift/benchmark/adversarial_generator.py",
+    "src/rift/benchmark/synthetic_benchmark.py",
+    "src/rift/cid/cid.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/identifiability/identifiability.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 329
+  },
+  {
+   "path": "scripts/run_reproducible_evaluation.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/baselines/latency_correlation.py",
+    "src/rift/baselines/oracle.py",
+    "src/rift/baselines/rift_obs.py",
+    "src/rift/baselines/rift_one_shot.py",
+    "src/rift/baselines/rift_random.py",
+    "src/rift/baselines/sieve_like.py",
+    "src/rift/benchmark/synthetic_benchmark.py",
+    "src/rift/cid/cid.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/evaluation/attribution_metrics.py",
+    "src/rift/evaluation/complete_evaluator.py",
+    "src/rift/evaluation/dataset_registry.py",
+    "src/rift/evaluation/held_out_guard.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/identifiability/identifiability.py",
+    "src/rift/statistics/stats.py"
+   ],
+   "heldout_token_hits": [
+    "HELD_OUT",
+    "HeldOut",
+    "held_out"
+   ],
+   "n_lines": 598
+  },
+  {
+   "path": "scripts/sprint440_run_v3.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/attribution_v3/__init__.py",
+    "src/rift/attribution_v3/pag_semantics.py",
+    "src/rift/attribution_v3/rift_v3.py",
+    "src/rift/evaluation/__init__.py",
+    "src/rift/evaluation/benchmark_v2.py",
+    "src/rift/evaluation/dataset_registry_v2.py",
+    "src/rift/evaluation/rift_v2.py",
+    "src/rift/scenarios/__init__.py",
+    "src/rift/scenarios/simulator.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 70
+  },
+  {
+   "path": "src/rift/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 12
+  },
+  {
+   "path": "src/rift/attribution_v3/__init__.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 1
+  },
+  {
+   "path": "src/rift/attribution_v3/pag_semantics.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/fci/fci_runner.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 174
+  },
+  {
+   "path": "src/rift/attribution_v3/rift_v3.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/attribution_v3/__init__.py",
+    "src/rift/attribution_v3/pag_semantics.py",
+    "src/rift/baselines/__init__.py",
+    "src/rift/cid/cid.py",
+    "src/rift/cid/evidence.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/evaluation/rift_v2.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/identifiability/identifiability.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 278
+  },
+  {
+   "path": "src/rift/baselines/__init__.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 124
+  },
+  {
+   "path": "src/rift/baselines/latency_correlation.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 87
+  },
+  {
+   "path": "src/rift/baselines/oracle.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 82
+  },
+  {
+   "path": "src/rift/baselines/rift_obs.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/graph/anomaly_subgraph.py",
+    "src/rift/graph/time_slice.py",
+    "src/rift/identifiability/identifiability.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 221
+  },
+  {
+   "path": "src/rift/baselines/rift_one_shot.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/optimizer/cost_model.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 245
+  },
+  {
+   "path": "src/rift/baselines/rift_random.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/optimizer/cost_model.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 306
+  },
+  {
+   "path": "src/rift/baselines/sieve_like.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 172
+  },
+  {
+   "path": "src/rift/benchmark/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 1
+  },
+  {
+   "path": "src/rift/benchmark/adversarial_generator.py",
+   "in_4_5_0_manifest": false,
+   "tracked": false,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 276
+  },
+  {
+   "path": "src/rift/benchmark/synthetic_benchmark.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [
+    "HELD_OUT"
+   ],
+   "n_lines": 661
+  },
+  {
+   "path": "src/rift/cid/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/cid/cid.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 9
+  },
+  {
+   "path": "src/rift/cid/cid.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 312
+  },
+  {
+   "path": "src/rift/cid/evidence.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 182
+  },
+  {
+   "path": "src/rift/ebd/ebd.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/cid/evidence.py",
+    "src/rift/fci/fci_runner.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 476
+  },
+  {
+   "path": "src/rift/evaluation/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 2
+  },
+  {
+   "path": "src/rift/evaluation/attribution_metrics.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 249
+  },
+  {
+   "path": "src/rift/evaluation/benchmark_v2.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/baselines/latency_correlation.py",
+    "src/rift/baselines/oracle.py",
+    "src/rift/baselines/rift_obs.py",
+    "src/rift/baselines/rift_one_shot.py",
+    "src/rift/baselines/rift_random.py",
+    "src/rift/baselines/sieve_like.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/evaluation/rift_v2.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/scenarios/__init__.py",
+    "src/rift/scenarios/simulator.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 367
+  },
+  {
+   "path": "src/rift/evaluation/complete_evaluator.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/evaluation/attribution_metrics.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 353
+  },
+  {
+   "path": "src/rift/evaluation/dataset_registry.py",
+   "in_4_5_0_manifest": false,
+   "tracked": false,
+   "imports_in_repo": [
+    "src/rift/evaluation/held_out_guard.py"
+   ],
+   "heldout_token_hits": [
+    "HELD_OUT",
+    "HeldOut",
+    "held_out",
+    "heldout"
+   ],
+   "n_lines": 189
+  },
+  {
+   "path": "src/rift/evaluation/dataset_registry_v2.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/evaluation/held_out_guard.py"
+   ],
+   "heldout_token_hits": [
+    "HeldOut",
+    "held_out",
+    "heldout"
+   ],
+   "n_lines": 128
+  },
+  {
+   "path": "src/rift/evaluation/held_out_guard.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [
+    "HeldOut",
+    "held_out"
+   ],
+   "n_lines": 170
+  },
+  {
+   "path": "src/rift/evaluation/rift_v2.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/baselines/__init__.py",
+    "src/rift/cid/cid.py",
+    "src/rift/cid/evidence.py",
+    "src/rift/ebd/ebd.py",
+    "src/rift/fci/fci_runner.py",
+    "src/rift/identifiability/identifiability.py",
+    "src/rift/optimizer/cost_model.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 315
+  },
+  {
+   "path": "src/rift/fci/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 2
+  },
+  {
+   "path": "src/rift/fci/fci_runner.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 302
+  },
+  {
+   "path": "src/rift/graph/anomaly_subgraph.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 218
+  },
+  {
+   "path": "src/rift/graph/time_slice.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 153
+  },
+  {
+   "path": "src/rift/identifiability/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/fci/fci_runner.py",
+    "src/rift/identifiability/identifiability.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 24
+  },
+  {
+   "path": "src/rift/identifiability/identifiability.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [
+    "src/rift/fci/fci_runner.py"
+   ],
+   "heldout_token_hits": [],
+   "n_lines": 408
+  },
+  {
+   "path": "src/rift/optimizer/cost_model.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 346
+  },
+  {
+   "path": "src/rift/scenarios/__init__.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 6
+  },
+  {
+   "path": "src/rift/scenarios/simulator.py",
+   "in_4_5_0_manifest": true,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 251
+  },
+  {
+   "path": "src/rift/statistics/__init__.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 1
+  },
+  {
+   "path": "src/rift/statistics/stats.py",
+   "in_4_5_0_manifest": false,
+   "tracked": true,
+   "imports_in_repo": [],
+   "heldout_token_hits": [],
+   "n_lines": 588
+  }
+ ]
+}

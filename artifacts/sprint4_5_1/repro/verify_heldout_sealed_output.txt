@@ -1,0 +1,14 @@
+
+==> RIFT Held-Out Gate Verification
+    held-out file: datasets/rift_faults/held_out_test.json
+
+[1/4] Checking source code for unauthorized held-out references...
+      PASS — no unauthorized references found
+[2/4] Checking HeldOutGuard raises HeldOutLeakageError...
+      PASS — HeldOutGuard raises correctly for unauthorized, passes for authorized
+[3/4] Checking results/ directory (/Users/manassakthivel/Desktop/RIFT FINAL/results)...
+      PASS — no held-out artifacts in results/
+[4/4] Checking held-out file integrity...
+      PASS — held_out_test.json exists (13823 bytes); registry hashes verified
+
+==> GATE PASS: 4/4 checks passed. Held-out set is SEALED.

@@ -1,0 +1,54 @@
+{
+ "datasets": {
+  "dev": {
+   "file": "dev.json",
+   "n_scenarios": 180,
+   "sha256": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f",
+   "size_bytes": 447520
+  },
+  "held_out": {
+   "file": "heldout_candidate.json",
+   "n_scenarios": 108,
+   "sha256": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce",
+   "size_bytes": 314885
+  },
+  "val": {
+   "file": "val.json",
+   "n_scenarios": 72,
+   "sha256": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb",
+   "size_bytes": 198802
+  }
+ },
+ "distinct_content_hash": {
+  "dev": 180,
+  "held_out": 108,
+  "val": 72
+ },
+ "distinct_template_id": {
+  "dev": 75,
+  "held_out": 71,
+  "val": 30
+ },
+ "generator_version": "rift-scenario-gen/2.0.0",
+ "independence_ok": true,
+ "qc": {
+  "dev": {
+   "n": 180,
+   "n_failed": 0
+  },
+  "held_out": {
+   "n": 108,
+   "n_failed": 0
+  },
+  "val": {
+   "n": 72,
+   "n_failed": 0
+  }
+ },
+ "targets": {
+  "dev": 150,
+  "held_out": 90,
+  "total": 300,
+  "val": 60
+ }
+}

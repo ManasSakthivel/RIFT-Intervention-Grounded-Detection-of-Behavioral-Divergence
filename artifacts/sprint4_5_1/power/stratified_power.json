@@ -1,0 +1,362 @@
+{
+ "purpose": "fixed-strata hierarchical power; non-confirmatory marginals from dev/val",
+ "seed": 4518,
+ "R": 1000,
+ "B": 199,
+ "N": 2000,
+ "A_devval_dependence": {
+  "n": 252,
+  "n_structures": 10,
+  "sd_total": 0.9691596250372028,
+  "sd_within_structure": 0.933437785212283,
+  "share_of_variance_between_structures": 0.07235858968203224,
+  "template": {
+   "icc": -0.049034915639462946,
+   "K": 105,
+   "mean_size_n0": 2.3988858363858365,
+   "m_w": 2.515873015873016,
+   "deff_implied": 0.9256692945465284,
+   "icc_boot_95": [
+    -0.22257032770334437,
+    0.1350973784832131
+   ]
+  },
+  "unionfind_group": {
+   "icc": -0.05381150619192181,
+   "K": 21,
+   "mean_size_n0": 11.83095238095238,
+   "m_w": 15.380952380952381,
+   "deff_implied": 0.22613929190664828,
+   "icc_boot_95": [
+    -0.08600076892537795,
+    -0.02532988212590423
+   ]
+  },
+  "family_after_structure": {
+   "icc": 0.0160521683771347,
+   "K": 15,
+   "mean_size_n0": 16.794784580498867,
+   "m_w": 16.873015873015873,
+   "deff_implied": 1.2547963234465827,
+   "icc_boot_95": [
+    -0.017956086618351096,
+    0.04102596362843212
+   ]
+  }
+ },
+ "B_mc": [
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.0,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 0.95,
+   "reject_mu_0.0": 0.015,
+   "reject_mu_0.1": 0.992
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.03,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.114,
+   "reject_mu_0.0": 0.034,
+   "reject_mu_0.1": 0.987
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.05,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.277,
+   "reject_mu_0.0": 0.024,
+   "reject_mu_0.1": 0.967
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.1,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.587,
+   "reject_mu_0.0": 0.019,
+   "reject_mu_0.1": 0.942
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.2,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 2.169,
+   "reject_mu_0.0": 0.02,
+   "reject_mu_0.1": 0.825
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.3,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 2.835,
+   "reject_mu_0.0": 0.02,
+   "reject_mu_0.1": 0.738
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.0,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 1.077,
+   "reject_mu_0.0": 0.108,
+   "reject_mu_0.1": 0.922
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.03,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 1.235,
+   "reject_mu_0.0": 0.081,
+   "reject_mu_0.1": 0.892
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.05,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 1.398,
+   "reject_mu_0.0": 0.097,
+   "reject_mu_0.1": 0.875
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.1,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 1.707,
+   "reject_mu_0.0": 0.07,
+   "reject_mu_0.1": 0.83
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.2,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 2.27,
+   "reject_mu_0.0": 0.06,
+   "reject_mu_0.1": 0.74
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.3,
+   "latent_crossed_family_ignored": 0.02,
+   "realised_within_deff": 2.91,
+   "reject_mu_0.0": 0.046,
+   "reject_mu_0.1": 0.662
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.0,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 1.234,
+   "reject_mu_0.0": 0.202,
+   "reject_mu_0.1": 0.813
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.03,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 1.462,
+   "reject_mu_0.0": 0.138,
+   "reject_mu_0.1": 0.766
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.05,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 1.567,
+   "reject_mu_0.0": 0.137,
+   "reject_mu_0.1": 0.787
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.1,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 1.865,
+   "reject_mu_0.0": 0.152,
+   "reject_mu_0.1": 0.74
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.2,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 2.454,
+   "reject_mu_0.0": 0.114,
+   "reject_mu_0.1": 0.665
+  },
+  {
+   "layout": "16 groups/structure (~7.8 per group) = 256 groups",
+   "G_total": 256,
+   "max_group": 14,
+   "latent_within_group": 0.3,
+   "latent_crossed_family_ignored": 0.05,
+   "realised_within_deff": 3.174,
+   "reject_mu_0.0": 0.096,
+   "reject_mu_0.1": 0.615
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.0,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 0.89,
+   "reject_mu_0.0": 0.023,
+   "reject_mu_0.1": 0.993
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.03,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.245,
+   "reject_mu_0.0": 0.022,
+   "reject_mu_0.1": 0.95
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.05,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.412,
+   "reject_mu_0.0": 0.022,
+   "reject_mu_0.1": 0.926
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.1,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 2.025,
+   "reject_mu_0.0": 0.018,
+   "reject_mu_0.1": 0.821
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.2,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 3.255,
+   "reject_mu_0.0": 0.02,
+   "reject_mu_0.1": 0.638
+  },
+  {
+   "layout": "8 groups/structure (~15.6) = 128 groups",
+   "G_total": 128,
+   "max_group": 25,
+   "latent_within_group": 0.3,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 4.551,
+   "reject_mu_0.0": 0.014,
+   "reject_mu_0.1": 0.506
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.0,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 0.967,
+   "reject_mu_0.0": 0.022,
+   "reject_mu_0.1": 0.991
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.03,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.056,
+   "reject_mu_0.0": 0.023,
+   "reject_mu_0.1": 0.985
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.05,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.111,
+   "reject_mu_0.0": 0.014,
+   "reject_mu_0.1": 0.986
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.1,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.283,
+   "reject_mu_0.0": 0.013,
+   "reject_mu_0.1": 0.968
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.2,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.565,
+   "reject_mu_0.0": 0.024,
+   "reject_mu_0.1": 0.946
+  },
+  {
+   "layout": "32 groups/structure (~3.9) = 512 groups",
+   "G_total": 512,
+   "max_group": 8,
+   "latent_within_group": 0.3,
+   "latent_crossed_family_ignored": 0.0,
+   "realised_within_deff": 1.856,
+   "reject_mu_0.0": 0.018,
+   "reject_mu_0.1": 0.894
+  }
+ ],
+ "C_random_structure_limitation": {
+  "sd_between_structures_0.263": {
+   "se": 0.06575,
+   "mde80_one_sided": 0.18420422809092768,
+   "note": "independent of N; only more structures reduce it"
+  },
+  "sd_between_structures_0.35": {
+   "se": 0.0875,
+   "mde80_one_sided": 0.2451387065848847,
+   "note": "independent of N; only more structures reduce it"
+  },
+  "fixed_strata_se_no_clustering_N2000": 0.020872303405015127
+ }
+}

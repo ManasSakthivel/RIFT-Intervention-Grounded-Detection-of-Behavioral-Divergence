@@ -1,0 +1,16 @@
+{
+ "dev": {
+  "n_attribute": 68,
+  "B0E_correct_original_order": 38,
+  "B0E_correct_shuffled_order": 33,
+  "B0E_unsafe_original": 130,
+  "B0E_unsafe_shuffled": 135
+ },
+ "val": {
+  "n_attribute": 31,
+  "B0E_correct_original_order": 11,
+  "B0E_correct_shuffled_order": 10,
+  "B0E_unsafe_original": 58,
+  "B0E_unsafe_shuffled": 59
+ }
+}

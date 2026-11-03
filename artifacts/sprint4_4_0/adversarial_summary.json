@@ -1,0 +1,475 @@
+{
+ "provenance": {
+  "sha256": "3525bc05ed8b9dd21dcc888181005af09e75f43396fb27a0ad6732588ea3c472",
+  "n": 112,
+  "types": 14,
+  "variants_per_type": 8,
+  "ground_truth": "generator_v2.compute_ground_truth (noise-free simulator state); never derived from any method output",
+  "independence": "disjoint from dev/val/held-out by construction (split='adv_dev', new seeds from a distinct hash tag)",
+  "caveat": "hand-designed counterexamples; K variants per family are NOT independent samples"
+ },
+ "per_type": {
+  "A01_DOWNSTREAM_LARGEST": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A02_ROOT_SMALLER_ANOMALY": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A03_DELAYED_PROPAGATION": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 3,
+    "answered": 7,
+    "unsafe": 4,
+    "wrong_root": 4
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A04_SIMULTANEOUS_ONSET": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A05_COMMON_CAUSE_CONFOUNDING": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 7,
+    "answered": 8,
+    "unsafe": 1,
+    "wrong_root": 1
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A06_MULTIPLE_POSSIBLE_ROOTS": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 3,
+    "answered": 3,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A07_WEAK_INTERVENTION": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A08_MULTI_SERVICE_INTERVENTION": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 7,
+    "answered": 8,
+    "unsafe": 1,
+    "wrong_root": 1
+   },
+   "V3-FULL": {
+    "correct": 7,
+    "answered": 7,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 7,
+    "answered": 7,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A09_INSUFFICIENT_SAMPLES": {
+   "n": 8,
+   "expected": {
+    "ABSTAIN_REQUIRED": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A10_AMBIGUOUS_PAG": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 7,
+    "answered": 8,
+    "unsafe": 1,
+    "wrong_root": 1
+   },
+   "V3-FULL": {
+    "correct": 7,
+    "answered": 7,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 7,
+    "answered": 7,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 8,
+    "answered": 8,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A11_ISOLATED_ROOT_HARD_FOR_FCI": {
+   "n": 8,
+   "expected": {
+    "ATTRIBUTE": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 1,
+    "answered": 1,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 5,
+    "answered": 5,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 5,
+    "answered": 5,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 5,
+    "answered": 5,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A12_MISSING_TELEMETRY_ON_ROOT": {
+   "n": 8,
+   "expected": {
+    "ABSTAIN_REQUIRED": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 0,
+    "answered": 8,
+    "unsafe": 8,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 0,
+    "answered": 7,
+    "unsafe": 7,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 0,
+    "answered": 7,
+    "unsafe": 7,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 0,
+    "answered": 8,
+    "unsafe": 8,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A13_NO_IDENTIFIABLE_ORIGIN": {
+   "n": 8,
+   "expected": {
+    "ABSTAIN_REQUIRED": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 0,
+    "answered": 8,
+    "unsafe": 8,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 0,
+    "answered": 8,
+    "unsafe": 8,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  },
+  "A14_STRONG_ANOMALIES_ABSTAIN": {
+   "n": 8,
+   "expected": {
+    "ABSTAIN_REQUIRED": 8
+   },
+   "RIFT-FULL-V2": {
+    "correct": 0,
+    "answered": 1,
+    "unsafe": 1,
+    "wrong_root": 0
+   },
+   "V3-FULL": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-DEFINITIVE-ONLY": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "V3-NO-SYMMETRY-CHECK": {
+    "correct": 0,
+    "answered": 0,
+    "unsafe": 0,
+    "wrong_root": 0
+   },
+   "always_abstain_unsafe": 0
+  }
+ },
+ "total": {
+  "RIFT-FULL-V2": {
+   "correct": 57,
+   "answered": 81,
+   "unsafe": 24,
+   "wrong_root": 7
+  },
+  "V3-FULL": {
+   "correct": 67,
+   "answered": 74,
+   "unsafe": 7,
+   "wrong_root": 0
+  },
+  "V3-DEFINITIVE-ONLY": {
+   "correct": 62,
+   "answered": 69,
+   "unsafe": 7,
+   "wrong_root": 0
+  },
+  "V3-NO-SYMMETRY-CHECK": {
+   "correct": 69,
+   "answered": 85,
+   "unsafe": 16,
+   "wrong_root": 0
+  },
+  "n": 112,
+  "n_attribute": 80
+ }
+}

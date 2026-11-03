@@ -1,0 +1,3209 @@
+{
+ "dev": {
+  "V2_pair_set": {
+   "n_pairs": 555,
+   "ancestral_pairs": {
+    "n": 232,
+    "sig": {
+     "k": 146,
+     "n": 232,
+     "rate": 0.6293103448275862,
+     "wilson95": [
+      0.565526270823159,
+      0.6888819247697935
+     ],
+     "scenario_cluster_boot95": [
+      0.5335995555246892,
+      0.7240073529411764
+     ],
+     "n_scenarios": 94
+    }
+   },
+   "nonancestral": {
+    "n": 323,
+    "A_clean_no_drift_no_other_channel": {
+     "k": 17,
+     "n": 304,
+     "rate": 0.05592105263157895,
+     "wilson95": [
+      0.03520410828109609,
+      0.0877210461760484
+     ],
+     "scenario_cluster_boot95": [
+      0.031140157957500046,
+      0.08411872079439248
+     ],
+     "n_scenarios": 87
+    },
+    "B_drift_gt_0.3_sigma": {
+     "k": 16,
+     "n": 17,
+     "rate": 0.9411764705882353,
+     "wilson95": [
+      0.7301796914154303,
+      0.9895395991310502
+     ],
+     "scenario_cluster_boot95": [
+      0.7272727272727273,
+      1.0
+     ],
+     "n_scenarios": 10
+    },
+    "C_other_real_channel_cotarget_or_collateral": {
+     "k": 2,
+     "n": 2,
+     "rate": 1.0,
+     "wilson95": [
+      0.3423802239546494,
+      1.0
+     ],
+     "scenario_cluster_boot95": [
+      1.0,
+      1.0
+     ],
+     "n_scenarios": 1
+    },
+    "all_nonancestral_sig": {
+     "k": 35,
+     "n": 323,
+     "rate": 0.10835913312693499,
+     "wilson95": [
+      0.07895102529425851,
+      0.14697336977495493
+     ],
+     "scenario_cluster_boot95": [
+      0.06395039584364176,
+      0.16382664091392948
+     ],
+     "n_scenarios": 95
+    },
+    "share_of_nonancestral_pairs_in_B": 0.05263157894736842,
+    "scenarios_with_any_B_pair": 10,
+    "scenarios_total_with_nonancestral_pairs": 95
+   },
+   "nonancestral_by_abs_drift_sigma": {
+    "0.0-0.1": {
+     "k": 15,
+     "n": 285,
+     "rate": 0.05263157894736842,
+     "wilson95": [
+      0.03215155955105729,
+      0.08501118783419147
+     ],
+     "scenario_cluster_boot95": [
+      0.02611576855979841,
+      0.08209916910293887
+     ],
+     "n_scenarios": 80
+    },
+    "0.1-0.3": {
+     "k": 2,
+     "n": 19,
+     "rate": 0.10526315789473684,
+     "wilson95": [
+      0.029358560033196812,
+      0.31394082911909027
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      0.25
+     ],
+     "n_scenarios": 7
+    },
+    "0.3-0.6": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "0.6-1.0": {
+     "k": 0,
+     "n": 1,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.7934506882081973
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      0.0
+     ],
+     "n_scenarios": 1
+    },
+    "1.0-inf": {
+     "k": 16,
+     "n": 16,
+     "rate": 1.0,
+     "wilson95": [
+      0.8063923170025951,
+      1.0
+     ],
+     "scenario_cluster_boot95": [
+      1.0,
+      1.0
+     ],
+     "n_scenarios": 9
+    }
+   },
+   "B_pairs_by_upstream_fault_shapes": {
+    "intermittent": {
+     "n": 4,
+     "sig": 3,
+     "scenarios": 4
+    },
+    "oscillation": {
+     "n": 13,
+     "sig": 13,
+     "scenarios": 6
+    }
+   },
+   "B_pairs_by_temporal_dimension": {
+    "abrupt_degradation": 1,
+    "oscillation": 13,
+    "intermittent_degradation": 3
+   },
+   "B_sig_signed_drift_sigma": {
+    "min": -4.906717753328507,
+    "median": -1.993138638888889,
+    "max": 4.838805758484702
+   },
+   "ancestral_pairs_with_abs_drift_gt_0.3": {
+    "n": 15,
+    "of": 232
+   }
+  },
+  "V3_pair_set": {
+   "n_pairs": 1334,
+   "ancestral_pairs": {
+    "n": 441,
+    "sig": {
+     "k": 308,
+     "n": 441,
+     "rate": 0.6984126984126984,
+     "wilson95": [
+      0.6540159663513261,
+      0.7393826175848397
+     ],
+     "scenario_cluster_boot95": [
+      0.6230901103610844,
+      0.7729359534206696
+     ],
+     "n_scenarios": 110
+    }
+   },
+   "nonancestral": {
+    "n": 893,
+    "A_clean_no_drift_no_other_channel": {
+     "k": 44,
+     "n": 780,
+     "rate": 0.05641025641025641,
+     "wilson95": [
+      0.04228736236600872,
+      0.07488104948652684
+     ],
+     "scenario_cluster_boot95": [
+      0.04076722317797936,
+      0.07252484916369382
+     ],
+     "n_scenarios": 108
+    },
+    "B_drift_gt_0.3_sigma": {
+     "k": 103,
+     "n": 110,
+     "rate": 0.9363636363636364,
+     "wilson95": [
+      0.8744425374987138,
+      0.9688354821557997
+     ],
+     "scenario_cluster_boot95": [
+      0.8749640804597701,
+      0.9752091623303744
+     ],
+     "n_scenarios": 18
+    },
+    "C_other_real_channel_cotarget_or_collateral": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6666666666666666,
+     "wilson95": [
+      0.2076595988078242,
+      0.9385080559790691
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      1.0
+     ],
+     "n_scenarios": 2
+    },
+    "all_nonancestral_sig": {
+     "k": 149,
+     "n": 893,
+     "rate": 0.16685330347144456,
+     "wilson95": [
+      0.14383698381137172,
+      0.1927235708911368
+     ],
+     "scenario_cluster_boot95": [
+      0.10869124261398712,
+      0.2321055954483704
+     ],
+     "n_scenarios": 121
+    },
+    "share_of_nonancestral_pairs_in_B": 0.12318029115341546,
+    "scenarios_with_any_B_pair": 18,
+    "scenarios_total_with_nonancestral_pairs": 121
+   },
+   "nonancestral_by_abs_drift_sigma": {
+    "0.0-0.1": {
+     "k": 38,
+     "n": 745,
+     "rate": 0.05100671140939597,
+     "wilson95": [
+      0.037384645324026744,
+      0.06923533135377657
+     ],
+     "scenario_cluster_boot95": [
+      0.03709061435322562,
+      0.06635209937796208
+     ],
+     "n_scenarios": 101
+    },
+    "0.1-0.3": {
+     "k": 6,
+     "n": 35,
+     "rate": 0.17142857142857143,
+     "wilson95": [
+      0.08102640006436056,
+      0.3268228243870004
+     ],
+     "scenario_cluster_boot95": [
+      0.08108108108108109,
+      0.2777777777777778
+     ],
+     "n_scenarios": 8
+    },
+    "0.3-0.6": {
+     "k": 2,
+     "n": 4,
+     "rate": 0.5,
+     "wilson95": [
+      0.15003898774401986,
+      0.8499610122559802
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      0.6666666666666666
+     ],
+     "n_scenarios": 2
+    },
+    "0.6-1.0": {
+     "k": 2,
+     "n": 3,
+     "rate": 0.6666666666666666,
+     "wilson95": [
+      0.2076595988078242,
+      0.9385080559790691
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      1.0
+     ],
+     "n_scenarios": 3
+    },
+    "1.0-inf": {
+     "k": 99,
+     "n": 103,
+     "rate": 0.9611650485436893,
+     "wilson95": [
+      0.9043719303779179,
+      0.9847960105573308
+     ],
+     "scenario_cluster_boot95": [
+      0.9189110622250157,
+      0.9910734039190898
+     ],
+     "n_scenarios": 17
+    }
+   },
+   "B_pairs_by_upstream_fault_shapes": {
+    "intermittent": {
+     "n": 54,
+     "sig": 50,
+     "scenarios": 10
+    },
+    "oscillation": {
+     "n": 53,
+     "sig": 51,
+     "scenarios": 7
+    },
+    "recovery_delay": {
+     "n": 3,
+     "sig": 2,
+     "scenarios": 1
+    }
+   },
+   "B_pairs_by_temporal_dimension": {
+    "abrupt_degradation": 3,
+    "oscillation": 53,
+    "intermittent_degradation": 38,
+    "delayed_downstream_effects": 8,
+    "delayed_propagation": 5,
+    "recovery_delay": 3
+   },
+   "B_sig_signed_drift_sigma": {
+    "min": -6.239305288632642,
+    "median": -2.156284583333332,
+    "max": 4.838805758484702
+   },
+   "ancestral_pairs_with_abs_drift_gt_0.3": {
+    "n": 54,
+    "of": 441
+   }
+  },
+  "decisions": [
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0001",
+    "top": "poppy",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0002",
+    "top": "dune",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0002",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0003",
+    "top": "kelp",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "other_channel"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0003",
+    "top": "kelp",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "other_channel"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0005",
+    "top": "clover",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0005",
+    "top": "yarrow",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0006",
+    "top": "nettle",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0007",
+    "top": "dill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0007",
+    "top": "dill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0010",
+    "top": "lotus",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0010",
+    "top": "lotus",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0013",
+    "top": "nettle",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0015",
+    "top": "juniper",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0015",
+    "top": "yarrow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0016",
+    "top": "rowan",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0016",
+    "top": "mint",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0017",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0018",
+    "top": "dill",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0021",
+    "top": "larch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0021",
+    "top": "yarrow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0022",
+    "top": "clover",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0022",
+    "top": "olive",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0023",
+    "top": "ulex",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0023",
+    "top": "ginger",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0024",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0025",
+    "top": "pine",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0025",
+    "top": "lotus",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0026",
+    "top": "olive",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0028",
+    "top": "kelp",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0028",
+    "top": "tansy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0029",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0029",
+    "top": "kale",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0033",
+    "top": "tansy",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0033",
+    "top": "tansy",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0034",
+    "top": "wisteria",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0037",
+    "top": "thorn",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0038",
+    "top": "fennel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0039",
+    "top": "larch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0039",
+    "top": "dill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0042",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0042",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0044",
+    "top": "iris",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0047",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0049",
+    "top": "nettle",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0049",
+    "top": "nettle",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0052",
+    "top": "zest",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0052",
+    "top": "zest",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0053",
+    "top": "zinnia",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0054",
+    "top": "iris",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0054",
+    "top": "kale",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0057",
+    "top": "zinnia",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0059",
+    "top": "yarrow",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0060",
+    "top": "elm",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0060",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 3,
+    "nonancestral_causes": [
+     "drift",
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0061",
+    "top": "oak",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0062",
+    "top": "kelp",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0062",
+    "top": "kelp",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0064",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0065",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0065",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0068",
+    "top": "zinnia",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0069",
+    "top": "birch",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0070",
+    "top": "sorrel",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0070",
+    "top": "tansy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0073",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0075",
+    "top": "alder",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0076",
+    "top": "iris",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0081",
+    "top": "oak",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0081",
+    "top": "oak",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0082",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0082",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0086",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0086",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0087",
+    "top": "ulex",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0090",
+    "top": "elm",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0092",
+    "top": "willow",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0092",
+    "top": "clover",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0095",
+    "top": "willow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0095",
+    "top": "willow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0098",
+    "top": "birch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0101",
+    "top": "heath",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0101",
+    "top": "heath",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0103",
+    "top": "olive",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0103",
+    "top": "juniper",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0106",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0106",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0107",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0107",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0108",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0109",
+    "top": "yucca",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0109",
+    "top": "nutmeg",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 3,
+    "nonancestral_causes": [
+     "drift",
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0110",
+    "top": "quill",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0112",
+    "top": "larch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0112",
+    "top": "larch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0113",
+    "top": "oak",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0114",
+    "top": "ginger",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 5,
+    "n_nonancestral_confirmed": 5,
+    "nonancestral_causes": [
+     "drift",
+     "drift",
+     "drift",
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0117",
+    "top": "wisteria",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0117",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0118",
+    "top": "rowan",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0118",
+    "top": "rowan",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0120",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0120",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0122",
+    "top": "poppy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0124",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0124",
+    "top": "umber",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0125",
+    "top": "umber",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "clean_false_positive",
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0125",
+    "top": "cedar",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0126",
+    "top": "oak",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0127",
+    "top": "wisteria",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0130",
+    "top": "juniper",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0130",
+    "top": "juniper",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0133",
+    "top": "basil",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0133",
+    "top": "basil",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0134",
+    "top": "dune",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0134",
+    "top": "fennel",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0138",
+    "top": "thorn",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0138",
+    "top": "thorn",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0139",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0141",
+    "top": "lotus",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0141",
+    "top": "lotus",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0144",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0145",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0145",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0146",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0146",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0147",
+    "top": "dill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0147",
+    "top": "dill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0151",
+    "top": "umber",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0151",
+    "top": "dune",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0153",
+    "top": "lotus",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0155",
+    "top": "zest",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0158",
+    "top": "fjord",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0159",
+    "top": "thorn",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0159",
+    "top": "birch",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0162",
+    "top": "basil",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0162",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0164",
+    "top": "mint",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0166",
+    "top": "thorn",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0167",
+    "top": "rowan",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0169",
+    "top": "yarrow",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0170",
+    "top": "vale",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0170",
+    "top": "vale",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0175",
+    "top": "cedar",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0176",
+    "top": "quince",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V2",
+    "sid": "V2D-0179",
+    "top": "kelp",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "dev",
+    "method": "V3",
+    "sid": "V2D-0179",
+    "top": "kelp",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   }
+  ]
+ },
+ "val": {
+  "V2_pair_set": {
+   "n_pairs": 314,
+   "ancestral_pairs": {
+    "n": 132,
+    "sig": {
+     "k": 85,
+     "n": 132,
+     "rate": 0.6439393939393939,
+     "wilson95": [
+      0.5592437771060641,
+      0.7204940902059029
+     ],
+     "scenario_cluster_boot95": [
+      0.5163294617209941,
+      0.758174019607843
+     ],
+     "n_scenarios": 43
+    }
+   },
+   "nonancestral": {
+    "n": 182,
+    "A_clean_no_drift_no_other_channel": {
+     "k": 11,
+     "n": 165,
+     "rate": 0.06666666666666667,
+     "wilson95": [
+      0.03763012142336688,
+      0.115421499028834
+     ],
+     "scenario_cluster_boot95": [
+      0.026662251655629143,
+      0.11195244193235002
+     ],
+     "n_scenarios": 30
+    },
+    "B_drift_gt_0.3_sigma": {
+     "k": 17,
+     "n": 17,
+     "rate": 1.0,
+     "wilson95": [
+      0.8156818626193445,
+      1.0
+     ],
+     "scenario_cluster_boot95": [
+      1.0,
+      1.0
+     ],
+     "n_scenarios": 6
+    },
+    "C_other_real_channel_cotarget_or_collateral": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "all_nonancestral_sig": {
+     "k": 28,
+     "n": 182,
+     "rate": 0.15384615384615385,
+     "wilson95": [
+      0.10863680590378713,
+      0.2133659336437915
+     ],
+     "scenario_cluster_boot95": [
+      0.07652991524478645,
+      0.25
+     ],
+     "n_scenarios": 36
+    },
+    "share_of_nonancestral_pairs_in_B": 0.09340659340659341,
+    "scenarios_with_any_B_pair": 6,
+    "scenarios_total_with_nonancestral_pairs": 36
+   },
+   "nonancestral_by_abs_drift_sigma": {
+    "0.0-0.1": {
+     "k": 10,
+     "n": 159,
+     "rate": 0.06289308176100629,
+     "wilson95": [
+      0.034517657785061176,
+      0.11189136510802981
+     ],
+     "scenario_cluster_boot95": [
+      0.024532440974158767,
+      0.10792900563270305
+     ],
+     "n_scenarios": 29
+    },
+    "0.1-0.3": {
+     "k": 1,
+     "n": 6,
+     "rate": 0.16666666666666666,
+     "wilson95": [
+      0.030053369411815023,
+      0.5635028250257673
+     ],
+     "scenario_cluster_boot95": [
+      0.16666666666666666,
+      0.16666666666666666
+     ],
+     "n_scenarios": 1
+    },
+    "0.3-0.6": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "0.6-1.0": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "1.0-inf": {
+     "k": 17,
+     "n": 17,
+     "rate": 1.0,
+     "wilson95": [
+      0.8156818626193445,
+      1.0
+     ],
+     "scenario_cluster_boot95": [
+      1.0,
+      1.0
+     ],
+     "n_scenarios": 6
+    }
+   },
+   "B_pairs_by_upstream_fault_shapes": {
+    "intermittent": {
+     "n": 8,
+     "sig": 8,
+     "scenarios": 3
+    },
+    "oscillation": {
+     "n": 9,
+     "sig": 9,
+     "scenarios": 3
+    }
+   },
+   "B_pairs_by_temporal_dimension": {
+    "oscillation": 9,
+    "intermittent_degradation": 6,
+    "immediate_propagation": 2
+   },
+   "B_sig_signed_drift_sigma": {
+    "min": -11.792188997215936,
+    "median": -3.0329999999999986,
+    "max": 1.5793122995119366
+   },
+   "ancestral_pairs_with_abs_drift_gt_0.3": {
+    "n": 14,
+    "of": 132
+   }
+  },
+  "V3_pair_set": {
+   "n_pairs": 902,
+   "ancestral_pairs": {
+    "n": 298,
+    "sig": {
+     "k": 194,
+     "n": 298,
+     "rate": 0.6510067114093959,
+     "wilson95": [
+      0.5952780939859152,
+      0.7028916814106247
+     ],
+     "scenario_cluster_boot95": [
+      0.5249059080454429,
+      0.7709316656497863
+     ],
+     "n_scenarios": 51
+    }
+   },
+   "nonancestral": {
+    "n": 604,
+    "A_clean_no_drift_no_other_channel": {
+     "k": 21,
+     "n": 535,
+     "rate": 0.03925233644859813,
+     "wilson95": [
+      0.02581463474375456,
+      0.05925947773539422
+     ],
+     "scenario_cluster_boot95": [
+      0.0209621722403855,
+      0.05599171290887849
+     ],
+     "n_scenarios": 45
+    },
+    "B_drift_gt_0.3_sigma": {
+     "k": 64,
+     "n": 69,
+     "rate": 0.927536231884058,
+     "wilson95": [
+      0.8413260570337221,
+      0.9686522287684288
+     ],
+     "scenario_cluster_boot95": [
+      0.8777672955974842,
+      1.0
+     ],
+     "n_scenarios": 10
+    },
+    "C_other_real_channel_cotarget_or_collateral": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "all_nonancestral_sig": {
+     "k": 85,
+     "n": 604,
+     "rate": 0.14072847682119205,
+     "wilson95": [
+      0.11526140215833267,
+      0.1707366263427885
+     ],
+     "scenario_cluster_boot95": [
+      0.06853441008048042,
+      0.23541389545429553
+     ],
+     "n_scenarios": 52
+    },
+    "share_of_nonancestral_pairs_in_B": 0.11423841059602649,
+    "scenarios_with_any_B_pair": 10,
+    "scenarios_total_with_nonancestral_pairs": 52
+   },
+   "nonancestral_by_abs_drift_sigma": {
+    "0.0-0.1": {
+     "k": 21,
+     "n": 517,
+     "rate": 0.04061895551257253,
+     "wilson95": [
+      0.026718523976646917,
+      0.06129570396088683
+     ],
+     "scenario_cluster_boot95": [
+      0.021788489611104796,
+      0.05736176848572234
+     ],
+     "n_scenarios": 43
+    },
+    "0.1-0.3": {
+     "k": 0,
+     "n": 18,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.17587922593328437
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      0.0
+     ],
+     "n_scenarios": 2
+    },
+    "0.3-0.6": {
+     "k": 0,
+     "n": 4,
+     "rate": 0.0,
+     "wilson95": [
+      0.0,
+      0.4898908403969213
+     ],
+     "scenario_cluster_boot95": [
+      0.0,
+      0.0
+     ],
+     "n_scenarios": 2
+    },
+    "0.6-1.0": {
+     "k": 0,
+     "n": 0,
+     "rate": null,
+     "wilson95": [
+      null,
+      null
+     ],
+     "scenario_cluster_boot95": [
+      null,
+      null
+     ],
+     "n_scenarios": 0
+    },
+    "1.0-inf": {
+     "k": 64,
+     "n": 65,
+     "rate": 0.9846153846153847,
+     "wilson95": [
+      0.9178671518687915,
+      0.9972790554280571
+     ],
+     "scenario_cluster_boot95": [
+      0.9444182389937107,
+      1.0
+     ],
+     "n_scenarios": 10
+    }
+   },
+   "B_pairs_by_upstream_fault_shapes": {
+    "intermittent": {
+     "n": 28,
+     "sig": 28,
+     "scenarios": 5
+    },
+    "oscillation": {
+     "n": 41,
+     "sig": 36,
+     "scenarios": 5
+    }
+   },
+   "B_pairs_by_temporal_dimension": {
+    "oscillation": 41,
+    "delayed_downstream_effects": 8,
+    "intermittent_degradation": 17,
+    "immediate_propagation": 3
+   },
+   "B_sig_signed_drift_sigma": {
+    "min": -11.792188997215936,
+    "median": -3.6977219364879454,
+    "max": 4.191834232597194
+   },
+   "ancestral_pairs_with_abs_drift_gt_0.3": {
+    "n": 40,
+    "of": 298
+   }
+  },
+  "decisions": [
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0001",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0001",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0002",
+    "top": "elm",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0003",
+    "top": "sorrel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0003",
+    "top": "umber",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0004",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0004",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0005",
+    "top": "quince",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0005",
+    "top": "quince",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0007",
+    "top": "quill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0007",
+    "top": "quill",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 5,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0008",
+    "top": "ulex",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0008",
+    "top": "ulex",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0009",
+    "top": "poppy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0009",
+    "top": "poppy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0011",
+    "top": "quince",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0011",
+    "top": "olive",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0013",
+    "top": "birch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0016",
+    "top": "ginger",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0017",
+    "top": "yucca",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0017",
+    "top": "yucca",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0018",
+    "top": "juniper",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0020",
+    "top": "violet",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0020",
+    "top": "willow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0023",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0023",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0025",
+    "top": "larch",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0026",
+    "top": "yarrow",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0027",
+    "top": "juniper",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0029",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0029",
+    "top": "vale",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0030",
+    "top": "tansy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0030",
+    "top": "cedar",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0031",
+    "top": "juniper",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0031",
+    "top": "juniper",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0033",
+    "top": "pine",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0033",
+    "top": "pine",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 3,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0036",
+    "top": "elm",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0041",
+    "top": "aspen",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0041",
+    "top": "xylia",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 6,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0042",
+    "top": "fennel",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0045",
+    "top": "poppy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0045",
+    "top": "pine",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0046",
+    "top": "jasmine",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0048",
+    "top": "clover",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0053",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0053",
+    "top": "ivy",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0054",
+    "top": "nutmeg",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0055",
+    "top": "sage",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0055",
+    "top": "jasmine",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0058",
+    "top": "sage",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0058",
+    "top": "sage",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0059",
+    "top": "reed",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0063",
+    "top": "zest",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0063",
+    "top": "mint",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0067",
+    "top": "basil",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 1,
+    "n_nonancestral_confirmed": 1,
+    "nonancestral_causes": [
+     "clean_false_positive"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0068",
+    "top": "hazel",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 2,
+    "nonancestral_causes": [
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0071",
+    "top": "fjord",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 5,
+    "n_nonancestral_confirmed": 4,
+    "nonancestral_causes": [
+     "drift",
+     "drift",
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0071",
+    "top": "fjord",
+    "unsafe": true,
+    "correct": false,
+    "n_confirmed_from_top": 5,
+    "n_nonancestral_confirmed": 4,
+    "nonancestral_causes": [
+     "drift",
+     "drift",
+     "drift",
+     "drift"
+    ]
+   },
+   {
+    "split": "val",
+    "method": "V2",
+    "sid": "V2V-0072",
+    "top": "elm",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 2,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   },
+   {
+    "split": "val",
+    "method": "V3",
+    "sid": "V2V-0072",
+    "top": "elm",
+    "unsafe": false,
+    "correct": true,
+    "n_confirmed_from_top": 4,
+    "n_nonancestral_confirmed": 0,
+    "nonancestral_causes": []
+   }
+  ]
+ },
+ "reproducibility": {
+  "dev": {
+   "analyze_py_k_n": [
+    16,
+    17
+   ],
+   "audit_V2_pair_set_k_n": [
+    16,
+    17
+   ],
+   "audit_rerun_identical": true,
+   "note": "audit B category excludes pairs reached by a co-target/collateral channel; analyze.py did not"
+  },
+  "val": {
+   "analyze_py_k_n": [
+    17,
+    17
+   ],
+   "audit_V2_pair_set_k_n": [
+    17,
+    17
+   ],
+   "audit_rerun_identical": true,
+   "note": "audit B category excludes pairs reached by a co-target/collateral channel; analyze.py did not"
+  }
+ },
+ "decision_level": {
+  "dev/V2": {
+   "answered": 80,
+   "with_nonancestral_confirmation_from_named_service": 18,
+   "of_which_unsafe": 17,
+   "causes": {
+    "other_channel": 1,
+    "drift": 14,
+    "clean_false_positive": 9
+   },
+   "unsafe_total": 52
+  },
+  "dev/V3": {
+   "answered": 67,
+   "with_nonancestral_confirmation_from_named_service": 16,
+   "of_which_unsafe": 15,
+   "causes": {
+    "other_channel": 1,
+    "clean_false_positive": 11,
+    "drift": 10
+   },
+   "unsafe_total": 35
+  },
+  "val/V2": {
+   "answered": 35,
+   "with_nonancestral_confirmation_from_named_service": 7,
+   "of_which_unsafe": 7,
+   "causes": {
+    "drift": 12,
+    "clean_false_positive": 1
+   },
+   "unsafe_total": 27
+  },
+  "val/V3": {
+   "answered": 26,
+   "with_nonancestral_confirmation_from_named_service": 4,
+   "of_which_unsafe": 4,
+   "causes": {
+    "drift": 6,
+    "clean_false_positive": 2
+   },
+   "unsafe_total": 13
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "note": "V3 dev scores (6 variants x 30 sampled dev scenarios = 180 runs per setting) recomputed in the lock-file venv and compared with committed artifacts/sprint4_4_0/v3_dev.json score fields.",
+ "environment": "A_canonical_py39_lockfile",
+ "settings": [
+  {"PYTHONHASHSEED": "1", "OMP_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "runs": 180, "score_mismatches": 0},
+  {"PYTHONHASHSEED": "12345", "OMP_NUM_THREADS": "4", "OPENBLAS_NUM_THREADS": "4", "runs": 180, "score_mismatches": 0}
+ ],
+ "limitation": "Sampled every 6th dev scenario; full dev/val reruns were done once per environment (see cross_environment_comparison.json)."
+}

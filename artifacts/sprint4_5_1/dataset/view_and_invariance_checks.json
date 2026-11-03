@@ -1,0 +1,22 @@
+{
+ "purpose": "validator-view and label-invariance checks (prototype indices >= 300000; dev for invariance)",
+ "n_checked": 800,
+ "frozen_validators_on_raw_new_scenarios_failures_by_check": {
+  "schema": 800
+ },
+ "frozen_validators_on_validation_view_failures_by_check": {},
+ "label_field_invariance_dev40": {
+  "fields_poisoned": [
+   "ground_truth",
+   "design",
+   "dimensions",
+   "template_id",
+   "content_hash",
+   "parent_scenario",
+   "generator_version"
+  ],
+  "observe_identical": 40,
+  "v3_output_identical": 40,
+  "of": 40
+ }
+}

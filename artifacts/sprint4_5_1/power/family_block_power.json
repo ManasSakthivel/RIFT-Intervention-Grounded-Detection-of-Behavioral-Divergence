@@ -1,0 +1,116 @@
+{
+ "purpose": "family-block bootstrap-t size/power (non-confirmatory)",
+ "seed": 4519,
+ "R": 400,
+ "B": 199,
+ "cases": [
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.0,
+   "latent_crossed_family": 0.0,
+   "family_block_reject_mu_0.0": 0.015,
+   "template_strat_reject_mu_0.0": 0.015,
+   "family_block_reject_mu_0.1": 0.9825,
+   "template_strat_reject_mu_0.1": 0.995
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.05,
+   "latent_crossed_family": 0.0,
+   "family_block_reject_mu_0.0": 0.015,
+   "template_strat_reject_mu_0.0": 0.02,
+   "family_block_reject_mu_0.1": 0.91,
+   "template_strat_reject_mu_0.1": 0.9775
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.1,
+   "latent_crossed_family": 0.0,
+   "family_block_reject_mu_0.0": 0.015,
+   "template_strat_reject_mu_0.0": 0.0175,
+   "family_block_reject_mu_0.1": 0.865,
+   "template_strat_reject_mu_0.1": 0.93
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.2,
+   "latent_crossed_family": 0.0,
+   "family_block_reject_mu_0.0": 0.02,
+   "template_strat_reject_mu_0.0": 0.0175,
+   "family_block_reject_mu_0.1": 0.73,
+   "template_strat_reject_mu_0.1": 0.8325
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.0,
+   "latent_crossed_family": 0.02,
+   "family_block_reject_mu_0.0": 0.0175,
+   "template_strat_reject_mu_0.0": 0.0875,
+   "family_block_reject_mu_0.1": 0.5875,
+   "template_strat_reject_mu_0.1": 0.925
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.05,
+   "latent_crossed_family": 0.02,
+   "family_block_reject_mu_0.0": 0.0375,
+   "template_strat_reject_mu_0.0": 0.1025,
+   "family_block_reject_mu_0.1": 0.5725,
+   "template_strat_reject_mu_0.1": 0.8625
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.1,
+   "latent_crossed_family": 0.02,
+   "family_block_reject_mu_0.0": 0.0175,
+   "template_strat_reject_mu_0.0": 0.0825,
+   "family_block_reject_mu_0.1": 0.5125,
+   "template_strat_reject_mu_0.1": 0.8175
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.2,
+   "latent_crossed_family": 0.02,
+   "family_block_reject_mu_0.0": 0.005,
+   "template_strat_reject_mu_0.0": 0.0675,
+   "family_block_reject_mu_0.1": 0.4675,
+   "template_strat_reject_mu_0.1": 0.73
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.0,
+   "latent_crossed_family": 0.05,
+   "family_block_reject_mu_0.0": 0.0175,
+   "template_strat_reject_mu_0.0": 0.1275,
+   "family_block_reject_mu_0.1": 0.2975,
+   "template_strat_reject_mu_0.1": 0.815
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.05,
+   "latent_crossed_family": 0.05,
+   "family_block_reject_mu_0.0": 0.03,
+   "template_strat_reject_mu_0.0": 0.1575,
+   "family_block_reject_mu_0.1": 0.3625,
+   "template_strat_reject_mu_0.1": 0.77
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.1,
+   "latent_crossed_family": 0.05,
+   "family_block_reject_mu_0.0": 0.0275,
+   "template_strat_reject_mu_0.0": 0.14,
+   "family_block_reject_mu_0.1": 0.3475,
+   "template_strat_reject_mu_0.1": 0.75
+  },
+  {
+   "layout": "16 templates/structure = 256",
+   "latent_within_group": 0.2,
+   "latent_crossed_family": 0.05,
+   "family_block_reject_mu_0.0": 0.02,
+   "template_strat_reject_mu_0.0": 0.1025,
+   "family_block_reject_mu_0.1": 0.3,
+   "template_strat_reject_mu_0.1": 0.6675
+  }
+ ]
+}

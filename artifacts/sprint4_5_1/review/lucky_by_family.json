@@ -1,0 +1,12 @@
+{
+ "var_mult=1": {
+  "n": 50,
+  "answered": 19,
+  "lucky_correct": 12
+ },
+ "var_mult>1": {
+  "n": 14,
+  "answered": 8,
+  "lucky_correct": 6
+ }
+}

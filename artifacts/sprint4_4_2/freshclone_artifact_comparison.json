@@ -1,0 +1,86 @@
+[
+ {
+  "file": "v3_dev.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {
+   "runtime_s": 2160,
+   "mem_kb": 2160
+  },
+  "byte_identical": false
+ },
+ {
+  "file": "v3_val.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {
+   "runtime_s": 864,
+   "mem_kb": 864
+  },
+  "byte_identical": false
+ },
+ {
+  "file": "analysis.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {
+   "runtime_s": 56
+  },
+  "byte_identical": false
+ },
+ {
+  "file": "adversarial_results.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {
+   "runtime_s": 896,
+   "mem_kb": 896
+  },
+  "byte_identical": true
+ },
+ {
+  "file": "adversarial_summary.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {},
+  "byte_identical": true
+ },
+ {
+  "file": "cid_audit.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {},
+  "byte_identical": true
+ },
+ {
+  "file": "failure_traces_dev.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {},
+  "byte_identical": true
+ },
+ {
+  "file": "failure_traces_val.json",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {},
+  "byte_identical": true
+ },
+ {
+  "file": "graph_quality.csv",
+  "status": "IDENTICAL",
+  "differences": [],
+  "ignored": {},
+  "byte_identical": true
+ },
+ {
+  "file": "trace_meta.json",
+  "status": "PROTECTED_UNAVAILABLE",
+  "differences": [
+   "/verify_freeze[0]: True != False",
+   "/verify_freeze[1]: 'ok' != 'datasets/rift_v2/heldout_candidate.json missing'"
+  ],
+  "ignored": {},
+  "byte_identical": false
+ }
+]

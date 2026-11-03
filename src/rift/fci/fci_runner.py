@@ -221,7 +221,10 @@ def run_fci(
     t_start = time.time()
 
     # Run FCI with Fisher's Z CI test
-    g, edges_raw = fci(data_array, fisherz, alpha, verbose=False)
+    try:
+        g, edges_raw = fci(data_array, fisherz, alpha, verbose=False, show_progress=False)
+    except TypeError:
+        g, edges_raw = fci(data_array, fisherz, alpha, verbose=False)
     elapsed = time.time() - t_start
 
     # Decode the PAG

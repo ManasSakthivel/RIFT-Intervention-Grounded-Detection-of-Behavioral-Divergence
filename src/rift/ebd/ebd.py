@@ -9,6 +9,7 @@ import pandas as pd
 import networkx as nx
 
 from src.rift.fci.fci_runner import PAGResult, PAGEdgeType
+from src.rift.cid.evidence import CIDEvidenceStore, grade_name, validate_cid_for_r4
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -43,20 +44,53 @@ class EBDResult:
     causal_path: List[Tuple[str, str]] = field(default_factory=list)
     anomaly_score: float = 0.0
     notes: str = ""
+    # Sprint 4.2.3: evidence provenance.
+    #   causal_path_kind: "DIRECTED" (every path edge oriented i->j in the PAG),
+    #   "SEMI_DIRECTED" (at least one edge is o-> / o-o / --, i.e. orientation not
+    #   established; reachability only), or "NONE".
+    #   evidence_type: "INTERVENTIONAL" only when R4 passed, otherwise "OBSERVATIONAL".
+    causal_path_kind: str = "NONE"
+    evidence_type: str = "OBSERVATIONAL"
 
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Helper: build causal graph from PAG (directed edges only)
 # ─────────────────────────────────────────────────────────────────────────────
 
-def _pag_to_digraph(pag: PAGResult) -> nx.DiGraph:
+def _pag_to_digraph(pag: PAGResult, allow_semi_directed: bool = True) -> nx.DiGraph:
+    """Build directed reachability graph from PAG (directed + semi-directed paths)."""
     G = nx.DiGraph()
     for v in pag.variables:
         G.add_node(v)
     for e in pag.edges:
         if e.edge_type.value == "DIRECTED":
             G.add_edge(e.source, e.target)
+        elif allow_semi_directed:
+            if e.edge_type.value == "PARTIALLY_DIRECTED":
+                # source o-> target: target cannot be ancestor of source
+                G.add_edge(e.source, e.target)
+            elif e.edge_type.value in ("UNDIRECTED", "TAIL_TAIL"):
+                # source o-o target: both directions admissible in semi-directed reachability
+                G.add_edge(e.source, e.target)
+                G.add_edge(e.target, e.source)
     return G
+
+
+def _path_kind(path: List[Tuple[str, str]], pag: PAGResult) -> str:
+    """Classify a reachability path: DIRECTED only if every hop is an oriented i -> j PAG edge."""
+    if not path:
+        return "NONE"
+    directed = {(e.source, e.target) for e in pag.edges if e.edge_type.value == "DIRECTED"}
+    return "DIRECTED" if all(hop in directed for hop in path) else "SEMI_DIRECTED"
+
+
+def _cid_supports_r4(cid: Any, theta_cid: float) -> bool:
+    """
+    R4 evidence gate. Strict as of Sprint 4.2.4 (see ``rift.cid.evidence.validate_cid_for_r4``):
+    finite W1 > theta_cid, grade in {CANDIDATE, RELIABLE}, permutation_significant is True and
+    exceeds_threshold is True. Absent attributes are NOT treated as passing.
+    """
+    return validate_cid_for_r4(cid, theta_cid)[0]
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -71,45 +105,67 @@ def _check_r1(
     theta_persist_windows: int,
     delta_t: float,
     t_start: float,
+    direction: str = "both",
+    max_gap_windows: int = 0,
 ) -> Tuple[bool, float, float]:
     """
     R1: Δᵢₖ(t) > θ_detect for some k, persisting ≥ 2Δt.
     Returns (passes, t_star, anomaly_score).
     t_star = first time window where persistent divergence begins.
+
+    direction:
+        "both"     (default, historical behaviour) |z| > θ_detect
+        "increase" z > θ_detect only (latency-degradation semantics)
+        "decrease" z < -θ_detect only
+    max_gap_windows:
+        Number of consecutive *missing* telemetry windows tolerated inside a
+        persistence run (default 0 = historical strict behaviour). An observed,
+        non-exceeding window always terminates a run; only absent samples are bridged.
+    anomaly_score is the maximum |z| from t_star onward (not over the whole window).
     """
-    if baseline_std <= 0:
+    if baseline_std <= 0 or metrics.empty:
         return False, float('inf'), 0.0
 
-    # Compute per-row deviation (z-score)
-    deviations = (metrics['value'] - baseline_mean) / baseline_std
+    z = (metrics['value'] - baseline_mean) / baseline_std
+    if direction == "increase":
+        exceeds = z > theta_detect
+    elif direction == "decrease":
+        exceeds = z < -theta_detect
+    elif direction == "both":
+        exceeds = z.abs() > theta_detect
+    else:
+        raise ValueError(f"direction must be 'both'|'increase'|'decrease', got {direction!r}")
 
-    # Find windows where deviation exceeds threshold
-    exceeds = deviations.abs() > theta_detect
+    per_t = (
+        pd.DataFrame({'time': metrics['time'].values,
+                      'ex': exceeds.values,
+                      'absz': z.abs().values})
+        .groupby('time', sort=True)
+        .agg(ex=('ex', 'any'), absz=('absz', 'max'))
+    )
+    times = per_t.index.to_numpy(dtype=float)
+    ex = per_t['ex'].to_numpy()
+    absz = per_t['absz'].to_numpy()
 
-    # Find first run of theta_persist_windows consecutive exceedances
-    window_times = sorted(metrics['time'].unique())
-    t_windows_exceed = [t for t in window_times if any(
-        (metrics['time'] == t) & exceeds
-    )]
+    max_step = delta_t * (1 + max(0, max_gap_windows)) + delta_t * 0.1
+    run_start_idx = -1
+    run_len = 0
+    prev_t = None
+    for idx, (t, e) in enumerate(zip(times, ex)):
+        if not e:
+            run_len = 0
+            prev_t = None
+            continue
+        if run_len > 0 and prev_t is not None and (t - prev_t) <= max_step:
+            run_len += 1
+        else:
+            run_start_idx = idx
+            run_len = 1
+        prev_t = t
+        if run_len >= theta_persist_windows:
+            score = float(absz[run_start_idx:].max())
+            return True, float(times[run_start_idx]), score
 
-    if not t_windows_exceed:
-        return False, float('inf'), 0.0
-
-    # Check for persistence (consecutive windows)
-    for i, t in enumerate(t_windows_exceed):
-        # Check if there are theta_persist_windows consecutive windows
-        run_length = 1
-        for j in range(i + 1, len(t_windows_exceed)):
-            if abs(t_windows_exceed[j] - (t + run_length * delta_t)) < delta_t * 0.1:
-                run_length += 1
-                if run_length >= theta_persist_windows:
-                    # Compute max anomaly score in this run
-                    score = float(deviations.abs().max())
-                    return True, t, score
-            else:
-                break
-
-    # Single window only (no persistence) — not enough
     return False, float('inf'), 0.0
 
 
@@ -237,11 +293,13 @@ def compute_ebd(
     baselines: Dict[str, Dict[str, float]],
     pag_result: PAGResult,
     incident_window: Tuple[float, float],
-    cid_results: Optional[Dict[str, Any]] = None,
+    cid_results: Optional[Any] = None,
     delta_t: float = 10.0,
     theta_detect: float = 3.0,
     theta_persist: int = 2,
     theta_cid: float = 0.1,
+    direction: str = "both",
+    max_gap_windows: int = 0,
 ) -> List[EBDResult]:
     """
     Compute Earliest Behavioral Divergence candidates.
@@ -258,6 +316,7 @@ def compute_ebd(
     Authority: docs/PHASE_3_SPEC_FREEZE.md §9
     """
     dag = _pag_to_digraph(pag_result)
+    cid_store = CIDEvidenceStore.from_mapping(cid_results) if cid_results is not None else None
 
     # Phase 1: Check R1 for all services
     r1_results: Dict[str, Tuple[bool, float, float]] = {}  # service → (pass, t_star, score)
@@ -275,7 +334,8 @@ def compute_ebd(
             continue
 
         passes, t_star, score = _check_r1(
-            incident_df, b_mean, b_std, theta_detect, theta_persist, delta_t, t_start
+            incident_df, b_mean, b_std, theta_detect, theta_persist, delta_t, t_start,
+            direction=direction, max_gap_windows=max_gap_windows,
         )
         r1_results[service_id] = (passes, t_star, score)
 
@@ -305,18 +365,11 @@ def compute_ebd(
             all_divergence_times=diverging,
         )
 
-        # If R2 failed but there are ties, try to resolve by R3
-        if not r2_pass and earlier_or_tied:
-            # All "earlier" services — check if current service is their ancestor
-            # If current service is ancestor of all "earlier" services, R2 tie resolved
-            all_are_descendants = all(
-                dag.has_node(service_id) and dag.has_node(svc) and
-                nx.has_path(dag, service_id, svc)
-                for svc in earlier_or_tied
-                if dag.has_node(svc)
-            )
-            if all_are_descendants:
-                r2_pass = True  # R3 resolves the tie in favor of this service
+        # NOTE (Sprint 4.2.3): a previous "tie-resolution" block here could flip a
+        # strict-earlier R2 failure to True when the service was a graph ancestor of
+        # the earlier service. _check_r2 already passes ties (same window), so that
+        # block was reachable ONLY for strictly-earlier divergences and silently
+        # overrode R2. Removed; strict precedence now stands.
 
         # Collect assumption warnings
         warnings = []
@@ -341,24 +394,42 @@ def compute_ebd(
         r4_pass = False
         cid_score_data = {}
 
-        if cid_results is not None:
-            # Check R4: CID(Vᵢ → Vⱼ, t*) > θ_cid for some downstream Vⱼ
-            for path_source, path_target in causal_path:
-                key = f"{path_source}→{path_target}"
-                if key in cid_results:
-                    cid = cid_results[key]
-                    w1 = getattr(cid, 'w1_estimate', None)
-                    if w1 is not None and w1 > theta_cid:
-                        r4_pass = True
-                    cid_score_data[key] = (
-                        getattr(cid, 'w1_estimate', None),
-                        getattr(cid, 'w1_ci_lower', None),
-                        getattr(cid, 'w1_ci_upper', None),
-                        getattr(cid, 'n_post', 0),
-                        getattr(cid, 'grade', 'INSUFFICIENT').value
-                        if hasattr(getattr(cid, 'grade', 'INSUFFICIENT'), 'value')
-                        else str(getattr(cid, 'grade', 'INSUFFICIENT')),
-                    )
+        r4_reasons: Dict[str, str] = {}
+        if cid_store is not None and r3_pass:
+            # R4: CID(Vi -> Vj) must be an INTERVENTION on Vi (the candidate itself) observed on
+            # some Vj in its causal path. Evidence for do(Vk), k != i, does not confirm Vi.
+            outcomes = sorted({n for edge in causal_path for n in edge} - {service_id})
+            for outcome in outcomes:
+                cid = cid_store.get(service_id, outcome)
+                if cid is None:
+                    continue
+                ok, reason = validate_cid_for_r4(cid, theta_cid)
+                key = f"{service_id}\u2192{outcome}"
+                r4_reasons[key] = reason
+                if ok:
+                    r4_pass = True
+                cid_score_data[key] = (
+                    getattr(cid, 'w1_estimate', None),
+                    getattr(cid, 'w1_ci_lower', None),
+                    getattr(cid, 'w1_ci_upper', None),
+                    getattr(cid, 'n_post', 0),
+                    grade_name(cid) or "INSUFFICIENT",
+                )
+            if cid_store.rejected:
+                warnings.append(
+                    "CID evidence rejected at boundary: "
+                    + "; ".join(f"{k} ({r})" for k, r in cid_store.rejected)
+                )
+            if not r4_pass and r4_reasons:
+                warnings.append("R4 not satisfied: " + "; ".join(f"{k}: {r}" for k, r in r4_reasons.items()))
+
+        path_kind = _path_kind(causal_path, pag_result) if r3_pass else "NONE"
+        if r3_pass and path_kind == "SEMI_DIRECTED":
+            warnings.append(
+                f"Causal path for {service_id} includes non-oriented PAG edges "
+                "(o->, o-o or undirected). This is semi-directed reachability, "
+                "not established causal ancestry."
+            )
 
         if r1_pass and r2_pass and r3_pass and r4_pass:
             confidence = "DEFINITIVE"
@@ -387,6 +458,8 @@ def compute_ebd(
             identifiability_state="NOT_IDENTIFIABLE" if has_bidirected else "IDENTIFIABLE",
             intervention_record_ref=None,
             causal_path=causal_path,
+            causal_path_kind=path_kind,
+            evidence_type="INTERVENTIONAL" if r4_pass else "OBSERVATIONAL",
             anomaly_score=anomaly_score,
             notes="Validated on synthetic ground-truth scenarios only.",
         ))

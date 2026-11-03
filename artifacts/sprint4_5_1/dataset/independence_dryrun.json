@@ -1,0 +1,58 @@
+{
+ "purpose": "verify_independence on a SIMULATED accepted set (prototype), label-stripped",
+ "n_confirm": 1992,
+ "verify_independence_ok_global": false,
+ "leaks_for_protected": {
+  "content_hash": 0,
+  "dynamics_hash": 0,
+  "topology_hash": 0,
+  "template_id": 0,
+  "joint_cell": 0
+ },
+ "shared_keys_confirm_pairs": {
+  "content_hash": {
+   "dev&confirm": 0,
+   "val&confirm": 0,
+   "adv&confirm": 0
+  },
+  "dynamics_hash": {
+   "dev&confirm": 0,
+   "val&confirm": 0,
+   "adv&confirm": 0
+  },
+  "topology_hash": {
+   "dev&confirm": 0,
+   "val&confirm": 0,
+   "adv&confirm": 0
+  },
+  "template_id": {
+   "dev&confirm": 0,
+   "val&confirm": 0,
+   "adv&confirm": 0
+  },
+  "joint_cell": {
+   "dev&confirm": 0,
+   "val&confirm": 0,
+   "adv&confirm": 0
+  }
+ },
+ "global_group_integrity_violations_n": 6,
+ "global_near_duplicate_pairs_n": 0,
+ "global_near_pairs_excluding_confirm_n": 0,
+ "confirm_spanning_groups": 0,
+ "confirm_near_pairs_ge_0.90": 0,
+ "baseline_dev_val_adv_only": {
+  "ok": false,
+  "group_violations": 6,
+  "near_pairs": 0,
+  "leaks": {
+   "content_hash": 0,
+   "dynamics_hash": 0,
+   "topology_hash": 7,
+   "template_id": 0,
+   "joint_cell": 0
+  }
+ },
+ "n_groups_global": 278,
+ "seconds": 15.4
+}
