@@ -169,3 +169,9 @@ Added (this sprint, all new): `reproducibility/__init__.py`, `reproducibility/pr
 10. **Determinism sampling** (180 runs per hash-seed/thread setting) is a sample, not exhaustive.
 11. **Eleven unrelated tracked modifications and many untracked historical files remain uncommitted** in the working tree by design (not part of V3's dependency closure).
 12. `docs/SPRINT_WORK_LEDGER.md` and `docs/SPRINT4_5_0_EXECUTION_PLAN.md` remain untracked; the Stage 4 artifact remains uncommitted pending owner approval to redact or accept the internal host name.
+
+---
+
+## Addendum (Sprint 4.5.1): `requires-python` mismatch resolved
+
+The `pyproject.toml` `requires-python >=3.10` mismatch noted above (§4.4 and item 7 of the limitations) was resolved in Sprint 4.5.1 by changing it to `>=3.9`. Caveats: evidence is from one platform (macOS arm64, CPython 3.9.6); the invalid `build-backend` and the non-PEP 440 `version` in the same file are unchanged, so `pip install -e .` still fails regardless of Python version; CI and the Makefile still target 3.11. See `docs/SPRINT4_5_1_REPRODUCIBILITY_REPORT.md`. This addendum does not alter any result recorded above.

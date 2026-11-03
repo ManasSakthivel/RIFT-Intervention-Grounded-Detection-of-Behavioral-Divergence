@@ -1,0 +1,18 @@
+{
+ "REPRODUCIBLE_PASS": [
+  "tests/unit/test_sprint424_heldout_guard.py::test_evaluate_dataset_split_held_out_without_guard_raises",
+  "tests/unit/test_sprint424_heldout_guard.py::test_held_out_blocked_for_selection_even_with_active_guard",
+  "tests/unit/test_sprint424_heldout_guard.py::test_held_out_requires_guard_and_token",
+  "tests/unit/test_sprint424_heldout_guard.py::test_historical_manifest_copy_pinned",
+  "tests/unit/test_sprint424_heldout_guard.py::test_no_literal_sealed_path_in_evaluator_or_comparison_script",
+  "tests/unit/test_sprint424_heldout_guard.py::test_sealed_script_passes_from_other_cwd",
+  "tests/unit/test_sprint424_heldout_guard.py::test_selection_loader_has_no_route_to_sealed_split",
+  "tests/unit/test_sprint424_heldout_guard.py::test_threshold_selection_path_never_references_held_out",
+  "tests/unit/test_sprint424_heldout_guard.py::test_unknown_split_and_purpose_rejected",
+  "tests/unit/test_sprint424_heldout_guard.py::test_wrong_identity_with_matching_hash_fails_closed"
+ ],
+ "PROTECTED_PASS": [],
+ "PROTECTED_UNAVAILABLE": [],
+ "SKIPPED_OTHER": [],
+ "FAILED": []
+}

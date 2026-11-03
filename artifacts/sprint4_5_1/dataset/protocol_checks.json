@@ -1,0 +1,549 @@
+{
+ "purpose": "analysis-only structural prototype; no confirmatory data; no held-out access",
+ "audit_seed": 451301,
+ "prototype_indices": "100000..105999",
+ "M": 6000,
+ "build_seconds": 3.6,
+ "node_counts": {
+  "total_incl_hidden_max": 12,
+  "observed_max": 11,
+  "observed_mean": 6.389,
+  "gt_12_total": 0,
+  "fci_cap_15_exceeded": 0
+ },
+ "cycle_consistency_violations": 0,
+ "mutual_scc_sizes": {
+  "2": 849
+ },
+ "natural_label_share": {
+  "ATTRIBUTE": 0.3672,
+  "INSUFFICIENT_BASELINE": 0.0902,
+  "NO_DISCRIMINATING_EVIDENCE": 0.0587,
+  "NO_FAULT": 0.0453,
+  "ROOT_UNOBSERVED": 0.1382,
+  "SYMMETRIC_MUTUAL_DEPENDENCY": 0.137,
+  "WEAK_SIGNAL": 0.1635
+ },
+ "label_share_by_structure": {
+  "S01_spine_with_leaves": {
+   "ATTRIBUTE": 0.48,
+   "INSUFFICIENT_BASELINE": 0.126,
+   "NO_DISCRIMINATING_EVIDENCE": 0.087,
+   "NO_FAULT": 0.056,
+   "WEAK_SIGNAL": 0.25
+  },
+  "S02_two_level_fanout": {
+   "ATTRIBUTE": 0.468,
+   "INSUFFICIENT_BASELINE": 0.116,
+   "NO_DISCRIMINATING_EVIDENCE": 0.105,
+   "NO_FAULT": 0.053,
+   "WEAK_SIGNAL": 0.258
+  },
+  "S03_ladder": {
+   "ATTRIBUTE": 0.517,
+   "INSUFFICIENT_BASELINE": 0.124,
+   "NO_DISCRIMINATING_EVIDENCE": 0.059,
+   "NO_FAULT": 0.048,
+   "WEAK_SIGNAL": 0.253
+  },
+  "S04_double_diamond": {
+   "ATTRIBUTE": 0.529,
+   "INSUFFICIENT_BASELINE": 0.129,
+   "NO_DISCRIMINATING_EVIDENCE": 0.053,
+   "NO_FAULT": 0.05,
+   "WEAK_SIGNAL": 0.238
+  },
+  "S05_late_merge": {
+   "ATTRIBUTE": 0.517,
+   "INSUFFICIENT_BASELINE": 0.12,
+   "NO_DISCRIMINATING_EVIDENCE": 0.101,
+   "NO_FAULT": 0.059,
+   "WEAK_SIGNAL": 0.204
+  },
+  "S06_bypass_chain": {
+   "ATTRIBUTE": 0.538,
+   "INSUFFICIENT_BASELINE": 0.151,
+   "NO_DISCRIMINATING_EVIDENCE": 0.053,
+   "NO_FAULT": 0.048,
+   "WEAK_SIGNAL": 0.21
+  },
+  "S07_two_stage_hub": {
+   "ATTRIBUTE": 0.52,
+   "INSUFFICIENT_BASELINE": 0.112,
+   "NO_DISCRIMINATING_EVIDENCE": 0.078,
+   "NO_FAULT": 0.056,
+   "WEAK_SIGNAL": 0.235
+  },
+  "S08_triangle_with_tail": {
+   "ATTRIBUTE": 0.544,
+   "INSUFFICIENT_BASELINE": 0.117,
+   "NO_DISCRIMINATING_EVIDENCE": 0.075,
+   "NO_FAULT": 0.042,
+   "WEAK_SIGNAL": 0.222
+  },
+  "S09_staggered_roots": {
+   "ATTRIBUTE": 0.51,
+   "INSUFFICIENT_BASELINE": 0.123,
+   "NO_DISCRIMINATING_EVIDENCE": 0.114,
+   "NO_FAULT": 0.056,
+   "WEAK_SIGNAL": 0.198
+  },
+  "S10_latent_confounded_diamond": {
+   "ATTRIBUTE": 0.501,
+   "INSUFFICIENT_BASELINE": 0.14,
+   "NO_DISCRIMINATING_EVIDENCE": 0.095,
+   "NO_FAULT": 0.031,
+   "WEAK_SIGNAL": 0.232
+  },
+  "S11_hidden_driver_chain": {
+   "NO_FAULT": 0.024,
+   "ROOT_UNOBSERVED": 0.976
+  },
+  "S12_hidden_driver_diamond": {
+   "NO_FAULT": 0.035,
+   "ROOT_UNOBSERVED": 0.965
+  },
+  "S13_mutual_pair_merge": {
+   "NO_FAULT": 0.026,
+   "SYMMETRIC_MUTUAL_DEPENDENCY": 0.974
+  },
+  "S14_mutual_pair_fanout": {
+   "NO_FAULT": 0.037,
+   "SYMMETRIC_MUTUAL_DEPENDENCY": 0.963
+  },
+  "S15_sink_with_two_chains": {
+   "ATTRIBUTE": 0.513,
+   "INSUFFICIENT_BASELINE": 0.137,
+   "NO_DISCRIMINATING_EVIDENCE": 0.087,
+   "NO_FAULT": 0.056,
+   "WEAK_SIGNAL": 0.207
+  },
+  "S16_pendant_cluster": {
+   "ATTRIBUTE": 0.515,
+   "INSUFFICIENT_BASELINE": 0.116,
+   "NO_DISCRIMINATING_EVIDENCE": 0.075,
+   "NO_FAULT": 0.061,
+   "WEAK_SIGNAL": 0.233
+  }
+ },
+ "attribute_share_by_family": {
+  "cascading_failure": 0.396,
+  "compound": 0.326,
+  "cpu_contention": 0.372,
+  "dependency_failure": 0.335,
+  "intermittent": 0.396,
+  "latency_degradation": 0.39,
+  "memory_pressure": 0.368,
+  "network_degradation": 0.325,
+  "packet_loss": 0.43,
+  "partial_degradation": 0.059,
+  "queue_buildup": 0.375,
+  "recovery_instability": 0.392,
+  "resource_saturation": 0.392,
+  "retry_amplification": 0.389,
+  "service_unavailability": 0.53,
+  "transient": 0.402
+ },
+ "attribute_share_by_structure": {
+  "S01_spine_with_leaves": 0.48,
+  "S02_two_level_fanout": 0.468,
+  "S03_ladder": 0.517,
+  "S04_double_diamond": 0.529,
+  "S05_late_merge": 0.517,
+  "S06_bypass_chain": 0.538,
+  "S07_two_stage_hub": 0.52,
+  "S08_triangle_with_tail": 0.544,
+  "S09_staggered_roots": 0.51,
+  "S10_latent_confounded_diamond": 0.501,
+  "S11_hidden_driver_chain": 0.0,
+  "S12_hidden_driver_diamond": 0.0,
+  "S13_mutual_pair_merge": 0.0,
+  "S14_mutual_pair_fanout": 0.0,
+  "S15_sink_with_two_chains": 0.513,
+  "S16_pendant_cluster": 0.515
+ },
+ "label_routes": {
+  "S13_S14_only_SYMMETRIC_or_NOFAULT_or_UNOBS": true,
+  "S11_S12_only_UNOBS_or_NOFAULT": true,
+  "other_structures_producing_SYMMETRIC_or_UNOBS": 0
+ },
+ "S13_S14_labels_WITHOUT_wrapper": {
+  "WEAK_SIGNAL": 201,
+  "ATTRIBUTE": 331,
+  "INSUFFICIENT_BASELINE": 104,
+  "NO_DISCRIMINATING_EVIDENCE": 186,
+  "NO_FAULT": 27
+ },
+ "quota_vs_natural_in_12000": {
+  "ATTRIBUTE": {
+   "quota": 800,
+   "natural_share": 0.3672,
+   "expected_in_12000": 4406,
+   "ratio_available_over_quota": 5.51
+  },
+  "WEAK_SIGNAL": {
+   "quota": 360,
+   "natural_share": 0.1635,
+   "expected_in_12000": 1962,
+   "ratio_available_over_quota": 5.45
+  },
+  "ROOT_UNOBSERVED": {
+   "quota": 240,
+   "natural_share": 0.1382,
+   "expected_in_12000": 1658,
+   "ratio_available_over_quota": 6.91
+  },
+  "SYMMETRIC_MUTUAL_DEPENDENCY": {
+   "quota": 180,
+   "natural_share": 0.137,
+   "expected_in_12000": 1644,
+   "ratio_available_over_quota": 9.13
+  },
+  "INSUFFICIENT_BASELINE": {
+   "quota": 180,
+   "natural_share": 0.0902,
+   "expected_in_12000": 1082,
+   "ratio_available_over_quota": 6.01
+  },
+  "NO_DISCRIMINATING_EVIDENCE": {
+   "quota": 140,
+   "natural_share": 0.0587,
+   "expected_in_12000": 704,
+   "ratio_available_over_quota": 5.03
+  },
+  "NO_FAULT": {
+   "quota": 100,
+   "natural_share": 0.0453,
+   "expected_in_12000": 543,
+   "ratio_available_over_quota": 5.44
+  }
+ },
+ "structures_able_to_supply_ATTRIBUTE": [
+  "S01_spine_with_leaves",
+  "S02_two_level_fanout",
+  "S03_ladder",
+  "S04_double_diamond",
+  "S05_late_merge",
+  "S06_bypass_chain",
+  "S07_two_stage_hub",
+  "S08_triangle_with_tail",
+  "S09_staggered_roots",
+  "S10_latent_confounded_diamond",
+  "S15_sink_with_two_chains",
+  "S16_pendant_cluster"
+ ],
+ "families_with_attribute_share_below_0.40": [
+  "cascading_failure",
+  "compound",
+  "cpu_contention",
+  "dependency_failure",
+  "intermittent",
+  "latency_degradation",
+  "memory_pressure",
+  "network_degradation",
+  "partial_degradation",
+  "queue_buildup",
+  "recovery_instability",
+  "resource_saturation",
+  "retry_amplification"
+ ],
+ "drift_stratum_natural": {
+  "n": 3000,
+  "none_lt_0.1": 0.706,
+  "mild_0.1_0.3": 0.026,
+  "substantial_ge_0.3": 0.268,
+  "seconds": 0.6
+ },
+ "drift_by_fault_shape": {
+  "": {
+   "n": 136,
+   "share_substantial": 0.0,
+   "max": 0.0
+  },
+  "intermittent": {
+   "n": 324,
+   "share_substantial": 0.997,
+   "max": 61.17
+  },
+  "intermittent+pulse": {
+   "n": 40,
+   "share_substantial": 1.0,
+   "max": 25.29
+  },
+  "intermittent+pulse+step": {
+   "n": 1,
+   "share_substantial": 1.0,
+   "max": 4.95
+  },
+  "intermittent+step": {
+   "n": 3,
+   "share_substantial": 1.0,
+   "max": 14.26
+  },
+  "multi_onset": {
+   "n": 308,
+   "share_substantial": 0.114,
+   "max": 11.42
+  },
+  "multi_onset+pulse": {
+   "n": 52,
+   "share_substantial": 0.038,
+   "max": 4.29
+  },
+  "multi_onset+step": {
+   "n": 5,
+   "share_substantial": 0.0,
+   "max": 0.0
+  },
+  "oscillation": {
+   "n": 159,
+   "share_substantial": 0.987,
+   "max": 21.78
+  },
+  "oscillation+pulse": {
+   "n": 29,
+   "share_substantial": 0.931,
+   "max": 23.21
+  },
+  "partial_recovery": {
+   "n": 231,
+   "share_substantial": 0.121,
+   "max": 86.72
+  },
+  "partial_recovery+pulse": {
+   "n": 32,
+   "share_substantial": 0.0,
+   "max": 0.0
+  },
+  "pulse": {
+   "n": 162,
+   "share_substantial": 0.068,
+   "max": 10.85
+  },
+  "pulse+ramp": {
+   "n": 20,
+   "share_substantial": 0.05,
+   "max": 4.43
+  },
+  "pulse+rebound": {
+   "n": 17,
+   "share_substantial": 0.412,
+   "max": 5.65
+  },
+  "pulse+rebound+step": {
+   "n": 1,
+   "share_substantial": 0.0,
+   "max": 0.0
+  },
+  "pulse+recovery_delay": {
+   "n": 16,
+   "share_substantial": 0.312,
+   "max": 22.46
+  },
+  "pulse+step": {
+   "n": 129,
+   "share_substantial": 0.023,
+   "max": 3.63
+  },
+  "ramp": {
+   "n": 158,
+   "share_substantial": 0.089,
+   "max": 22.65
+  },
+  "rebound": {
+   "n": 147,
+   "share_substantial": 0.313,
+   "max": 4.85
+  },
+  "rebound+step": {
+   "n": 11,
+   "share_substantial": 0.091,
+   "max": 2.15
+  },
+  "recovery_delay": {
+   "n": 173,
+   "share_substantial": 0.376,
+   "max": 4.77
+  },
+  "step": {
+   "n": 846,
+   "share_substantial": 0.041,
+   "max": 27.68
+  }
+ },
+ "drift_substantial_share_by_outcome": {
+  "ATTRIBUTE": 0.274,
+  "ABSTAIN_REQUIRED": 0.264
+ },
+ "drift_note": "In frozen sim.intervene() the only source of change between the baseline and post 30 s windows that does not come from do(x) is fault_series (workload drift_sigma and AR(1) latent are NOT applied to the do() windows). The drift stratum is therefore a function of fault shape/temporal level, by construction.",
+ "geometry_first_2000_candidates": {
+  "distinct_topology_hashes": 1072,
+  "share_scenarios_with_unique_topology": 0.396,
+  "max_scenarios_per_topology": 51,
+  "n_topologies_shared_by_gt3": 93,
+  "union_find_groups_template_or_topology": 11,
+  "max_group_size": 363,
+  "group_size_quantiles_50_90_99": [
+   138,
+   357,
+   362
+  ],
+  "groups_topology_only": 1072,
+  "max_group_size_topology_only": 51
+ },
+ "geometry_first_4000_candidates": {
+  "distinct_topology_hashes": 1773,
+  "share_scenarios_with_unique_topology": 0.3108,
+  "max_scenarios_per_topology": 89,
+  "n_topologies_shared_by_gt3": 195,
+  "union_find_groups_template_or_topology": 8,
+  "max_group_size": 1672,
+  "group_size_quantiles_50_90_99": [
+   283,
+   897,
+   1594
+  ],
+  "groups_topology_only": 1773,
+  "max_group_size_topology_only": 89
+ },
+ "geometry_first_6000_candidates": {
+  "distinct_topology_hashes": 2344,
+  "share_scenarios_with_unique_topology": 0.264,
+  "max_scenarios_per_topology": 132,
+  "n_topologies_shared_by_gt3": 291,
+  "union_find_groups_template_or_topology": 7,
+  "max_group_size": 2505,
+  "group_size_quantiles_50_90_99": [
+   428,
+   1684,
+   2422
+  ],
+  "groups_topology_only": 2344,
+  "max_group_size_topology_only": 132
+ },
+ "distinct_topology_hashes_per_structure_in_M": {
+  "S01_spine_with_leaves": 169,
+  "S02_two_level_fanout": 156,
+  "S03_ladder": 191,
+  "S04_double_diamond": 186,
+  "S05_late_merge": 199,
+  "S06_bypass_chain": 138,
+  "S07_two_stage_hub": 187,
+  "S08_triangle_with_tail": 133,
+  "S09_staggered_roots": 131,
+  "S10_latent_confounded_diamond": 124,
+  "S11_hidden_driver_chain": 139,
+  "S12_hidden_driver_diamond": 119,
+  "S13_mutual_pair_merge": 160,
+  "S14_mutual_pair_fanout": 78,
+  "S15_sink_with_two_chains": 160,
+  "S16_pendant_cluster": 163
+ },
+ "topology_hashes_shared_by_>=2_structures": 74,
+ "frozen_design_space_topology_hashes": 840,
+ "prototype_topology_hashes_in_frozen_design_space": 148,
+ "prototype_topology_hashes_in_frozen_design_space_distinct": 25,
+ "in_frozen_design_space_by_new_structure": {
+  "S15_sink_with_two_chains": 5,
+  "S09_staggered_roots": 43,
+  "S13_mutual_pair_merge": 38,
+  "S07_two_stage_hub": 23,
+  "S06_bypass_chain": 8,
+  "S05_late_merge": 19,
+  "S08_triangle_with_tail": 10,
+  "S11_hidden_driver_chain": 2
+ },
+ "prototype_topology_hash_overlap_with_readable": {
+  "dev": 0,
+  "val": 43,
+  "adv": 0
+ },
+ "prototype_scenarios_whose_topology_hash_in_dev_val_adv": 43,
+ "cross_set_max_spec_similarity_first_2000": {
+  "max": 0.8997,
+  "p99": 0.8092,
+  "p50": 0.6961,
+  "n_ge_0.88": 3,
+  "n_ge_0.90": 0
+ },
+ "within_set_pairs_first_2000": {
+  "spec_sim_ge_0.90": 9,
+  "spec_sim_ge_0.88": 24,
+  "total_pairs": 1999000
+ },
+ "max_possible_cross_structure_similarity": 0.9143,
+ "cross_structure_numeric_part_needed_for_0.90": 0.9643,
+ "strip_labels_keys_that_survive": [
+  "content_hash",
+  "dimensions",
+  "faults",
+  "generator_version",
+  "graph",
+  "intervention",
+  "parent_scenario",
+  "scenario_id",
+  "seed",
+  "split",
+  "telemetry",
+  "template_id",
+  "workload_params"
+ ],
+ "strip_labels_removed": [
+  "ground_truth",
+  "design"
+ ],
+ "leak_surface_in_strip_labels": {
+  "faults[].service == true root ids": true,
+  "dimensions.structure (reveals S11-S14 label route)": true,
+  "graph.nodes[].hidden flags": true,
+  "telemetry.unobserved": true,
+  "intervention (co_target/collateral)": true
+ },
+ "observe_output_keys": [
+  "baseline_stats",
+  "call_graph",
+  "incident_window",
+  "metrics"
+ ],
+ "observe_call_graph_includes_decoy_edges": true,
+ "PROTOTYPE_observed_node_order_root_first": {
+  "root_is_first_observed_service": 489,
+  "of": 489
+ },
+ "FROZEN_dev_val_observed_node_order_root_first": {
+  "root_is_first_observed_service": 208,
+  "of": 208
+ },
+ "frozen_validators_on_new_structures": {
+  "S01": {
+   "schema": [
+    "dimension structure='S01_spine_with_leaves' outside domain"
+   ]
+  },
+  "S01_reproducible_check": "ran",
+  "S13": {
+   "schema": [
+    "dimension structure='S13_mutual_pair_merge' outside domain"
+   ]
+  },
+  "S13_reproducible_check": "ran"
+ },
+ "T1_frozen_builder_reproduces_stored_dev_val_content_hash": {
+  "match": 90,
+  "of": 90
+ },
+ "content_hash_covers_keys": [
+  "design",
+  "dimensions",
+  "faults",
+  "generator_version",
+  "graph",
+  "ground_truth",
+  "intervention",
+  "telemetry",
+  "template_id",
+  "workload_params"
+ ],
+ "T1_requires": "same rng draw order, same seed value (= sha256 of the FROZEN tag|split|idx), same generator_version string (it is INSIDE content_hash), same dimensions incl. size_extra; the scenario_id/seed/split fields are excluded from the hash",
+ "total_seconds": 6.0
+}

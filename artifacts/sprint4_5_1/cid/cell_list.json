@@ -1,0 +1,3865 @@
+{
+  "summary": {
+    "total_nominal_cells": 218,
+    "factorial_cells": 214,
+    "mixture_cells": 4,
+    "null_cells_d0": 96,
+    "alternative_cells_d_gt_0": 122,
+    "degenerate_duplicate_cells": 8,
+    "unique_dgp_cells": 210,
+    "total_replicates": 468000,
+    "replicate_breakdown": "214 factorial * 2,000 + 4 mixture * 10,000 = 468,000"
+  },
+  "blocks": {
+    "B1": {
+      "title": "Genuine effect, delay, multiplicity",
+      "nominal_cells": 54,
+      "null_cells_d0": 9,
+      "alt_cells_d_gt_0": 45,
+      "degenerate_cells": 6,
+      "unique_dgp_count": 48,
+      "replicates_per_cell": 2000,
+      "block_replicates": 108000
+    },
+    "B2": {
+      "title": "Independent own-drift of y",
+      "nominal_cells": 36,
+      "null_cells_d0": 18,
+      "alt_cells_d_gt_0": 18,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 36,
+      "replicates_per_cell": 2000,
+      "block_replicates": 72000
+    },
+    "B3": {
+      "title": "Shared drift with control",
+      "nominal_cells": 36,
+      "null_cells_d0": 18,
+      "alt_cells_d_gt_0": 18,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 36,
+      "replicates_per_cell": 2000,
+      "block_replicates": 72000
+    },
+    "B4": {
+      "title": "Autocorrelation",
+      "nominal_cells": 12,
+      "null_cells_d0": 6,
+      "alt_cells_d_gt_0": 6,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 12,
+      "replicates_per_cell": 2000,
+      "block_replicates": 24000
+    },
+    "B5": {
+      "title": "Baseline-variance change",
+      "nominal_cells": 6,
+      "null_cells_d0": 3,
+      "alt_cells_d_gt_0": 3,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 6,
+      "replicates_per_cell": 2000,
+      "block_replicates": 12000
+    },
+    "B6": {
+      "title": "Recovery instability / carryover",
+      "nominal_cells": 12,
+      "null_cells_d0": 6,
+      "alt_cells_d_gt_0": 6,
+      "degenerate_cells": 2,
+      "unique_dgp_count": 10,
+      "replicates_per_cell": 2000,
+      "block_replicates": 24000
+    },
+    "B7": {
+      "title": "Regression to the mean",
+      "nominal_cells": 18,
+      "null_cells_d0": 9,
+      "alt_cells_d_gt_0": 9,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 18,
+      "replicates_per_cell": 2000,
+      "block_replicates": 36000
+    },
+    "B8": {
+      "title": "Window-selection artefacts (a: best-of-k)",
+      "nominal_cells": 10,
+      "null_cells_d0": 10,
+      "alt_cells_d_gt_0": 0,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 10,
+      "replicates_per_cell": 2000,
+      "block_replicates": 20000
+    },
+    "B9": {
+      "title": "Time-varying faults inside windows",
+      "nominal_cells": 18,
+      "null_cells_d0": 9,
+      "alt_cells_d_gt_0": 9,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 18,
+      "replicates_per_cell": 2000,
+      "block_replicates": 36000
+    },
+    "B10": {
+      "title": "Control-arm exchangeability (E2)",
+      "nominal_cells": 12,
+      "null_cells_d0": 6,
+      "alt_cells_d_gt_0": 6,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 12,
+      "replicates_per_cell": 2000,
+      "block_replicates": 24000
+    },
+    "B11": {
+      "title": "Pre-specified operating mixtures",
+      "nominal_cells": 4,
+      "null_cells_d0": 2,
+      "alt_cells_d_gt_0": 2,
+      "degenerate_cells": 0,
+      "unique_dgp_count": 4,
+      "replicates_per_cell": 10000,
+      "block_replicates": 40000
+    }
+  },
+  "cells": [
+    {
+      "cell_id": "B1_001",
+      "global_id": "CELL_001",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.0_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_002",
+      "global_id": "CELL_002",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.0_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_003",
+      "global_id": "CELL_003",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.0_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_004",
+      "global_id": "CELL_004",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_005",
+      "global_id": "CELL_005",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_006",
+      "global_id": "CELL_006",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_007",
+      "global_id": "CELL_007",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_008",
+      "global_id": "CELL_008",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_009",
+      "global_id": "CELL_009",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "d": 0.0,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Delay has zero physical effect when d=0 (null effect)",
+      "canonical_dgp_id": "B1_d0.0_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_010",
+      "global_id": "CELL_010",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_011",
+      "global_id": "CELL_011",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_012",
+      "global_id": "CELL_012",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_013",
+      "global_id": "CELL_013",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del5_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_014",
+      "global_id": "CELL_014",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del5_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_015",
+      "global_id": "CELL_015",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del5_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_016",
+      "global_id": "CELL_016",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del10_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_017",
+      "global_id": "CELL_017",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del10_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_018",
+      "global_id": "CELL_018",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.25,
+      "is_null": false,
+      "factors": {
+        "d": 0.25,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.25_del10_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_019",
+      "global_id": "CELL_019",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_020",
+      "global_id": "CELL_020",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_021",
+      "global_id": "CELL_021",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_022",
+      "global_id": "CELL_022",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del5_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_023",
+      "global_id": "CELL_023",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del5_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_024",
+      "global_id": "CELL_024",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del5_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_025",
+      "global_id": "CELL_025",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del10_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_026",
+      "global_id": "CELL_026",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del10_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_027",
+      "global_id": "CELL_027",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.5,
+      "is_null": false,
+      "factors": {
+        "d": 0.5,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.5_del10_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_028",
+      "global_id": "CELL_028",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_029",
+      "global_id": "CELL_029",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_030",
+      "global_id": "CELL_030",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_031",
+      "global_id": "CELL_031",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del5_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_032",
+      "global_id": "CELL_032",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del5_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_033",
+      "global_id": "CELL_033",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del5_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_034",
+      "global_id": "CELL_034",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del10_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_035",
+      "global_id": "CELL_035",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del10_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_036",
+      "global_id": "CELL_036",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 0.75,
+      "is_null": false,
+      "factors": {
+        "d": 0.75,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d0.75_del10_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_037",
+      "global_id": "CELL_037",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_038",
+      "global_id": "CELL_038",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_039",
+      "global_id": "CELL_039",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_040",
+      "global_id": "CELL_040",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del5_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_041",
+      "global_id": "CELL_041",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del5_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_042",
+      "global_id": "CELL_042",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del5_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_043",
+      "global_id": "CELL_043",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del10_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_044",
+      "global_id": "CELL_044",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del10_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_045",
+      "global_id": "CELL_045",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "d": 1.0,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d1.0_del10_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_046",
+      "global_id": "CELL_046",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 0,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del0_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_047",
+      "global_id": "CELL_047",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 0,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del0_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_048",
+      "global_id": "CELL_048",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 0,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del0_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_049",
+      "global_id": "CELL_049",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 5,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del5_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_050",
+      "global_id": "CELL_050",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 5,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del5_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_051",
+      "global_id": "CELL_051",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 5,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del5_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_052",
+      "global_id": "CELL_052",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 10,
+        "m_outcomes": 1
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del10_m1",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_053",
+      "global_id": "CELL_053",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 10,
+        "m_outcomes": 3
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del10_m3",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B1_054",
+      "global_id": "CELL_054",
+      "block": "B1",
+      "block_title": "Genuine effect, delay, multiplicity",
+      "d": 2.0,
+      "is_null": false,
+      "factors": {
+        "d": 2.0,
+        "delay_s": 10,
+        "m_outcomes": 6
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B1_d2.0_del10_m6",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_001",
+      "global_id": "CELL_055",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_002",
+      "global_id": "CELL_056",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_003",
+      "global_id": "CELL_057",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_004",
+      "global_id": "CELL_058",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_005",
+      "global_id": "CELL_059",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_006",
+      "global_id": "CELL_060",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "linear_ramp",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_linear_ramp_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_007",
+      "global_id": "CELL_061",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_008",
+      "global_id": "CELL_062",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_009",
+      "global_id": "CELL_063",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_010",
+      "global_id": "CELL_064",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_011",
+      "global_id": "CELL_065",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_012",
+      "global_id": "CELL_066",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "step_boundary",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_step_boundary_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_013",
+      "global_id": "CELL_067",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_014",
+      "global_id": "CELL_068",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_015",
+      "global_id": "CELL_069",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_016",
+      "global_id": "CELL_070",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_017",
+      "global_id": "CELL_071",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_018",
+      "global_id": "CELL_072",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "oscillation_p80",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_oscillation_p80_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_019",
+      "global_id": "CELL_073",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_020",
+      "global_id": "CELL_074",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_021",
+      "global_id": "CELL_075",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_022",
+      "global_id": "CELL_076",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_023",
+      "global_id": "CELL_077",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_024",
+      "global_id": "CELL_078",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "intermittent_p50_on30",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_intermittent_p50_on30_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_025",
+      "global_id": "CELL_079",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_026",
+      "global_id": "CELL_080",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_027",
+      "global_id": "CELL_081",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_028",
+      "global_id": "CELL_082",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_029",
+      "global_id": "CELL_083",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_030",
+      "global_id": "CELL_084",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "pulse_4win",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_pulse_4win_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_031",
+      "global_id": "CELL_085",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 0.3,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag0.3_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_032",
+      "global_id": "CELL_086",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 0.3,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag0.3_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_033",
+      "global_id": "CELL_087",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_034",
+      "global_id": "CELL_088",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_035",
+      "global_id": "CELL_089",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 3.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag3.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B2_036",
+      "global_id": "CELL_090",
+      "block": "B2",
+      "block_title": "Independent own-drift of y",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "drift_shape": "recovery_delay",
+        "drift_magnitude_sigma": 3.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B2_recovery_delay_mag3.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_001",
+      "global_id": "CELL_091",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_002",
+      "global_id": "CELL_092",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_003",
+      "global_id": "CELL_093",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_004",
+      "global_id": "CELL_094",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_005",
+      "global_id": "CELL_095",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_006",
+      "global_id": "CELL_096",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag0.3_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_007",
+      "global_id": "CELL_097",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_008",
+      "global_id": "CELL_098",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_009",
+      "global_id": "CELL_099",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_010",
+      "global_id": "CELL_100",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_011",
+      "global_id": "CELL_101",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_012",
+      "global_id": "CELL_102",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag1.0_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_013",
+      "global_id": "CELL_103",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_014",
+      "global_id": "CELL_104",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_015",
+      "global_id": "CELL_105",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_016",
+      "global_id": "CELL_106",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_017",
+      "global_id": "CELL_107",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_018",
+      "global_id": "CELL_108",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "ramp",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_ramp_mag3.0_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_019",
+      "global_id": "CELL_109",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_020",
+      "global_id": "CELL_110",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_021",
+      "global_id": "CELL_111",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_022",
+      "global_id": "CELL_112",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_023",
+      "global_id": "CELL_113",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_024",
+      "global_id": "CELL_114",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 0.3,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag0.3_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_025",
+      "global_id": "CELL_115",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_026",
+      "global_id": "CELL_116",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_027",
+      "global_id": "CELL_117",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_028",
+      "global_id": "CELL_118",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_029",
+      "global_id": "CELL_119",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_030",
+      "global_id": "CELL_120",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 1.0,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag1.0_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_031",
+      "global_id": "CELL_121",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_032",
+      "global_id": "CELL_122",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_033",
+      "global_id": "CELL_123",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_034",
+      "global_id": "CELL_124",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_035",
+      "global_id": "CELL_125",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B3_036",
+      "global_id": "CELL_126",
+      "block": "B3",
+      "block_title": "Shared drift with control",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "shared_shape": "oscillation",
+        "magnitude_sigma": 3.0,
+        "phi_differential_fraction": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B3_oscillation_mag3.0_phi1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_001",
+      "global_id": "CELL_127",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.0,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.0_drift_none_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_002",
+      "global_id": "CELL_128",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.0,
+        "drift": "none",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.0_drift_none_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_003",
+      "global_id": "CELL_129",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.0,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.0_drift_ramp_1sigma_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_004",
+      "global_id": "CELL_130",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.0,
+        "drift": "ramp_1sigma",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.0_drift_ramp_1sigma_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_005",
+      "global_id": "CELL_131",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.5,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.5_drift_none_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_006",
+      "global_id": "CELL_132",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.5,
+        "drift": "none",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.5_drift_none_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_007",
+      "global_id": "CELL_133",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.5,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.5_drift_ramp_1sigma_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_008",
+      "global_id": "CELL_134",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.5,
+        "drift": "ramp_1sigma",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.5_drift_ramp_1sigma_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_009",
+      "global_id": "CELL_135",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.8,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.8_drift_none_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_010",
+      "global_id": "CELL_136",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.8,
+        "drift": "none",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.8_drift_none_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_011",
+      "global_id": "CELL_137",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "rho_ar1": 0.8,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.8_drift_ramp_1sigma_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B4_012",
+      "global_id": "CELL_138",
+      "block": "B4",
+      "block_title": "Autocorrelation",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "rho_ar1": 0.8,
+        "drift": "ramp_1sigma",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B4_rho0.8_drift_ramp_1sigma_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_001",
+      "global_id": "CELL_139",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "variance_ratio_v": 1.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v1.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_002",
+      "global_id": "CELL_140",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "variance_ratio_v": 1.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v1.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_003",
+      "global_id": "CELL_141",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "variance_ratio_v": 2.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v2.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_004",
+      "global_id": "CELL_142",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "variance_ratio_v": 2.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v2.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_005",
+      "global_id": "CELL_143",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "variance_ratio_v": 4.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v4.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B5_006",
+      "global_id": "CELL_144",
+      "block": "B5",
+      "block_title": "Baseline-variance change",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "variance_ratio_v": 4.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B5_v4.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_001",
+      "global_id": "CELL_145",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.0,
+        "time_constant_s": 10,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.0_tau0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_002",
+      "global_id": "CELL_146",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.0,
+        "time_constant_s": 10,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.0_tau0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_003",
+      "global_id": "CELL_147",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.0,
+        "time_constant_s": 30,
+        "d": 0.0
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Time constant tau has zero effect when residual fraction omega=0",
+      "canonical_dgp_id": "B6_omega0.0_tau0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_004",
+      "global_id": "CELL_148",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.0,
+        "time_constant_s": 30,
+        "d": 1.0
+      },
+      "is_degenerate": true,
+      "degeneracy_reason": "Time constant tau has zero effect when residual fraction omega=0",
+      "canonical_dgp_id": "B6_omega0.0_tau0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_005",
+      "global_id": "CELL_149",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.25,
+        "time_constant_s": 10,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.25_tau10_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_006",
+      "global_id": "CELL_150",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.25,
+        "time_constant_s": 10,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.25_tau10_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_007",
+      "global_id": "CELL_151",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.25,
+        "time_constant_s": 30,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.25_tau30_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_008",
+      "global_id": "CELL_152",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.25,
+        "time_constant_s": 30,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.25_tau30_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_009",
+      "global_id": "CELL_153",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.5,
+        "time_constant_s": 10,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.5_tau10_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_010",
+      "global_id": "CELL_154",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.5,
+        "time_constant_s": 10,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.5_tau10_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_011",
+      "global_id": "CELL_155",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "residual_fraction_omega": 0.5,
+        "time_constant_s": 30,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.5_tau30_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B6_012",
+      "global_id": "CELL_156",
+      "block": "B6",
+      "block_title": "Recovery instability / carryover",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "residual_fraction_omega": 0.5,
+        "time_constant_s": 30,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B6_omega0.5_tau30_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_001",
+      "global_id": "CELL_157",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_002",
+      "global_id": "CELL_158",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_003",
+      "global_id": "CELL_159",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_004",
+      "global_id": "CELL_160",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_005",
+      "global_id": "CELL_161",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.8,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.8_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_006",
+      "global_id": "CELL_162",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "none",
+        "rho_ar1": 0.8,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_none_rho0.8_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_007",
+      "global_id": "CELL_163",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_008",
+      "global_id": "CELL_164",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_009",
+      "global_id": "CELL_165",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_010",
+      "global_id": "CELL_166",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_011",
+      "global_id": "CELL_167",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.8,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.8_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_012",
+      "global_id": "CELL_168",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "2sigma",
+        "rho_ar1": 0.8,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_2sigma_rho0.8_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_013",
+      "global_id": "CELL_169",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.0,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.0_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_014",
+      "global_id": "CELL_170",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.0,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.0_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_015",
+      "global_id": "CELL_171",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.5,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.5_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_016",
+      "global_id": "CELL_172",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.5,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.5_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_017",
+      "global_id": "CELL_173",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.8,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.8_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B7_018",
+      "global_id": "CELL_174",
+      "block": "B7",
+      "block_title": "Regression to the mean",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "threshold": "3sigma",
+        "rho_ar1": 0.8,
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B7_thresh_3sigma_rho0.8_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_001",
+      "global_id": "CELL_175",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 1,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k1_drift_none_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_002",
+      "global_id": "CELL_176",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 1,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k1_drift_ramp_1sigma_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_003",
+      "global_id": "CELL_177",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 5,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k5_drift_none_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_004",
+      "global_id": "CELL_178",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 5,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k5_drift_ramp_1sigma_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_005",
+      "global_id": "CELL_179",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 10,
+        "drift": "none",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k10_drift_none_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_006",
+      "global_id": "CELL_180",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (a: best-of-k)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "a_best_of_k",
+        "k_candidates": 10,
+        "drift": "ramp_1sigma",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8a_k10_drift_ramp_1sigma_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_007",
+      "global_id": "CELL_181",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (b: oscillation phase)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "b_oscillation_phase",
+        "oscillation_period_s": 30,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8b_period30_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_008",
+      "global_id": "CELL_182",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (b: oscillation phase)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "b_oscillation_phase",
+        "oscillation_period_s": 50,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8b_period50_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_009",
+      "global_id": "CELL_183",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (b: oscillation phase)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "b_oscillation_phase",
+        "oscillation_period_s": 80,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8b_period80_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B8_010",
+      "global_id": "CELL_184",
+      "block": "B8",
+      "block_title": "Window-selection artefacts (b: oscillation phase)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "subpart": "b_oscillation_phase",
+        "oscillation_period_s": 120,
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B8b_period120_d0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_001",
+      "global_id": "CELL_185",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "step",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_step_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_002",
+      "global_id": "CELL_186",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "step",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_step_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_003",
+      "global_id": "CELL_187",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_004",
+      "global_id": "CELL_188",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_005",
+      "global_id": "CELL_189",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "pulse",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_pulse_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_006",
+      "global_id": "CELL_190",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_A",
+        "fault_shape": "pulse",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_A_shape_pulse_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_007",
+      "global_id": "CELL_191",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "step",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_step_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_008",
+      "global_id": "CELL_192",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "step",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_step_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_009",
+      "global_id": "CELL_193",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_010",
+      "global_id": "CELL_194",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_011",
+      "global_id": "CELL_195",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "pulse",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_pulse_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_012",
+      "global_id": "CELL_196",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "at_boundary",
+        "fault_shape": "pulse",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_at_boundary_shape_pulse_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_013",
+      "global_id": "CELL_197",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "step",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_step_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_014",
+      "global_id": "CELL_198",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "step",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_step_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_015",
+      "global_id": "CELL_199",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_016",
+      "global_id": "CELL_200",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_017",
+      "global_id": "CELL_201",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "pulse",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_pulse_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B9_018",
+      "global_id": "CELL_202",
+      "block": "B9",
+      "block_title": "Time-varying faults inside windows",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "onset_location": "inside_B",
+        "fault_shape": "pulse",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B9_onset_inside_B_shape_pulse_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_001",
+      "global_id": "CELL_203",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 1.0,
+        "drift_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda1.0_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_002",
+      "global_id": "CELL_204",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 1.0,
+        "drift_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda1.0_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_003",
+      "global_id": "CELL_205",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 1.0,
+        "drift_shape": "oscillation",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda1.0_shape_oscillation_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_004",
+      "global_id": "CELL_206",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 1.0,
+        "drift_shape": "oscillation",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda1.0_shape_oscillation_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_005",
+      "global_id": "CELL_207",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 0.5,
+        "drift_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.5_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_006",
+      "global_id": "CELL_208",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 0.5,
+        "drift_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.5_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_007",
+      "global_id": "CELL_209",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 0.5,
+        "drift_shape": "oscillation",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.5_shape_oscillation_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_008",
+      "global_id": "CELL_210",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 0.5,
+        "drift_shape": "oscillation",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.5_shape_oscillation_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_009",
+      "global_id": "CELL_211",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 0.0,
+        "drift_shape": "ramp",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.0_shape_ramp_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_010",
+      "global_id": "CELL_212",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 0.0,
+        "drift_shape": "ramp",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.0_shape_ramp_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_011",
+      "global_id": "CELL_213",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "lambda_replica_drift_share": 0.0,
+        "drift_shape": "oscillation",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.0_shape_oscillation_d0.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B10_012",
+      "global_id": "CELL_214",
+      "block": "B10",
+      "block_title": "Control-arm exchangeability (E2)",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "lambda_replica_drift_share": 0.0,
+        "drift_shape": "oscillation",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B10_lambda0.0_shape_oscillation_d1.0",
+      "replicates_R": 2000
+    },
+    {
+      "cell_id": "B11_001",
+      "global_id": "CELL_215",
+      "block": "B11",
+      "block_title": "Pre-specified operating mixtures",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "mixture_profile": "M1_dev_val_like",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B11_M1_dev_val_like_d0.0",
+      "replicates_R": 10000
+    },
+    {
+      "cell_id": "B11_002",
+      "global_id": "CELL_216",
+      "block": "B11",
+      "block_title": "Pre-specified operating mixtures",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "mixture_profile": "M1_dev_val_like",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B11_M1_dev_val_like_d1.0",
+      "replicates_R": 10000
+    },
+    {
+      "cell_id": "B11_003",
+      "global_id": "CELL_217",
+      "block": "B11",
+      "block_title": "Pre-specified operating mixtures",
+      "d": 0.0,
+      "is_null": true,
+      "factors": {
+        "mixture_profile": "M2_stress",
+        "d": 0.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B11_M2_stress_d0.0",
+      "replicates_R": 10000
+    },
+    {
+      "cell_id": "B11_004",
+      "global_id": "CELL_218",
+      "block": "B11",
+      "block_title": "Pre-specified operating mixtures",
+      "d": 1.0,
+      "is_null": false,
+      "factors": {
+        "mixture_profile": "M2_stress",
+        "d": 1.0
+      },
+      "is_degenerate": false,
+      "degeneracy_reason": null,
+      "canonical_dgp_id": "B11_M2_stress_d1.0",
+      "replicates_R": 10000
+    }
+  ]
+}

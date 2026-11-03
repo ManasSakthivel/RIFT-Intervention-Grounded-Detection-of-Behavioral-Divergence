@@ -1,0 +1,61 @@
+{
+ "N": 252,
+ "stratum_counts": {
+  "none": 193,
+  "mild": 7,
+  "substantial": 52
+ },
+ "stratum_counts_by_split": {
+  "dev": {
+   "none": 137,
+   "mild": 6,
+   "substantial": 37
+  },
+  "val": {
+   "none": 56,
+   "mild": 1,
+   "substantial": 15
+  }
+ },
+ "stratum_none": {
+  "n": 193,
+  "meanU": -0.3238341968911917,
+  "unsafe_rate": 0.20207253886010362,
+  "answer_rate": 0.42487046632124353,
+  "frac_attribute": 0.41450777202072536
+ },
+ "stratum_mild": {
+  "n": 7,
+  "meanU": -0.7642857142857142,
+  "unsafe_rate": 0.42857142857142855,
+  "answer_rate": 0.7142857142857143,
+  "frac_attribute": 0.5714285714285714
+ },
+ "stratum_substantial": {
+  "n": 52,
+  "meanU": -0.3317307692307692,
+  "unsafe_rate": 0.11538461538461539,
+  "answer_rate": 0.11538461538461539,
+  "frac_attribute": 0.28846153846153844
+ },
+ "decomp": {
+  "mean_correct": 0.17857142857142858,
+  "mean_unsafe": 0.19047619047619047,
+  "mean_cost_c": 0.13531746031746034,
+  "lam*unsafe": 0.38095238095238093,
+  "gamma*cost": 0.13531746031746034,
+  "U": -0.3376984126984127,
+  "U_if_zero_unsafe_same_correct_same_cost": 0.04325396825396824,
+  "U_if_zero_unsafe_zero_cost": 0.17857142857142858,
+  "cost_from_abstained_after_probing": 0.05575396825396826,
+  "frac_scenarios_abstained_after_probing": 0.3253968253968254
+ },
+ "stratum_power_n500_deff2.0_mu0.10": 0.37135082112072093,
+ "stratum_MDE80_n500_deff2.0": 0.17169589085706344,
+ "stratum_power_n500_deff3.0_mu0.10": 0.265098805384237,
+ "stratum_MDE80_n500_deff3.0": 0.21028366176619848,
+ "stratum_power_n300_deff2.0_mu0.10": 0.24319143064671134,
+ "stratum_MDE80_n300_deff2.0": 0.22165844196721765,
+ "compute_cid_ms_per_call_n30_perm1000_boot100": 5.7871396,
+ "note": "stratum membership uses protocol definition (max over y with >=1 observed non-ancestor x) on frozen fault_series"
+}

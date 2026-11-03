@@ -1,0 +1,39 @@
+{
+ "seed": 4520,
+ "R": 400,
+ "B": 199,
+ "cases": [
+  {
+   "scale": 1.25,
+   "sd_within": 1.1667972315153539,
+   "latent_within_group": 0.0,
+   "realised_within_deff": 0.938,
+   "reject_mu_0.0": 0.025,
+   "reject_mu_0.1": 0.9425
+  },
+  {
+   "scale": 1.25,
+   "sd_within": 1.1667972315153539,
+   "latent_within_group": 0.05,
+   "realised_within_deff": 1.28,
+   "reject_mu_0.0": 0.015,
+   "reject_mu_0.1": 0.8775
+  },
+  {
+   "scale": 1.25,
+   "sd_within": 1.1667972315153539,
+   "latent_within_group": 0.1,
+   "realised_within_deff": 1.539,
+   "reject_mu_0.0": 0.025,
+   "reject_mu_0.1": 0.7625
+  },
+  {
+   "scale": 1.25,
+   "sd_within": 1.1667972315153539,
+   "latent_within_group": 0.2,
+   "realised_within_deff": 2.103,
+   "reject_mu_0.0": 0.0175,
+   "reject_mu_0.1": 0.6075
+  }
+ ]
+}

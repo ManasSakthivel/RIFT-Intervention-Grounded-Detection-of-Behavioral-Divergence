@@ -1,0 +1,58 @@
+{
+ "purpose": "node-order leakage investigation (dev/val only; no confirmatory data; no held-out)",
+ "seed": 4517,
+ "K_permutations": 3,
+ "position_of_true_root": {
+  "n_scenarios": 252,
+  "n_attributable_with_observed_root": 99,
+  "n_with_multiple_roots": 22,
+  "first_root_is_first_in_graph_nodes": 99,
+  "first_root_is_first_in_observe_metrics": 99,
+  "position_histogram_metrics": {
+   "0": 99
+  },
+  "position_histogram_graph_nodes": {
+   "0": 99
+  },
+  "chance_if_uniform_expected_first_share": "1/n_observed per scenario (mean ~ 0.160)"
+ },
+ "method_order_sensitivity": {
+  "V3-FULL": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  },
+  "B0-EARLIEST": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 35,
+   "permutation_runs_changed": 67
+  },
+  "B0-HIGHEST": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  },
+  "B1": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  },
+  "B3": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  },
+  "B5": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  },
+  "B7": {
+   "scenarios": 252,
+   "scenarios_with_any_change": 0,
+   "permutation_runs_changed": 0
+  }
+ },
+ "advantage_of_original_order": {},
+ "seconds": 99.3
+}

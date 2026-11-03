@@ -1,0 +1,305 @@
+{
+ "purpose": "simulated acceptance process (prototype indices >= 200000; no CONFIRM seed; no method run)",
+ "budget_per_structure": 10000,
+ "topology_cap": 1,
+ "ownership_rule": true,
+ "drift_subquota": null,
+ "attempts": [
+  {
+   "offset": 0,
+   "accepted": 1999,
+   "target": 2000,
+   "labels": {
+    "WEAK_SIGNAL": 359,
+    "ATTRIBUTE": 800,
+    "INSUFFICIENT_BASELINE": 180,
+    "NO_DISCRIMINATING_EVIDENCE": 140,
+    "NO_FAULT": 100,
+    "ROOT_UNOBSERVED": 240,
+    "SYMMETRIC_MUTUAL_DEPENDENCY": 180
+   },
+   "unfilled_cells": {
+    "S08_triangle_with_tail:WEAK_SIGNAL": 1
+   },
+   "n_unfilled_cells": 1,
+   "unfilled_total": 1,
+   "templates_populated": 256,
+   "template_size_min_max": [
+    5,
+    9
+   ],
+   "union_find_groups": 256,
+   "max_group_size": 9,
+   "groups_equal_templates": true,
+   "unique_topology_share": 1.0,
+   "distinct_topologies": 1999,
+   "max_scen_per_topology": 1,
+   "family_count_min_max": [
+    122,
+    127
+   ],
+   "rejections": {
+    "R-OWN": 3267,
+    "R-CAP1": 171,
+    "template_full": 8762,
+    "R-DUP-within": 15,
+    "cell_full_or_label_not_in_quota": 145659,
+    "R-NOVEL": 126,
+    "R-DUP-readable": 1
+   },
+   "seconds": 97.8,
+   "drift_substantial_n": 566,
+   "drift_substantial_share": 0.283,
+   "drift_substantial_share_ATTRIBUTE": 0.249,
+   "drift_substantial_share_ABSTAIN": 0.306,
+   "drift_none_share": 0.693,
+   "drift_mild_share": 0.024,
+   "substantial_groups(templates)": 220,
+   "attribute_per_family_min_max": [
+    13,
+    71
+   ],
+   "attribute_in_partial_degradation": 13,
+   "templates_with_zero_ATTRIBUTE": 69,
+   "structure_counts": {
+    "S01_spine_with_leaves": 132,
+    "S02_two_level_fanout": 131,
+    "S03_ladder": 132,
+    "S04_double_diamond": 131,
+    "S05_late_merge": 132,
+    "S06_bypass_chain": 131,
+    "S07_two_stage_hub": 132,
+    "S08_triangle_with_tail": 130,
+    "S09_staggered_roots": 130,
+    "S10_latent_confounded_diamond": 129,
+    "S11_hidden_driver_chain": 125,
+    "S12_hidden_driver_diamond": 125,
+    "S13_mutual_pair_merge": 90,
+    "S14_mutual_pair_fanout": 90,
+    "S15_sink_with_two_chains": 130,
+    "S16_pendant_cluster": 129
+   }
+  },
+  {
+   "offset": 1,
+   "accepted": 1999,
+   "target": 2000,
+   "labels": {
+    "ATTRIBUTE": 800,
+    "INSUFFICIENT_BASELINE": 180,
+    "WEAK_SIGNAL": 359,
+    "NO_FAULT": 100,
+    "NO_DISCRIMINATING_EVIDENCE": 140,
+    "ROOT_UNOBSERVED": 240,
+    "SYMMETRIC_MUTUAL_DEPENDENCY": 180
+   },
+   "unfilled_cells": {
+    "S02_two_level_fanout:WEAK_SIGNAL": 1
+   },
+   "n_unfilled_cells": 1,
+   "unfilled_total": 1,
+   "templates_populated": 256,
+   "template_size_min_max": [
+    5,
+    9
+   ],
+   "union_find_groups": 256,
+   "max_group_size": 9,
+   "groups_equal_templates": true,
+   "unique_topology_share": 1.0,
+   "distinct_topologies": 1999,
+   "max_scen_per_topology": 1,
+   "family_count_min_max": [
+    123,
+    128
+   ],
+   "rejections": {
+    "R-OWN": 3100,
+    "R-CAP1": 154,
+    "R-DUP-within": 9,
+    "template_full": 8398,
+    "cell_full_or_label_not_in_quota": 146190,
+    "R-NOVEL": 149,
+    "R-DUP-readable": 1
+   },
+   "seconds": 98.9,
+   "drift_substantial_n": 527,
+   "drift_substantial_share": 0.264,
+   "drift_substantial_share_ATTRIBUTE": 0.256,
+   "drift_substantial_share_ABSTAIN": 0.269,
+   "drift_none_share": 0.71,
+   "drift_mild_share": 0.027,
+   "substantial_groups(templates)": 213,
+   "attribute_per_family_min_max": [
+    9,
+    65
+   ],
+   "attribute_in_partial_degradation": 9,
+   "templates_with_zero_ATTRIBUTE": 70,
+   "structure_counts": {
+    "S01_spine_with_leaves": 132,
+    "S02_two_level_fanout": 130,
+    "S03_ladder": 132,
+    "S04_double_diamond": 131,
+    "S05_late_merge": 132,
+    "S06_bypass_chain": 131,
+    "S07_two_stage_hub": 132,
+    "S08_triangle_with_tail": 131,
+    "S09_staggered_roots": 130,
+    "S10_latent_confounded_diamond": 129,
+    "S11_hidden_driver_chain": 125,
+    "S12_hidden_driver_diamond": 125,
+    "S13_mutual_pair_merge": 90,
+    "S14_mutual_pair_fanout": 90,
+    "S15_sink_with_two_chains": 130,
+    "S16_pendant_cluster": 129
+   }
+  },
+  {
+   "offset": 2,
+   "accepted": 2000,
+   "target": 2000,
+   "labels": {
+    "NO_DISCRIMINATING_EVIDENCE": 140,
+    "ATTRIBUTE": 800,
+    "WEAK_SIGNAL": 360,
+    "INSUFFICIENT_BASELINE": 180,
+    "NO_FAULT": 100,
+    "ROOT_UNOBSERVED": 240,
+    "SYMMETRIC_MUTUAL_DEPENDENCY": 180
+   },
+   "unfilled_cells": {},
+   "n_unfilled_cells": 0,
+   "unfilled_total": 0,
+   "templates_populated": 256,
+   "template_size_min_max": [
+    5,
+    9
+   ],
+   "union_find_groups": 256,
+   "max_group_size": 9,
+   "groups_equal_templates": true,
+   "unique_topology_share": 1.0,
+   "distinct_topologies": 2000,
+   "max_scen_per_topology": 1,
+   "family_count_min_max": [
+    122,
+    128
+   ],
+   "rejections": {
+    "R-OWN": 3258,
+    "R-CAP1": 157,
+    "R-DUP-within": 9,
+    "cell_full_or_label_not_in_quota": 146392,
+    "template_full": 8073,
+    "R-DUP-readable": 1,
+    "R-NOVEL": 110
+   },
+   "seconds": 97.6,
+   "drift_substantial_n": 533,
+   "drift_substantial_share": 0.267,
+   "drift_substantial_share_ATTRIBUTE": 0.256,
+   "drift_substantial_share_ABSTAIN": 0.273,
+   "drift_none_share": 0.709,
+   "drift_mild_share": 0.025,
+   "substantial_groups(templates)": 213,
+   "attribute_per_family_min_max": [
+    7,
+    68
+   ],
+   "attribute_in_partial_degradation": 7,
+   "templates_with_zero_ATTRIBUTE": 69,
+   "structure_counts": {
+    "S01_spine_with_leaves": 132,
+    "S02_two_level_fanout": 131,
+    "S03_ladder": 132,
+    "S04_double_diamond": 131,
+    "S05_late_merge": 132,
+    "S06_bypass_chain": 131,
+    "S07_two_stage_hub": 132,
+    "S08_triangle_with_tail": 131,
+    "S09_staggered_roots": 130,
+    "S10_latent_confounded_diamond": 129,
+    "S11_hidden_driver_chain": 125,
+    "S12_hidden_driver_diamond": 125,
+    "S13_mutual_pair_merge": 90,
+    "S14_mutual_pair_fanout": 90,
+    "S15_sink_with_two_chains": 130,
+    "S16_pendant_cluster": 129
+   }
+  },
+  {
+   "offset": 3,
+   "accepted": 2000,
+   "target": 2000,
+   "labels": {
+    "ATTRIBUTE": 800,
+    "WEAK_SIGNAL": 360,
+    "INSUFFICIENT_BASELINE": 180,
+    "NO_DISCRIMINATING_EVIDENCE": 140,
+    "NO_FAULT": 100,
+    "ROOT_UNOBSERVED": 240,
+    "SYMMETRIC_MUTUAL_DEPENDENCY": 180
+   },
+   "unfilled_cells": {},
+   "n_unfilled_cells": 0,
+   "unfilled_total": 0,
+   "templates_populated": 256,
+   "template_size_min_max": [
+    5,
+    9
+   ],
+   "union_find_groups": 256,
+   "max_group_size": 9,
+   "groups_equal_templates": true,
+   "unique_topology_share": 1.0,
+   "distinct_topologies": 2000,
+   "max_scen_per_topology": 1,
+   "family_count_min_max": [
+    122,
+    129
+   ],
+   "rejections": {
+    "R-OWN": 3337,
+    "R-CAP1": 176,
+    "cell_full_or_label_not_in_quota": 147504,
+    "template_full": 6843,
+    "R-DUP-within": 11,
+    "R-NOVEL": 127,
+    "R-DUP-readable": 2
+   },
+   "seconds": 97.1,
+   "drift_substantial_n": 538,
+   "drift_substantial_share": 0.269,
+   "drift_substantial_share_ATTRIBUTE": 0.253,
+   "drift_substantial_share_ABSTAIN": 0.28,
+   "drift_none_share": 0.704,
+   "drift_mild_share": 0.027,
+   "substantial_groups(templates)": 215,
+   "attribute_per_family_min_max": [
+    9,
+    63
+   ],
+   "attribute_in_partial_degradation": 9,
+   "templates_with_zero_ATTRIBUTE": 72,
+   "structure_counts": {
+    "S01_spine_with_leaves": 132,
+    "S02_two_level_fanout": 131,
+    "S03_ladder": 132,
+    "S04_double_diamond": 131,
+    "S05_late_merge": 132,
+    "S06_bypass_chain": 131,
+    "S07_two_stage_hub": 132,
+    "S08_triangle_with_tail": 131,
+    "S09_staggered_roots": 130,
+    "S10_latent_confounded_diamond": 129,
+    "S11_hidden_driver_chain": 125,
+    "S12_hidden_driver_diamond": 125,
+    "S13_mutual_pair_merge": 90,
+    "S14_mutual_pair_fanout": 90,
+    "S15_sink_with_two_chains": 130,
+    "S16_pendant_cluster": 129
+   }
+  }
+ ]
+}
