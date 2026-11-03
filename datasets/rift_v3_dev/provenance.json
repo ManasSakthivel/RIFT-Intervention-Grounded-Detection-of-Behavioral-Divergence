@@ -1,0 +1,9 @@
+{
+ "sha256": "3525bc05ed8b9dd21dcc888181005af09e75f43396fb27a0ad6732588ea3c472",
+ "n": 112,
+ "types": 14,
+ "variants_per_type": 8,
+ "ground_truth": "generator_v2.compute_ground_truth (noise-free simulator state); never derived from any method output",
+ "independence": "disjoint from dev/val/held-out by construction (split='adv_dev', new seeds from a distinct hash tag)",
+ "caveat": "hand-designed counterexamples; K variants per family are NOT independent samples"
+}

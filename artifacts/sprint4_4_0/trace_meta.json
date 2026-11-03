@@ -1,0 +1,18 @@
+{
+ "verify_freeze": [
+  true,
+  "ok"
+ ],
+ "pins": {
+  "dev": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f",
+  "val": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb"
+ },
+ "dev": {
+  "n": 180,
+  "sha256": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f"
+ },
+ "val": {
+  "n": 72,
+  "sha256": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb"
+ }
+}
