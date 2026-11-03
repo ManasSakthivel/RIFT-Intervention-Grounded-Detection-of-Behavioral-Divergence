@@ -1,0 +1,237 @@
+{
+ "dataset_sha256": {
+  "dev": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f",
+  "held_out": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce",
+  "val": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb"
+ },
+ "declared_shared_marginal_dimensions": {
+  "intervention": {
+   "dev": [
+    "collateral_effects",
+    "delayed",
+    "high_magnitude",
+    "imperfect",
+    "low_magnitude",
+    "multi_service",
+    "no_meaningful_effect",
+    "reversible",
+    "single_service"
+   ],
+   "held_out": [
+    "collateral_effects",
+    "delayed",
+    "high_magnitude",
+    "imperfect",
+    "low_magnitude",
+    "multi_service",
+    "no_meaningful_effect",
+    "reversible",
+    "single_service"
+   ],
+   "val": [
+    "collateral_effects",
+    "delayed",
+    "high_magnitude",
+    "imperfect",
+    "low_magnitude",
+    "multi_service",
+    "no_meaningful_effect",
+    "reversible",
+    "single_service"
+   ]
+  },
+  "observability": {
+   "dev": [
+    "ambiguous_pag",
+    "complete_telemetry",
+    "conflicting_observational_evidence",
+    "delayed_telemetry",
+    "insufficient_samples",
+    "missing_windows",
+    "noisy_telemetry",
+    "partial_service_observability",
+    "weak_interventional_evidence"
+   ],
+   "held_out": [
+    "ambiguous_pag",
+    "complete_telemetry",
+    "conflicting_observational_evidence",
+    "delayed_telemetry",
+    "insufficient_samples",
+    "missing_windows",
+    "noisy_telemetry",
+    "partial_service_observability",
+    "weak_interventional_evidence"
+   ],
+   "val": [
+    "ambiguous_pag",
+    "complete_telemetry",
+    "conflicting_observational_evidence",
+    "delayed_telemetry",
+    "insufficient_samples",
+    "missing_windows",
+    "noisy_telemetry",
+    "partial_service_observability",
+    "weak_interventional_evidence"
+   ]
+  },
+  "temporal": {
+   "dev": [
+    "abrupt_degradation",
+    "delayed_downstream_effects",
+    "delayed_propagation",
+    "gradual_degradation",
+    "immediate_propagation",
+    "intermittent_degradation",
+    "multiple_onsets",
+    "oscillation",
+    "overlapping_faults",
+    "partial_recovery",
+    "recovery_delay"
+   ],
+   "held_out": [
+    "abrupt_degradation",
+    "delayed_downstream_effects",
+    "delayed_propagation",
+    "gradual_degradation",
+    "immediate_propagation",
+    "intermittent_degradation",
+    "multiple_onsets",
+    "oscillation",
+    "overlapping_faults",
+    "partial_recovery",
+    "recovery_delay"
+   ],
+   "val": [
+    "abrupt_degradation",
+    "delayed_downstream_effects",
+    "delayed_propagation",
+    "gradual_degradation",
+    "immediate_propagation",
+    "intermittent_degradation",
+    "multiple_onsets",
+    "oscillation",
+    "overlapping_faults",
+    "partial_recovery",
+    "recovery_delay"
+   ]
+  },
+  "workload": {
+   "dev": [
+    "bursty_traffic",
+    "changing_workload",
+    "high_baseline_variance",
+    "high_load",
+    "low_baseline_variance",
+    "low_load",
+    "moderate_load",
+    "skewed_requests",
+    "sparse_telemetry",
+    "unequal_service_rates"
+   ],
+   "held_out": [
+    "bursty_traffic",
+    "changing_workload",
+    "high_baseline_variance",
+    "high_load",
+    "low_baseline_variance",
+    "low_load",
+    "moderate_load",
+    "skewed_requests",
+    "sparse_telemetry",
+    "unequal_service_rates"
+   ],
+   "val": [
+    "bursty_traffic",
+    "changing_workload",
+    "high_baseline_variance",
+    "high_load",
+    "low_baseline_variance",
+    "low_load",
+    "moderate_load",
+    "skewed_requests",
+    "sparse_telemetry",
+    "unequal_service_rates"
+   ]
+  }
+ },
+ "distinct_keys_per_split": {
+  "dev": {
+   "content_hash": 180,
+   "dynamics_hash": 180,
+   "joint_cell": 180,
+   "template_id": 75,
+   "topology_hash": 60
+  },
+  "held_out": {
+   "content_hash": 108,
+   "dynamics_hash": 108,
+   "joint_cell": 108,
+   "template_id": 71,
+   "topology_hash": 27
+  },
+  "val": {
+   "content_hash": 72,
+   "dynamics_hash": 72,
+   "joint_cell": 72,
+   "template_id": 30,
+   "topology_hash": 26
+  }
+ },
+ "group_integrity_violations": [],
+ "heldout_sha256": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce",
+ "labels_stripped_before_analysis": true,
+ "leaks_for_protected": {
+  "content_hash": 0,
+  "dynamics_hash": 0,
+  "joint_cell": 0,
+  "template_id": 0,
+  "topology_hash": 0
+ },
+ "n_groups": 35,
+ "n_scenarios": {
+  "dev": 180,
+  "held_out": 108,
+  "val": 72
+ },
+ "near_duplicate_pairs_cross_split": [],
+ "near_threshold": 0.9,
+ "ok": true,
+ "protected_split": "held_out",
+ "shared_keys_by_pair": {
+  "content_hash": {
+   "dev&held_out": 0,
+   "dev&val": 0,
+   "val&held_out": 0
+  },
+  "dynamics_hash": {
+   "dev&held_out": 0,
+   "dev&val": 0,
+   "val&held_out": 0
+  },
+  "joint_cell": {
+   "dev&held_out": 0,
+   "dev&val": 0,
+   "val&held_out": 0
+  },
+  "template_id": {
+   "dev&held_out": 0,
+   "dev&val": 0,
+   "val&held_out": 0
+  },
+  "topology_hash": {
+   "dev&held_out": 0,
+   "dev&val": 0,
+   "val&held_out": 0
+  }
+ },
+ "unseen_in_protected_vs_other_splits": {
+  "family": [
+   "recovery_instability"
+  ],
+  "structure": [
+   "feedback_like"
+  ]
+ },
+ "verified_at_utc": "2026-11-03T04:02:35Z"
+}

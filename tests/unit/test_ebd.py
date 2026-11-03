@@ -390,6 +390,9 @@ class TestComputeEBD:
             w1_ci_lower = 1.0
             w1_ci_upper = 2.0
             n_post = 50
+            # Sprint 4.2.4: R4 requires complete evidence (absent fields are rejected)
+            permutation_significant = True
+            exceeds_threshold = True
 
             class grade:
                 value = "RELIABLE"
