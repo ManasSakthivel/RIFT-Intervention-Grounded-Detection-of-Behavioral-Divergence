@@ -1,7 +1,7 @@
 # RIFT — Final Pre-Publication Status
 
 **Author:** an AI engineering agent. This is a status report, not an independent review and not an approval. No human approval exists for any item in it.
-**Branch:** `sprint-4.5.1-prereg-finalization`. **Base HEAD when this phase began:** `1efc229783a4adece3c4041efb6ae8a9aa29b326` (verified with `git rev-parse HEAD`; it equals the SHA named in the task). The closing commit SHA is reported in the session message, not in this file (a commit cannot contain its own hash). **Not pushed.**
+**Branch:** `sprint-4.5.1-prereg-finalization`. **Base HEAD when this phase began:** `1efc229783a4adece3c4041efb6ae8a9aa29b326` (verified with `git rev-parse HEAD`; it equals the SHA named in the task). The closing commit SHA is reported in the session message, not in this file (a commit cannot contain its own hash). **Pushed to origin at `6558ad9`; PR #2 opened against `main`.**
 **Not claimed anywhere in this phase:** that CI is green on GitHub, that independent review has occurred, that any decision is approved, that RIFT or V3 beats always-abstain, or any real-system effectiveness.
 
 ---
@@ -76,7 +76,7 @@ Nothing else changed: tests are not removed, assertions not weakened, `reproduci
 | Workflow YAML | parses; step list: setup, install, harness, publish, upload, lint, secrets scan |
 | Secrets scan (the workflow's own `grep`) on the clean clone | clean |
 
-**Not verified:** this has not run on GitHub itself. I did not push. **Do not describe CI as green until a pushed run has been read.** The GitHub job will report 664 passed and 2 protected-unavailable; it will be a successful job but it will not certify the two protected integrity checks.
+**GitHub run read (PR #2, run 41770356421, Python 3.11.18):** the harness step reported 664 REPRODUCIBLE passed, 0 PROTECTED passed, 2 PROTECTED-MATERIAL-UNAVAILABLE (integrity NOT verified, not a pass), 0 genuine failures; the `requests` failures are gone. The `test (3.11)` check is reported as pass. **Caveat:** the "Lint — forbidden causal-claim phrases" step exited 2 (pre-existing `make lint` Makefile:188 error, `continue-on-error`, hidden) and the check passes despite it. The two protected integrity checks remain unverified until the owner runs `--require-protected` (D12).
 
 ### 3.3 Other CI findings (pre-existing, not fixed, owner decision)
 
@@ -197,4 +197,4 @@ The plan is `docs/CONFIRMATORY_INFRASTRUCTURE_PLAN.md` (work packages WP1–WP5,
 * The 861-of-888 total in the 4.5.1 report (the 48 + 10 extra tests were not repeated).
 * One subagent noted the gate-3.0 flip count is 29 while 30 WEAK_SIGNAL scenarios sit in SNR [3, 4); the one-scenario difference was not traced.
 * The headline V3 − AA interval quoted in the 4.5.1 report ([−0.465, −0.219]) differs slightly from both studentised intervals in `utility_verification.json`; the percentile interval for the template layout is the likely source, but I did not confirm which procedure produced it.
-* Whether GitHub Actions passes: **not run**.
+* Whether GitHub Actions passes: **run on PR #2 and passed (664 passed, 2 protected-unavailable, 0 failures)**; the lint step error noted in the CI section is unresolved.
