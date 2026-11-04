@@ -4,7 +4,7 @@ A prototype for exploring whether controlled interventions can improve root-caus
 
 Standard observability (metrics, traces, logs) tells you what changed around the same time a failure occurred — it's correlation. RIFT explores whether deliberately perturbing a service — injecting latency via `tc netem` — and measuring what happens downstream gives better signal for identifying what actually *caused* the problem.
 
-> **Status:** Implementation complete. 624 tests passing on Mac. Live empirical evaluation on the Linux testbed is pending — see [Current Status](#current-status) for the full breakdown.
+> **Status:** Research prototype. Implementation complete; live empirical evaluation on the Linux testbed is pending. A synthetic-benchmark study (Sprints 4.3–4.5) is documented below: it has produced **no positive attribution result**, and a confirmatory experiment has been designed but **not yet run**. See [Current Status](#current-status) and [Research status](#research-status-synthetic-benchmark-sprints-4345).
 
 ---
 
@@ -75,7 +75,7 @@ Fault injection: `tc netem` with per-destination `u32` filters. Requires Linux `
 
 ```
 Implementation                COMPLETE
-Mac-side tests                624 passing / 0 failing
+Automated tests (CI, py3.11)  664 passed, 2 protected-material checks UNAVAILABLE (not verified in CI), 0 failures
 Linux environment             PASS (RHEL 9.6, Docker, tc/netem confirmed)
 Online Boutique testbed       PASS (14/14 containers healthy)
 Safety hard stops             PASS (all 8 validated)
@@ -101,6 +101,20 @@ These are from the pre-Linux synthetic benchmark using oracle PAG and mock telem
 
 ---
 
+## Research status (synthetic benchmark, Sprints 4.3–4.5)
+
+Everything in this section comes from a **synthetic** simulator benchmark, not from the live testbed or production telemetry. It must not be read as evidence of real-world effectiveness.
+
+- **Sprint 4.3 held-out (spent, V2 only):** V2 attributed correctly in 60/108 scenarios versus 63/108 for an always-abstain baseline. It did not beat always-abstain.
+- **V3 (development/validation only, non-confirmatory):** mean utility U = C − 2.0·S − 1.0·(n_do/20) was −0.338 against always-abstain (U ≡ 0); V2 was −0.562. V3 improves on V2 but does not beat always-abstain on dev/val. The utility weights are normative choices, not calibrated constants.
+- **Known validity concerns:** the ground-truth label reuses part of RIFT's own detection vocabulary (partial circularity); scenarios are not independent (template groups nested in 16 fixed structural strata); CID can show spurious divergence under time-varying faults.
+- **Confirmatory experiment:** preregistered but **not run**. No confirmatory data exist. Required human decisions (including an independent human scientific review) are still open.
+- **CI:** two tests guard protected material that is deliberately not in Git. In CI they are reported as *unavailable*, which is **not** a pass.
+
+Details: [`docs/FINAL_PREPUBLICATION_STATUS.md`](docs/FINAL_PREPUBLICATION_STATUS.md) · [`docs/FINAL_APPROVAL_MATRIX.md`](docs/FINAL_APPROVAL_MATRIX.md) · [`docs/FINAL_SCIENTIFIC_VALIDITY_CLOSURE.md`](docs/FINAL_SCIENTIFIC_VALIDITY_CLOSURE.md) · [`docs/FINAL_INDEPENDENT_REVIEW_PACKAGE.md`](docs/FINAL_INDEPENDENT_REVIEW_PACKAGE.md) · [`docs/IEEE_ACCESS_MANUSCRIPT_BLUEPRINT.md`](docs/IEEE_ACCESS_MANUSCRIPT_BLUEPRINT.md)
+
+---
+
 ## Running it
 
 ```bash
@@ -111,7 +125,9 @@ python3.11 -m pip install -r requirements.txt
 
 # Run the test suite (Mac/Linux — no testbed required)
 python3.11 -m pytest tests/ -q
-# Expected: 624 passed
+# Expected in a clean checkout: 664 pass; two protected-material tests cannot run (their inputs are
+# not in Git). Use the reproducibility-aware runner to see them reported as UNAVAILABLE, not as passes:
+python3.11 scripts/sprint442_run_tests.py tests
 
 # Run development validation
 make reproduce-all
@@ -148,7 +164,7 @@ src/rift/
   evaluation/       # attribution metrics, power analysis
 
 experiments/        # registered experiment configs
-tests/              # 624 unit and integration tests
+tests/              # unit and integration tests (664 reproducible in CI)
 docs/               # formal model, hypotheses, intervention semantics, limitations
 artifacts/          # frozen state manifests
 ```

@@ -2,7 +2,7 @@
 
 **Author:** an AI engineering agent. This is a status report, not an independent review and not an approval. No human approval exists for any item in it.
 **Branch:** `sprint-4.5.1-prereg-finalization`. **Base HEAD when this phase began:** `1efc229783a4adece3c4041efb6ae8a9aa29b326` (verified with `git rev-parse HEAD`; it equals the SHA named in the task). The closing commit SHA is reported in the session message, not in this file (a commit cannot contain its own hash). **Pushed to origin at `6558ad9`; PR #2 opened against `main`.**
-**Not claimed anywhere in this phase:** that CI is green on GitHub, that independent review has occurred, that any decision is approved, that RIFT or V3 beats always-abstain, or any real-system effectiveness.
+**Not claimed anywhere in this phase:** that independent review has occurred, that any decision is approved, that RIFT or V3 beats always-abstain, or any real-system effectiveness.
 
 ---
 
