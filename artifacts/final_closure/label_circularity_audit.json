@@ -1,0 +1,61 @@
+{
+ "n": 252,
+ "by_label": {
+  "ATTRIBUTE|None": 99,
+  "ABSTAIN_REQUIRED|WEAK_SIGNAL": 46,
+  "ABSTAIN_REQUIRED|ROOT_UNOBSERVED": 31,
+  "ABSTAIN_REQUIRED|INSUFFICIENT_BASELINE": 23,
+  "ABSTAIN_REQUIRED|SYMMETRIC_MUTUAL_DEPENDENCY": 22,
+  "ABSTAIN_REQUIRED|NO_DISCRIMINATING_EVIDENCE": 18,
+  "ABSTAIN_REQUIRED|NO_FAULT": 13
+ },
+ "ATTRIBUTE_root_snr_band": {
+  ">=5": 84,
+  "[4,5)": 15
+ },
+ "WEAK_SIGNAL_root_snr_band": {
+  "[3,4)": 30,
+  "<3": 16
+ },
+ "WEAK_SIGNAL_snr_lt_3_never_crosses_detector_threshold": 16,
+ "WEAK_SIGNAL_snr_3_to_4_label_only_threshold_gap": 30,
+ "NO_DISCRIMINATING_EVIDENCE_snr_band": {
+  ">=5": 18
+ },
+ "min_snr_of_any_ATTRIBUTE": 4.0,
+ "definition": {
+  "WEAK_SIGNAL": "all observed true roots have noise-free max|z| < 4.0 (compute_ground_truth)",
+  "detector_theta": 3.0,
+  "label_theta": 4.0
+ },
+ "part2": {
+  "label_rederivation": {
+   "scenarios_reaching_snr_gate": 163,
+   "gate_reproduces_stored_label": 163
+  },
+  "stored_ATTRIBUTE_by_evidence_kind": {
+   "TEMPORAL": 49,
+   "INTERVENTIONAL": 17,
+   "INTERVENTIONAL+TEMPORAL": 33
+  },
+  "ATTRIBUTE_labels_resting_only_on_TEMPORAL_rule_identical_to_RIFT_R1": 49,
+  "sensitivity_of_stored_labels_to_SNR_gate_(diagnostic_only,_not_relabelling)": {
+   "3.0": {
+    "ABSTAIN_to_ATTRIBUTE": 29,
+    "ATTRIBUTE_to_ABSTAIN": 0
+   },
+   "3.5": {
+    "ABSTAIN_to_ATTRIBUTE": 12,
+    "ATTRIBUTE_to_ABSTAIN": 0
+   },
+   "4.5": {
+    "ABSTAIN_to_ATTRIBUTE": 0,
+    "ATTRIBUTE_to_ABSTAIN": 8
+   },
+   "5.0": {
+    "ABSTAIN_to_ATTRIBUTE": 0,
+    "ATTRIBUTE_to_ABSTAIN": 15
+   }
+  }
+ }
+}
