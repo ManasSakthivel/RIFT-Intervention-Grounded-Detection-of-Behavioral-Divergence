@@ -1,0 +1,5 @@
+{
+ "purpose": "final closure: re-hash of the 51 original frozen files vs manifest and HEAD; no sealed file is in this manifest",
+ "n": 51,
+ "mismatches": []
+}

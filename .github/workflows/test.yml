@@ -26,10 +26,43 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run full test suite
+      # Sprint 4.4.2 reproducibility-aware harness. Two committed tests verify integrity of protected
+      # materials that are deliberately NOT in git (sealed held-out candidate; historical Stage 4 artifact).
+      # On a clean checkout they are reported as PROTECTED-MATERIAL-UNAVAILABLE (integrity NOT verified) --
+      # never as passed, never silently skipped. Any other failure, including a protected test that runs and
+      # fails, exits non-zero. Owner-run verification with materials present: --require-protected.
+      - name: Run full test suite (reproducibility-aware)
         run: |
-          python -m pytest tests/ -q --tb=short
-          # Expected: 624 passed, 0 failed
+          python scripts/sprint442_run_tests.py tests --tb=short --json test_classification.json
+
+      - name: Publish test classification
+        if: always()
+        run: |
+          python - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json, os
+          if not os.path.exists("test_classification.json"):
+              print("## RIFT test classification\n\nNo classification produced (test run aborted).")
+          else:
+              d = json.load(open("test_classification.json"))
+              print("## RIFT test classification")
+              for k in ("REPRODUCIBLE_PASS", "PROTECTED_PASS", "PROTECTED_UNAVAILABLE", "SKIPPED_OTHER", "FAILED"):
+                  print(f"- **{k}**: {len(d.get(k, []))}")
+              for k in ("PROTECTED_UNAVAILABLE", "FAILED", "SKIPPED_OTHER"):
+                  if d.get(k):
+                      print(f"\n### {k}")
+                      for n in d[k]:
+                          print(f"- `{n}`")
+              if d.get("PROTECTED_UNAVAILABLE"):
+                  print("\n> Protected-material integrity was **NOT verified** in CI. This is not a pass.")
+          EOF
+
+      - name: Upload test classification
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-classification
+          path: test_classification.json
+          if-no-files-found: ignore
 
       - name: Lint — forbidden causal-claim phrases
         run: |
