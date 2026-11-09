@@ -1,0 +1,42 @@
+{
+ "environment": {
+  "python": "3.11.15",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.0.2",
+  "scipy": "1.13.1",
+  "scikit-learn": "1.6.1",
+  "networkx": "3.2.1",
+  "pandas": "2.3.3",
+  "causal-learn": "0.1.4.8",
+  "momentchi2": "0.1.8",
+  "joblib": "1.5.3",
+  "statsmodels": "0.14.6"
+ },
+ "files": {
+  "v3_dev.json": {
+   "status": "IDENTICAL",
+   "n_differences": 0,
+   "first_differences": []
+  },
+  "v3_val.json": {
+   "status": "IDENTICAL",
+   "n_differences": 0,
+   "first_differences": []
+  }
+ },
+ "field_drift": {
+  "dev": {
+   "ident_status": 0,
+   "abstained": 0,
+   "top": 0,
+   "score": 0
+  },
+  "val": {
+   "ident_status": 0,
+   "abstained": 0,
+   "top": 0,
+   "score": 0
+  }
+ },
+ "verdict": "REPRODUCES_COMMITTED_RECORDS"
+}

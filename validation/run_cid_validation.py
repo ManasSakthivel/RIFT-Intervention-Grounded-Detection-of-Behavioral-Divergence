@@ -26,9 +26,13 @@ from typing import Any, Callable, Optional
 import numpy as np
 
 # Make src importable from project root
-sys.path.insert(0, str(Path(__file__).resolve().parents[2]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
 
-from src.rift.cid.cid import CIDGrade, CIDResult, compute_cid
+try:
+    from src.rift.cid.cid import CIDGrade, CIDResult, compute_cid
+except ModuleNotFoundError:
+    from rift.cid.cid import CIDGrade, CIDResult, compute_cid
 
 SAMPLE_SIZES = [5, 10, 20, 30, 50, 100, 300]
 
@@ -407,7 +411,7 @@ def main() -> None:
         "gate":  gate,
     }
 
-    out_path = Path(__file__).resolve().parents[2] / "artifacts" / "phase3" / "cid_validation.json"
+    out_path = Path(__file__).resolve().parents[1] / "artifacts" / "phase3" / "cid_validation.json"
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w") as f:
         json.dump(output, f, indent=2, default=str)

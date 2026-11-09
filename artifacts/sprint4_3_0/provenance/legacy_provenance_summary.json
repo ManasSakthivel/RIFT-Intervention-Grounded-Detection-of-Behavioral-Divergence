@@ -1,0 +1,883 @@
+{
+ "distinct": {
+  "effective_dynamics": {
+   "adversarial": 6,
+   "dev": 22,
+   "held_out_v1": 7,
+   "val": 9
+  },
+  "raw_content": {
+   "adversarial": 6,
+   "dev": 25,
+   "held_out_v1": 7,
+   "val": 10
+  },
+  "structure": {
+   "adversarial": 5,
+   "dev": 13,
+   "held_out_v1": 4,
+   "val": 6
+  },
+  "template": {
+   "adversarial": 5,
+   "dev": 17,
+   "held_out_v1": 4,
+   "val": 7
+  }
+ },
+ "distinct_all_pooled": {
+  "effective_dynamics": 28,
+  "raw_content": 31,
+  "structure": 18,
+  "template": 22
+ },
+ "distinct_core_pooled": {
+  "effective_dynamics": 22,
+  "raw_content": 25,
+  "structure": 13,
+  "template": 17
+ },
+ "exact_duplicate_groups_pooled_core": [
+  [
+   "NL_01",
+   "NL_02",
+   "NL_03"
+  ],
+  [
+   "PL_01",
+   "PL_02",
+   "PL_03"
+  ],
+  [
+   "SD_01",
+   "SD_02",
+   "SD_03"
+  ],
+  [
+   "RC_01",
+   "RC_02",
+   "RC_03"
+  ],
+  [
+   "QU_01",
+   "QU_02",
+   "QU_03"
+  ],
+  [
+   "DF_01",
+   "DF_02",
+   "DF_03"
+  ],
+  [
+   "MC_01",
+   "MC_02",
+   "MC_03"
+  ],
+  [
+   "CF_00",
+   "CF_04",
+   "CF_08",
+   "CF_12",
+   "CF_16",
+   "CF_20",
+   "CF_24",
+   "CF_28",
+   "CF_32",
+   "CF_36",
+   "CF_40",
+   "CF_44"
+  ],
+  [
+   "CF_01",
+   "CF_05",
+   "CF_09",
+   "CF_13",
+   "CF_17",
+   "CF_21",
+   "CF_25",
+   "CF_29",
+   "CF_33",
+   "CF_37",
+   "CF_41",
+   "CF_45"
+  ],
+  [
+   "CF_02",
+   "CF_06",
+   "CF_10",
+   "CF_14",
+   "CF_18",
+   "CF_22",
+   "CF_26",
+   "CF_30",
+   "CF_34",
+   "CF_38",
+   "CF_42",
+   "CF_46"
+  ],
+  [
+   "CF_03",
+   "CF_07",
+   "CF_11",
+   "CF_15",
+   "CF_19",
+   "CF_23",
+   "CF_27",
+   "CF_31",
+   "CF_35",
+   "CF_39",
+   "CF_43",
+   "CF_47"
+  ]
+ ],
+ "groups_effective_dynamics_core": {
+  "0ca3aa21625c": [
+   "CF_03",
+   "CF_07",
+   "CF_11",
+   "CF_15",
+   "CF_19",
+   "CF_23",
+   "CF_27",
+   "CF_31",
+   "CF_35",
+   "CF_39",
+   "CF_43",
+   "CF_47"
+  ],
+  "1bc00f650e58": [
+   "QU_01",
+   "QU_02",
+   "QU_03"
+  ],
+  "21ab65637d72": [
+   "SD_01",
+   "SD_02",
+   "SD_03"
+  ],
+  "2c779df1d009": [
+   "NL_01",
+   "NL_02",
+   "NL_03"
+  ],
+  "308273f45df1": [
+   "CF_01",
+   "CF_05",
+   "CF_09",
+   "CF_13",
+   "CF_17",
+   "CF_21",
+   "CF_25",
+   "CF_29",
+   "CF_33",
+   "CF_37",
+   "CF_41",
+   "CF_45"
+  ],
+  "5cdacec8fae4": [
+   "PL_01",
+   "PL_02",
+   "CF_00",
+   "CF_04",
+   "CF_08",
+   "CF_12",
+   "CF_16",
+   "CF_20",
+   "PL_03",
+   "CF_24",
+   "CF_28",
+   "CF_32",
+   "CF_36",
+   "CF_40",
+   "CF_44"
+  ],
+  "7fa4a6920586": [
+   "DF_01",
+   "MC_03",
+   "AA_03",
+   "DF_02",
+   "DF_03"
+  ],
+  "9e269d2f7916": [
+   "MC_01",
+   "MC_02",
+   "MC_03"
+  ],
+  "bd4d5e2ece33": [
+   "RC_01",
+   "RC_02",
+   "RC_03"
+  ],
+  "c1417b070022": [
+   "CF_02",
+   "CF_06",
+   "CF_10",
+   "CF_14",
+   "CF_18",
+   "CF_22",
+   "CF_26",
+   "CF_30",
+   "CF_34",
+   "CF_38",
+   "CF_42",
+   "CF_46"
+  ]
+ },
+ "heldout_twin_counts": {
+  "effective_dynamics": {
+   "ids": [
+    "QU_03",
+    "DF_03",
+    "MC_03",
+    "CF_36",
+    "CF_37",
+    "CF_38",
+    "CF_39",
+    "CF_40",
+    "CF_41",
+    "CF_42",
+    "CF_43",
+    "CF_44",
+    "CF_45",
+    "CF_46",
+    "CF_47"
+   ],
+   "n_heldout": 15,
+   "n_with_twin_in_dev_or_val": 15
+  },
+  "raw_content": {
+   "ids": [
+    "QU_03",
+    "DF_03",
+    "MC_03",
+    "CF_36",
+    "CF_37",
+    "CF_38",
+    "CF_39",
+    "CF_40",
+    "CF_41",
+    "CF_42",
+    "CF_43",
+    "CF_44",
+    "CF_45",
+    "CF_46",
+    "CF_47"
+   ],
+   "n_heldout": 15,
+   "n_with_twin_in_dev_or_val": 15
+  },
+  "structure": {
+   "ids": [
+    "QU_03",
+    "DF_03",
+    "MC_03",
+    "CF_36",
+    "CF_37",
+    "CF_38",
+    "CF_39",
+    "CF_40",
+    "CF_41",
+    "CF_42",
+    "CF_43",
+    "CF_44",
+    "CF_45",
+    "CF_46",
+    "CF_47"
+   ],
+   "n_heldout": 15,
+   "n_with_twin_in_dev_or_val": 15
+  },
+  "template": {
+   "ids": [
+    "QU_03",
+    "DF_03",
+    "MC_03",
+    "CF_36",
+    "CF_37",
+    "CF_38",
+    "CF_39",
+    "CF_40",
+    "CF_41",
+    "CF_42",
+    "CF_43",
+    "CF_44",
+    "CF_45",
+    "CF_46",
+    "CF_47"
+   ],
+   "n_heldout": 15,
+   "n_with_twin_in_dev_or_val": 15
+  }
+ },
+ "id_collisions_across_splits": {
+  "MC_02": [
+   "dev",
+   "val"
+  ],
+  "MC_03": [
+   "dev",
+   "held_out_v1"
+  ]
+ },
+ "labels_not_reflected_in_observable_series": [
+  "fault_type",
+  "confounded",
+  "affected_services",
+  "expected_recovery_t",
+  "workload",
+  "observability"
+ ],
+ "leakage": {
+  "effective_dynamics": {
+   "cells": {
+    "dev": {
+     "dev": {
+      "denominator": 50,
+      "fraction": 0.74,
+      "n_with_twin": 37
+     },
+     "held_out_v1": {
+      "denominator": 50,
+      "fraction": 0.64,
+      "n_with_twin": 32
+     },
+     "val": {
+      "denominator": 50,
+      "fraction": 0.72,
+      "n_with_twin": 36
+     }
+    },
+    "held_out_v1": {
+     "dev": {
+      "denominator": 15,
+      "fraction": 1.0,
+      "n_with_twin": 15
+     },
+     "held_out_v1": {
+      "denominator": 15,
+      "fraction": 0.8,
+      "n_with_twin": 12
+     },
+     "val": {
+      "denominator": 15,
+      "fraction": 0.9333333333333333,
+      "n_with_twin": 14
+     }
+    },
+    "val": {
+     "dev": {
+      "denominator": 18,
+      "fraction": 1.0,
+      "n_with_twin": 18
+     },
+     "held_out_v1": {
+      "denominator": 18,
+      "fraction": 0.8333333333333334,
+      "n_with_twin": 15
+     },
+     "val": {
+      "denominator": 18,
+      "fraction": 0.7222222222222222,
+      "n_with_twin": 13
+     }
+    }
+   },
+   "distinct_keys": {
+    "dev": 22,
+    "held_out_v1": 7,
+    "val": 9
+   },
+   "level": "effective_dynamics",
+   "shared_distinct_keys": {
+    "dev&held_out_v1": 7,
+    "dev&val": 9,
+    "val&held_out_v1": 6
+   }
+  },
+  "raw_content": {
+   "cells": {
+    "dev": {
+     "dev": {
+      "denominator": 50,
+      "fraction": 0.68,
+      "n_with_twin": 34
+     },
+     "held_out_v1": {
+      "denominator": 50,
+      "fraction": 0.56,
+      "n_with_twin": 28
+     },
+     "val": {
+      "denominator": 50,
+      "fraction": 0.68,
+      "n_with_twin": 34
+     }
+    },
+    "held_out_v1": {
+     "dev": {
+      "denominator": 15,
+      "fraction": 1.0,
+      "n_with_twin": 15
+     },
+     "held_out_v1": {
+      "denominator": 15,
+      "fraction": 0.8,
+      "n_with_twin": 12
+     },
+     "val": {
+      "denominator": 15,
+      "fraction": 0.9333333333333333,
+      "n_with_twin": 14
+     }
+    },
+    "val": {
+     "dev": {
+      "denominator": 18,
+      "fraction": 1.0,
+      "n_with_twin": 18
+     },
+     "held_out_v1": {
+      "denominator": 18,
+      "fraction": 0.7777777777777778,
+      "n_with_twin": 14
+     },
+     "val": {
+      "denominator": 18,
+      "fraction": 0.6666666666666666,
+      "n_with_twin": 12
+     }
+    }
+   },
+   "distinct_keys": {
+    "dev": 25,
+    "held_out_v1": 7,
+    "val": 10
+   },
+   "level": "raw_content",
+   "shared_distinct_keys": {
+    "dev&held_out_v1": 7,
+    "dev&val": 10,
+    "val&held_out_v1": 6
+   }
+  },
+  "structure": {
+   "cells": {
+    "dev": {
+     "dev": {
+      "denominator": 50,
+      "fraction": 0.92,
+      "n_with_twin": 46
+     },
+     "held_out_v1": {
+      "denominator": 50,
+      "fraction": 0.68,
+      "n_with_twin": 34
+     },
+     "val": {
+      "denominator": 50,
+      "fraction": 0.76,
+      "n_with_twin": 38
+     }
+    },
+    "held_out_v1": {
+     "dev": {
+      "denominator": 15,
+      "fraction": 1.0,
+      "n_with_twin": 15
+     },
+     "held_out_v1": {
+      "denominator": 15,
+      "fraction": 0.8,
+      "n_with_twin": 12
+     },
+     "val": {
+      "denominator": 15,
+      "fraction": 0.9333333333333333,
+      "n_with_twin": 14
+     }
+    },
+    "val": {
+     "dev": {
+      "denominator": 18,
+      "fraction": 1.0,
+      "n_with_twin": 18
+     },
+     "held_out_v1": {
+      "denominator": 18,
+      "fraction": 0.8333333333333334,
+      "n_with_twin": 15
+     },
+     "val": {
+      "denominator": 18,
+      "fraction": 0.7777777777777778,
+      "n_with_twin": 14
+     }
+    }
+   },
+   "distinct_keys": {
+    "dev": 13,
+    "held_out_v1": 4,
+    "val": 6
+   },
+   "level": "structure",
+   "shared_distinct_keys": {
+    "dev&held_out_v1": 4,
+    "dev&val": 6,
+    "val&held_out_v1": 3
+   }
+  },
+  "template": {
+   "cells": {
+    "dev": {
+     "dev": {
+      "denominator": 50,
+      "fraction": 0.84,
+      "n_with_twin": 42
+     },
+     "held_out_v1": {
+      "denominator": 50,
+      "fraction": 0.58,
+      "n_with_twin": 29
+     },
+     "val": {
+      "denominator": 50,
+      "fraction": 0.7,
+      "n_with_twin": 35
+     }
+    },
+    "held_out_v1": {
+     "dev": {
+      "denominator": 15,
+      "fraction": 1.0,
+      "n_with_twin": 15
+     },
+     "held_out_v1": {
+      "denominator": 15,
+      "fraction": 0.8,
+      "n_with_twin": 12
+     },
+     "val": {
+      "denominator": 15,
+      "fraction": 0.9333333333333333,
+      "n_with_twin": 14
+     }
+    },
+    "val": {
+     "dev": {
+      "denominator": 18,
+      "fraction": 1.0,
+      "n_with_twin": 18
+     },
+     "held_out_v1": {
+      "denominator": 18,
+      "fraction": 0.7777777777777778,
+      "n_with_twin": 14
+     },
+     "val": {
+      "denominator": 18,
+      "fraction": 0.6666666666666666,
+      "n_with_twin": 12
+     }
+    }
+   },
+   "distinct_keys": {
+    "dev": 17,
+    "held_out_v1": 4,
+    "val": 7
+   },
+   "level": "template",
+   "shared_distinct_keys": {
+    "dev&held_out_v1": 4,
+    "dev&val": 7,
+    "val&held_out_v1": 3
+   }
+  }
+ },
+ "legacy_generator_consumed_fields": [
+  "root_cause_service",
+  "causal_path",
+  "injected_at_t",
+  "seed"
+ ],
+ "n_records": {
+  "adversarial": 30,
+  "dev": 50,
+  "held_out_v1": 15,
+  "val": 18
+ },
+ "near_duplicate_pairs_ge_0.70_excluding_exact": 50,
+ "near_duplicate_pairs_ge_0.85_excluding_exact": 1,
+ "seed_only_groups_pooled_core": [
+  [
+   "NL_01",
+   "NL_02",
+   "NL_03"
+  ],
+  [
+   "PL_01",
+   "PL_02",
+   "PL_03"
+  ],
+  [
+   "SD_01",
+   "SD_02",
+   "SD_03"
+  ],
+  [
+   "RC_01",
+   "RC_02",
+   "RC_03"
+  ],
+  [
+   "QU_01",
+   "QU_02",
+   "QU_03"
+  ],
+  [
+   "DF_01",
+   "DF_02",
+   "DF_03"
+  ],
+  [
+   "MC_01",
+   "MC_02",
+   "MC_03"
+  ],
+  [
+   "CF_00",
+   "CF_04",
+   "CF_08",
+   "CF_12",
+   "CF_16",
+   "CF_20",
+   "CF_24",
+   "CF_28",
+   "CF_32",
+   "CF_36",
+   "CF_40",
+   "CF_44"
+  ],
+  [
+   "CF_01",
+   "CF_05",
+   "CF_09",
+   "CF_13",
+   "CF_17",
+   "CF_21",
+   "CF_25",
+   "CF_29",
+   "CF_33",
+   "CF_37",
+   "CF_41",
+   "CF_45"
+  ],
+  [
+   "CF_02",
+   "CF_06",
+   "CF_10",
+   "CF_14",
+   "CF_18",
+   "CF_22",
+   "CF_26",
+   "CF_30",
+   "CF_34",
+   "CF_38",
+   "CF_42",
+   "CF_46"
+  ],
+  [
+   "CF_03",
+   "CF_07",
+   "CF_11",
+   "CF_15",
+   "CF_19",
+   "CF_23",
+   "CF_27",
+   "CF_31",
+   "CF_35",
+   "CF_39",
+   "CF_43",
+   "CF_47"
+  ]
+ ],
+ "seed_only_variant_groups": {
+  "adversarial": [
+   [
+    "ADV_A_01",
+    "ADV_A_02",
+    "ADV_A_03",
+    "ADV_A_04",
+    "ADV_A_05"
+   ],
+   [
+    "ADV_B_01",
+    "ADV_B_02",
+    "ADV_B_03",
+    "ADV_B_04",
+    "ADV_B_05"
+   ],
+   [
+    "ADV_C_01",
+    "ADV_C_02",
+    "ADV_C_03",
+    "ADV_C_04",
+    "ADV_C_05"
+   ],
+   [
+    "ADV_D_01",
+    "ADV_D_02",
+    "ADV_D_03",
+    "ADV_D_04",
+    "ADV_D_05"
+   ],
+   [
+    "ADV_E_01",
+    "ADV_E_02",
+    "ADV_E_03",
+    "ADV_E_04",
+    "ADV_E_05"
+   ],
+   [
+    "ADV_F_01",
+    "ADV_F_02",
+    "ADV_F_03",
+    "ADV_F_04",
+    "ADV_F_05"
+   ]
+  ],
+  "dev": [
+   [
+    "NL_01",
+    "NL_02"
+   ],
+   [
+    "PL_01",
+    "PL_02"
+   ],
+   [
+    "SD_01",
+    "SD_02"
+   ],
+   [
+    "RC_01",
+    "RC_02"
+   ],
+   [
+    "QU_01",
+    "QU_02"
+   ],
+   [
+    "CF_00",
+    "CF_04",
+    "CF_08",
+    "CF_12",
+    "CF_16",
+    "CF_20"
+   ],
+   [
+    "CF_01",
+    "CF_05",
+    "CF_09",
+    "CF_13",
+    "CF_17",
+    "CF_21"
+   ],
+   [
+    "CF_02",
+    "CF_06",
+    "CF_10",
+    "CF_14",
+    "CF_18",
+    "CF_22"
+   ],
+   [
+    "CF_03",
+    "CF_07",
+    "CF_11",
+    "CF_15",
+    "CF_19",
+    "CF_23"
+   ]
+  ],
+  "held_out_v1": [
+   [
+    "CF_36",
+    "CF_40",
+    "CF_44"
+   ],
+   [
+    "CF_37",
+    "CF_41",
+    "CF_45"
+   ],
+   [
+    "CF_38",
+    "CF_42",
+    "CF_46"
+   ],
+   [
+    "CF_39",
+    "CF_43",
+    "CF_47"
+   ]
+  ],
+  "val": [
+   [
+    "CF_24",
+    "CF_28",
+    "CF_32"
+   ],
+   [
+    "CF_25",
+    "CF_29",
+    "CF_33"
+   ],
+   [
+    "CF_26",
+    "CF_30",
+    "CF_34"
+   ],
+   [
+    "CF_27",
+    "CF_31",
+    "CF_35"
+   ]
+  ]
+ },
+ "template_prefix_by_split": {
+  "adversarial": {
+   "ADV_A": 5,
+   "ADV_B": 5,
+   "ADV_C": 5,
+   "ADV_D": 5,
+   "ADV_E": 5,
+   "ADV_F": 5
+  },
+  "dev": {
+   "AA": 3,
+   "CF": 24,
+   "DF": 1,
+   "MC": 12,
+   "NL": 2,
+   "PL": 2,
+   "QU": 2,
+   "RC": 2,
+   "SD": 2
+  },
+  "held_out_v1": {
+   "CF": 12,
+   "DF": 1,
+   "MC": 1,
+   "QU": 1
+  },
+  "val": {
+   "CF": 12,
+   "DF": 1,
+   "MC": 1,
+   "NL": 1,
+   "PL": 1,
+   "RC": 1,
+   "SD": 1
+  }
+ }
+}

@@ -38,6 +38,7 @@ from src.rift.graph.time_slice import (
     collapse_to_service_graph,
 )
 from src.rift.graph.anomaly_subgraph import build_anomaly_subgraph
+from src.rift.cid.evidence import CIDEvidenceStore
 
 # ── Stage 5: FCI ────────────────────────────────────────────────────────────
 from src.rift.fci.fci_runner import run_fci, PAGResult, PAGEdgeType
@@ -95,10 +96,28 @@ class PrometheusClient:
     Live validation requires a deployed Online Boutique on Linux.
     """
 
-    # Prometheus metric queries per service
-    # Each query uses the {job=~"<service>"} label selector; the service name
-    # is substituted at collection time.
+    # OpenTelemetry Spanmetrics queries (Primary RIFT telemetry format)
+    # Queries match span_name or service_name and convert duration ms -> seconds.
     _METRIC_QUERIES: Dict[str, str] = {
+        "lat_p99": (
+            "histogram_quantile(0.99, "
+            "sum by (le) (rate(rift_duration_milliseconds_bucket"
+            '{{span_name=~"(?i).*{service}.*"}}[2m]))) / 1000'
+        ),
+        "rps": (
+            "sum(rate(rift_calls_total"
+            '{{span_name=~"(?i).*{service}.*"}}[2m]))'
+        ),
+        "err_rate": (
+            "sum(rate(rift_calls_total"
+            '{{span_name=~"(?i).*{service}.*",status_code=~".*ERROR.*"}}[2m])) / '
+            "clamp_min(sum(rate(rift_calls_total"
+            '{{span_name=~"(?i).*{service}.*"}}[2m])), 1e-9)'
+        ),
+    }
+
+    # Direct gRPC exporter queries (Legacy / fallback format)
+    _FALLBACK_QUERIES: Dict[str, str] = {
         "lat_p99": (
             "histogram_quantile(0.99, "
             "sum(rate(grpc_server_handling_seconds_bucket"
@@ -122,23 +141,27 @@ class PrometheusClient:
         scrape_interval_s: float = 15.0,
         timeout_s: float = 10.0,
         primary_metric: str = "lat_p99",
+        metric_queries: Optional[Dict[str, str]] = None,
     ):
         """
         Args:
             endpoint:          Base URL of the Prometheus HTTP API,
-                               e.g. "http://prometheus:9090"
+                                e.g. "http://prometheus:9090"
             scrape_interval_s: Expected scrape interval in seconds (default 15).
-                               Used to compute the Prometheus `step` parameter
-                               so that every scrape window aligns to Δt=10s.
+                                Used to compute the Prometheus `step` parameter
+                                so that every scrape window aligns to Δt=10s.
             timeout_s:         HTTP request timeout in seconds (default 10).
             primary_metric:    Which metric query to use when a single aggregated
-                               value per service is needed. One of: lat_p99, rps,
-                               err_rate. Default: lat_p99.
+                                value per service is needed. One of: lat_p99, rps,
+                                err_rate. Default: lat_p99.
+            metric_queries:    Optional custom metric query dictionary mapping
+                                metric names to PromQL template strings.
         """
         self.endpoint = endpoint.rstrip("/")
         self.scrape_interval_s = scrape_interval_s
         self.timeout_s = timeout_s
         self.primary_metric = primary_metric
+        self.metric_queries = metric_queries if metric_queries is not None else self._METRIC_QUERIES
         self._is_live = True
 
     @property
@@ -269,12 +292,16 @@ class PrometheusClient:
         # Align step to scrape interval; minimum 10s (Δt from SPEC_FREEZE §2)
         step_s = max(10.0, self.scrape_interval_s)
 
-        template = self._METRIC_QUERIES[self.primary_metric]
+        template = self.metric_queries.get(self.primary_metric, self._METRIC_QUERIES.get(self.primary_metric, ""))
         result: Dict[str, pd.DataFrame] = {}
 
         for svc in services:
             query = template.format(service=svc)
             series = self._query_range(query, t_end=t_end, window_s=window_s, step_s=step_s)
+            if not series and self.metric_queries is self._METRIC_QUERIES and self.primary_metric in self._FALLBACK_QUERIES:
+                fallback_template = self._FALLBACK_QUERIES[self.primary_metric]
+                fallback_query = fallback_template.format(service=svc)
+                series = self._query_range(fallback_query, t_end=t_end, window_s=window_s, step_s=step_s)
             df = self._result_to_dataframe(series)
             result[svc] = df
 
@@ -450,7 +477,11 @@ class RIFTEndToEndRunner:
         delta_t: float = 10.0,
         theta_detect: float = 3.0,
         max_iterations: int = 10,
+        post_window_s: float = 60.0,
+        observe_window_s: float = 300.0,
     ):
+        self.post_window_s = post_window_s
+        self.observe_window_s = observe_window_s
         self.telemetry_source = telemetry_source
         self.services = services
         self.call_graph = call_graph
@@ -560,7 +591,7 @@ class RIFTEndToEndRunner:
         try:
             metrics = self.telemetry_source.collect(
                 services=self.services,
-                window_s=300.0,
+                window_s=self.observe_window_s,
             )
             observe_status = "COMPLETE"
             observe_notes = (
@@ -1023,7 +1054,7 @@ class RIFTEndToEndRunner:
         try:
             post_metrics = self.telemetry_source.collect(
                 services=self.services,
-                window_s=60.0,
+                window_s=self.post_window_s,
             )
             post_status = "COMPLETE"
             post_notes = f"Post-intervention metrics collected for {len(post_metrics)} services."
@@ -1054,44 +1085,56 @@ class RIFTEndToEndRunner:
 
         # ── STAGE 13: CID ─────────────────────────────────────────────────────
         t0 = time.time()
-        cid_results: Dict[str, Any] = {}
-
+        # Sprint 4.2.4: canonical CID identity = (intervened service X, outcome service Y).
+        # For each do(X) we compare Y's baseline vs post-intervention distribution for every
+        # OTHER observed service Y. Previously the runner stored a self-referential entry under
+        # a string key that R4 could never look up.
+        # Baseline for Y is its PRE-INCIDENT distribution (caller-supplied baseline_metrics, else
+        # the first half of the observation window, consistent with _default_baselines). Using the
+        # incident window itself would fold the fault into the "baseline" and make CID > 0 even
+        # when the intervention had no effect.
+        cid_store = CIDEvidenceStore()
         for rec in verified_records:
-            svc = rec.source_service
-            if svc not in metrics or svc not in post_metrics:
-                continue
-            baseline_vals = metrics[svc]["value"].values
-            post_vals = post_metrics[svc]["value"].values
-            cid = compute_cid(
-                baseline_samples=baseline_vals,
-                post_intervention_samples=post_vals,
-                source_variable=svc,
-                target_variable=f"{svc}.downstream",
-                t_intervention=rec.t_applied or time.time(),
-                intervention_record_id=rec.record_id,
-                n_bootstrap=200,   # reduced for runtime budget
-                n_permutations=1000,
-            )
-            cid_results[f"{svc}→{svc}.downstream"] = cid
+            x = rec.source_service
+            for y in sorted(metrics):
+                if y == x or y not in post_metrics:
+                    continue
+                if baseline_metrics and y in baseline_metrics:
+                    base_vals = baseline_metrics[y]["value"].values
+                else:
+                    base_vals = metrics[y]["value"].values[: max(1, len(metrics[y]) // 2)]
+                cid = compute_cid(
+                    baseline_samples=base_vals,
+                    post_intervention_samples=post_metrics[y]["value"].values,
+                    source_variable=x,
+                    target_variable=y,
+                    t_intervention=rec.t_applied or time.time(),
+                    intervention_record_id=rec.record_id,
+                    n_bootstrap=200,   # reduced for runtime budget
+                    n_permutations=1000,
+                )
+                cid_store.add(cid)
+        cid_results = cid_store
 
         provenance_map["CID"] = {
             "source": "cid/cid.py compute_cid() W1 Wasserstein",
             "upstream": "POST_OBSERVE + baseline from OBSERVE",
             "telemetry_ref": telemetry_ref,
-            "n_pairs": len(cid_results),
+            "n_pairs": len(cid_store),
+            "schema": "rift.cid_evidence/1",
             "metric": "Wasserstein W1",
             "theta_cid": "0.1 * IQR_baseline",
         }
         stage_records.append(self._stage(
             "CID", t0, "COMPLETE",
-            {"n_pairs": len(cid_results),
-             "grades": {k: v.grade.value for k, v in cid_results.items()},
+            {"n_pairs": len(cid_store),
+             "grades": {k.as_legacy_string(): v.grade.value for k, v in cid_store},
              "exceeds_threshold": {
-                 k: v.exceeds_threshold for k, v in cid_results.items()
+                 k.as_legacy_string(): v.exceeds_threshold for k, v in cid_store
              }},
             "POST_OBSERVE",
             notes=(
-                f"CID computed for {len(cid_results)} source→target pairs. "
+                f"CID computed for {len(cid_store)} (intervened, outcome) pairs. "
                 "Primary metric: W1 Wasserstein. θ_cid = 0.1×IQR_baseline."
             ),
         ))
@@ -1126,6 +1169,9 @@ class RIFTEndToEndRunner:
                 "r4_pass": r.r4_pass,
                 "boundary_limited": r.boundary_limited,
                 "anomaly_score": r.anomaly_score,
+                "identifiability_state": r.identifiability_state,
+                "causal_path_kind": r.causal_path_kind,
+                "evidence_type": r.evidence_type,
             }
             for r in ebd_candidates
         ]
@@ -1164,18 +1210,15 @@ class RIFTEndToEndRunner:
             budget_remaining=self.t_budget_s,
         )
 
-        # Apply evidence from each CID result
+        # Apply evidence from each CID result (canonical (intervened, outcome) identity)
         for svc in selected_services:
-            key = f"{svc}→{svc}.downstream"
-            if key in cid_results:
-                cid = cid_results[key]
+            by_outcome = cid_store.for_intervened(svc)
+            for outcome, cid in sorted(by_outcome.items()):
                 if cid.w1_estimate is not None:
-                    cl_state = cl_engine.update_edge_confidence(
-                        cl_state, svc, f"{svc}.downstream", cid.w1_estimate
-                    )
-                    cl_state = cl_engine.update_candidate_posterior(
-                        cl_state, svc, cid.w1_estimate
-                    )
+                    cl_state = cl_engine.update_edge_confidence(cl_state, svc, outcome, cid.w1_estimate)
+            valid = [c.w1_estimate for c in by_outcome.values() if c.w1_estimate is not None]
+            if valid:
+                cl_state = cl_engine.update_candidate_posterior(cl_state, svc, max(valid))
 
         provenance_map["GRAPH_UPDATE"] = {
             "source": "loop/closed_loop.py ClosedLoop.update_edge_confidence() + update_candidate_posterior()",
@@ -1209,10 +1252,15 @@ class RIFTEndToEndRunner:
             attribution = None
             attribution_confidence = "NONE"
 
-        # RIFT abstains if top EBD is NONE or boundary_limited with no CID support
+        # RIFT abstains if top EBD is NONE, boundary_limited with no CID support, or
+        # NOT_IDENTIFIABLE (bidirected edge adjacent -> possible hidden confounder) with
+        # no interventional (R4) evidence. Sprint 4.2.3: the last clause was missing, so
+        # a confounder-adjacent candidate was reported as a PASS attribution.
         abstain = (
             attribution_confidence == "NONE" or
-            (ebd_candidates and ebd_candidates[0].boundary_limited and not ebd_candidates[0].r4_pass)
+            (ebd_candidates and ebd_candidates[0].boundary_limited and not ebd_candidates[0].r4_pass) or
+            (ebd_candidates and ebd_candidates[0].identifiability_state == "NOT_IDENTIFIABLE"
+             and not ebd_candidates[0].r4_pass)
         )
         if abstain:
             attribution = None

@@ -1,0 +1,265 @@
+{
+  "schema": "rift.stage4_attribution/1",
+  "prediction": {
+    "predicted_root": null,
+    "confidence": 0.0,
+    "confidence_label": "NONE",
+    "abstained": true,
+    "abstention_reason": "NOT_IDENTIFIABLE",
+    "ebd_candidate": "cartservice",
+    "ebd_candidate_confidence": "CANDIDATE",
+    "ebd_tied_at_t_star": [
+      "frontend",
+      "shippingservice",
+      "adservice"
+    ],
+    "causal_path_kind": "SEMI_DIRECTED",
+    "evidence_type": "OBSERVATIONAL",
+    "cid_grade": "INSUFFICIENT",
+    "cid_evidence": {
+      "cartservice\u2192adservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 1.4683734939691107e-05,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192checkoutservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 0.025,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192currencyservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 2.0616883116883984,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192emailservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 0.49099999999999994,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192frontend": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 1.2333333333333458,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192paymentservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 1.4024999999999996,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192productcatalogservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 0.02794479166666677,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192recommendationservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 0.0049488579940417665,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      },
+      "cartservice\u2192shippingservice": {
+        "grade": "INSUFFICIENT",
+        "n_baseline": 15,
+        "n_post": 12,
+        "w1": null,
+        "theta_cid": 0.023999999999999935,
+        "permutation_significant": null,
+        "exceeds_threshold": null
+      }
+    },
+    "detection_timestamp": 1793642335.0,
+    "prediction_timestamp": 1793642445.0,
+    "identifiability": {
+      "query": [
+        "cartservice",
+        "frontend"
+      ],
+      "status": "NOT_IDENTIFIABLE",
+      "method": "ABSTAIN",
+      "blocking_reason": "Bidirected edge (\u2194) between source and target with no directed causal path. Hidden confounder causes correlation without direct causation. No backdoor set, front-door set, or intervention can establish P(Y | do(X:=x)) from this PAG structure. RIFT ABSTAINS.",
+      "all_pairs": {
+        "frontend": "NOT_IDENTIFIABLE",
+        "shippingservice": "NOT_IDENTIFIABLE",
+        "adservice": "NOT_IDENTIFIABLE"
+      }
+    },
+    "pag_edges": [
+      [
+        "adservice",
+        "frontend",
+        "UNDIRECTED"
+      ],
+      [
+        "cartservice",
+        "checkoutservice",
+        "UNDIRECTED"
+      ],
+      [
+        "cartservice",
+        "emailservice",
+        "BIDIRECTED"
+      ],
+      [
+        "cartservice",
+        "shippingservice",
+        "UNDIRECTED"
+      ],
+      [
+        "checkoutservice",
+        "paymentservice",
+        "UNDIRECTED"
+      ],
+      [
+        "checkoutservice",
+        "shippingservice",
+        "UNDIRECTED"
+      ],
+      [
+        "currencyservice",
+        "emailservice",
+        "UNDIRECTED"
+      ],
+      [
+        "currencyservice",
+        "paymentservice",
+        "UNDIRECTED"
+      ],
+      [
+        "emailservice",
+        "productcatalogservice",
+        "UNDIRECTED"
+      ],
+      [
+        "emailservice",
+        "shippingservice",
+        "BIDIRECTED"
+      ],
+      [
+        "shippingservice",
+        "frontend",
+        "DIRECTED"
+      ],
+      [
+        "productcatalogservice",
+        "recommendationservice",
+        "UNDIRECTED"
+      ]
+    ],
+    "diverging_services": [
+      "cartservice",
+      "frontend",
+      "shippingservice",
+      "adservice"
+    ],
+    "warnings": [
+      "Bidirected edge adjacent to cartservice \u2014 possible hidden confounder. EBD confidence may be overstated. RIFT may abstain on identifiability.",
+      "R4 not satisfied: cartservice\u2192adservice: NO_W1_ESTIMATE; cartservice\u2192frontend: NO_W1_ESTIMATE; cartservice\u2192shippingservice: NO_W1_ESTIMATE",
+      "Causal path for cartservice includes non-oriented PAG edges (o->, o-o or undirected). This is semi-directed reachability, not established causal ancestry."
+    ],
+    "parameters": {
+      "alpha": 0.05,
+      "seed": 42,
+      "delta_t": 10.0,
+      "theta_detect": 3.0,
+      "theta_persist": 2,
+      "direction": "both",
+      "n_pre": 15,
+      "n_active": 12,
+      "services": [
+        "adservice",
+        "cartservice",
+        "checkoutservice",
+        "currencyservice",
+        "emailservice",
+        "frontend",
+        "paymentservice",
+        "productcatalogservice",
+        "recommendationservice",
+        "shippingservice"
+      ]
+    }
+  },
+  "evaluation": {
+    "ground_truth_root": "cartservice",
+    "outcome": "ABSTAINED",
+    "top1_correct": null,
+    "coverage": 0.0,
+    "ebd_candidate_matches_ground_truth": true,
+    "n_trials": 1,
+    "note": "Single trial; not a statistical estimate. ABSTAINED is neither correct nor incorrect."
+  },
+  "summary": {
+    "predicted_root": null,
+    "ground_truth_root": "cartservice",
+    "confidence": 0.0,
+    "abstained": true,
+    "ebd_candidate": "cartservice",
+    "causal_path_kind": "SEMI_DIRECTED",
+    "evidence_type": "OBSERVATIONAL",
+    "cid_grade": "INSUFFICIENT",
+    "detection_timestamp": 1793642335.0,
+    "prediction_timestamp": 1793642445.0
+  },
+  "inputs": {
+    "evidence_keys_read": [
+      "pre_baseline",
+      "intervention",
+      "target_service"
+    ],
+    "label_keys_ignored_by_inference": [
+      "ground_truth",
+      "attributed_root_cause",
+      "attribution_accuracy_top1",
+      "verdict",
+      "summary_table"
+    ],
+    "evidence_sha256": "3fc5566b0d703b4bb6f5dfca96aac1721653d1110e52888d9325cea9133f0098",
+    "n_services": 10,
+    "n_pre": 15,
+    "n_active": 12,
+    "incident_window": [
+      1793642335.0,
+      1793642445.0
+    ],
+    "intervention": {
+      "service_id": "cartservice",
+      "applied_at": 1793642335.0,
+      "source": "target_service"
+    },
+    "source_artifact": "artifacts/stage4_intervention_results.json",
+    "source_artifact_sha256": "e4cf1391c83bcb33070e8bc4ae3f8b792df2e0d1970df14524fc6c8d5d1dcffe"
+  },
+  "computed_at_utc": "2026-11-09T05:11:41.743327+00:00"
+}

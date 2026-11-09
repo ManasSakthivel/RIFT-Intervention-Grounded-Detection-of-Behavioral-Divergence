@@ -1,0 +1,484 @@
+{
+  "source": "artifacts/stage4_intervention_results.json",
+  "per_service": {
+    "frontend": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          224.17,
+          231.79,
+          236.5
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          297.5,
+          595.0
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          200.8,
+          216.14,
+          232.58,
+          232.64
+        ]
+      }
+    },
+    "cartservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.96,
+          4.99,
+          8.15
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          227.5,
+          244.8
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.96,
+          4.98,
+          4.99
+        ]
+      }
+    },
+    "productcatalogservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          3.89,
+          4.17,
+          4.37
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          3.94,
+          4.08
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          3.59,
+          3.93,
+          4.09,
+          4.24
+        ]
+      }
+    },
+    "currencyservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          54.95,
+          68.06,
+          75.57
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          69.53,
+          70.55
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          45.94,
+          47.5,
+          78.74,
+          79.3
+        ]
+      }
+    },
+    "paymentservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.9,
+          9.93,
+          23.95
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.89,
+          9.91
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.88,
+          9.9
+        ]
+      }
+    },
+    "shippingservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.07,
+          4.31,
+          4.53
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 1,
+        "plateau_lengths": [
+          12
+        ],
+        "distinct_values_ms": [
+          1.98
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          1.98,
+          3.77,
+          4.25,
+          4.65
+        ]
+      }
+    },
+    "emailservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.94,
+          9.5,
+          9.85
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 1,
+        "plateau_lengths": [
+          12
+        ],
+        "distinct_values_ms": [
+          4.94
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          5,
+          6,
+          12
+        ],
+        "distinct_values_ms": [
+          4.93,
+          4.94
+        ]
+      }
+    },
+    "checkoutservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          99.0,
+          99.25,
+          245.0
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          245.5,
+          246.25
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          98.3,
+          99.17,
+          241.0,
+          241.75
+        ]
+      }
+    },
+    "recommendationservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.89,
+          9.94,
+          13.55
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.88
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          9.87,
+          9.89,
+          9.93,
+          9.94
+        ]
+      }
+    },
+    "adservice": {
+      "pre": {
+        "n_samples": 15,
+        "n_plateaus": 3,
+        "plateau_lengths": [
+          3,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.97,
+          8.45
+        ]
+      },
+      "active": {
+        "n_samples": 12,
+        "n_plateaus": 2,
+        "plateau_lengths": [
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.97,
+          12.25
+        ]
+      },
+      "post": {
+        "n_samples": 23,
+        "n_plateaus": 4,
+        "plateau_lengths": [
+          5,
+          6,
+          6,
+          6
+        ],
+        "distinct_values_ms": [
+          4.96,
+          7.63,
+          10.6,
+          11.8
+        ]
+      }
+    }
+  },
+  "plateau_length_summary": {
+    "median_samples": 6.0,
+    "mean_samples": 5.75,
+    "share_of_plateaus_ge_3_samples": 1.0,
+    "interpretation": "Series are constant for several consecutive 10 s samples, i.e. the effective update interval is longer than the 10 s query step (consistent with a 60 s spanmetrics flush; flush interval not verified from the running stack)."
+  },
+  "bucket_argument": {
+    "buckets_ms": [
+      2,
+      5,
+      10,
+      25,
+      50,
+      100,
+      250,
+      500,
+      1000
+    ],
+    "cartservice_active_p99_ms": [
+      227.5,
+      244.8
+    ],
+    "statement": "histogram_quantile(0.99) returns a value inside (100, 250] ms only if at least ~1% of the spans in the 2 m rate window were slower than 100 ms. Linear interpolation inside the bucket means the exact value (227.5 vs 244.8) reflects bucket mass, not a measured latency.",
+    "single_hop_expectation_ms": "cartservice baseline p99 ~5-8 ms + one 50 ms egress delay would land in (50, 100] ms if the delay were applied once per request. Observing p99 > 100 ms therefore requires >=1% of spans to carry more than ~one delayed hop or additional queueing/retry/client-span effects. This is a lower-bound argument, not an identification of the mechanism.",
+    "mean_latency_not_available": true
+  },
+  "checkoutservice_level_outside_intervention": {
+    "pre_values_ms": [
+      99.0,
+      99.25,
+      245.0
+    ],
+    "active_values_ms": [
+      245.5,
+      246.25
+    ],
+    "post_values_ms": [
+      98.3,
+      99.17,
+      241.0,
+      241.75
+    ],
+    "statement": "The ~241-246 ms level appears in pre-baseline and post-recovery windows in which no intervention was active; an increase to that level during the active window is therefore not evidence of an intervention-caused shift for checkoutservice."
+  },
+  "measurement_definition_issues_from_code": [
+    "Query regex span_name=~\"(?i).*<service>.*\" matches any span whose NAME contains the service string, with no span_kind filter; callers' client spans and callee server spans are merged.",
+    "sum by (le) merges all matching operations into a single mixture histogram.",
+    "tc filter 'u32 match ip protocol 6' delays ALL TCP egress from the cart container (gRPC replies, Redis requests, telemetry export), not only application replies.",
+    "Active-phase analysis window (110 s) and rate(...[2m]) both extend beyond the 30 s intervention."
+  ],
+  "conclusion": "Not resolvable from saved data. Compounded multi-hop egress delay is consistent with p99 > 100 ms but 2 x 50 ms = ~100 ms still leaves part of the 227-245 ms bucket-interpolated value unexplained; queueing, retries, mixed client/server span aggregation and bucket interpolation are not excluded. No per-request, per-hop or trace data were saved, so no mechanism is claimed."
+}

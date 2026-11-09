@@ -61,8 +61,8 @@ safety:
 
 network_intervention:
   backend: "linux_tc_netem"      # requires Linux+CAP_NET_ADMIN
-  interface: "eth0"
-  namespace: "rift-eval-default"
+  interface: "eth0"              # container-internal interface inside target NetNS (not host eth0)
+  namespace: "rift-eval-default" # explicit container network namespace
 
 linux_requirements:
   - "Linux kernel >= 4.19"

@@ -1,0 +1,2293 @@
+{
+ "note": "POST-HOC descriptive evidence for docs/SPRINT4_3_0_FAILURE_TAXONOMY.md; held-out section uses saved results only (no method execution).",
+ "dev": {
+  "n": 180,
+  "attribute_scenarios": 68,
+  "attribute_answered": 42,
+  "attribute_answered_correct": 28,
+  "attribute_answered_wrong": 14,
+  "attribute_abstained": 26,
+  "wrong_root_relation": {
+   "downstream_of_true_root": 14
+  },
+  "wrong_root_ids": [
+   "V2D-0015",
+   "V2D-0017",
+   "V2D-0021",
+   "V2D-0029",
+   "V2D-0039",
+   "V2D-0044",
+   "V2D-0047",
+   "V2D-0054",
+   "V2D-0114",
+   "V2D-0125",
+   "V2D-0146",
+   "V2D-0159",
+   "V2D-0167",
+   "V2D-0169"
+  ],
+  "wrong_root_path_kind": {
+   "SEMI_DIRECTED": 14
+  },
+  "answered_path_kind_correctness": {
+   "DIRECTED": {
+    "answered": 0,
+    "correct": 0
+   },
+   "SEMI_DIRECTED": {
+    "answered": 80,
+    "correct": 28
+   }
+  },
+  "abstention_reasons_on_attribute": {
+   "INTERVENTION_NOT_VERIFIED": 15,
+   "INSUFFICIENT_BASELINE": 11
+  },
+  "unsafe_on_abstain_required_by_label_reason": {
+   "WEAK_SIGNAL": 16,
+   "NO_DISCRIMINATING_EVIDENCE": 7,
+   "ROOT_UNOBSERVED": 6,
+   "SYMMETRIC_MUTUAL_DEPENDENCY": 9
+  },
+  "answered_top_is_true_root_on_abstain_required": 17,
+  "categories": {
+   "C02_earliest_divergence_ambiguity": {
+    "V2": {
+     "n": 12,
+     "n_attribute": 1,
+     "n_abstain_required": 11,
+     "P1": {
+      "k": 1,
+      "n": 1,
+      "value": 1.0,
+      "wilson95": [
+       0.2065493117918027,
+       1.0
+      ]
+     },
+     "P2": {
+      "k": 6,
+      "n": 12,
+      "value": 0.5,
+      "wilson95": [
+       0.25378159616252394,
+       0.7462184038374761
+      ]
+     },
+     "unsafe": {
+      "k": 6,
+      "n": 12,
+      "value": 0.5,
+      "wilson95": [
+       0.25378159616252394,
+       0.7462184038374761
+      ]
+     },
+     "coverage": {
+      "k": 7,
+      "n": 12,
+      "value": 0.5833333333333334,
+      "wilson95": [
+       0.31951131084242423,
+       0.8067396875653928
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 6,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 2,
+     "n": 12,
+     "value": 0.16666666666666666,
+     "wilson95": [
+      0.04696514175692082,
+      0.4480308646118111
+     ]
+    },
+    "n_failing_scenarios": 6,
+    "failing_ids": [
+     "V2D-0016",
+     "V2D-0024",
+     "V2D-0028",
+     "V2D-0060",
+     "V2D-0112",
+     "V2D-0144"
+    ],
+    "all_ids_n": 12
+   },
+   "C05_non_identifiable": {
+    "V2": {
+     "n": 30,
+     "n_attribute": 0,
+     "n_abstain_required": 30,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 14,
+      "n": 30,
+      "value": 0.4666666666666667,
+      "wilson95": [
+       0.30232388795369436,
+       0.6385770050304025
+      ]
+     },
+     "unsafe": {
+      "k": 16,
+      "n": 30,
+      "value": 0.5333333333333333,
+      "wilson95": [
+       0.3614229949695976,
+       0.6976761120463056
+      ]
+     },
+     "coverage": {
+      "k": 16,
+      "n": 30,
+      "value": 0.5333333333333333,
+      "wilson95": [
+       0.3614229949695976,
+       0.6976761120463056
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 16,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 9,
+     "n": 30,
+     "value": 0.3,
+     "wilson95": [
+      0.16664748188562525,
+      0.4787578760189556
+     ]
+    },
+    "n_failing_scenarios": 16,
+    "failing_ids": [
+     "V2D-0003",
+     "V2D-0016",
+     "V2D-0024",
+     "V2D-0028",
+     "V2D-0034",
+     "V2D-0052"
+    ],
+    "all_ids_n": 30
+   },
+   "C06_confounding": {
+    "V2": {
+     "n": 38,
+     "n_attribute": 8,
+     "n_abstain_required": 30,
+     "P1": {
+      "k": 2,
+      "n": 8,
+      "value": 0.25,
+      "wilson95": [
+       0.07147921209795555,
+       0.5907245720727483
+      ]
+     },
+     "P2": {
+      "k": 24,
+      "n": 38,
+      "value": 0.631578947368421,
+      "wilson95": [
+       0.4728395943392636,
+       0.7661578084131104
+      ]
+     },
+     "unsafe": {
+      "k": 8,
+      "n": 38,
+      "value": 0.21052631578947367,
+      "wilson95": [
+       0.11074791786551921,
+       0.3634577960792579
+      ]
+     },
+     "coverage": {
+      "k": 10,
+      "n": 38,
+      "value": 0.2631578947368421,
+      "wilson95": [
+       0.14971621186603556,
+       0.42008846317969106
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 8,
+     "lost_coverage_on_attribute": 6
+    },
+    "V2G_unsafe": {
+     "k": 3,
+     "n": 38,
+     "value": 0.07894736842105263,
+     "wilson95": [
+      0.027214595294883195,
+      0.2079937158975197
+     ]
+    },
+    "n_failing_scenarios": 14,
+    "failing_ids": [
+     "V2D-0006",
+     "V2D-0013",
+     "V2D-0014",
+     "V2D-0016",
+     "V2D-0049",
+     "V2D-0051"
+    ],
+    "all_ids_n": 38
+   },
+   "C07_multiple_simultaneous_causes": {
+    "V2": {
+     "n": 60,
+     "n_attribute": 21,
+     "n_abstain_required": 39,
+     "P1": {
+      "k": 8,
+      "n": 21,
+      "value": 0.38095238095238093,
+      "wilson95": [
+       0.20751011264009112,
+       0.5912134637854193
+      ]
+     },
+     "P2": {
+      "k": 28,
+      "n": 60,
+      "value": 0.4666666666666667,
+      "wilson95": [
+       0.3462790595365474,
+       0.5910657306657343
+      ]
+     },
+     "unsafe": {
+      "k": 25,
+      "n": 60,
+      "value": 0.4166666666666667,
+      "wilson95": [
+       0.30064278475893513,
+       0.5427191907467694
+      ]
+     },
+     "coverage": {
+      "k": 33,
+      "n": 60,
+      "value": 0.55,
+      "wilson95": [
+       0.4249193579032369,
+       0.6690634567933404
+      ]
+     },
+     "wrong_root": 6,
+     "unsafe_on_abstain_required": 19,
+     "lost_coverage_on_attribute": 7
+    },
+    "V2G_unsafe": {
+     "k": 11,
+     "n": 60,
+     "value": 0.18333333333333332,
+     "wilson95": [
+      0.10557796842900966,
+      0.2991975384926676
+     ]
+    },
+    "n_failing_scenarios": 32,
+    "failing_ids": [
+     "V2D-0003",
+     "V2D-0005",
+     "V2D-0015",
+     "V2D-0016",
+     "V2D-0024",
+     "V2D-0029"
+    ],
+    "all_ids_n": 60
+   },
+   "C08_high_variance_service": {
+    "V2": {
+     "n": 23,
+     "n_attribute": 2,
+     "n_abstain_required": 21,
+     "P1": {
+      "k": 2,
+      "n": 2,
+      "value": 1.0,
+      "wilson95": [
+       0.3423802239546494,
+       1.0
+      ]
+     },
+     "P2": {
+      "k": 21,
+      "n": 23,
+      "value": 0.9130434782608695,
+      "wilson95": [
+       0.7320401874258483,
+       0.9758199957343082
+      ]
+     },
+     "unsafe": {
+      "k": 2,
+      "n": 23,
+      "value": 0.08695652173913043,
+      "wilson95": [
+       0.02418000426569175,
+       0.2679598125741516
+      ]
+     },
+     "coverage": {
+      "k": 4,
+      "n": 23,
+      "value": 0.17391304347826086,
+      "wilson95": [
+       0.0697865351446468,
+       0.3713764781499663
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 2,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 1,
+     "n": 23,
+     "value": 0.043478260869565216,
+     "wilson95": [
+      0.007716666057951335,
+      0.2099115525545071
+     ]
+    },
+    "n_failing_scenarios": 2,
+    "failing_ids": [
+     "V2D-0006",
+     "V2D-0170"
+    ],
+    "all_ids_n": 23
+   },
+   "C09_weak_intervention_effect": {
+    "V2": {
+     "n": 76,
+     "n_attribute": 27,
+     "n_abstain_required": 49,
+     "P1": {
+      "k": 3,
+      "n": 27,
+      "value": 0.1111111111111111,
+      "wilson95": [
+       0.03852034798244741,
+       0.2805780098213858
+      ]
+     },
+     "P2": {
+      "k": 38,
+      "n": 76,
+      "value": 0.5,
+      "wilson95": [
+       0.39032595363117417,
+       0.6096740463688258
+      ]
+     },
+     "unsafe": {
+      "k": 22,
+      "n": 76,
+      "value": 0.2894736842105263,
+      "wilson95": [
+       0.19961016764984998,
+       0.39959555268179014
+      ]
+     },
+     "coverage": {
+      "k": 25,
+      "n": 76,
+      "value": 0.32894736842105265,
+      "wilson95": [
+       0.2337927357005797,
+       0.44056191206887796
+      ]
+     },
+     "wrong_root": 8,
+     "unsafe_on_abstain_required": 14,
+     "lost_coverage_on_attribute": 16
+    },
+    "V2G_unsafe": {
+     "k": 9,
+     "n": 76,
+     "value": 0.11842105263157894,
+     "wilson95": [
+      0.06356818973321521,
+      0.2099921783678826
+     ]
+    },
+    "n_failing_scenarios": 38,
+    "failing_ids": [
+     "V2D-0005",
+     "V2D-0008",
+     "V2D-0013",
+     "V2D-0016",
+     "V2D-0017",
+     "V2D-0021"
+    ],
+    "all_ids_n": 76
+   },
+   "C10_insufficient_telemetry": {
+    "V2": {
+     "n": 62,
+     "n_attribute": 13,
+     "n_abstain_required": 49,
+     "P1": {
+      "k": 4,
+      "n": 13,
+      "value": 0.3076923076923077,
+      "wilson95": [
+       0.12680703567070326,
+       0.5763065701492199
+      ]
+     },
+     "P2": {
+      "k": 47,
+      "n": 62,
+      "value": 0.7580645161290323,
+      "wilson95": [
+       0.6384749238235117,
+       0.8475410385155373
+      ]
+     },
+     "unsafe": {
+      "k": 7,
+      "n": 62,
+      "value": 0.11290322580645161,
+      "wilson95": [
+       0.055778634989919,
+       0.21519742150150747
+      ]
+     },
+     "coverage": {
+      "k": 11,
+      "n": 62,
+      "value": 0.1774193548387097,
+      "wilson95": [
+       0.10206437721219586,
+       0.29041566986399286
+      ]
+     },
+     "wrong_root": 1,
+     "unsafe_on_abstain_required": 6,
+     "lost_coverage_on_attribute": 8
+    },
+    "V2G_unsafe": {
+     "k": 5,
+     "n": 62,
+     "value": 0.08064516129032258,
+     "wilson95": [
+      0.03493834676486676,
+      0.17528571443417862
+     ]
+    },
+    "n_failing_scenarios": 15,
+    "failing_ids": [
+     "V2D-0008",
+     "V2D-0014",
+     "V2D-0024",
+     "V2D-0028",
+     "V2D-0038",
+     "V2D-0051"
+    ],
+    "all_ids_n": 62
+   },
+   "C11_recovery_anomaly": {
+    "V2": {
+     "n": 29,
+     "n_attribute": 12,
+     "n_abstain_required": 17,
+     "P1": {
+      "k": 5,
+      "n": 12,
+      "value": 0.4166666666666667,
+      "wilson95": [
+       0.1932603124346072,
+       0.6804886891575758
+      ]
+     },
+     "P2": {
+      "k": 18,
+      "n": 29,
+      "value": 0.6206896551724138,
+      "wilson95": [
+       0.4400254406948544,
+       0.7731197799636186
+      ]
+     },
+     "unsafe": {
+      "k": 5,
+      "n": 29,
+      "value": 0.1724137931034483,
+      "wilson95": [
+       0.07597857204821831,
+       0.34548440045021234
+      ]
+     },
+     "coverage": {
+      "k": 10,
+      "n": 29,
+      "value": 0.3448275862068966,
+      "wilson95": [
+       0.19940718436625743,
+       0.5265489605014202
+      ]
+     },
+     "wrong_root": 1,
+     "unsafe_on_abstain_required": 4,
+     "lost_coverage_on_attribute": 6
+    },
+    "V2G_unsafe": {
+     "k": 3,
+     "n": 29,
+     "value": 0.10344827586206896,
+     "wilson95": [
+      0.035814891071239724,
+      0.26385081247949216
+     ]
+    },
+    "n_failing_scenarios": 11,
+    "failing_ids": [
+     "V2D-0008",
+     "V2D-0014",
+     "V2D-0028",
+     "V2D-0029",
+     "V2D-0059",
+     "V2D-0073"
+    ],
+    "all_ids_n": 29
+   },
+   "C12_feedback_like_structure_unseen": {
+    "V2": {
+     "n": 0,
+     "n_attribute": 0,
+     "n_abstain_required": 0,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "unsafe": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "coverage": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 0,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": [
+      NaN,
+      NaN
+     ]
+    },
+    "n_failing_scenarios": 0,
+    "failing_ids": [],
+    "all_ids_n": 0
+   }
+  },
+  "wrong_root_mechanisms": [
+   {
+    "scenario_id": "V2D-0015",
+    "named": "juniper",
+    "true_roots": [
+     "yarrow"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 160.0,
+    "named_t_star": 280.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 3,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0017",
+    "named": "ivy",
+    "true_roots": [
+     "poppy"
+    ],
+    "mechanism": "M1_true_root_not_diverging_or_not_observed",
+    "true_root_t_star": null,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0021",
+    "named": "larch",
+    "true_roots": [
+     "yarrow"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 150.0,
+    "named_t_star": 320.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 4,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0029",
+    "named": "basil",
+    "true_roots": [
+     "kale",
+     "fjord"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 190.0,
+    "named_t_star": 210.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0039",
+    "named": "larch",
+    "true_roots": [
+     "dill",
+     "yarrow"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 230.0,
+    "named_t_star": 100.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0044",
+    "named": "iris",
+    "true_roots": [
+     "ginger"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 170.0,
+    "named_t_star": 190.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 2,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0047",
+    "named": "basil",
+    "true_roots": [
+     "poppy",
+     "juniper"
+    ],
+    "mechanism": "M1_true_root_not_diverging_or_not_observed",
+    "true_root_t_star": null,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0054",
+    "named": "iris",
+    "true_roots": [
+     "yarrow"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 220.0,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0114",
+    "named": "ginger",
+    "true_roots": [
+     "nutmeg",
+     "cedar"
+    ],
+    "mechanism": "M4_true_root_candidate_never_intervened_or_explained_away",
+    "true_root_t_star": 210.0,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 2,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0125",
+    "named": "umber",
+    "true_roots": [
+     "cedar",
+     "zest"
+    ],
+    "mechanism": "M4_true_root_candidate_never_intervened_or_explained_away",
+    "true_root_t_star": 210.0,
+    "named_t_star": 170.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0146",
+    "named": "basil",
+    "true_roots": [
+     "quill"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 160.0,
+    "named_t_star": 180.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0159",
+    "named": "thorn",
+    "true_roots": [
+     "birch"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 200.0,
+    "named_t_star": 190.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0167",
+    "named": "rowan",
+    "true_roots": [
+     "basil"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 140.0,
+    "named_t_star": 150.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2D-0169",
+    "named": "yarrow",
+    "true_roots": [
+     "mint"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 200.0,
+    "named_t_star": 390.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 2,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   }
+  ],
+  "wrong_root_mechanism_counts": {
+   "M2": 8,
+   "M1": 2,
+   "M4": 2,
+   "M3": 2
+  },
+  "wrong_root_true_root_earlier": 9
+ },
+ "val": {
+  "n": 72,
+  "attribute_scenarios": 31,
+  "attribute_answered": 21,
+  "attribute_answered_correct": 8,
+  "attribute_answered_wrong": 13,
+  "attribute_abstained": 10,
+  "wrong_root_relation": {
+   "downstream_of_true_root": 13
+  },
+  "wrong_root_ids": [
+   "V2V-0001",
+   "V2V-0002",
+   "V2V-0011",
+   "V2V-0013",
+   "V2V-0020",
+   "V2V-0027",
+   "V2V-0029",
+   "V2V-0045",
+   "V2V-0055",
+   "V2V-0059",
+   "V2V-0063",
+   "V2V-0068",
+   "V2V-0071"
+  ],
+  "wrong_root_path_kind": {
+   "SEMI_DIRECTED": 13
+  },
+  "answered_path_kind_correctness": {
+   "DIRECTED": {
+    "answered": 0,
+    "correct": 0
+   },
+   "SEMI_DIRECTED": {
+    "answered": 35,
+    "correct": 8
+   }
+  },
+  "abstention_reasons_on_attribute": {
+   "INTERVENTION_NOT_VERIFIED": 5,
+   "INSUFFICIENT_BASELINE": 2,
+   "NO_CANDIDATES": 1,
+   "NOT_IDENTIFIABLE": 2
+  },
+  "unsafe_on_abstain_required_by_label_reason": {
+   "WEAK_SIGNAL": 6,
+   "ROOT_UNOBSERVED": 3,
+   "SYMMETRIC_MUTUAL_DEPENDENCY": 3,
+   "NO_DISCRIMINATING_EVIDENCE": 2
+  },
+  "answered_top_is_true_root_on_abstain_required": 8,
+  "categories": {
+   "C02_earliest_divergence_ambiguity": {
+    "V2": {
+     "n": 6,
+     "n_attribute": 2,
+     "n_abstain_required": 4,
+     "P1": {
+      "k": 1,
+      "n": 2,
+      "value": 0.5,
+      "wilson95": [
+       0.09453120463920084,
+       0.9054687953607992
+      ]
+     },
+     "P2": {
+      "k": 2,
+      "n": 6,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.09677141021353453,
+       0.7000066870052566
+      ]
+     },
+     "unsafe": {
+      "k": 4,
+      "n": 6,
+      "value": 0.6666666666666666,
+      "wilson95": [
+       0.29999331299474324,
+       0.9032285897864654
+      ]
+     },
+     "coverage": {
+      "k": 5,
+      "n": 6,
+      "value": 0.8333333333333334,
+      "wilson95": [
+       0.4364971749742326,
+       0.969946630588185
+      ]
+     },
+     "wrong_root": 1,
+     "unsafe_on_abstain_required": 3,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 3,
+     "n": 6,
+     "value": 0.5,
+     "wilson95": [
+      0.18761630498040816,
+      0.8123836950195918
+     ]
+    },
+    "n_failing_scenarios": 4,
+    "failing_ids": [
+     "V2V-0004",
+     "V2V-0008",
+     "V2V-0036",
+     "V2V-0068"
+    ],
+    "all_ids_n": 6
+   },
+   "C05_non_identifiable": {
+    "V2": {
+     "n": 10,
+     "n_attribute": 0,
+     "n_abstain_required": 10,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 5,
+      "n": 10,
+      "value": 0.5,
+      "wilson95": [
+       0.23659308901147935,
+       0.7634069109885206
+      ]
+     },
+     "unsafe": {
+      "k": 5,
+      "n": 10,
+      "value": 0.5,
+      "wilson95": [
+       0.23659308901147935,
+       0.7634069109885206
+      ]
+     },
+     "coverage": {
+      "k": 5,
+      "n": 10,
+      "value": 0.5,
+      "wilson95": [
+       0.23659308901147935,
+       0.7634069109885206
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 5,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 1,
+     "n": 10,
+     "value": 0.1,
+     "wilson95": [
+      0.017876212896073995,
+      0.4041500295247722
+     ]
+    },
+    "n_failing_scenarios": 5,
+    "failing_ids": [
+     "V2V-0016",
+     "V2V-0018",
+     "V2V-0025",
+     "V2V-0041",
+     "V2V-0046"
+    ],
+    "all_ids_n": 10
+   },
+   "C06_confounding": {
+    "V2": {
+     "n": 15,
+     "n_attribute": 7,
+     "n_abstain_required": 8,
+     "P1": {
+      "k": 2,
+      "n": 7,
+      "value": 0.2857142857142857,
+      "wilson95": [
+       0.08221892324928332,
+       0.6410655504689458
+      ]
+     },
+     "P2": {
+      "k": 7,
+      "n": 15,
+      "value": 0.4666666666666667,
+      "wilson95": [
+       0.24809535232620925,
+       0.6988302012468901
+      ]
+     },
+     "unsafe": {
+      "k": 7,
+      "n": 15,
+      "value": 0.4666666666666667,
+      "wilson95": [
+       0.24809535232620925,
+       0.6988302012468901
+      ]
+     },
+     "coverage": {
+      "k": 9,
+      "n": 15,
+      "value": 0.6,
+      "wilson95": [
+       0.35746829954344506,
+       0.8017550397372577
+      ]
+     },
+     "wrong_root": 4,
+     "unsafe_on_abstain_required": 3,
+     "lost_coverage_on_attribute": 1
+    },
+    "V2G_unsafe": {
+     "k": 4,
+     "n": 15,
+     "value": 0.26666666666666666,
+     "wilson95": [
+      0.1089745324961737,
+      0.5195043425155202
+     ]
+    },
+    "n_failing_scenarios": 8,
+    "failing_ids": [
+     "V2V-0001",
+     "V2V-0005",
+     "V2V-0029",
+     "V2V-0030",
+     "V2V-0053",
+     "V2V-0059"
+    ],
+    "all_ids_n": 15
+   },
+   "C07_multiple_simultaneous_causes": {
+    "V2": {
+     "n": 25,
+     "n_attribute": 12,
+     "n_abstain_required": 13,
+     "P1": {
+      "k": 4,
+      "n": 12,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.13812009012485987,
+       0.6093779130595061
+      ]
+     },
+     "P2": {
+      "k": 11,
+      "n": 25,
+      "value": 0.44,
+      "wilson95": [
+       0.26665638767770883,
+       0.629326682653538
+      ]
+     },
+     "unsafe": {
+      "k": 9,
+      "n": 25,
+      "value": 0.36,
+      "wilson95": [
+       0.20247880678156654,
+       0.554815023991343
+      ]
+     },
+     "coverage": {
+      "k": 13,
+      "n": 25,
+      "value": 0.52,
+      "wilson95": [
+       0.33498516822009217,
+       0.6996871416694923
+      ]
+     },
+     "wrong_root": 3,
+     "unsafe_on_abstain_required": 6,
+     "lost_coverage_on_attribute": 5
+    },
+    "V2G_unsafe": {
+     "k": 2,
+     "n": 25,
+     "value": 0.08,
+     "wilson95": [
+      0.022220401084126262,
+      0.24966109123460217
+     ]
+    },
+    "n_failing_scenarios": 14,
+    "failing_ids": [
+     "V2V-0002",
+     "V2V-0008",
+     "V2V-0010",
+     "V2V-0011",
+     "V2V-0018",
+     "V2V-0020"
+    ],
+    "all_ids_n": 25
+   },
+   "C08_high_variance_service": {
+    "V2": {
+     "n": 8,
+     "n_attribute": 0,
+     "n_abstain_required": 8,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 6,
+      "n": 8,
+      "value": 0.75,
+      "wilson95": [
+       0.40927542792725174,
+       0.9285207879020445
+      ]
+     },
+     "unsafe": {
+      "k": 2,
+      "n": 8,
+      "value": 0.25,
+      "wilson95": [
+       0.07147921209795555,
+       0.5907245720727483
+      ]
+     },
+     "coverage": {
+      "k": 2,
+      "n": 8,
+      "value": 0.25,
+      "wilson95": [
+       0.07147921209795555,
+       0.5907245720727483
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 2,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 1,
+     "n": 8,
+     "value": 0.125,
+     "wilson95": [
+      0.022417491199971912,
+      0.47088818505608376
+     ]
+    },
+    "n_failing_scenarios": 2,
+    "failing_ids": [
+     "V2V-0009",
+     "V2V-0030"
+    ],
+    "all_ids_n": 8
+   },
+   "C09_weak_intervention_effect": {
+    "V2": {
+     "n": 32,
+     "n_attribute": 14,
+     "n_abstain_required": 18,
+     "P1": {
+      "k": 2,
+      "n": 14,
+      "value": 0.14285714285714285,
+      "wilson95": [
+       0.04009392090764893,
+       0.39941379723733705
+      ]
+     },
+     "P2": {
+      "k": 16,
+      "n": 32,
+      "value": 0.5,
+      "wilson95": [
+       0.33630882754048685,
+       0.6636911724595131
+      ]
+     },
+     "unsafe": {
+      "k": 9,
+      "n": 32,
+      "value": 0.28125,
+      "wilson95": [
+       0.15564580423200683,
+       0.45374509566504084
+      ]
+     },
+     "coverage": {
+      "k": 11,
+      "n": 32,
+      "value": 0.34375,
+      "wilson95": [
+       0.20410437836619277,
+       0.5168891215602698
+      ]
+     },
+     "wrong_root": 5,
+     "unsafe_on_abstain_required": 4,
+     "lost_coverage_on_attribute": 7
+    },
+    "V2G_unsafe": {
+     "k": 4,
+     "n": 32,
+     "value": 0.125,
+     "wilson95": [
+      0.04970134352905961,
+      0.2806830562944507
+     ]
+    },
+    "n_failing_scenarios": 16,
+    "failing_ids": [
+     "V2V-0001",
+     "V2V-0002",
+     "V2V-0010",
+     "V2V-0013",
+     "V2V-0025",
+     "V2V-0034"
+    ],
+    "all_ids_n": 32
+   },
+   "C10_insufficient_telemetry": {
+    "V2": {
+     "n": 25,
+     "n_attribute": 11,
+     "n_abstain_required": 14,
+     "P1": {
+      "k": 1,
+      "n": 11,
+      "value": 0.09090909090909091,
+      "wilson95": [
+       0.016232172705325593,
+       0.3773584391082959
+      ]
+     },
+     "P2": {
+      "k": 13,
+      "n": 25,
+      "value": 0.52,
+      "wilson95": [
+       0.33498516822009217,
+       0.6996871416694923
+      ]
+     },
+     "unsafe": {
+      "k": 7,
+      "n": 25,
+      "value": 0.28,
+      "wilson95": [
+       0.1428385377368367,
+       0.47576605347773543
+      ]
+     },
+     "coverage": {
+      "k": 8,
+      "n": 25,
+      "value": 0.32,
+      "wilson95": [
+       0.172051902198581,
+       0.5158973087951597
+      ]
+     },
+     "wrong_root": 5,
+     "unsafe_on_abstain_required": 2,
+     "lost_coverage_on_attribute": 5
+    },
+    "V2G_unsafe": {
+     "k": 4,
+     "n": 25,
+     "value": 0.16,
+     "wilson95": [
+      0.06403451412098321,
+      0.3465362177560826
+     ]
+    },
+    "n_failing_scenarios": 12,
+    "failing_ids": [
+     "V2V-0002",
+     "V2V-0009",
+     "V2V-0011",
+     "V2V-0013",
+     "V2V-0023",
+     "V2V-0029"
+    ],
+    "all_ids_n": 25
+   },
+   "C11_recovery_anomaly": {
+    "V2": {
+     "n": 13,
+     "n_attribute": 5,
+     "n_abstain_required": 8,
+     "P1": {
+      "k": 0,
+      "n": 5,
+      "value": 0.0,
+      "wilson95": [
+       0.0,
+       0.43448246865939283
+      ]
+     },
+     "P2": {
+      "k": 6,
+      "n": 13,
+      "value": 0.46153846153846156,
+      "wilson95": [
+       0.23206067674961361,
+       0.7085620444143711
+      ]
+     },
+     "unsafe": {
+      "k": 6,
+      "n": 13,
+      "value": 0.46153846153846156,
+      "wilson95": [
+       0.23206067674961361,
+       0.7085620444143711
+      ]
+     },
+     "coverage": {
+      "k": 6,
+      "n": 13,
+      "value": 0.46153846153846156,
+      "wilson95": [
+       0.23206067674961361,
+       0.7085620444143711
+      ]
+     },
+     "wrong_root": 4,
+     "unsafe_on_abstain_required": 2,
+     "lost_coverage_on_attribute": 1
+    },
+    "V2G_unsafe": {
+     "k": 4,
+     "n": 13,
+     "value": 0.3076923076923077,
+     "wilson95": [
+      0.12680703567070326,
+      0.5763065701492199
+     ]
+    },
+    "n_failing_scenarios": 7,
+    "failing_ids": [
+     "V2V-0004",
+     "V2V-0011",
+     "V2V-0013",
+     "V2V-0029",
+     "V2V-0030",
+     "V2V-0043"
+    ],
+    "all_ids_n": 13
+   },
+   "C12_feedback_like_structure_unseen": {
+    "V2": {
+     "n": 0,
+     "n_attribute": 0,
+     "n_abstain_required": 0,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "unsafe": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "coverage": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 0,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 0,
+     "n": 0,
+     "value": null,
+     "wilson95": [
+      NaN,
+      NaN
+     ]
+    },
+    "n_failing_scenarios": 0,
+    "failing_ids": [],
+    "all_ids_n": 0
+   }
+  },
+  "wrong_root_mechanisms": [
+   {
+    "scenario_id": "V2V-0001",
+    "named": "basil",
+    "true_roots": [
+     "yarrow"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 200.0,
+    "named_t_star": 220.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0002",
+    "named": "elm",
+    "true_roots": [
+     "poppy",
+     "hazel"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 150.0,
+    "named_t_star": 210.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 4,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0011",
+    "named": "quince",
+    "true_roots": [
+     "olive",
+     "pine"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 180.0,
+    "named_t_star": 180.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0013",
+    "named": "birch",
+    "true_roots": [
+     "moss"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 160.0,
+    "named_t_star": 280.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 2,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0020",
+    "named": "violet",
+    "true_roots": [
+     "willow",
+     "vale"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 140.0,
+    "named_t_star": 140.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0027",
+    "named": "juniper",
+    "true_roots": [
+     "ulex"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 210.0,
+    "named_t_star": 220.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0029",
+    "named": "basil",
+    "true_roots": [
+     "vale"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 230.0,
+    "named_t_star": 210.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0045",
+    "named": "poppy",
+    "true_roots": [
+     "pine"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 210.0,
+    "named_t_star": 260.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0055",
+    "named": "sage",
+    "true_roots": [
+     "jasmine"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service_and_isolated_in_PAG",
+    "true_root_t_star": 150.0,
+    "named_t_star": 110.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0059",
+    "named": "reed",
+    "true_roots": [
+     "xylia"
+    ],
+    "mechanism": "M4_true_root_candidate_never_intervened_or_explained_away",
+    "true_root_t_star": 350.0,
+    "named_t_star": 270.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0063",
+    "named": "zest",
+    "true_roots": [
+     "mint"
+    ],
+    "mechanism": "M2_true_root_diverges_but_fails_R3_no_PAG_path_to_a_diverging_service",
+    "true_root_t_star": 170.0,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 1,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0068",
+    "named": "hazel",
+    "true_roots": [
+     "zest"
+    ],
+    "mechanism": "M4_true_root_candidate_never_intervened_or_explained_away",
+    "true_root_t_star": 150.0,
+    "named_t_star": 150.0,
+    "true_root_earlier_than_named": false,
+    "n_unexplained_earlier_R1_divergences": 0,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   },
+   {
+    "scenario_id": "V2V-0071",
+    "named": "fjord",
+    "true_roots": [
+     "ivy"
+    ],
+    "mechanism": "M3_true_root_intervened_but_effect_not_confirmed",
+    "true_root_t_star": 210.0,
+    "named_t_star": 230.0,
+    "true_root_earlier_than_named": true,
+    "n_unexplained_earlier_R1_divergences": 3,
+    "path_kind": "SEMI_DIRECTED",
+    "relation": "downstream_of_true_root"
+   }
+  ],
+  "wrong_root_mechanism_counts": {
+   "M3": 5,
+   "M2": 6,
+   "M4": 2
+  },
+  "wrong_root_true_root_earlier": 7
+ },
+ "held_out": {
+  "n": 108,
+  "attribute_scenarios": 45,
+  "attribute_answered": 34,
+  "attribute_answered_correct": 20,
+  "attribute_answered_wrong": 14,
+  "attribute_abstained": 11,
+  "wrong_root_relation": {
+   "downstream_of_true_root": 14
+  },
+  "wrong_root_ids": [
+   "V2H-0001",
+   "V2H-0010",
+   "V2H-0028",
+   "V2H-0033",
+   "V2H-0035",
+   "V2H-0051",
+   "V2H-0060",
+   "V2H-0061",
+   "V2H-0067",
+   "V2H-0078",
+   "V2H-0082",
+   "V2H-0084",
+   "V2H-0098",
+   "V2H-0103"
+  ],
+  "wrong_root_path_kind": {
+   "SEMI_DIRECTED": 14
+  },
+  "answered_path_kind_correctness": {
+   "DIRECTED": {
+    "answered": 1,
+    "correct": 1
+   },
+   "SEMI_DIRECTED": {
+    "answered": 56,
+    "correct": 19
+   }
+  },
+  "abstention_reasons_on_attribute": {
+   "INSUFFICIENT_BASELINE": 4,
+   "NO_CANDIDATES": 2,
+   "INTERVENTION_NOT_VERIFIED": 4,
+   "NOT_IDENTIFIABLE": 1
+  },
+  "unsafe_on_abstain_required_by_label_reason": {
+   "WEAK_SIGNAL": 12,
+   "SYMMETRIC_MUTUAL_DEPENDENCY": 6,
+   "ROOT_UNOBSERVED": 3,
+   "NO_DISCRIMINATING_EVIDENCE": 2
+  },
+  "answered_top_is_true_root_on_abstain_required": 10,
+  "categories": {
+   "C02_earliest_divergence_ambiguity": {
+    "V2": {
+     "n": 7,
+     "n_attribute": 3,
+     "n_abstain_required": 4,
+     "P1": {
+      "k": 1,
+      "n": 3,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.06149194402093078,
+       0.7923404011921757
+      ]
+     },
+     "P2": {
+      "k": 3,
+      "n": 7,
+      "value": 0.42857142857142855,
+      "wilson95": [
+       0.15821985399244537,
+       0.7495416372469643
+      ]
+     },
+     "unsafe": {
+      "k": 4,
+      "n": 7,
+      "value": 0.5714285714285714,
+      "wilson95": [
+       0.25045836275303557,
+       0.8417801460075546
+      ]
+     },
+     "coverage": {
+      "k": 5,
+      "n": 7,
+      "value": 0.7142857142857143,
+      "wilson95": [
+       0.3589344495310541,
+       0.9177810767507166
+      ]
+     },
+     "wrong_root": 2,
+     "unsafe_on_abstain_required": 2,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 2,
+     "n": 7,
+     "value": 0.2857142857142857,
+     "wilson95": [
+      0.08221892324928332,
+      0.6410655504689458
+     ]
+    },
+    "n_failing_scenarios": 4,
+    "failing_ids": [
+     "V2H-0028",
+     "V2H-0040",
+     "V2H-0048",
+     "V2H-0084"
+    ],
+    "all_ids_n": 7
+   },
+   "C05_non_identifiable": {
+    "V2": {
+     "n": 20,
+     "n_attribute": 0,
+     "n_abstain_required": 20,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 12,
+      "n": 20,
+      "value": 0.6,
+      "wilson95": [
+       0.3865814992347542,
+       0.7811934687282198
+      ]
+     },
+     "unsafe": {
+      "k": 8,
+      "n": 20,
+      "value": 0.4,
+      "wilson95": [
+       0.21880653127178018,
+       0.6134185007652458
+      ]
+     },
+     "coverage": {
+      "k": 8,
+      "n": 20,
+      "value": 0.4,
+      "wilson95": [
+       0.21880653127178018,
+       0.6134185007652458
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 8,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 6,
+     "n": 20,
+     "value": 0.3,
+     "wilson95": [
+      0.14547724402157294,
+      0.518972820052479
+     ]
+    },
+    "n_failing_scenarios": 8,
+    "failing_ids": [
+     "V2H-0005",
+     "V2H-0008",
+     "V2H-0016",
+     "V2H-0027",
+     "V2H-0048",
+     "V2H-0050"
+    ],
+    "all_ids_n": 20
+   },
+   "C06_confounding": {
+    "V2": {
+     "n": 20,
+     "n_attribute": 6,
+     "n_abstain_required": 14,
+     "P1": {
+      "k": 2,
+      "n": 6,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.09677141021353453,
+       0.7000066870052566
+      ]
+     },
+     "P2": {
+      "k": 11,
+      "n": 20,
+      "value": 0.55,
+      "wilson95": [
+       0.3420853410191274,
+       0.7418021429623598
+      ]
+     },
+     "unsafe": {
+      "k": 6,
+      "n": 20,
+      "value": 0.3,
+      "wilson95": [
+       0.14547724402157294,
+       0.518972820052479
+      ]
+     },
+     "coverage": {
+      "k": 8,
+      "n": 20,
+      "value": 0.4,
+      "wilson95": [
+       0.21880653127178018,
+       0.6134185007652458
+      ]
+     },
+     "wrong_root": 1,
+     "unsafe_on_abstain_required": 5,
+     "lost_coverage_on_attribute": 3
+    },
+    "V2G_unsafe": {
+     "k": 2,
+     "n": 20,
+     "value": 0.1,
+     "wilson95": [
+      0.02786648096169142,
+      0.3010336471864123
+     ]
+    },
+    "n_failing_scenarios": 9,
+    "failing_ids": [
+     "V2H-0002",
+     "V2H-0003",
+     "V2H-0018",
+     "V2H-0019",
+     "V2H-0031",
+     "V2H-0065"
+    ],
+    "all_ids_n": 20
+   },
+   "C07_multiple_simultaneous_causes": {
+    "V2": {
+     "n": 36,
+     "n_attribute": 15,
+     "n_abstain_required": 21,
+     "P1": {
+      "k": 10,
+      "n": 15,
+      "value": 0.6666666666666666,
+      "wilson95": [
+       0.4171354755711991,
+       0.8482367565633053
+      ]
+     },
+     "P2": {
+      "k": 23,
+      "n": 36,
+      "value": 0.6388888888888888,
+      "wilson95": [
+       0.4757507535888593,
+       0.7752440714197851
+      ]
+     },
+     "unsafe": {
+      "k": 12,
+      "n": 36,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.20214618741007417,
+       0.4966600225795522
+      ]
+     },
+     "coverage": {
+      "k": 22,
+      "n": 36,
+      "value": 0.6111111111111112,
+      "wilson95": [
+       0.4486445897263513,
+       0.7521512702805644
+      ]
+     },
+     "wrong_root": 4,
+     "unsafe_on_abstain_required": 8,
+     "lost_coverage_on_attribute": 1
+    },
+    "V2G_unsafe": {
+     "k": 4,
+     "n": 36,
+     "value": 0.1111111111111111,
+     "wilson95": [
+      0.04406640269669905,
+      0.253148087279096
+     ]
+    },
+    "n_failing_scenarios": 13,
+    "failing_ids": [
+     "V2H-0010",
+     "V2H-0011",
+     "V2H-0033",
+     "V2H-0038",
+     "V2H-0040",
+     "V2H-0048"
+    ],
+    "all_ids_n": 36
+   },
+   "C08_high_variance_service": {
+    "V2": {
+     "n": 13,
+     "n_attribute": 0,
+     "n_abstain_required": 13,
+     "P1": {
+      "k": 0,
+      "n": 0,
+      "value": null,
+      "wilson95": [
+       NaN,
+       NaN
+      ]
+     },
+     "P2": {
+      "k": 10,
+      "n": 13,
+      "value": 0.7692307692307693,
+      "wilson95": [
+       0.49743623839480355,
+       0.918204713457304
+      ]
+     },
+     "unsafe": {
+      "k": 3,
+      "n": 13,
+      "value": 0.23076923076923078,
+      "wilson95": [
+       0.08179528654269594,
+       0.5025637616051964
+      ]
+     },
+     "coverage": {
+      "k": 3,
+      "n": 13,
+      "value": 0.23076923076923078,
+      "wilson95": [
+       0.08179528654269594,
+       0.5025637616051964
+      ]
+     },
+     "wrong_root": 0,
+     "unsafe_on_abstain_required": 3,
+     "lost_coverage_on_attribute": 0
+    },
+    "V2G_unsafe": {
+     "k": 2,
+     "n": 13,
+     "value": 0.15384615384615385,
+     "wilson95": [
+      0.04325817796522907,
+      0.4223463125106327
+     ]
+    },
+    "n_failing_scenarios": 3,
+    "failing_ids": [
+     "V2H-0003",
+     "V2H-0040",
+     "V2H-0057"
+    ],
+    "all_ids_n": 13
+   },
+   "C09_weak_intervention_effect": {
+    "V2": {
+     "n": 46,
+     "n_attribute": 17,
+     "n_abstain_required": 29,
+     "P1": {
+      "k": 3,
+      "n": 17,
+      "value": 0.17647058823529413,
+      "wilson95": [
+       0.06191126589146398,
+       0.4102945877077837
+      ]
+     },
+     "P2": {
+      "k": 26,
+      "n": 46,
+      "value": 0.5652173913043478,
+      "wilson95": [
+       0.4224743358658626,
+       0.6979073731505164
+      ]
+     },
+     "unsafe": {
+      "k": 13,
+      "n": 46,
+      "value": 0.2826086956521739,
+      "wilson95": [
+       0.1732420231282967,
+       0.4254856134837728
+      ]
+     },
+     "coverage": {
+      "k": 16,
+      "n": 46,
+      "value": 0.34782608695652173,
+      "wilson95": [
+       0.22680993290439397,
+       0.49229941272405464
+      ]
+     },
+     "wrong_root": 7,
+     "unsafe_on_abstain_required": 6,
+     "lost_coverage_on_attribute": 7
+    },
+    "V2G_unsafe": {
+     "k": 5,
+     "n": 46,
+     "value": 0.10869565217391304,
+     "wilson95": [
+      0.04733145828147013,
+      0.23037828762025514
+     ]
+    },
+    "n_failing_scenarios": 20,
+    "failing_ids": [
+     "V2H-0002",
+     "V2H-0005",
+     "V2H-0010",
+     "V2H-0011",
+     "V2H-0023",
+     "V2H-0031"
+    ],
+    "all_ids_n": 46
+   },
+   "C10_insufficient_telemetry": {
+    "V2": {
+     "n": 38,
+     "n_attribute": 15,
+     "n_abstain_required": 23,
+     "P1": {
+      "k": 7,
+      "n": 15,
+      "value": 0.4666666666666667,
+      "wilson95": [
+       0.24809535232620925,
+       0.6988302012468901
+      ]
+     },
+     "P2": {
+      "k": 24,
+      "n": 38,
+      "value": 0.631578947368421,
+      "wilson95": [
+       0.4728395943392636,
+       0.7661578084131104
+      ]
+     },
+     "unsafe": {
+      "k": 9,
+      "n": 38,
+      "value": 0.23684210526315788,
+      "wilson95": [
+       0.1299370695458797,
+       0.39206812494937215
+      ]
+     },
+     "coverage": {
+      "k": 16,
+      "n": 38,
+      "value": 0.42105263157894735,
+      "wilson95": [
+       0.27852501060597445,
+       0.5780765477426011
+      ]
+     },
+     "wrong_root": 3,
+     "unsafe_on_abstain_required": 6,
+     "lost_coverage_on_attribute": 5
+    },
+    "V2G_unsafe": {
+     "k": 3,
+     "n": 38,
+     "value": 0.07894736842105263,
+     "wilson95": [
+      0.027214595294883195,
+      0.2079937158975197
+     ]
+    },
+    "n_failing_scenarios": 14,
+    "failing_ids": [
+     "V2H-0003",
+     "V2H-0015",
+     "V2H-0019",
+     "V2H-0031",
+     "V2H-0035",
+     "V2H-0042"
+    ],
+    "all_ids_n": 38
+   },
+   "C11_recovery_anomaly": {
+    "V2": {
+     "n": 34,
+     "n_attribute": 16,
+     "n_abstain_required": 18,
+     "P1": {
+      "k": 7,
+      "n": 16,
+      "value": 0.4375,
+      "wilson95": [
+       0.23098652281405668,
+       0.6682144375606189
+      ]
+     },
+     "P2": {
+      "k": 18,
+      "n": 34,
+      "value": 0.5294117647058824,
+      "wilson95": [
+       0.36736712863069904,
+       0.6854849563344647
+      ]
+     },
+     "unsafe": {
+      "k": 12,
+      "n": 34,
+      "value": 0.35294117647058826,
+      "wilson95": [
+       0.2148792050658079,
+       0.5208603701083743
+      ]
+     },
+     "coverage": {
+      "k": 19,
+      "n": 34,
+      "value": 0.5588235294117647,
+      "wilson95": [
+       0.3945389913538066,
+       0.7111651785765205
+      ]
+     },
+     "wrong_root": 5,
+     "unsafe_on_abstain_required": 7,
+     "lost_coverage_on_attribute": 4
+    },
+    "V2G_unsafe": {
+     "k": 8,
+     "n": 34,
+     "value": 0.23529411764705882,
+     "wilson95": [
+      0.12436985469356415,
+      0.3999613806199636
+     ]
+    },
+    "n_failing_scenarios": 16,
+    "failing_ids": [
+     "V2H-0002",
+     "V2H-0012",
+     "V2H-0016",
+     "V2H-0029",
+     "V2H-0033",
+     "V2H-0040"
+    ],
+    "all_ids_n": 34
+   },
+   "C12_feedback_like_structure_unseen": {
+    "V2": {
+     "n": 24,
+     "n_attribute": 13,
+     "n_abstain_required": 11,
+     "P1": {
+      "k": 4,
+      "n": 13,
+      "value": 0.3076923076923077,
+      "wilson95": [
+       0.12680703567070326,
+       0.5763065701492199
+      ]
+     },
+     "P2": {
+      "k": 11,
+      "n": 24,
+      "value": 0.4583333333333333,
+      "wilson95": [
+       0.27891333613001446,
+       0.6492513477492627
+      ]
+     },
+     "unsafe": {
+      "k": 8,
+      "n": 24,
+      "value": 0.3333333333333333,
+      "wilson95": [
+       0.1797219023644938,
+       0.5329368331526154
+      ]
+     },
+     "coverage": {
+      "k": 12,
+      "n": 24,
+      "value": 0.5,
+      "wilson95": [
+       0.3142742569328851,
+       0.6857257430671149
+      ]
+     },
+     "wrong_root": 4,
+     "unsafe_on_abstain_required": 4,
+     "lost_coverage_on_attribute": 5
+    },
+    "V2G_unsafe": {
+     "k": 5,
+     "n": 24,
+     "value": 0.20833333333333334,
+     "wilson95": [
+      0.0924482529436571,
+      0.40470453421128416
+     ]
+    },
+    "n_failing_scenarios": 13,
+    "failing_ids": [
+     "V2H-0010",
+     "V2H-0012",
+     "V2H-0015",
+     "V2H-0029",
+     "V2H-0048",
+     "V2H-0057"
+    ],
+    "all_ids_n": 24
+   }
+  }
+ }
+}

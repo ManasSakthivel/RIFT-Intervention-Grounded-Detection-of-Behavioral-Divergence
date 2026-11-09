@@ -1,0 +1,789 @@
+{
+  "scenarios": [
+    {
+      "scenario_id": "ADV_A_01",
+      "family": "A_INVERTED",
+      "name": "Inverted Onset Async Queue 1",
+      "root_cause_service": "cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout"
+      ],
+      "seed": 1001,
+      "parameters": {
+        "buffer_delay_s": 20.0,
+        "victim_service": "frontend"
+      }
+    },
+    {
+      "scenario_id": "ADV_A_02",
+      "family": "A_INVERTED",
+      "name": "Inverted Onset Async Queue 2",
+      "root_cause_service": "cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout"
+      ],
+      "seed": 1002,
+      "parameters": {
+        "buffer_delay_s": 20.0,
+        "victim_service": "frontend"
+      }
+    },
+    {
+      "scenario_id": "ADV_A_03",
+      "family": "A_INVERTED",
+      "name": "Inverted Onset Async Queue 3",
+      "root_cause_service": "cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout"
+      ],
+      "seed": 1003,
+      "parameters": {
+        "buffer_delay_s": 20.0,
+        "victim_service": "frontend"
+      }
+    },
+    {
+      "scenario_id": "ADV_A_04",
+      "family": "A_INVERTED",
+      "name": "Inverted Onset Async Queue 4",
+      "root_cause_service": "cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout"
+      ],
+      "seed": 1004,
+      "parameters": {
+        "buffer_delay_s": 20.0,
+        "victim_service": "frontend"
+      }
+    },
+    {
+      "scenario_id": "ADV_A_05",
+      "family": "A_INVERTED",
+      "name": "Inverted Onset Async Queue 5",
+      "root_cause_service": "cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend",
+        "checkout"
+      ],
+      "seed": 1005,
+      "parameters": {
+        "buffer_delay_s": 20.0,
+        "victim_service": "frontend"
+      }
+    },
+    {
+      "scenario_id": "ADV_B_01",
+      "family": "B_RETRY",
+      "name": "Client Retry Amplification 1",
+      "root_cause_service": "payment",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "payment",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1006,
+      "parameters": {
+        "child_service": "checkout"
+      }
+    },
+    {
+      "scenario_id": "ADV_B_02",
+      "family": "B_RETRY",
+      "name": "Client Retry Amplification 2",
+      "root_cause_service": "payment",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "payment",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1007,
+      "parameters": {
+        "child_service": "checkout"
+      }
+    },
+    {
+      "scenario_id": "ADV_B_03",
+      "family": "B_RETRY",
+      "name": "Client Retry Amplification 3",
+      "root_cause_service": "payment",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "payment",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1008,
+      "parameters": {
+        "child_service": "checkout"
+      }
+    },
+    {
+      "scenario_id": "ADV_B_04",
+      "family": "B_RETRY",
+      "name": "Client Retry Amplification 4",
+      "root_cause_service": "payment",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "payment",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1009,
+      "parameters": {
+        "child_service": "checkout"
+      }
+    },
+    {
+      "scenario_id": "ADV_B_05",
+      "family": "B_RETRY",
+      "name": "Client Retry Amplification 5",
+      "root_cause_service": "payment",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "payment",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1010,
+      "parameters": {
+        "child_service": "checkout"
+      }
+    },
+    {
+      "scenario_id": "ADV_C_01",
+      "family": "C_CONFOUNDED",
+      "name": "Shared Host CPU Throttle 1",
+      "root_cause_service": "recommendation",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [],
+      "confounded": true,
+      "confounder_description": "Shared hypervisor core contention",
+      "affected_services": [
+        "recommendation",
+        "product_catalog"
+      ],
+      "seed": 1011,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_C_02",
+      "family": "C_CONFOUNDED",
+      "name": "Shared Host CPU Throttle 2",
+      "root_cause_service": "recommendation",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [],
+      "confounded": true,
+      "confounder_description": "Shared hypervisor core contention",
+      "affected_services": [
+        "recommendation",
+        "product_catalog"
+      ],
+      "seed": 1012,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_C_03",
+      "family": "C_CONFOUNDED",
+      "name": "Shared Host CPU Throttle 3",
+      "root_cause_service": "recommendation",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [],
+      "confounded": true,
+      "confounder_description": "Shared hypervisor core contention",
+      "affected_services": [
+        "recommendation",
+        "product_catalog"
+      ],
+      "seed": 1013,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_C_04",
+      "family": "C_CONFOUNDED",
+      "name": "Shared Host CPU Throttle 4",
+      "root_cause_service": "recommendation",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [],
+      "confounded": true,
+      "confounder_description": "Shared hypervisor core contention",
+      "affected_services": [
+        "recommendation",
+        "product_catalog"
+      ],
+      "seed": 1014,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_C_05",
+      "family": "C_CONFOUNDED",
+      "name": "Shared Host CPU Throttle 5",
+      "root_cause_service": "recommendation",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [],
+      "confounded": true,
+      "confounder_description": "Shared hypervisor core contention",
+      "affected_services": [
+        "recommendation",
+        "product_catalog"
+      ],
+      "seed": 1015,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_D_01",
+      "family": "D_MULTI",
+      "name": "Dual Root Cause Concurrent Degradation 1",
+      "root_cause_service": "shipping",
+      "secondary_root_cause": "email",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "shipping",
+          "checkout"
+        ],
+        [
+          "email",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout"
+      ],
+      "seed": 1016,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_D_02",
+      "family": "D_MULTI",
+      "name": "Dual Root Cause Concurrent Degradation 2",
+      "root_cause_service": "shipping",
+      "secondary_root_cause": "email",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "shipping",
+          "checkout"
+        ],
+        [
+          "email",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout"
+      ],
+      "seed": 1017,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_D_03",
+      "family": "D_MULTI",
+      "name": "Dual Root Cause Concurrent Degradation 3",
+      "root_cause_service": "shipping",
+      "secondary_root_cause": "email",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "shipping",
+          "checkout"
+        ],
+        [
+          "email",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout"
+      ],
+      "seed": 1018,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_D_04",
+      "family": "D_MULTI",
+      "name": "Dual Root Cause Concurrent Degradation 4",
+      "root_cause_service": "shipping",
+      "secondary_root_cause": "email",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "shipping",
+          "checkout"
+        ],
+        [
+          "email",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout"
+      ],
+      "seed": 1019,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_D_05",
+      "family": "D_MULTI",
+      "name": "Dual Root Cause Concurrent Degradation 5",
+      "root_cause_service": "shipping",
+      "secondary_root_cause": "email",
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "shipping",
+          "checkout"
+        ],
+        [
+          "email",
+          "checkout"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "checkout"
+      ],
+      "seed": 1020,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_E_01",
+      "family": "E_NOISE",
+      "name": "Noisy Telemetry with Dropouts 1",
+      "root_cause_service": "product_catalog",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "product_catalog",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend"
+      ],
+      "seed": 1021,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_E_02",
+      "family": "E_NOISE",
+      "name": "Noisy Telemetry with Dropouts 2",
+      "root_cause_service": "product_catalog",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "product_catalog",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend"
+      ],
+      "seed": 1022,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_E_03",
+      "family": "E_NOISE",
+      "name": "Noisy Telemetry with Dropouts 3",
+      "root_cause_service": "product_catalog",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "product_catalog",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend"
+      ],
+      "seed": 1023,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_E_04",
+      "family": "E_NOISE",
+      "name": "Noisy Telemetry with Dropouts 4",
+      "root_cause_service": "product_catalog",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "product_catalog",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend"
+      ],
+      "seed": 1024,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_E_05",
+      "family": "E_NOISE",
+      "name": "Noisy Telemetry with Dropouts 5",
+      "root_cause_service": "product_catalog",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "product_catalog",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "frontend"
+      ],
+      "seed": 1025,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_F_01",
+      "family": "F_DEEP",
+      "name": "Deep Multi-Hop Degradation Cascade 1",
+      "root_cause_service": "redis_cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "redis_cart",
+          "cart"
+        ],
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1026,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_F_02",
+      "family": "F_DEEP",
+      "name": "Deep Multi-Hop Degradation Cascade 2",
+      "root_cause_service": "redis_cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "redis_cart",
+          "cart"
+        ],
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1027,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_F_03",
+      "family": "F_DEEP",
+      "name": "Deep Multi-Hop Degradation Cascade 3",
+      "root_cause_service": "redis_cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "redis_cart",
+          "cart"
+        ],
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1028,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_F_04",
+      "family": "F_DEEP",
+      "name": "Deep Multi-Hop Degradation Cascade 4",
+      "root_cause_service": "redis_cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "redis_cart",
+          "cart"
+        ],
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1029,
+      "parameters": {}
+    },
+    {
+      "scenario_id": "ADV_F_05",
+      "family": "F_DEEP",
+      "name": "Deep Multi-Hop Degradation Cascade 5",
+      "root_cause_service": "redis_cart",
+      "secondary_root_cause": null,
+      "injected_at_t": 60.0,
+      "expected_recovery_t": 180.0,
+      "causal_path": [
+        [
+          "redis_cart",
+          "cart"
+        ],
+        [
+          "cart",
+          "checkout"
+        ],
+        [
+          "checkout",
+          "frontend"
+        ]
+      ],
+      "confounded": false,
+      "confounder_description": null,
+      "affected_services": [
+        "cart",
+        "checkout",
+        "frontend"
+      ],
+      "seed": 1030,
+      "parameters": {}
+    }
+  ]
+}

@@ -1,0 +1,256 @@
+{
+ "purpose": "does N repair the family-level limitation? (NON-CONFIRMATORY)",
+ "seed": 4602,
+ "R": 800,
+ "B": 399,
+ "cases": [
+  {
+   "N": 1008,
+   "rg": 0.05,
+   "rf": 0.0,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.0325,
+     "F_reject": 0.025,
+     "H_reject": 0.01625,
+     "T_neg": 0.03375,
+     "F_neg": 0.0325,
+     "H_neg": 0.0225,
+     "T_useful": 0.00125,
+     "F_useful": 0.00125,
+     "H_useful": 0.00125,
+     "F_wider_than_T": 0.645
+    },
+    "0.1": {
+     "T_reject": 0.85125,
+     "F_reject": 0.79625,
+     "H_reject": 0.77875,
+     "T_neg": 0.0,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.495,
+     "F_useful": 0.4875,
+     "H_useful": 0.4875,
+     "F_wider_than_T": 0.65125
+    }
+   }
+  },
+  {
+   "N": 1008,
+   "rg": 0.05,
+   "rf": 0.05,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.145,
+     "F_reject": 0.03875,
+     "H_reject": 0.0375,
+     "T_neg": 0.1375,
+     "F_neg": 0.03,
+     "H_neg": 0.03,
+     "T_useful": 0.04625,
+     "F_useful": 0.03125,
+     "H_useful": 0.03125,
+     "F_wider_than_T": 0.9975
+    },
+    "0.1": {
+     "T_reject": 0.71625,
+     "F_reject": 0.36,
+     "H_reject": 0.36,
+     "T_neg": 0.0025,
+     "F_neg": 0.00125,
+     "H_neg": 0.00125,
+     "T_useful": 0.50375,
+     "F_useful": 0.34,
+     "H_useful": 0.34,
+     "F_wider_than_T": 1.0
+    }
+   }
+  },
+  {
+   "N": 2000,
+   "rg": 0.05,
+   "rf": 0.0,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.02375,
+     "F_reject": 0.02625,
+     "H_reject": 0.01625,
+     "T_neg": 0.02875,
+     "F_neg": 0.0225,
+     "H_neg": 0.01625,
+     "T_useful": 0.0,
+     "F_useful": 0.0,
+     "H_useful": 0.0,
+     "F_wider_than_T": 0.68375
+    },
+    "0.1": {
+     "T_reject": 0.9875,
+     "F_reject": 0.95625,
+     "H_reject": 0.95375,
+     "T_neg": 0.0,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.51125,
+     "F_useful": 0.51125,
+     "H_useful": 0.51125,
+     "F_wider_than_T": 0.66875
+    }
+   }
+  },
+  {
+   "N": 2000,
+   "rg": 0.05,
+   "rf": 0.05,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.1625,
+     "F_reject": 0.02375,
+     "H_reject": 0.02375,
+     "T_neg": 0.165,
+     "F_neg": 0.03625,
+     "H_neg": 0.03625,
+     "T_useful": 0.03375,
+     "F_useful": 0.0175,
+     "H_useful": 0.0175,
+     "F_wider_than_T": 1.0
+    },
+    "0.1": {
+     "T_reject": 0.80125,
+     "F_reject": 0.3725,
+     "H_reject": 0.3725,
+     "T_neg": 0.005,
+     "F_neg": 0.00125,
+     "H_neg": 0.00125,
+     "T_useful": 0.50375,
+     "F_useful": 0.3475,
+     "H_useful": 0.3475,
+     "F_wider_than_T": 1.0
+    }
+   }
+  },
+  {
+   "N": 4000,
+   "rg": 0.05,
+   "rf": 0.0,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.01875,
+     "F_reject": 0.02625,
+     "H_reject": 0.0125,
+     "T_neg": 0.0225,
+     "F_neg": 0.01625,
+     "H_neg": 0.0125,
+     "T_useful": 0.0,
+     "F_useful": 0.0,
+     "H_useful": 0.0,
+     "F_wider_than_T": 0.65
+    },
+    "0.1": {
+     "T_reject": 1.0,
+     "F_reject": 0.99375,
+     "H_reject": 0.99375,
+     "T_neg": 0.0,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.5525,
+     "F_useful": 0.5525,
+     "H_useful": 0.5525,
+     "F_wider_than_T": 0.65875
+    }
+   }
+  },
+  {
+   "N": 4000,
+   "rg": 0.05,
+   "rf": 0.05,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.1825,
+     "F_reject": 0.0325,
+     "H_reject": 0.0325,
+     "T_neg": 0.185,
+     "F_neg": 0.02125,
+     "H_neg": 0.02125,
+     "T_useful": 0.03,
+     "F_useful": 0.02375,
+     "H_useful": 0.02375,
+     "F_wider_than_T": 0.99875
+    },
+    "0.1": {
+     "T_reject": 0.86,
+     "F_reject": 0.41375,
+     "H_reject": 0.41375,
+     "T_neg": 0.0025,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.49875,
+     "F_useful": 0.36875,
+     "H_useful": 0.36875,
+     "F_wider_than_T": 1.0
+    }
+   }
+  },
+  {
+   "N": 8000,
+   "rg": 0.05,
+   "rf": 0.0,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.03125,
+     "F_reject": 0.02875,
+     "H_reject": 0.0225,
+     "T_neg": 0.0225,
+     "F_neg": 0.02125,
+     "H_neg": 0.01625,
+     "T_useful": 0.0,
+     "F_useful": 0.0,
+     "H_useful": 0.0,
+     "F_wider_than_T": 0.66
+    },
+    "0.1": {
+     "T_reject": 1.0,
+     "F_reject": 1.0,
+     "H_reject": 1.0,
+     "T_neg": 0.0,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.4975,
+     "F_useful": 0.4975,
+     "H_useful": 0.4975,
+     "F_wider_than_T": 0.635
+    }
+   }
+  },
+  {
+   "N": 8000,
+   "rg": 0.05,
+   "rf": 0.05,
+   "results_by_true_mu": {
+    "0.0": {
+     "T_reject": 0.20875,
+     "F_reject": 0.0275,
+     "H_reject": 0.0275,
+     "T_neg": 0.215,
+     "F_neg": 0.02125,
+     "H_neg": 0.02125,
+     "T_useful": 0.01875,
+     "F_useful": 0.01125,
+     "H_useful": 0.01125,
+     "F_wider_than_T": 1.0
+    },
+    "0.1": {
+     "T_reject": 0.875,
+     "F_reject": 0.395,
+     "H_reject": 0.395,
+     "T_neg": 0.00125,
+     "F_neg": 0.0,
+     "H_neg": 0.0,
+     "T_useful": 0.495,
+     "F_useful": 0.35625,
+     "H_useful": 0.35625,
+     "F_wider_than_T": 1.0
+    }
+   }
+  }
+ ]
+}

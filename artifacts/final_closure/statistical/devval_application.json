@@ -1,0 +1,59 @@
+{
+ "purpose": "dev/val (exploratory, N=252) application of production inference module; strata=10 structures, 15 families; NOT confirmatory",
+ "results": {
+  "V3_minus_AA": {
+   "template": {
+    "theta": -0.3377,
+    "se": 0.0602,
+    "p": 1.0,
+    "lo": -0.4668,
+    "hi": -0.2233,
+    "B_valid": 20000
+   },
+   "family": {
+    "theta": -0.3377,
+    "se": 0.0657,
+    "p": 1.0,
+    "lo": -0.5064,
+    "hi": -0.2031,
+    "B_valid": 20000
+   }
+  },
+  "V3_minus_V2": {
+   "template": {
+    "theta": 0.2242,
+    "se": 0.0706,
+    "p": 0.0006,
+    "lo": 0.0884,
+    "hi": 0.3706,
+    "B_valid": 20000
+   },
+   "family": {
+    "theta": 0.2242,
+    "se": 0.0734,
+    "p": 0.0062,
+    "lo": 0.0643,
+    "hi": 0.4072,
+    "B_valid": 20000
+   }
+  },
+  "V3_op_minus_AA": {
+   "template": {
+    "theta": -0.1948,
+    "se": 0.051,
+    "p": 0.9999,
+    "lo": -0.3052,
+    "hi": -0.1001,
+    "B_valid": 20000
+   },
+   "family": {
+    "theta": -0.1948,
+    "se": 0.047,
+    "p": 0.9994,
+    "lo": -0.3022,
+    "hi": -0.0958,
+    "B_valid": 20000
+   }
+  }
+ }
+}

@@ -1,0 +1,23 @@
+{
+  "generator": "SyntheticBenchmark",
+  "seed": 42,
+  "total_scenarios": 69,
+  "non_confounded": 21,
+  "confounded": 48,
+  "by_fault_type": {
+    "NETWORK_LATENCY": 3,
+    "PACKET_LOSS": 3,
+    "SERVICE_DEGRADATION": 3,
+    "RESOURCE_CONTENTION": 3,
+    "QUEUEING": 3,
+    "DEPENDENCY_FAILURE": 3,
+    "MULTI_CAUSE": 3,
+    "CONFOUNDED": 48
+  },
+  "split_counts": {
+    "DEVELOPMENT": 36,
+    "VALIDATION": 18,
+    "HELD_OUT_TEST": 15
+  },
+  "h2_power_note": "48 confounded scenarios generated; 80% power claimed for H2"
+}

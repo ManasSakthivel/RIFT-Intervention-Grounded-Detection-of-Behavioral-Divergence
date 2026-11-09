@@ -1,0 +1,125 @@
+{
+  "always_abstain": {
+    "missed_attributions_lstruct": 163,
+    "outcome_accuracy_frozen": 0.6071428571428572,
+    "outcome_accuracy_lstruct": 0.3531746031746032,
+    "unsafe": 0
+  },
+  "frozen_attribute": 99,
+  "l_plus": 163,
+  "l_struct_version": "l-struct/1.0.0-proposal",
+  "methods": {
+    "RIFT-FULL-V2": {
+      "abstained_on_Lminus_correct": 68,
+      "answered_on_Lminus_unsafe": 21,
+      "correct_root_on_Lplus": 52,
+      "correct_root_rate_on_Lplus": 0.31901840490797545,
+      "missed_on_Lplus": 69,
+      "outcome_accuracy_lstruct": 0.47619047619047616,
+      "strata": {
+        "L+/<3": {
+          "correct_root": 5,
+          "missed": 9,
+          "n": 16,
+          "wrong_root": 2
+        },
+        "L+/>=5": {
+          "correct_root": 36,
+          "missed": 38,
+          "n": 102,
+          "wrong_root": 28
+        },
+        "L+/[3,4)": {
+          "correct_root": 7,
+          "missed": 15,
+          "n": 30,
+          "wrong_root": 8
+        },
+        "L+/[4,5)": {
+          "correct_root": 4,
+          "missed": 7,
+          "n": 15,
+          "wrong_root": 4
+        },
+        "L-/INSUFFICIENT_BASELINE": {
+          "correct_abstain": 23,
+          "n": 23
+        },
+        "L-/NO_FAULT": {
+          "correct_abstain": 13,
+          "n": 13
+        },
+        "L-/ROOT_UNOBSERVED": {
+          "correct_abstain": 22,
+          "n": 31,
+          "unsafe_answer": 9
+        },
+        "L-/SYMMETRIC_MUTUAL_DEPENDENCY": {
+          "correct_abstain": 10,
+          "n": 22,
+          "unsafe_answer": 12
+        }
+      },
+      "unsafe_lstruct": 63,
+      "unsafe_rate_lstruct": 0.25,
+      "wrong_root_on_Lplus": 42
+    },
+    "V3-FULL": {
+      "abstained_on_Lminus_correct": 78,
+      "answered_on_Lminus_unsafe": 11,
+      "correct_root_on_Lplus": 63,
+      "correct_root_rate_on_Lplus": 0.38650306748466257,
+      "missed_on_Lplus": 81,
+      "outcome_accuracy_lstruct": 0.5595238095238095,
+      "strata": {
+        "L+/<3": {
+          "correct_root": 5,
+          "missed": 9,
+          "n": 16,
+          "wrong_root": 2
+        },
+        "L+/>=5": {
+          "correct_root": 43,
+          "missed": 44,
+          "n": 102,
+          "wrong_root": 15
+        },
+        "L+/[3,4)": {
+          "correct_root": 9,
+          "missed": 19,
+          "n": 30,
+          "wrong_root": 2
+        },
+        "L+/[4,5)": {
+          "correct_root": 6,
+          "missed": 9,
+          "n": 15
+        },
+        "L-/INSUFFICIENT_BASELINE": {
+          "correct_abstain": 23,
+          "n": 23
+        },
+        "L-/NO_FAULT": {
+          "correct_abstain": 12,
+          "n": 13,
+          "unsafe_answer": 1
+        },
+        "L-/ROOT_UNOBSERVED": {
+          "correct_abstain": 23,
+          "n": 31,
+          "unsafe_answer": 8
+        },
+        "L-/SYMMETRIC_MUTUAL_DEPENDENCY": {
+          "correct_abstain": 20,
+          "n": 22,
+          "unsafe_answer": 2
+        }
+      },
+      "unsafe_lstruct": 30,
+      "unsafe_rate_lstruct": 0.11904761904761904,
+      "wrong_root_on_Lplus": 19
+    }
+  },
+  "n": 252,
+  "scope": "dev+val only; post-hoc descriptive; not confirmatory; frozen labels unchanged"
+}

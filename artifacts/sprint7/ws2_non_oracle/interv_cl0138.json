@@ -1,0 +1,354 @@
+{
+ "all_edges": {
+  "n_edges": 476,
+  "verdicts": {
+   "NONE": 205,
+   "A->B": 111,
+   "B->A": 98,
+   "BOTH": 62
+  },
+  "oriented_k": 209,
+  "oriented_correct_k": 184,
+  "oriented_wrong_k": 25,
+  "edges_with_true_ancestral_direction_k": 327,
+  "of_which_recovered_correctly_k": 184,
+  "edges_with_no_ancestry_k": 134,
+  "of_which_correctly_NONE_k": 111,
+  "of_which_falsely_oriented_k": 14,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 90,
+    "B->A": 72,
+    "BOTH": 37,
+    "NONE": 69
+   },
+   "INDIRECT_ANCESTRAL": {
+    "A->B": 15,
+    "NONE": 25,
+    "B->A": 18,
+    "BOTH": 16
+   },
+   "HIDDEN_COMMON_CAUSE": {
+    "NONE": 54,
+    "BOTH": 7,
+    "B->A": 3,
+    "A->B": 3
+   },
+   "UNRELATED": {
+    "B->A": 5,
+    "NONE": 57,
+    "BOTH": 2,
+    "A->B": 3
+   }
+  }
+ },
+ "circle_marked_edges": {
+  "n_edges": 471,
+  "verdicts": {
+   "NONE": 200,
+   "A->B": 111,
+   "B->A": 98,
+   "BOTH": 62
+  },
+  "oriented_k": 209,
+  "oriented_correct_k": 184,
+  "oriented_wrong_k": 25,
+  "edges_with_true_ancestral_direction_k": 325,
+  "of_which_recovered_correctly_k": 184,
+  "edges_with_no_ancestry_k": 131,
+  "of_which_correctly_NONE_k": 108,
+  "of_which_falsely_oriented_k": 14,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 90,
+    "B->A": 72,
+    "BOTH": 37,
+    "NONE": 68
+   },
+   "INDIRECT_ANCESTRAL": {
+    "A->B": 15,
+    "NONE": 24,
+    "B->A": 18,
+    "BOTH": 16
+   },
+   "HIDDEN_COMMON_CAUSE": {
+    "NONE": 54,
+    "BOTH": 7,
+    "B->A": 3,
+    "A->B": 3
+   },
+   "UNRELATED": {
+    "B->A": 5,
+    "NONE": 54,
+    "BOTH": 2,
+    "A->B": 3
+   }
+  }
+ },
+ "non_circle_edges": {
+  "n_edges": 5,
+  "verdicts": {
+   "NONE": 5
+  },
+  "oriented_k": 0,
+  "oriented_correct_k": 0,
+  "oriented_wrong_k": 0,
+  "edges_with_true_ancestral_direction_k": 2,
+  "of_which_recovered_correctly_k": 0,
+  "edges_with_no_ancestry_k": 3,
+  "of_which_correctly_NONE_k": 3,
+  "of_which_falsely_oriented_k": 0,
+  "by_truth_class": {
+   "DIRECT": {
+    "NONE": 1
+   },
+   "INDIRECT_ANCESTRAL": {
+    "NONE": 1
+   },
+   "HIDDEN_COMMON_CAUSE": {},
+   "UNRELATED": {
+    "NONE": 3
+   }
+  }
+ },
+ "circle_marked_by_split": {
+  "dev": {
+   "n_edges": 297,
+   "verdicts": {
+    "NONE": 129,
+    "A->B": 74,
+    "B->A": 58,
+    "BOTH": 36
+   },
+   "oriented_k": 132,
+   "oriented_correct_k": 115,
+   "oriented_wrong_k": 17,
+   "edges_with_true_ancestral_direction_k": 200,
+   "of_which_recovered_correctly_k": 115,
+   "edges_with_no_ancestry_k": 87,
+   "of_which_correctly_NONE_k": 72,
+   "of_which_falsely_oriented_k": 10,
+   "by_truth_class": {
+    "DIRECT": {
+     "A->B": 61,
+     "B->A": 43,
+     "BOTH": 26,
+     "NONE": 45
+    },
+    "INDIRECT_ANCESTRAL": {
+     "A->B": 9,
+     "NONE": 12,
+     "B->A": 9,
+     "BOTH": 5
+    },
+    "HIDDEN_COMMON_CAUSE": {
+     "NONE": 34,
+     "BOTH": 3,
+     "B->A": 1,
+     "A->B": 1
+    },
+    "UNRELATED": {
+     "B->A": 5,
+     "NONE": 38,
+     "BOTH": 2,
+     "A->B": 3
+    }
+   }
+  },
+  "val": {
+   "n_edges": 174,
+   "verdicts": {
+    "B->A": 40,
+    "BOTH": 26,
+    "A->B": 37,
+    "NONE": 71
+   },
+   "oriented_k": 77,
+   "oriented_correct_k": 69,
+   "oriented_wrong_k": 8,
+   "edges_with_true_ancestral_direction_k": 125,
+   "of_which_recovered_correctly_k": 69,
+   "edges_with_no_ancestry_k": 44,
+   "of_which_correctly_NONE_k": 36,
+   "of_which_falsely_oriented_k": 4,
+   "by_truth_class": {
+    "DIRECT": {
+     "B->A": 29,
+     "BOTH": 11,
+     "A->B": 29,
+     "NONE": 23
+    },
+    "INDIRECT_ANCESTRAL": {
+     "NONE": 12,
+     "B->A": 9,
+     "BOTH": 11,
+     "A->B": 6
+    },
+    "HIDDEN_COMMON_CAUSE": {
+     "NONE": 20,
+     "B->A": 2,
+     "A->B": 2,
+     "BOTH": 4
+    },
+    "UNRELATED": {
+     "NONE": 16
+    }
+   }
+  }
+ },
+ "circle_marked_weak_interventional_evidence": {
+  "n_edges": 59,
+  "verdicts": {
+   "A->B": 6,
+   "BOTH": 8,
+   "NONE": 39,
+   "B->A": 6
+  },
+  "oriented_k": 12,
+  "oriented_correct_k": 6,
+  "oriented_wrong_k": 6,
+  "edges_with_true_ancestral_direction_k": 44,
+  "of_which_recovered_correctly_k": 6,
+  "edges_with_no_ancestry_k": 13,
+  "of_which_correctly_NONE_k": 11,
+  "of_which_falsely_oriented_k": 1,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 6,
+    "NONE": 21,
+    "BOTH": 5,
+    "B->A": 4
+   },
+   "INDIRECT_ANCESTRAL": {
+    "NONE": 7,
+    "BOTH": 2,
+    "B->A": 1
+   },
+   "HIDDEN_COMMON_CAUSE": {
+    "BOTH": 1,
+    "NONE": 9,
+    "B->A": 1
+   },
+   "UNRELATED": {
+    "NONE": 2
+   }
+  }
+ },
+ "circle_marked_other_observability": {
+  "n_edges": 412,
+  "verdicts": {
+   "NONE": 161,
+   "A->B": 105,
+   "B->A": 92,
+   "BOTH": 54
+  },
+  "oriented_k": 197,
+  "oriented_correct_k": 178,
+  "oriented_wrong_k": 19,
+  "edges_with_true_ancestral_direction_k": 281,
+  "of_which_recovered_correctly_k": 178,
+  "edges_with_no_ancestry_k": 118,
+  "of_which_correctly_NONE_k": 97,
+  "of_which_falsely_oriented_k": 13,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 84,
+    "B->A": 68,
+    "BOTH": 32,
+    "NONE": 47
+   },
+   "INDIRECT_ANCESTRAL": {
+    "A->B": 15,
+    "NONE": 17,
+    "B->A": 17,
+    "BOTH": 14
+   },
+   "HIDDEN_COMMON_CAUSE": {
+    "NONE": 45,
+    "BOTH": 6,
+    "B->A": 2,
+    "A->B": 3
+   },
+   "UNRELATED": {
+    "B->A": 5,
+    "NONE": 52,
+    "BOTH": 2,
+    "A->B": 3
+   }
+  }
+ },
+ "circle_marked_with_collateral_leakage": {
+  "n_edges": 4,
+  "verdicts": {
+   "NONE": 1,
+   "A->B": 3
+  },
+  "oriented_k": 3,
+  "oriented_correct_k": 3,
+  "oriented_wrong_k": 0,
+  "edges_with_true_ancestral_direction_k": 3,
+  "of_which_recovered_correctly_k": 3,
+  "edges_with_no_ancestry_k": 1,
+  "of_which_correctly_NONE_k": 1,
+  "of_which_falsely_oriented_k": 0,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 3
+   },
+   "INDIRECT_ANCESTRAL": {},
+   "HIDDEN_COMMON_CAUSE": {},
+   "UNRELATED": {
+    "NONE": 1
+   }
+  }
+ },
+ "circle_marked_without_collateral_leakage": {
+  "n_edges": 467,
+  "verdicts": {
+   "NONE": 199,
+   "A->B": 108,
+   "B->A": 98,
+   "BOTH": 62
+  },
+  "oriented_k": 206,
+  "oriented_correct_k": 181,
+  "oriented_wrong_k": 25,
+  "edges_with_true_ancestral_direction_k": 322,
+  "of_which_recovered_correctly_k": 181,
+  "edges_with_no_ancestry_k": 130,
+  "of_which_correctly_NONE_k": 107,
+  "of_which_falsely_oriented_k": 14,
+  "by_truth_class": {
+   "DIRECT": {
+    "A->B": 87,
+    "B->A": 72,
+    "BOTH": 37,
+    "NONE": 68
+   },
+   "INDIRECT_ANCESTRAL": {
+    "A->B": 15,
+    "NONE": 24,
+    "B->A": 18,
+    "BOTH": 16
+   },
+   "HIDDEN_COMMON_CAUSE": {
+    "NONE": 54,
+    "BOTH": 7,
+    "B->A": 3,
+    "A->B": 3
+   },
+   "UNRELATED": {
+    "B->A": 5,
+    "NONE": 53,
+    "BOTH": 2,
+    "A->B": 3
+   }
+  }
+ },
+ "do_nodes_needed_per_scenario": {
+  "n_scenarios": 204,
+  "mean": 3.4313725490196076,
+  "max": 7,
+  "n_over_MAX_DO_20": 0
+ }
+}

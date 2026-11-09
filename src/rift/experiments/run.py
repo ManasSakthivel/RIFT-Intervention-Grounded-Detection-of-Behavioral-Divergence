@@ -180,15 +180,32 @@ class ExperimentRunner:
         # Import pipeline components
         import numpy as np
         import networkx as nx
-        from src.rift.benchmark.synthetic_benchmark import SyntheticBenchmark
+        from src.rift.benchmark.synthetic_benchmark import (
+            SyntheticBenchmark,
+            SPLIT_DEVELOPMENT,
+            SPLIT_VALIDATION,
+            SPLIT_HELD_OUT_TEST,
+        )
 
-        benchmark = SyntheticBenchmark(seed=seed)
-        scenarios = benchmark.generate_scenarios(n=min(n_scenarios, 5))
+        benchmark = SyntheticBenchmark()
+        all_faults = benchmark.generate_all_faults(seed=seed)
+        dataset_name = str(spec.get("dataset", "development")).upper()
+        if dataset_name in ("DEVELOPMENT", "DEV", SPLIT_DEVELOPMENT):
+            all_scenarios = [s for s in all_faults if s.split == SPLIT_DEVELOPMENT]
+        elif dataset_name in ("VALIDATION", "VAL", SPLIT_VALIDATION):
+            all_scenarios = [s for s in all_faults if s.split == SPLIT_VALIDATION]
+        elif dataset_name in ("HELD_OUT", "HELD_OUT_TEST", SPLIT_HELD_OUT_TEST):
+            all_scenarios = [s for s in all_faults if s.split == SPLIT_HELD_OUT_TEST]
+        else:
+            all_scenarios = all_faults
+
+        scenarios = all_scenarios[:min(n_scenarios, len(all_scenarios))]
 
         results = []
         for scenario in scenarios:
+            scenario_id = getattr(scenario, "fault_id", getattr(scenario, "scenario_id", str(scenario)))
             results.append({
-                "scenario_id": scenario.get("scenario_id", "unknown"),
+                "scenario_id": scenario_id,
                 "method": method,
                 "dry_run": self.dry_run,
                 "status": "DRY_RUN_COMPLETE",

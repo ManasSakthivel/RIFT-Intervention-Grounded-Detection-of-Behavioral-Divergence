@@ -1,0 +1,6 @@
+{
+ "file": "heldout_candidate.json",
+ "heldout_status": "FINAL_FROZEN",
+ "reason": "independence verified; freeze performed before any held-out method run",
+ "sha256": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce"
+}

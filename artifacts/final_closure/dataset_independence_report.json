@@ -1,0 +1,107 @@
+{
+ "legacy_heldout_declared_twins": {
+  "n_declared": 15,
+  "of": 15,
+  "source": "datasets/rift_faults/manifest.json + artifacts/sprint4_3_0/provenance/legacy_provenance_summary.json"
+ },
+ "legacy_rift_faults_dev_val": {
+  "distinct_pooled": {
+   "effective_dynamics": 22,
+   "raw_content": 25,
+   "structure": 13,
+   "template": 17
+  },
+  "n": {
+   "development": 50,
+   "validation": 18
+  },
+  "val_scenarios_with_twin_in_dev": {
+   "effective_dynamics": 18,
+   "raw_content": 18,
+   "structure": 18,
+   "template": 18
+  }
+ },
+ "readable_file_sha256": {
+  "datasets/rift_faults/adversarial_stress_cohort.json": "46e769c6e75895fa25bfc22616aabb38757a2dac3c3c190025a4e57eb1215577",
+  "datasets/rift_faults/development.json": "d8960776ee3556a8b98de4767c3e8bd14f430f828983fcf50b0114dce8a1aebd",
+  "datasets/rift_faults/validation.json": "2363f6bbea6f86eb883525be90151655ca9ddac01aa9ad5b6e8351dc4953d0f3",
+  "datasets/rift_v2/dev.json": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f",
+  "datasets/rift_v2/val.json": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb",
+  "datasets/rift_v3_dev/adversarial_dev.json": "3525bc05ed8b9dd21dcc888181005af09e75f43396fb27a0ad6732588ea3c472"
+ },
+ "schema": "rift.final_dataset_independence/1",
+ "sealed_file_sha256_copied_from_manifests": {
+  "datasets/rift_faults/held_out_test.json": "4337675b723dff1b88246216078a51e5b9aa1ffe976541739516d716ba18dd91",
+  "datasets/rift_v2/heldout_candidate.json": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce"
+ },
+ "sealed_policy": "no sealed file opened, parsed or hashed; sealed hashes copied from committed manifests",
+ "v2_adversarial_dev_vs_dev_val": {
+  "intra_candidate_duplicates": {
+   "content": 0,
+   "dynamics": 0,
+   "ids": 0,
+   "topology": 104
+  },
+  "n_candidate": 112,
+  "near_threshold": 0.88,
+  "ok": false,
+  "per_protected_set": {
+   "dev": {
+    "content": 0,
+    "dynamics": 0,
+    "ids": 0,
+    "joint_cell": 0,
+    "max_similarity": 0.7973,
+    "near_pairs": 0,
+    "seeds": 0,
+    "template": 0,
+    "topology": 7
+   },
+   "val": {
+    "content": 0,
+    "dynamics": 0,
+    "ids": 0,
+    "joint_cell": 0,
+    "max_similarity": 0.806,
+    "near_pairs": 0,
+    "seeds": 0,
+    "template": 0,
+    "topology": 0
+   }
+  },
+  "spanning_groups": [
+   "G000",
+   "G001",
+   "G002",
+   "G003",
+   "G005",
+   "G006"
+  ]
+ },
+ "v2_val_vs_dev": {
+  "intra_candidate_duplicates": {
+   "content": 0,
+   "dynamics": 0,
+   "ids": 0,
+   "topology": 46
+  },
+  "n_candidate": 72,
+  "near_threshold": 0.88,
+  "ok": true,
+  "per_protected_set": {
+   "dev": {
+    "content": 0,
+    "dynamics": 0,
+    "ids": 0,
+    "joint_cell": 0,
+    "max_similarity": 0.8216,
+    "near_pairs": 0,
+    "seeds": 0,
+    "template": 0,
+    "topology": 0
+   }
+  },
+  "spanning_groups": []
+ }
+}

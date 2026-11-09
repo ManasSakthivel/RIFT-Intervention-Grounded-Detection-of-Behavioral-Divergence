@@ -1,0 +1,398 @@
+{
+  "B0-EARLIEST": {
+    "total": 30,
+    "correct": 11,
+    "abstained": 0,
+    "false_attribution": 19,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 2,
+        "abstained": 0,
+        "false_attribution": 3
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 2,
+        "abstained": 0,
+        "false_attribution": 3
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 4,
+        "abstained": 0,
+        "false_attribution": 1
+      }
+    }
+  },
+  "B0-HIGHEST": {
+    "total": 30,
+    "correct": 22,
+    "abstained": 0,
+    "false_attribution": 8,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 4,
+        "abstained": 0,
+        "false_attribution": 1
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  },
+  "B1-LATENCY-CORR": {
+    "total": 30,
+    "correct": 22,
+    "abstained": 0,
+    "false_attribution": 8,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 4,
+        "abstained": 0,
+        "false_attribution": 1
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  },
+  "B3-SIEVE-LIKE": {
+    "total": 30,
+    "correct": 5,
+    "abstained": 0,
+    "false_attribution": 25,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      }
+    }
+  },
+  "B6-RIFT-RANDOM": {
+    "total": 30,
+    "correct": 22,
+    "abstained": 0,
+    "false_attribution": 8,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 4,
+        "abstained": 0,
+        "false_attribution": 1
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  },
+  "B4-RIFT-ONE-SHOT": {
+    "total": 30,
+    "correct": 22,
+    "abstained": 0,
+    "false_attribution": 8,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 4,
+        "abstained": 0,
+        "false_attribution": 1
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  },
+  "RIFT-OBS": {
+    "total": 30,
+    "correct": 0,
+    "abstained": 30,
+    "false_attribution": 0,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      }
+    }
+  },
+  "RIFT-FULL": {
+    "total": 30,
+    "correct": 14,
+    "abstained": 5,
+    "false_attribution": 11,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 1,
+        "false_attribution": 4
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 3,
+        "abstained": 0,
+        "false_attribution": 2
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 1,
+        "abstained": 4,
+        "false_attribution": 0
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  },
+  "RIFT-FULL-ORACLE": {
+    "total": 30,
+    "correct": 14,
+    "abstained": 5,
+    "false_attribution": 11,
+    "by_family": {
+      "A_INVERTED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 0,
+        "false_attribution": 5
+      },
+      "B_RETRY": {
+        "total": 5,
+        "correct": 2,
+        "abstained": 0,
+        "false_attribution": 3
+      },
+      "C_CONFOUNDED": {
+        "total": 5,
+        "correct": 0,
+        "abstained": 5,
+        "false_attribution": 0
+      },
+      "D_MULTI": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      },
+      "E_NOISE": {
+        "total": 5,
+        "correct": 2,
+        "abstained": 0,
+        "false_attribution": 3
+      },
+      "F_DEEP": {
+        "total": 5,
+        "correct": 5,
+        "abstained": 0,
+        "false_attribution": 0
+      }
+    }
+  }
+}

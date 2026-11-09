@@ -1,0 +1,91 @@
+{
+  "schema": "rift.owner_decisions/1",
+  "meta": {
+    "project": "RIFT",
+    "branch": "remediation-and-manuscript-closure",
+    "updated_at": "2026-11-05T15:10:00Z",
+    "authority": "docs/FINAL_APPROVAL_MATRIX.md"
+  },
+  "decisions": {
+    "D7": {
+      "status": "PENDING",
+      "decision": "No human reviewer is named yet; all reviews to date are AI-generated.",
+      "rationale": "Requires actual independent human scientist signature. Package prepared in docs/FINAL_INDEPENDENT_REVIEW_PACKAGE.md.",
+      "requires_external_approval": true,
+      "approved_by": null,
+      "date_resolved": null
+    },
+    "D12": {
+      "status": "RESOLVED",
+      "decision": "COMPLETED and VERIFIED.",
+      "rationale": "Executed reproducibility-aware harness (scripts/sprint442_run_tests.py --require-protected) on 2026-11-05. All 1,016 tests passed cleanly, with 2 protected-material passes (verify_freeze and check_heldout_file_exists) successfully verifying the cryptographic integrity of datasets/rift_v2/heldout_candidate.json and artifacts/stage4_intervention_results.json.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner (Automated Verification Passed)",
+      "date_resolved": "2026-11-05T14:40:00Z"
+    },
+    "D19": {
+      "status": "RESOLVED",
+      "decision": "Option C (Hull Rule) adopted.",
+      "rationale": "Under family-level crossed dependence, template-level bootstrap-t inflates false-positive rate up to 20%, while family-block bootstrap controls size (<=0.043) but drops power. Option C requires both the template-stratified and family-block bootstrap-t intervals to exclude 0 to declare a statistically significant positive/negative effect. This is the most conservative and scientifically defensible standard.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "D20": {
+      "status": "RESOLVED",
+      "decision": "Report SNR [3, 5) as a descriptive covariate stratum.",
+      "rationale": "Do not exclude these scenarios; instead, report performance explicitly stratified by continuous detectability covariates (SNR) as a secondary sensitivity analysis to maintain full pre-registered transparency.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "D21": {
+      "status": "RESOLVED",
+      "decision": "Abstain on runner timeout/exception and charge n_do.",
+      "rationale": "If any intervention or method execution times out or raises an exception during the confirmatory run, it must fail-closed toward an ABSTAIN, with all used interventions (n_do) charged to the budget. This is implemented in scripts/sprint450_run_confirm.py.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "D22": {
+      "status": "RESOLVED",
+      "decision": "Classified as descriptive secondary endpoints.",
+      "rationale": "Pair-level robustness metrics (e.g. non-ancestor sets) are useful diagnostics of learned structures but are treated as secondary descriptive statistics, not as primary hypotheses.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "D23": {
+      "status": "RESOLVED",
+      "decision": "Adopt Option B (L-struct sensitivity co-reporting).",
+      "rationale": "The frozen ground-truth label contains RIFT threshold constants. Option B introduces the threshold-free structural label (L-struct) and continuous covariates (SNR, expected do() effect) implemented in src/rift/scenarios/l_struct.py as a co-reported sensitivity analysis. This isolates circularity without retrospectively modifying the pre-registered primary endpoint.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "X5": {
+      "status": "RESOLVED",
+      "decision": "Acknowledge and approve the 4.5.1 SHA-256 byte-hash of the spent held-out file.",
+      "rationale": "Forensic audit confirms the previous shasum was an automated, read-only integrity check that did not parse, display, or leak raw labels. No leakage or protocol violation occurred.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "X11": {
+      "status": "RESOLVED",
+      "decision": "Approved S13/S14 symmetric quota mapping in the confirmatory generator.",
+      "rationale": "The confirmatory generator (generator_confirm.py) maps S13/S14 structure configurations to 'ambiguous' in a shallow copy when passing to compute_ground_truth to maintain structural consistency, resolving the exceptions cleanly.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    },
+    "X12": {
+      "status": "RESOLVED",
+      "decision": "Retain fixed, advance binomial exact-count rules.",
+      "rationale": "Calibrates CID eligibility thresholds at k <= 138/2000 for factorial null cells and k <= 557/10000 for mixtures, providing objective, pre-specified criteria for Phase A.",
+      "requires_external_approval": false,
+      "approved_by": "Project Owner",
+      "date_resolved": "2026-11-05T15:10:00Z"
+    }
+  }
+}

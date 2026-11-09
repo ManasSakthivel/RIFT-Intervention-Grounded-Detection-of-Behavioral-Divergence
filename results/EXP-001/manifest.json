@@ -1,0 +1,25 @@
+{
+  "experiment_id": "EXP-001",
+  "scenario_id": null,
+  "seed": 42,
+  "config_hash": "unknown",
+  "git_commit": "ebad911087942f257ba434f69816ed6d692be170",
+  "timestamp_utc": "2026-11-09T06:34:32Z",
+  "files": [
+    "config.json",
+    "environment.json",
+    "inputs.json",
+    "raw_results.json",
+    "metrics.json",
+    "statistics.json"
+  ],
+  "checksums": {
+    "config.json": "53dd1b62a2fb402a85f0de1fa7ee56005bb354a38a0b007bcd8a513b6e2d951e",
+    "environment.json": "df46d4e2c10433b9d4fce0bcfd2653a09332b91e8fe15eca92d47577637d82af",
+    "inputs.json": "44b3ca2f5905ebafef5b2325475d22cd1589e5e9219a136766c5f7799351b4a1",
+    "raw_results.json": "daa4397893b830a36f50f03e0cb26c2d47da8b4c93048b7759342ec3612e5541",
+    "metrics.json": "411485944342e8a6cd059a020de3113bd21ef3089a7066497302970f2d748d45",
+    "statistics.json": "c61a822d7fd0738d7073332d19c528c5dc15e5f509d4121000a68ff3c116b847"
+  },
+  "artifact_dir": "results/EXP-001"
+}

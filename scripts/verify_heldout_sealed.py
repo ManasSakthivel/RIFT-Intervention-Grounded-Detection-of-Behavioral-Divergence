@@ -32,7 +32,7 @@ from pathlib import Path
 from typing import List, Tuple
 
 # Project root
-REPO_ROOT = Path(__file__).parent.parent
+REPO_ROOT = Path(__file__).resolve().parent.parent
 HELDOUT_PATH = REPO_ROOT / "datasets" / "rift_faults" / "held_out_test.json"
 SRC_DIR = REPO_ROOT / "src"
 TESTS_DIR = REPO_ROOT / "tests"
@@ -171,11 +171,23 @@ def check_results_directory(results_dir: Path) -> Tuple[bool, List[str]]:
 # ---------------------------------------------------------------------------
 
 def check_heldout_file_exists() -> Tuple[bool, str]:
-    """Verify the held-out file exists and has not been deleted."""
-    if HELDOUT_PATH.exists():
-        size = HELDOUT_PATH.stat().st_size
-        return True, f"held_out_test.json exists ({size} bytes)"
-    return False, f"held_out_test.json MISSING: {HELDOUT_PATH}"
+    """
+    Verify the held-out file exists AND that every registered dataset file (and the preserved
+    historical manifest) matches its pinned SHA-256 / size (Sprint 4.2.4: fail closed on a wrong
+    path, hash or identity). Hash verification does not parse labels into this process.
+    """
+    if not HELDOUT_PATH.exists():
+        return False, f"held_out_test.json MISSING: {HELDOUT_PATH}"
+    size = HELDOUT_PATH.stat().st_size
+    try:
+        sys.path.insert(0, str(REPO_ROOT))
+        from src.rift.evaluation.dataset_registry import verify_all_files
+    except Exception as exc:  # pragma: no cover
+        return False, f"dataset registry unavailable: {exc}"
+    problems = verify_all_files(REPO_ROOT)
+    if problems:
+        return False, "dataset integrity failure: " + "; ".join(problems)
+    return True, f"held_out_test.json exists ({size} bytes); registry hashes verified"
 
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,1104 @@
+{
+ "stage1_detector": "EBD R1 persistence (theta=3, 2 windows)",
+ "metrics": {
+  "tp": 154,
+  "fn": 17,
+  "fp": 3,
+  "tn": 6,
+  "n_fault": 171,
+  "n_no_fault": 9,
+  "precision": 0.9808917197452229,
+  "recall": 0.9005847953216374,
+  "f1": 0.9390243902439024,
+  "fpr": 0.3333333333333333,
+  "fnr": 0.09941520467836257,
+  "delay_s": {
+   "n": 154,
+   "median": 0.0,
+   "q1": 0.0,
+   "q3": 30.0
+  }
+ },
+ "per_scenario": [
+  {
+   "scenario_id": "V2D-0001",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -60.0
+  },
+  {
+   "scenario_id": "V2D-0002",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0003",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0004",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0005",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0006",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0007",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0008",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0009",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0010",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0011",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0012",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0013",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -10.0
+  },
+  {
+   "scenario_id": "V2D-0014",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0015",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0016",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -60.0
+  },
+  {
+   "scenario_id": "V2D-0017",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 80.0
+  },
+  {
+   "scenario_id": "V2D-0018",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0019",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0020",
+   "fault_present": false,
+   "detected": true,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0021",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -40.0
+  },
+  {
+   "scenario_id": "V2D-0022",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0023",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0024",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0025",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0026",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0027",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0028",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0029",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0030",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0031",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 70.0
+  },
+  {
+   "scenario_id": "V2D-0032",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0033",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0034",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0035",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0036",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0037",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0038",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0039",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -60.0
+  },
+  {
+   "scenario_id": "V2D-0040",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0041",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0042",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0043",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0044",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0045",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0046",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0047",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0048",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0049",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0050",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 100.0
+  },
+  {
+   "scenario_id": "V2D-0051",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0052",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0053",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0054",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0055",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0056",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0057",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0058",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0059",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0060",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0061",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0062",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -60.0
+  },
+  {
+   "scenario_id": "V2D-0063",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0064",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0065",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0066",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0067",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0068",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0069",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0070",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0071",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0072",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 60.0
+  },
+  {
+   "scenario_id": "V2D-0073",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0074",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0075",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0076",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0077",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0078",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0079",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0080",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0081",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -20.0
+  },
+  {
+   "scenario_id": "V2D-0082",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0083",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0084",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -40.0
+  },
+  {
+   "scenario_id": "V2D-0085",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0086",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0087",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0088",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0089",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0090",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0091",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 80.0
+  },
+  {
+   "scenario_id": "V2D-0092",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0093",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0094",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0095",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0096",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0097",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0098",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0099",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0100",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0101",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0102",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0103",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0104",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0105",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0106",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0107",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0108",
+   "fault_present": false,
+   "detected": true,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0109",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0110",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 60.0
+  },
+  {
+   "scenario_id": "V2D-0111",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0112",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0113",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0114",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -30.0
+  },
+  {
+   "scenario_id": "V2D-0115",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0116",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0117",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0118",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0119",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -10.0
+  },
+  {
+   "scenario_id": "V2D-0120",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0121",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0122",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0123",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0124",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0125",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0126",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0127",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0128",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0129",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0130",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0131",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0132",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0133",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0134",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0135",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 170.0
+  },
+  {
+   "scenario_id": "V2D-0136",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0137",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -10.0
+  },
+  {
+   "scenario_id": "V2D-0138",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 80.0
+  },
+  {
+   "scenario_id": "V2D-0139",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0140",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0141",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0142",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 140.0
+  },
+  {
+   "scenario_id": "V2D-0143",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0144",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 10.0
+  },
+  {
+   "scenario_id": "V2D-0145",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 70.0
+  },
+  {
+   "scenario_id": "V2D-0146",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0147",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0148",
+   "fault_present": false,
+   "detected": true,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0149",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 90.0
+  },
+  {
+   "scenario_id": "V2D-0150",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0151",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0152",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0153",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0154",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 20.0
+  },
+  {
+   "scenario_id": "V2D-0155",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0156",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0157",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0158",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0159",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0160",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0161",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 90.0
+  },
+  {
+   "scenario_id": "V2D-0162",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -100.0
+  },
+  {
+   "scenario_id": "V2D-0163",
+   "fault_present": true,
+   "detected": false,
+   "delay_s": null
+  },
+  {
+   "scenario_id": "V2D-0164",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 40.0
+  },
+  {
+   "scenario_id": "V2D-0165",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0166",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0167",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0168",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0169",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0170",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0171",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 280.0
+  },
+  {
+   "scenario_id": "V2D-0172",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": -10.0
+  },
+  {
+   "scenario_id": "V2D-0173",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 60.0
+  },
+  {
+   "scenario_id": "V2D-0174",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 30.0
+  },
+  {
+   "scenario_id": "V2D-0175",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0176",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0177",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 70.0
+  },
+  {
+   "scenario_id": "V2D-0178",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 50.0
+  },
+  {
+   "scenario_id": "V2D-0179",
+   "fault_present": true,
+   "detected": true,
+   "delay_s": 0.0
+  },
+  {
+   "scenario_id": "V2D-0180",
+   "fault_present": false,
+   "detected": false,
+   "delay_s": null
+  }
+ ]
+}

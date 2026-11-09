@@ -1,0 +1,55 @@
+{
+ "dev": {
+  "n_scenarios": 157,
+  "xo-oy": 405,
+  "_circle_any": 510,
+  "_circle_both": 405,
+  "_fully_directed": 71,
+  "_bidirected": 0,
+  "_edges": 581,
+  "true_direct_observed": 439,
+  "pop_adjacent_true_direct": 439,
+  "x->y": 41,
+  "x<-y": 30,
+  "x<-oy": 51,
+  "xo->y": 54,
+  "skipped_cyclic": 16
+ },
+ "val": {
+  "n_scenarios": 65,
+  "xo-oy": 260,
+  "_circle_any": 312,
+  "_circle_both": 260,
+  "_fully_directed": 56,
+  "_bidirected": 0,
+  "_edges": 368,
+  "true_direct_observed": 285,
+  "pop_adjacent_true_direct": 285,
+  "xo->y": 25,
+  "x<-y": 33,
+  "x<-oy": 27,
+  "x->y": 23,
+  "skipped_cyclic": 7
+ },
+ "pooled": {
+  "xo-oy": 665,
+  "_circle_any": 822,
+  "_circle_both": 665,
+  "_fully_directed": 127,
+  "_bidirected": 0,
+  "_edges": 949,
+  "true_direct_observed": 724,
+  "pop_adjacent_true_direct": 724,
+  "x->y": 64,
+  "x<-y": 63,
+  "x<-oy": 78,
+  "xo->y": 79,
+  "skipped_cyclic": 23
+ },
+ "pooled_shares": {
+  "circle_any": 0.8661749209694415,
+  "o-o": 0.7007376185458377,
+  "fully_directed": 0.13382507903055849,
+  "bidirected": 0.0
+ }
+}

@@ -1,0 +1,989 @@
+{
+ "A1_validation_harness_36dev": {
+  "oracle": {
+   "n_nonconf": 12,
+   "n_conf": 24,
+   "nonconf_root_found_any_rank_CAND_or_DEF": 10,
+   "nonconf_top1_correct": 12,
+   "nonconf_abstained_empty_ebd": 0,
+   "nonconf_wrong_top1": 0,
+   "conf_abstained_empty_ebd": 0,
+   "conf_warning_only": 24,
+   "conf_neither_abstain_nor_warning": 0,
+   "conf_top1_is_true_root": 24,
+   "harness_V2_metric_abstain_or_warning": 24,
+   "far_wrong_top1_over_nonconf": 0.0
+  },
+  "learned": {
+   "n_nonconf": 12,
+   "n_conf": 24,
+   "nonconf_root_found_any_rank_CAND_or_DEF": 9,
+   "nonconf_top1_correct": 12,
+   "nonconf_abstained_empty_ebd": 0,
+   "nonconf_wrong_top1": 0,
+   "conf_abstained_empty_ebd": 0,
+   "conf_warning_only": 24,
+   "conf_neither_abstain_nor_warning": 0,
+   "conf_top1_is_true_root": 24,
+   "harness_V2_metric_abstain_or_warning": 24,
+   "far_wrong_top1_over_nonconf": 0.0
+  },
+  "learned_pag_mark_census": {
+   "xo-oy": 71,
+   "_circle_any": 89,
+   "_circle_both": 71,
+   "_fully_directed": 0,
+   "_bidirected": 3,
+   "_edges": 92,
+   "xo->y": 12,
+   "x<-oy": 6,
+   "x<->y": 3
+  },
+  "learned_pag_n_scenarios_with_zero_edges": 0
+ },
+ "A2_reproducible_eval_path": {
+  "dev50": {
+   "n": 50,
+   "oracle": {
+    "NONCONF": {
+     "ATTR_OK": 13,
+     "ABSTAIN:NOT_IDENTIFIABLE": 4,
+     "ABSTAIN:NO_CANDIDATES": 9
+    },
+    "CONF": {
+     "ABSTAIN:NOT_IDENTIFIABLE": 24
+    },
+    "summary": {
+     "nonconf_P1_over_all_nonconf": 0.5,
+     "nonconf_P1_k": 13,
+     "nonconf_n": 26,
+     "conf_abstained_k": 24,
+     "conf_n": 24,
+     "conf_answered_k": 0,
+     "answered_total": 13,
+     "wrong_answers_total": 0,
+     "FAR_wrong_over_answered": 0.0,
+     "FAR_answers_on_conf_over_conf": 0.0
+    }
+   },
+   "learned": {
+    "NONCONF": {
+     "ATTR_OK": 20,
+     "ABSTAIN:NO_CANDIDATES": 3,
+     "ATTR_WRONG": 3
+    },
+    "CONF": {
+     "ATTR_OK": 24
+    },
+    "summary": {
+     "nonconf_P1_over_all_nonconf": 0.7692307692307693,
+     "nonconf_P1_k": 20,
+     "nonconf_n": 26,
+     "conf_abstained_k": 0,
+     "conf_n": 24,
+     "conf_answered_k": 24,
+     "answered_total": 47,
+     "wrong_answers_total": 3,
+     "FAR_wrong_over_answered": 0.06382978723404255,
+     "FAR_answers_on_conf_over_conf": 1.0
+    }
+   },
+   "learned_pag_mark_census": {
+    "xo-oy": 113,
+    "_circle_any": 139,
+    "_circle_both": 113,
+    "_fully_directed": 0,
+    "_bidirected": 0,
+    "_edges": 139,
+    "xo->y": 17,
+    "x<-oy": 9
+   },
+   "learned_pag_scenarios_with_zero_edges": 0,
+   "per_scenario": {
+    "oracle": [
+     {
+      "id": "NL_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_01",
+      "conf": false,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_01",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "QU_01",
+      "conf": false,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "QUEUEING"
+     },
+     {
+      "id": "DF_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "DEPENDENCY_FAILURE"
+     },
+     {
+      "id": "MC_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "NL_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "QU_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "QUEUEING"
+     },
+     {
+      "id": "CF_00",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_01",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_02",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_03",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_04",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_05",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_06",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_07",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_08",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_09",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_10",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_11",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_12",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_13",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_14",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_15",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_16",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_17",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_18",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_19",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_20",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_21",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_22",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_23",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "MC_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_04",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_05",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_06",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_07",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_08",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_09",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_10",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_11",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_12",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "AA_01",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     },
+     {
+      "id": "AA_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     },
+     {
+      "id": "AA_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     }
+    ],
+    "learned": [
+     {
+      "id": "NL_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_01",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "QU_01",
+      "conf": false,
+      "outcome": "ATTR_WRONG",
+      "fault_type": "QUEUEING"
+     },
+     {
+      "id": "DF_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "DEPENDENCY_FAILURE"
+     },
+     {
+      "id": "MC_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "NL_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "QU_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "QUEUEING"
+     },
+     {
+      "id": "CF_00",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_01",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_02",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_03",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_04",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_05",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_06",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_07",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_08",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_09",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_10",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_11",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_12",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_13",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_14",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_15",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_16",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_17",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_18",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_19",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_20",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_21",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_22",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_23",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "MC_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_04",
+      "conf": false,
+      "outcome": "ATTR_WRONG",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_05",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_06",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_07",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_08",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_09",
+      "conf": false,
+      "outcome": "ATTR_WRONG",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_10",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_11",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "MC_12",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "AA_01",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     },
+     {
+      "id": "AA_02",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     },
+     {
+      "id": "AA_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "AMBIGUOUS_ATTRIBUTION"
+     }
+    ]
+   }
+  },
+  "val18": {
+   "n": 18,
+   "oracle": {
+    "NONCONF": {
+     "ATTR_OK": 4,
+     "ABSTAIN:NOT_IDENTIFIABLE": 1,
+     "ABSTAIN:NO_CANDIDATES": 1
+    },
+    "CONF": {
+     "ABSTAIN:NOT_IDENTIFIABLE": 12
+    },
+    "summary": {
+     "nonconf_P1_over_all_nonconf": 0.6666666666666666,
+     "nonconf_P1_k": 4,
+     "nonconf_n": 6,
+     "conf_abstained_k": 12,
+     "conf_n": 12,
+     "conf_answered_k": 0,
+     "answered_total": 4,
+     "wrong_answers_total": 0,
+     "FAR_wrong_over_answered": 0.0,
+     "FAR_answers_on_conf_over_conf": 0.0
+    }
+   },
+   "learned": {
+    "NONCONF": {
+     "ATTR_OK": 4,
+     "ATTR_WRONG": 1,
+     "ABSTAIN:NO_CANDIDATES": 1
+    },
+    "CONF": {
+     "ATTR_OK": 12
+    },
+    "summary": {
+     "nonconf_P1_over_all_nonconf": 0.6666666666666666,
+     "nonconf_P1_k": 4,
+     "nonconf_n": 6,
+     "conf_abstained_k": 0,
+     "conf_n": 12,
+     "conf_answered_k": 12,
+     "answered_total": 17,
+     "wrong_answers_total": 1,
+     "FAR_wrong_over_answered": 0.058823529411764705,
+     "FAR_answers_on_conf_over_conf": 1.0
+    }
+   },
+   "learned_pag_mark_census": {
+    "xo-oy": 42,
+    "_circle_any": 46,
+    "_circle_both": 42,
+    "_fully_directed": 0,
+    "_bidirected": 0,
+    "_edges": 46,
+    "xo->y": 4
+   },
+   "learned_pag_scenarios_with_zero_edges": 0,
+   "per_scenario": {
+    "oracle": [
+     {
+      "id": "DF_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "DEPENDENCY_FAILURE"
+     },
+     {
+      "id": "MC_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "NL_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_03",
+      "conf": false,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_03",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "CF_24",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_25",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_26",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_27",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_28",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_29",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_30",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_31",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_32",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_33",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_34",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_35",
+      "conf": true,
+      "outcome": "ABSTAIN:NOT_IDENTIFIABLE",
+      "fault_type": "CONFOUNDED"
+     }
+    ],
+    "learned": [
+     {
+      "id": "DF_02",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "DEPENDENCY_FAILURE"
+     },
+     {
+      "id": "MC_02",
+      "conf": false,
+      "outcome": "ATTR_WRONG",
+      "fault_type": "MULTI_CAUSE"
+     },
+     {
+      "id": "NL_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "NETWORK_LATENCY"
+     },
+     {
+      "id": "PL_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "PACKET_LOSS"
+     },
+     {
+      "id": "SD_03",
+      "conf": false,
+      "outcome": "ATTR_OK",
+      "fault_type": "SERVICE_DEGRADATION"
+     },
+     {
+      "id": "RC_03",
+      "conf": false,
+      "outcome": "ABSTAIN:NO_CANDIDATES",
+      "fault_type": "RESOURCE_CONTENTION"
+     },
+     {
+      "id": "CF_24",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_25",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_26",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_27",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_28",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_29",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_30",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_31",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_32",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_33",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_34",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     },
+     {
+      "id": "CF_35",
+      "conf": true,
+      "outcome": "ATTR_OK",
+      "fault_type": "CONFOUNDED"
+     }
+    ]
+   }
+  }
+ }
+}

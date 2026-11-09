@@ -1,0 +1,54 @@
+{
+  "H1_Intervention_vs_Obs": {
+    "hypothesis": "H1: RIFT-FULL P@1 > RIFT-OBS P@1",
+    "p_value_raw": 1.641879324936691e-11,
+    "corrected_alpha": 0.016666666666666666,
+    "significant": true,
+    "cliffs_delta": 0.88,
+    "cliffs_delta_ci": [
+      0.78,
+      0.96
+    ],
+    "statistic": 990.0,
+    "effect_size": "large"
+  },
+  "H2_Identifiability_Abstention": {
+    "hypothesis": "H2: RIFT-FULL correctly abstains on confounded non-identifiable faults",
+    "p_value_raw": 0.5,
+    "corrected_alpha": 0.025,
+    "significant": false,
+    "cliffs_delta": 0.0,
+    "cliffs_delta_ci": [
+      0.0,
+      0.0
+    ],
+    "statistic": 0.0,
+    "effect_size": "negligible"
+  },
+  "H3_Closed_Loop_Update": {
+    "hypothesis": "H3: RIFT-FULL > RIFT-ONE-SHOT on multi-cause faults",
+    "p_value_raw": 0.875,
+    "corrected_alpha": 0.05,
+    "significant": false,
+    "cliffs_delta": -0.08333333333333333,
+    "cliffs_delta_ci": [
+      -0.3333333333333333,
+      0.16666666666666666
+    ],
+    "statistic": 2.0,
+    "effect_size": "negligible"
+  },
+  "H4_Cost_Minimization": {
+    "hypothesis": "H4: RIFT-FULL MSIS intervention duration < RIFT-RANDOM",
+    "p_value_raw": 7.687298972140177e-13,
+    "corrected_alpha": 0.0125,
+    "significant": true,
+    "cliffs_delta": 1.0,
+    "cliffs_delta_ci": [
+      1.0,
+      1.0
+    ],
+    "statistic": 1275.0,
+    "effect_size": "large"
+  }
+}

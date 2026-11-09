@@ -1,0 +1,41 @@
+{
+  "experiment_id": "EXP-001",
+  "seed": 42,
+  "spec": {
+    "description": "Causal attribution on synthetic fault scenarios (dev split)",
+    "rq": [
+      "RQ1",
+      "RQ2"
+    ],
+    "hypotheses": [
+      "H1",
+      "H2"
+    ],
+    "input": "datasets/rift_faults/development.json",
+    "split": "DEVELOPMENT",
+    "method": "RIFT-FULL",
+    "baselines": [
+      "RIFT-OBS",
+      "RIFT-RANDOM",
+      "SIEVE-LIKE",
+      "ORACLE-UPPER-BOUND"
+    ],
+    "metrics": [
+      "precision_at_1",
+      "conditional_precision_at_1",
+      "coverage",
+      "abstention_rate",
+      "false_attribution_rate",
+      "correct_attribution_rate",
+      "mean_detection_latency_s"
+    ],
+    "statistical_test": "wilcoxon_one_sided",
+    "seed": 42,
+    "n_scenarios": 50,
+    "status": "READY_FOR_LINUX",
+    "output_artifact": "results/EXP-001/",
+    "notes": "Primary causal attribution experiment. PENDING_LINUX for live run. Development set expanded to 50 scenarios (P0-02 fix: +11 MULTI_CAUSE, +3 AMBIGUOUS_ATTRIBUTION).\n"
+  },
+  "dry_run": true,
+  "dataset": "development"
+}

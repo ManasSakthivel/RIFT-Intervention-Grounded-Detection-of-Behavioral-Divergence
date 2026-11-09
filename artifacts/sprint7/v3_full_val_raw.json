@@ -1,0 +1,4737 @@
+[
+ {
+  "scenario_id": "V2V-0001",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "basil",
+     1.0
+    ],
+    [
+     "yarrow",
+     0.1
+    ],
+    [
+     "aspen",
+     0.1
+    ],
+    [
+     "sorrel",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 100.0,
+   "runtime_s": 0.10806445899999995,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "yarrow",
+    "aspen",
+    "basil",
+    "sorrel"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0001",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "basil",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": true,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0002",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_UNINFORMATIVE",
+   "top": [],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.22904225,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "poppy",
+    "heath",
+    "zest"
+   ],
+   "intervened": [
+    "poppy",
+    "heath",
+    "zest",
+    "hazel",
+    "elm",
+    "clover"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0002",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_UNINFORMATIVE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0003",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "umber",
+     1.0
+    ],
+    [
+     "sorrel",
+     0.1
+    ],
+    [
+     "ginger",
+     0.1
+    ],
+    [
+     "wisteria",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 40.0,
+   "runtime_s": 0.11174445799999999,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sorrel",
+    "umber",
+    "ginger",
+    "wisteria"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0003",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "umber",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": true,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0004",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "violet",
+     1.0
+    ],
+    [
+     "dune",
+     0.1
+    ],
+    [
+     "fennel",
+     0.1
+    ]
+   ],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 80.0,
+   "runtime_s": 0.06845345800000002,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "violet",
+    "dune",
+    "fennel"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0004",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "violet",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0005",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "quince",
+     1.0
+    ],
+    [
+     "sorrel",
+     0.1
+    ],
+    [
+     "violet",
+     0.1
+    ],
+    [
+     "willow",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 90.0,
+   "runtime_s": 0.1084607919999998,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sorrel",
+    "quince",
+    "violet",
+    "willow"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0005",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "quince",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0006",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.0022877920000001772,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0006",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0007",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "quill",
+     1.0
+    ],
+    [
+     "mint",
+     0.1
+    ],
+    [
+     "ivy",
+     0.1
+    ],
+    [
+     "willow",
+     0.1
+    ],
+    [
+     "thorn",
+     0.1
+    ]
+   ],
+   "ed_s": 210.0,
+   "n_do": 7,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 10.0,
+   "runtime_s": 0.3172435829999998,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "mint",
+    "ivy",
+    "willow",
+    "thorn",
+    "yarrow",
+    "quill",
+    "xylia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0007",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "quill",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0008",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "ulex",
+     1.0
+    ],
+    [
+     "dill",
+     0.1
+    ],
+    [
+     "basil",
+     0.1
+    ],
+    [
+     "poppy",
+     0.1
+    ],
+    [
+     "heath",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.17147241699999993,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "dill",
+    "basil",
+    "ulex",
+    "poppy",
+    "heath"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0008",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "ulex",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0009",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "poppy",
+     1.0
+    ],
+    [
+     "rowan",
+     0.1
+    ],
+    [
+     "iris",
+     0.1
+    ],
+    [
+     "zinnia",
+     0.1
+    ],
+    [
+     "cedar",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.16423833299999968,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "rowan",
+    "iris",
+    "zinnia",
+    "poppy",
+    "cedar"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0009",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "poppy",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0010",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 60.0,
+   "n_do": 2,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.033650665999999774,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "zinnia",
+    "xylia"
+   ],
+   "intervened": [
+    "zinnia",
+    "xylia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0010",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0011",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "olive",
+     0.5
+    ],
+    [
+     "pine",
+     0.25
+    ],
+    [
+     "quince",
+     0.1
+    ],
+    [
+     "mint",
+     0.1
+    ],
+    [
+     "heath",
+     0.1
+    ]
+   ],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 80.0,
+   "runtime_s": 0.23264266700000036,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "QUALIFIED_ROOT",
+   "caveats": [
+    "MULTIPLE_INTERVENTIONAL_SOURCES"
+   ],
+   "possible_roots": [],
+   "intervened": [
+    "quince",
+    "olive",
+    "mint",
+    "pine",
+    "heath",
+    "juniper"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0011",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "olive",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 0.5,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0012",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.001851499999999895,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0012",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0013",
+  "record": {
+   "abstained": true,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.10654720800000028,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "moss",
+    "hazel",
+    "birch",
+    "fennel"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0013",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0014",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 60.0,
+   "n_do": 2,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.034744707999999846,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "reed",
+    "thorn"
+   ],
+   "intervened": [
+    "reed",
+    "thorn"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0014",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0015",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.08226354199999975,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "rowan",
+    "aspen",
+    "reed"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0015",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0016",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 100.0,
+   "runtime_s": 0.1078160420000005,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "ginger",
+    "dune",
+    "juniper",
+    "xylia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0016",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0017",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "yucca",
+     1.0
+    ],
+    [
+     "wisteria",
+     0.1
+    ],
+    [
+     "elm",
+     0.1
+    ],
+    [
+     "yarrow",
+     0.1
+    ],
+    [
+     "xylia",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.16293187499999995,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "wisteria",
+    "yucca",
+    "elm",
+    "yarrow",
+    "xylia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0017",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "yucca",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0018",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 10.0,
+   "runtime_s": 0.2309469170000007,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "mint",
+    "umber",
+    "juniper",
+    "oak",
+    "elm",
+    "nutmeg"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0018",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0019",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_BASELINE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.00014037499999997038,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0019",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_BASELINE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0020",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "willow",
+     0.5
+    ],
+    [
+     "vale",
+     0.25
+    ],
+    [
+     "dune",
+     0.1
+    ],
+    [
+     "larch",
+     0.1
+    ],
+    [
+     "violet",
+     0.1
+    ]
+   ],
+   "ed_s": 240.0,
+   "n_do": 8,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 0.0,
+   "runtime_s": 0.4207009580000003,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "QUALIFIED_ROOT",
+   "caveats": [
+    "MULTIPLE_INTERVENTIONAL_SOURCES"
+   ],
+   "possible_roots": [],
+   "intervened": [
+    "dune",
+    "larch",
+    "violet",
+    "willow",
+    "poppy",
+    "ulex",
+    "ginger",
+    "vale"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0020",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "willow",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 0.5,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0021",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.001898917000000111,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0021",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0022",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 90.0,
+   "runtime_s": 0.1729887080000001,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "wisteria",
+    "pine",
+    "moss"
+   ],
+   "intervened": [
+    "wisteria",
+    "pine",
+    "moss",
+    "olive",
+    "dill"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0022",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0023",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "sage",
+     0.5
+    ],
+    [
+     "alder",
+     0.25
+    ],
+    [
+     "moss",
+     0.1
+    ],
+    [
+     "xylia",
+     0.1
+    ],
+    [
+     "ivy",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 170.0,
+   "runtime_s": 0.17140520900000045,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "QUALIFIED_ROOT",
+   "caveats": [
+    "MULTIPLE_INTERVENTIONAL_SOURCES"
+   ],
+   "possible_roots": [],
+   "intervened": [
+    "moss",
+    "sage",
+    "alder",
+    "xylia",
+    "ivy"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0023",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "sage",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 0.5,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0024",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_BASELINE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.00014033400000013074,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0024",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_BASELINE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0025",
+  "record": {
+   "abstained": true,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+   "top": [],
+   "ed_s": 210.0,
+   "n_do": 7,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.3284306250000002,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "violet",
+    "larch",
+    "dune",
+    "nettle",
+    "willow",
+    "umber",
+    "jasmine"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0025",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0026",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 80.0,
+   "runtime_s": 0.11104891600000055,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "yarrow",
+    "fjord",
+    "dune",
+    "birch"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0026",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0027",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.1674067500000005,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "ulex",
+    "juniper",
+    "thorn",
+    "fennel",
+    "sage"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0027",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0028",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.0016417920000000308,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0028",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0029",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "vale",
+     1.0
+    ],
+    [
+     "kelp",
+     0.1
+    ],
+    [
+     "basil",
+     0.1
+    ],
+    [
+     "cedar",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 90.0,
+   "runtime_s": 0.10729325000000056,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "kelp",
+    "basil",
+    "cedar",
+    "vale"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0029",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "vale",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0030",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "cedar",
+     1.0
+    ],
+    [
+     "sage",
+     0.1
+    ],
+    [
+     "tansy",
+     0.1
+    ]
+   ],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.06668641599999958,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sage",
+    "tansy",
+    "cedar"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0030",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "cedar",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0031",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "juniper",
+     1.0
+    ],
+    [
+     "nettle",
+     0.1
+    ],
+    [
+     "larch",
+     0.1
+    ]
+   ],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 130.0,
+   "runtime_s": 0.06226091599999961,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "juniper",
+    "nettle",
+    "larch"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0031",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "juniper",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0032",
+  "record": {
+   "abstained": true,
+   "reason": "NO_CANDIDATES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.015738542000000244,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0032",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "NO_CANDIDATES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0033",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "pine",
+     1.0
+    ],
+    [
+     "olive",
+     0.1
+    ],
+    [
+     "vale",
+     0.1
+    ],
+    [
+     "rowan",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 70.0,
+   "runtime_s": 0.1066094169999996,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "pine",
+    "olive",
+    "vale",
+    "rowan"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0033",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "pine",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0034",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_UNINFORMATIVE",
+   "top": [],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 100.0,
+   "runtime_s": 0.23849004100000037,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "yarrow",
+    "tansy",
+    "xylia"
+   ],
+   "intervened": [
+    "yarrow",
+    "tansy",
+    "xylia",
+    "jasmine",
+    "grove",
+    "zinnia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0034",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_UNINFORMATIVE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0035",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.06642891699999964,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "basil",
+    "nettle",
+    "yucca"
+   ],
+   "intervened": [
+    "basil",
+    "nettle",
+    "yucca"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0035",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0036",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.11344291600000034,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "elm",
+    "ivy",
+    "violet",
+    "sage"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0036",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0037",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.16762595800000035,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "vale",
+    "fennel",
+    "poppy"
+   ],
+   "intervened": [
+    "vale",
+    "fennel",
+    "poppy",
+    "reed",
+    "sorrel"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0037",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0038",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_BASELINE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.00017141700000067317,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0038",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_BASELINE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0039",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_UNINFORMATIVE",
+   "top": [],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 80.0,
+   "runtime_s": 0.2354210830000003,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "vale",
+    "wisteria",
+    "yarrow"
+   ],
+   "intervened": [
+    "vale",
+    "wisteria",
+    "yarrow",
+    "hazel",
+    "ivy",
+    "dill"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0039",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_UNINFORMATIVE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0040",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.002130249999999556,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0040",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0041",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "xylia",
+     1.0
+    ],
+    [
+     "kelp",
+     0.1
+    ],
+    [
+     "aspen",
+     0.1
+    ],
+    [
+     "poppy",
+     0.1
+    ],
+    [
+     "moss",
+     0.1
+    ]
+   ],
+   "ed_s": 240.0,
+   "n_do": 8,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.40925987500000005,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "kelp",
+    "aspen",
+    "xylia",
+    "poppy",
+    "moss",
+    "dune",
+    "nettle",
+    "cedar"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0041",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "xylia",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0042",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "fennel",
+     1.0
+    ],
+    [
+     "basil",
+     0.1
+    ],
+    [
+     "vale",
+     0.1
+    ],
+    [
+     "quill",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "IDENTIFIABLE",
+   "detect_latency_s": 70.0,
+   "runtime_s": 0.10585570900000096,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "fennel",
+    "basil",
+    "vale",
+    "quill"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0042",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "fennel",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0043",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_BASELINE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.0001655419999995189,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0043",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_BASELINE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0044",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.0017581670000001992,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0044",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0045",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "pine",
+     1.0
+    ],
+    [
+     "poppy",
+     0.1
+    ],
+    [
+     "dill",
+     0.1
+    ]
+   ],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.06535279200000055,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "pine",
+    "poppy",
+    "dill"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0045",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "pine",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0046",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 70.0,
+   "runtime_s": 0.06502095799999985,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "birch",
+    "jasmine",
+    "dill"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0046",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0047",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.0015729999999987143,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0047",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0048",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "clover",
+     1.0
+    ],
+    [
+     "lotus",
+     0.1
+    ],
+    [
+     "oak",
+     0.1
+    ],
+    [
+     "iris",
+     0.1
+    ],
+    [
+     "sage",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "IDENTIFIABLE",
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.160882333,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "lotus",
+    "oak",
+    "iris",
+    "clover",
+    "sage"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0048",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "clover",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0049",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 60.0,
+   "n_do": 2,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.035450125000000554,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "wisteria",
+    "ivy"
+   ],
+   "intervened": [
+    "wisteria",
+    "ivy"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0049",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0050",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 40.0,
+   "runtime_s": 0.0659706670000002,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "rowan",
+    "alder",
+    "zest"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0050",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0051",
+  "record": {
+   "abstained": true,
+   "reason": "NOT_IDENTIFIABLE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": "NOT_IDENTIFIABLE",
+   "detect_latency_s": null,
+   "runtime_s": 0.01423737500000044,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "NON_IDENTIFIABLE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0051",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "NOT_IDENTIFIABLE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0052",
+  "record": {
+   "abstained": true,
+   "reason": "NO_CANDIDATES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.011101625000000226,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0052",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "NO_CANDIDATES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0053",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "ivy",
+     1.0
+    ],
+    [
+     "oak",
+     0.1
+    ],
+    [
+     "sage",
+     0.1
+    ],
+    [
+     "birch",
+     0.1
+    ]
+   ],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 100.0,
+   "runtime_s": 0.10805370799999992,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "oak",
+    "sage",
+    "birch",
+    "ivy"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0053",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "ivy",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0054",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 10.0,
+   "runtime_s": 0.1114822499999999,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sorrel",
+    "birch",
+    "fennel",
+    "nutmeg"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0054",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0055",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "jasmine",
+     1.0
+    ],
+    [
+     "sage",
+     0.1
+    ],
+    [
+     "willow",
+     0.1
+    ],
+    [
+     "ginger",
+     0.1
+    ],
+    [
+     "vale",
+     0.1
+    ]
+   ],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 10.0,
+   "runtime_s": 0.23455416600000056,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sage",
+    "jasmine",
+    "willow",
+    "ginger",
+    "vale",
+    "lotus"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0055",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "jasmine",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0056",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.001579834000001057,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0056",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0057",
+  "record": {
+   "abstained": true,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+   "top": [],
+   "ed_s": 120.0,
+   "n_do": 4,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 100.0,
+   "runtime_s": 0.10802662500000082,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "clover",
+    "fjord",
+    "rowan",
+    "kelp"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0057",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "UNRESOLVED_EARLIER_DIVERGENCE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0058",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "sage",
+     1.0
+    ],
+    [
+     "poppy",
+     0.1
+    ],
+    [
+     "violet",
+     0.1
+    ],
+    [
+     "dill",
+     0.1
+    ],
+    [
+     "jasmine",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 90.0,
+   "runtime_s": 0.16343937500000116,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "sage",
+    "poppy",
+    "violet",
+    "dill",
+    "jasmine"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0058",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "sage",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0059",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 60.0,
+   "n_do": 2,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 170.0,
+   "runtime_s": 0.0324939999999998,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "reed",
+    "xylia"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0059",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0060",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_BASELINE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.00014629200000015885,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0060",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_BASELINE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0061",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_UNINFORMATIVE",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 170.0,
+   "runtime_s": 0.06278508399999971,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "xylia",
+    "violet",
+    "juniper"
+   ],
+   "intervened": [
+    "xylia",
+    "violet",
+    "juniper"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0061",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_UNINFORMATIVE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0062",
+  "record": {
+   "abstained": true,
+   "reason": "NOT_IDENTIFIABLE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": "NOT_IDENTIFIABLE",
+   "detect_latency_s": null,
+   "runtime_s": 0.015898583000000244,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "NON_IDENTIFIABLE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0062",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "NOT_IDENTIFIABLE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0063",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "mint",
+     1.0
+    ],
+    [
+     "zest",
+     0.1
+    ],
+    [
+     "willow",
+     0.1
+    ]
+   ],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 70.0,
+   "runtime_s": 0.06167549999999977,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "mint",
+    "zest",
+    "willow"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0063",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "mint",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0064",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_NOT_VERIFIED",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 70.0,
+   "runtime_s": 0.06984912499999929,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "pine",
+    "oak",
+    "quince"
+   ],
+   "intervened": [
+    "pine",
+    "oak",
+    "quince"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0064",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_NOT_VERIFIED"
+  }
+ },
+ {
+  "scenario_id": "V2V-0065",
+  "record": {
+   "abstained": true,
+   "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": 60.0,
+   "runtime_s": 0.009092167000000373,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "nettle"
+   ],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0065",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "SOLE_DIVERGENCE_NO_CORROBORATION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0066",
+  "record": {
+   "abstained": true,
+   "reason": "INTERVENTION_UNINFORMATIVE",
+   "top": [],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 90.0,
+   "runtime_s": 0.2358410830000004,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "POSSIBLE_ROOT",
+   "caveats": [],
+   "possible_roots": [
+    "cedar",
+    "wisteria",
+    "zest"
+   ],
+   "intervened": [
+    "cedar",
+    "wisteria",
+    "zest",
+    "heath",
+    "yarrow",
+    "lotus"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0066",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": null,
+   "reason": "INTERVENTION_UNINFORMATIVE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0067",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "basil",
+     1.0
+    ],
+    [
+     "oak",
+     0.1
+    ],
+    [
+     "willow",
+     0.1
+    ],
+    [
+     "jasmine",
+     0.1
+    ],
+    [
+     "quince",
+     0.1
+    ]
+   ],
+   "ed_s": 150.0,
+   "n_do": 5,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.16381658299999913,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "oak",
+    "willow",
+    "jasmine",
+    "quince",
+    "basil"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0067",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": true,
+   "top1": "basil",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0068",
+  "record": {
+   "abstained": true,
+   "reason": "AMBIGUOUS_ATTRIBUTION",
+   "top": [],
+   "ed_s": 90.0,
+   "n_do": 3,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 50.0,
+   "runtime_s": 0.06670370900000044,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "zest",
+    "kelp",
+    "hazel"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0068",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "AMBIGUOUS_ATTRIBUTION"
+  }
+ },
+ {
+  "scenario_id": "V2V-0069",
+  "record": {
+   "abstained": true,
+   "reason": "NOT_IDENTIFIABLE",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": "NOT_IDENTIFIABLE",
+   "detect_latency_s": null,
+   "runtime_s": 0.014776917000000722,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "NON_IDENTIFIABLE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0069",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": false,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": false,
+   "alarm": true,
+   "top_score": null,
+   "reason": "NOT_IDENTIFIABLE"
+  }
+ },
+ {
+  "scenario_id": "V2V-0070",
+  "record": {
+   "abstained": true,
+   "reason": "INSUFFICIENT_SAMPLES",
+   "top": [],
+   "ed_s": 0.0,
+   "n_do": 0,
+   "evidence_type": "OBSERVATIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [],
+   "ident_status": null,
+   "detect_latency_s": null,
+   "runtime_s": 0.00158725000000004,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "INSUFFICIENT_EVIDENCE",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": []
+  },
+  "score": {
+   "scenario_id": "V2V-0070",
+   "split": "val",
+   "expected": "ABSTAIN_REQUIRED",
+   "answered": false,
+   "top1": null,
+   "correct": false,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": null,
+   "alarm": false,
+   "top_score": null,
+   "reason": "INSUFFICIENT_SAMPLES"
+  }
+ },
+ {
+  "scenario_id": "V2V-0071",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "fjord",
+     1.0
+    ],
+    [
+     "ivy",
+     0.1
+    ],
+    [
+     "cedar",
+     0.1
+    ],
+    [
+     "aspen",
+     0.1
+    ],
+    [
+     "zest",
+     0.1
+    ]
+   ],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "SEMI_DIRECTED",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 110.0,
+   "runtime_s": 0.23542429200000115,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "DEFINITIVE_ROOT",
+   "caveats": [],
+   "possible_roots": [],
+   "intervened": [
+    "ivy",
+    "cedar",
+    "aspen",
+    "zest",
+    "fjord",
+    "wisteria"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0071",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "fjord",
+   "correct": false,
+   "p2": false,
+   "unsafe": true,
+   "wrong_root": true,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 1.0,
+   "reason": null
+  }
+ },
+ {
+  "scenario_id": "V2V-0072",
+  "record": {
+   "abstained": false,
+   "reason": null,
+   "top": [
+    [
+     "elm",
+     0.5
+    ],
+    [
+     "dune",
+     0.1
+    ],
+    [
+     "pine",
+     0.1
+    ],
+    [
+     "olive",
+     0.1
+    ],
+    [
+     "umber",
+     0.1
+    ]
+   ],
+   "ed_s": 180.0,
+   "n_do": 6,
+   "evidence_type": "INTERVENTIONAL",
+   "path_kind": "NONE",
+   "cid_grades": [
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE",
+    "CANDIDATE"
+   ],
+   "ident_status": "CONDITIONALLY_IDENTIFIABLE",
+   "detect_latency_s": 40.0,
+   "runtime_s": 0.23319775000000043,
+   "mem_kb": 0.0,
+   "error": null,
+   "status": "QUALIFIED_ROOT",
+   "caveats": [
+    "PAG_CONTRADICTS_INTERVENTION"
+   ],
+   "possible_roots": [],
+   "intervened": [
+    "dune",
+    "elm",
+    "pine",
+    "olive",
+    "umber",
+    "yucca"
+   ]
+  },
+  "score": {
+   "scenario_id": "V2V-0072",
+   "split": "val",
+   "expected": "ATTRIBUTE",
+   "answered": true,
+   "top1": "elm",
+   "correct": true,
+   "p2": true,
+   "unsafe": false,
+   "wrong_root": false,
+   "distractor_hit": false,
+   "top3_hit": true,
+   "alarm": true,
+   "top_score": 0.5,
+   "reason": null
+  }
+ }
+]

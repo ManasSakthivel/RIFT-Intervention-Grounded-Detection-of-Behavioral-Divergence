@@ -1,0 +1,119 @@
+{
+ "dev": {
+  "n": 180,
+  "pag_status": {
+   "OK": 150,
+   "INSUFFICIENT_SAMPLES": 30
+  },
+  "census": {
+   "xo-oy": 269,
+   "_circle_any": 293,
+   "_circle_both": 269,
+   "_fully_directed": 1,
+   "_bidirected": 1,
+   "_edges": 299,
+   "frozen_UNDIRECTED": 292,
+   "xo->y": 14,
+   "x<-oy": 9,
+   "x<-y": 1,
+   "frozen_DIRECTED": 1,
+   "x<->y": 1,
+   "frozen_BIDIRECTED": 1,
+   "x---y": 4,
+   "xo--y": 1,
+   "frozen_PARTIALLY_DIRECTED": 1,
+   "frozen_TAIL_TAIL": 4
+  },
+  "gq": {
+   "tp": 175,
+   "fp": 85,
+   "fn": 243,
+   "n_true_direct_edges": 418,
+   "or_directed_correct": 0,
+   "or_directed_wrong": 6,
+   "or_circle_or_undirected": 166,
+   "or_bidirected_on_direct": 0,
+   "or_tail_tail": 3,
+   "or_n_scored": 175
+  },
+  "scenarios_with_zero_edges": 8,
+  "scenarios_with_edges": 142,
+  "scenarios_every_edge_circle_marked": 139,
+  "scenarios_with_any_non_circle_edge": 3
+ },
+ "val": {
+  "n": 72,
+  "pag_status": {
+   "OK": 63,
+   "INSUFFICIENT_SAMPLES": 9
+  },
+  "census": {
+   "xo-oy": 148,
+   "_circle_any": 172,
+   "_circle_both": 148,
+   "_fully_directed": 2,
+   "_bidirected": 3,
+   "_edges": 177,
+   "frozen_UNDIRECTED": 172,
+   "xo->y": 10,
+   "x<-oy": 14,
+   "x<-y": 2,
+   "frozen_DIRECTED": 2,
+   "x<->y": 3,
+   "frozen_BIDIRECTED": 3
+  },
+  "gq": {
+   "tp": 93,
+   "fp": 56,
+   "fn": 176,
+   "n_true_direct_edges": 269,
+   "or_directed_correct": 1,
+   "or_directed_wrong": 8,
+   "or_circle_or_undirected": 83,
+   "or_bidirected_on_direct": 1,
+   "or_tail_tail": 0,
+   "or_n_scored": 93
+  },
+  "scenarios_with_zero_edges": 1,
+  "scenarios_with_edges": 62,
+  "scenarios_every_edge_circle_marked": 58,
+  "scenarios_with_any_non_circle_edge": 4
+ },
+ "pooled": {
+  "census": {
+   "xo-oy": 417,
+   "_circle_any": 465,
+   "_circle_both": 417,
+   "_fully_directed": 3,
+   "_bidirected": 4,
+   "_edges": 476,
+   "frozen_UNDIRECTED": 464,
+   "xo->y": 24,
+   "x<-oy": 23,
+   "x<-y": 3,
+   "frozen_DIRECTED": 3,
+   "x<->y": 4,
+   "frozen_BIDIRECTED": 4,
+   "x---y": 4,
+   "xo--y": 1,
+   "frozen_PARTIALLY_DIRECTED": 1,
+   "frozen_TAIL_TAIL": 4
+  },
+  "gq": {
+   "tp": 268,
+   "fp": 141,
+   "fn": 419,
+   "n_true_direct_edges": 687,
+   "or_directed_correct": 1,
+   "or_directed_wrong": 14,
+   "or_circle_or_undirected": 249,
+   "or_bidirected_on_direct": 1,
+   "or_tail_tail": 3,
+   "or_n_scored": 268
+  },
+  "share_circle_any": 0.976890756302521,
+  "share_o_o_both_circle": 0.8760504201680672,
+  "share_fully_directed": 0.0063025210084033615,
+  "share_bidirected": 0.008403361344537815
+ }
+}

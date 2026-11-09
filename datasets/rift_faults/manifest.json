@@ -1,23 +1,158 @@
 {
+  "schema": "rift.dataset_manifest/2",
   "generator": "SyntheticBenchmark",
   "seed": 42,
-  "total_scenarios": 69,
-  "non_confounded": 21,
+  "total_scenarios": 83,
+  "unique_fault_ids": 81,
+  "non_confounded": 35,
   "confounded": 48,
   "by_fault_type": {
+    "AMBIGUOUS_ATTRIBUTION": 3,
+    "CONFOUNDED": 48,
+    "DEPENDENCY_FAILURE": 3,
+    "MULTI_CAUSE": 14,
     "NETWORK_LATENCY": 3,
     "PACKET_LOSS": 3,
-    "SERVICE_DEGRADATION": 3,
-    "RESOURCE_CONTENTION": 3,
     "QUEUEING": 3,
-    "DEPENDENCY_FAILURE": 3,
-    "MULTI_CAUSE": 3,
-    "CONFOUNDED": 48
+    "RESOURCE_CONTENTION": 3,
+    "SERVICE_DEGRADATION": 3
   },
   "split_counts": {
-    "DEVELOPMENT": 36,
+    "DEVELOPMENT": 50,
     "VALIDATION": 18,
     "HELD_OUT_TEST": 15
   },
-  "h2_power_note": "48 confounded scenarios generated; 80% power claimed for H2"
+  "generator_output": {
+    "total_scenarios": 69,
+    "split_counts": {
+      "DEVELOPMENT": 36,
+      "VALIDATION": 18,
+      "HELD_OUT_TEST": 15
+    },
+    "confounded": 48,
+    "historical_manifest": "manifest.v1_generator_69.json",
+    "historical_manifest_sha256": "8fe47d2730bf02f554e4b98c5b6fb7ed58213ee5799abf6108e1e4bed6c3fde1",
+    "note": "The historical manifest (69 scenarios) described the generator output only. It was not regenerated when the development split was expanded by hand (P0-02: +14 scenarios)."
+  },
+  "files": {
+    "development.json": {
+      "split": "DEVELOPMENT",
+      "scenario_count": 50,
+      "unique_scenario_ids": 50,
+      "sha256": "d8960776ee3556a8b98de4767c3e8bd14f430f828983fcf50b0114dce8a1aebd",
+      "size_bytes": 44761,
+      "generator_produced": 36,
+      "hand_added": 14,
+      "hand_added_ids": [
+        "MC_02",
+        "MC_03",
+        "MC_04",
+        "MC_05",
+        "MC_06",
+        "MC_07",
+        "MC_08",
+        "MC_09",
+        "MC_10",
+        "MC_11",
+        "MC_12",
+        "AA_01",
+        "AA_02",
+        "AA_03"
+      ],
+      "used_for_threshold_selection": true,
+      "sealed": false
+    },
+    "validation.json": {
+      "split": "VALIDATION",
+      "scenario_count": 18,
+      "unique_scenario_ids": 18,
+      "sha256": "2363f6bbea6f86eb883525be90151655ca9ddac01aa9ad5b6e8351dc4953d0f3",
+      "size_bytes": 15580,
+      "generator_produced": 18,
+      "hand_added": 0,
+      "hand_added_ids": [],
+      "used_for_threshold_selection": true,
+      "sealed": false
+    },
+    "held_out_test.json": {
+      "split": "HELD_OUT_TEST",
+      "scenario_count": 15,
+      "unique_scenario_ids": 15,
+      "sha256": "4337675b723dff1b88246216078a51e5b9aa1ffe976541739516d716ba18dd91",
+      "size_bytes": 13823,
+      "generator_produced": 15,
+      "hand_added": 0,
+      "hand_added_ids": [],
+      "used_for_threshold_selection": false,
+      "sealed": true
+    },
+    "adversarial_stress_cohort.json": {
+      "split": null,
+      "scenario_count": 30,
+      "unique_scenario_ids": 30,
+      "sha256": "46e769c6e75895fa25bfc22616aabb38757a2dac3c3c190025a4e57eb1215577",
+      "size_bytes": 18333,
+      "generator_produced": null,
+      "hand_added": null,
+      "role": "adversarial stress cohort (separate generator; NOT part of the 83-scenario corpus); per family (6 families x 5): indices 01-03 (18 scenarios) used for threshold selection, indices 04-05 (12 scenarios) reserved for the frozen final evaluation",
+      "used_for_threshold_selection": "partial (18 of 30: per-family indices 01-03)",
+      "sealed": false
+    }
+  },
+  "reconciliation": {
+    "deployed_total": 83,
+    "generator_total": 69,
+    "difference": 14,
+    "difference_explained_by": "hand-added development scenarios MC_02, MC_03, MC_04, MC_05, MC_06, MC_07, MC_08, MC_09, MC_10, MC_11, MC_12, AA_01, AA_02, AA_03",
+    "hand_added_total": 14
+  },
+  "fault_id_collisions_across_files": {
+    "MC_02": [
+      {
+        "file": "development.json",
+        "split": "DEVELOPMENT",
+        "root_cause_service": "redis_cart",
+        "seed": 100
+      },
+      {
+        "file": "validation.json",
+        "split": "VALIDATION",
+        "root_cause_service": "payment",
+        "seed": 44
+      }
+    ],
+    "MC_03": [
+      {
+        "file": "development.json",
+        "split": "DEVELOPMENT",
+        "root_cause_service": "product_catalog",
+        "seed": 101
+      },
+      {
+        "file": "held_out_test.json",
+        "split": "HELD_OUT_TEST",
+        "root_cause_service": "payment",
+        "seed": 45
+      }
+    ]
+  },
+  "held_out_scenarios_with_content_twin_in_other_split": [
+    "CF_36",
+    "CF_37",
+    "CF_38",
+    "CF_39",
+    "CF_40",
+    "CF_41",
+    "CF_42",
+    "CF_43",
+    "CF_44",
+    "CF_45",
+    "CF_46",
+    "CF_47",
+    "DF_03",
+    "MC_03",
+    "QU_03"
+  ],
+  "content_duplication_note": "Scenarios are templated; scenarios in different splits can be identical apart from fault_id/name/seed/split. Held-out is therefore NOT content-independent of development/validation. See docs/RIFT_DATASET_PROVENANCE.md.",
+  "h2_power_note": "48 confounded scenarios; unchanged by the development expansion (hand-added scenarios are MULTI_CAUSE / AMBIGUOUS_ATTRIBUTION, not CONFOUNDED)"
 }

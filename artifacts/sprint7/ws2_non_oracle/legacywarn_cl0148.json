@@ -1,0 +1,41 @@
+{
+ "oracle": {
+  "confounded": {
+   "n": 24,
+   "any_warning": 24,
+   "bidirected_warning": 24,
+   "semi_directed_warning": 0,
+   "top_ebd_identifiability_NOT_IDENTIFIABLE": 24,
+   "abstained_empty_ebd": 0
+  },
+  "non_confounded": {
+   "n": 12,
+   "any_warning": 2,
+   "bidirected_warning": 0,
+   "semi_directed_warning": 0,
+   "top_ebd_identifiability_NOT_IDENTIFIABLE": 0,
+   "abstained_empty_ebd": 0
+  }
+ },
+ "learned": {
+  "confounded": {
+   "n": 24,
+   "any_warning": 24,
+   "bidirected_warning": 3,
+   "semi_directed_warning": 23,
+   "top_ebd_identifiability_NOT_IDENTIFIABLE": 2,
+   "abstained_empty_ebd": 0
+  },
+  "non_confounded": {
+   "n": 12,
+   "any_warning": 10,
+   "bidirected_warning": 0,
+   "semi_directed_warning": 10,
+   "top_ebd_identifiability_NOT_IDENTIFIABLE": 0,
+   "abstained_empty_ebd": 0
+  }
+ },
+ "confounded_scenarios_whose_data_change_when_flag_flipped": 0,
+ "fisher_p_bidirected_warning_conf_vs_nonconf_learned": 0.5361344537815125,
+ "fisher_p_any_warning_conf_vs_nonconf_learned": 0.10476190476190476
+}

@@ -27,7 +27,6 @@ MANIFEST_FILE = "manifest.json"
 SPLIT_FILES = {
     "DEVELOPMENT": "development.json",
     "VALIDATION": "validation.json",
-    "HELD_OUT_TEST": "held_out_test.json",
 }
 FAULT_TYPE_LABELS = {
     "NETWORK_LATENCY":     "Network Latency",

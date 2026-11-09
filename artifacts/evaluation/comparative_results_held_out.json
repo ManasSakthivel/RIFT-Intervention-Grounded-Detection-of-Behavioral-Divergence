@@ -1,0 +1,1851 @@
+{
+  "split": "held_out_test.json",
+  "n_scenarios": 15,
+  "evaluations": {
+    "RIFT-FULL": {
+      "method_id": "RIFT-FULL",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 0.9333333333333333,
+        "conditional_precision_at_1": 0.9333333333333333,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.06666666666666667,
+        "correct_attribution_rate": 0.9333333333333333,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 61.333333333333336,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 0.9333333333333333,
+          "ci_lower": 0.8,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 0.9333333333333333,
+          "ci_lower": 0.8,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "RIFT-FULL",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.012177319599868498,
+        "median_pipeline_time_s": 0.012160833000962157,
+        "p95_pipeline_time_s": 0.012406587300574756,
+        "max_pipeline_time_s": 0.012458416000299621,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "RIFT-FULL-ORACLE": {
+      "method_id": "RIFT-FULL-ORACLE",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 0.13333333333333333,
+        "conditional_precision_at_1": 1.0,
+        "coverage": 0.13333333333333333,
+        "abstention_rate": 0.8666666666666667,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 1.0,
+        "correct_abstention_rate": 1.0,
+        "not_identifiable_rate": 0.8666666666666667,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 60.0,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 0.13333333333333333,
+          "ci_lower": 0.0,
+          "ci_upper": 0.3333333333333333
+        },
+        "conditional_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.8666666666666667,
+          "ci_lower": 0.6666666666666666,
+          "ci_upper": 1.0
+        }
+      },
+      "runtime": {
+        "method_id": "RIFT-FULL-ORACLE",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.0067553582002195375,
+        "median_pipeline_time_s": 0.006749999998646672,
+        "p95_pipeline_time_s": 0.006797591100803402,
+        "max_pipeline_time_s": 0.006804708000345272,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "RIFT-OBS": {
+      "method_id": "RIFT-OBS",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 0.0,
+        "conditional_precision_at_1": 0.0,
+        "coverage": 0.0,
+        "abstention_rate": 1.0,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 0.0,
+        "correct_abstention_rate": 1.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": null,
+        "median_detection_latency_s": null
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        },
+        "abstention_rate": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        }
+      },
+      "runtime": {
+        "method_id": "RIFT-OBS",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.0020813667334247535,
+        "median_pipeline_time_s": 0.002082541999698151,
+        "p95_pipeline_time_s": 0.002112866299103189,
+        "max_pipeline_time_s": 0.0021156669990887167,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "SIEVE-LIKE": {
+      "method_id": "SIEVE-LIKE",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 0.8,
+        "conditional_precision_at_1": 0.8,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.2,
+        "correct_attribution_rate": 0.8,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 62.666666666666664,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 0.8,
+          "ci_lower": 0.6,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 0.8,
+          "ci_lower": 0.6,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "SIEVE-LIKE",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.0016285526668070815,
+        "median_pipeline_time_s": 0.0016279169994959375,
+        "p95_pipeline_time_s": 0.0016456542998639634,
+        "max_pipeline_time_s": 0.0016523329995834501,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "RIFT-RANDOM": {
+      "method_id": "RIFT-RANDOM",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 1.0,
+        "conditional_precision_at_1": 1.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 1.0,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 60.0,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "RIFT-RANDOM",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.00889719446665064,
+        "median_pipeline_time_s": 0.008886042000085581,
+        "p95_pipeline_time_s": 0.00898957489971508,
+        "max_pipeline_time_s": 0.008990332999019301,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "RIFT-ONE-SHOT": {
+      "method_id": "RIFT-ONE-SHOT",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 1.0,
+        "conditional_precision_at_1": 1.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 1.0,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 60.0,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "RIFT-ONE-SHOT",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.008886561200051801,
+        "median_pipeline_time_s": 0.008871166999597335,
+        "p95_pipeline_time_s": 0.008955754300222907,
+        "max_pipeline_time_s": 0.009044333000929328,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "B1-LATENCY-CORR": {
+      "method_id": "B1-LATENCY-CORR",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 1.0,
+        "conditional_precision_at_1": 1.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 1.0,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 59.333333333333336,
+        "median_detection_latency_s": 60.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "B1-LATENCY-CORR",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 0.0021500665998852734,
+        "median_pipeline_time_s": 0.0021403329992608633,
+        "p95_pipeline_time_s": 0.002195958599622827,
+        "max_pipeline_time_s": 0.0022691660014970694,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    },
+    "ORACLE-UPPER-BOUND": {
+      "method_id": "ORACLE-UPPER-BOUND",
+      "n_scenarios": 15,
+      "attribution": {
+        "raw_precision_at_1": 1.0,
+        "conditional_precision_at_1": 1.0,
+        "coverage": 1.0,
+        "abstention_rate": 0.0,
+        "false_attribution_rate": 0.0,
+        "correct_attribution_rate": 1.0,
+        "correct_abstention_rate": 0.0,
+        "not_identifiable_rate": 0.0,
+        "insufficient_evidence_rate": 0.0,
+        "graph_discovery_failure_rate": 0.0,
+        "intervention_failure_rate": 0.0,
+        "mean_detection_latency_s": 0.0,
+        "median_detection_latency_s": 0.0
+      },
+      "confidence_intervals": {
+        "raw_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "conditional_precision_at_1": {
+          "point": 1.0,
+          "ci_lower": 1.0,
+          "ci_upper": 1.0
+        },
+        "abstention_rate": {
+          "point": 0.0,
+          "ci_lower": 0.0,
+          "ci_upper": 0.0
+        }
+      },
+      "runtime": {
+        "method_id": "ORACLE-UPPER-BOUND",
+        "n_scenarios": 15,
+        "mean_pipeline_time_s": 2.8474666275239238e-06,
+        "median_pipeline_time_s": 2.6670004444895312e-06,
+        "p95_pipeline_time_s": 3.6713992813020006e-06,
+        "max_pipeline_time_s": 4.1669991333037615e-06,
+        "mean_peak_memory_mb": null,
+        "max_peak_memory_mb": null,
+        "stage_timings": {},
+        "bottleneck_stage": null,
+        "notes": ""
+      }
+    }
+  },
+  "scenario_results": {
+    "RIFT-FULL": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "shipping",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ],
+    "RIFT-FULL-ORACLE": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "payment",
+        "top_score": 0.8,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": "NOT_IDENTIFIABLE",
+        "correct": false,
+        "correct_abstention": true
+      }
+    ],
+    "RIFT-OBS": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": null,
+        "top_score": null,
+        "abstained": true,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": true
+      }
+    ],
+    "SIEVE-LIKE": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 14.379183224609072,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 7.79833185040207,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "checkout",
+        "top_score": 13.879183224609072,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 8.142286159584415,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "frontend",
+        "top_score": 12.840720039757052,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": false,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 8.448215743463923,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 5.582352470675677,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 8.328708782142705,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 5.653891064347377,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 8.203973189042975,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 5.577123337864974,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 8.549220274352033,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 5.663046078238027,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 8.041508361000767,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 5.606256962430191,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ],
+    "RIFT-RANDOM": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 0.37294006968946347,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 0.541448900355298,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "payment",
+        "top_score": 0.3778460144383626,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5479845990679904,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5266594575012138,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.5735737910863465,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5336614158032006,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5571184228467795,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5278350858505131,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.5676285510005453,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5361360836703061,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5769734983647787,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5618662279690886,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.537549921692125,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5350139701273471,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ],
+    "RIFT-ONE-SHOT": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 0.37294006968946347,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 0.541448900355298,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "payment",
+        "top_score": 0.3778460144383626,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5479845990679904,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5266594575012138,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.5735737910863465,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5336614158032006,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5571184228467795,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5278350858505131,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.5676285510005453,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5361360836703061,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 0.5769734983647787,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 0.5618662279690886,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 0.537549921692125,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 0.5350139701273471,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ],
+    "B1-LATENCY-CORR": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 4.287947300752574,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 4.342389724331008,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "payment",
+        "top_score": 4.344354306203073,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 4.3235385733260205,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 4.37571734722185,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 4.619111438570023,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 4.186764353006758,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 4.469869182371799,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 4.240418298260533,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 4.455911520721754,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 4.182842503398731,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 4.69190528734204,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 4.247284558678521,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 4.217143257031852,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 4.204692721822643,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ],
+    "ORACLE-UPPER-BOUND": [
+      {
+        "scenario_id": "QU_03",
+        "ground_truth": "checkout",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "checkout",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "DF_03",
+        "ground_truth": "product_catalog",
+        "is_confounded": false,
+        "is_multi_cause": false,
+        "top_candidate": "product_catalog",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "MC_03",
+        "ground_truth": "payment",
+        "is_confounded": false,
+        "is_multi_cause": true,
+        "top_candidate": "payment",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_36",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_37",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_38",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_39",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_40",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_41",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_42",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_43",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_44",
+        "ground_truth": "cart",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "cart",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_45",
+        "ground_truth": "payment",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "payment",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_46",
+        "ground_truth": "recommendation",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "recommendation",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      },
+      {
+        "scenario_id": "CF_47",
+        "ground_truth": "shipping",
+        "is_confounded": true,
+        "is_multi_cause": false,
+        "top_candidate": "shipping",
+        "top_score": 1.0,
+        "abstained": false,
+        "abstain_reason": null,
+        "correct": true,
+        "correct_abstention": false
+      }
+    ]
+  }
+}

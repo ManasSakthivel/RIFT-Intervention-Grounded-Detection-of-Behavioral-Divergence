@@ -184,43 +184,42 @@ pre-linux-check: test
 	@echo "======================================================"
 	@echo " PRE-LINUX READINESS CHECK"
 	@echo "======================================================"
-	@$(PYTHON) -c "
-import json, sys
-from pathlib import Path
-checks = {
-    'src/rift/pipeline/e2e_runner.py': 'RIFT-FULL pipeline',
-    'src/rift/baselines/rift_obs.py': 'RIFT-OBS',
-    'src/rift/baselines/rift_random.py': 'RIFT-RANDOM',
-    'src/rift/baselines/sieve_like.py': 'Sieve-like',
-    'src/rift/baselines/oracle.py': 'Oracle',
-    'src/rift/evaluation/attribution_metrics.py': 'Attribution metrics',
-    'src/rift/evaluation/divergence_metrics.py': 'Divergence metrics',
-    'src/rift/evaluation/ebd_metrics.py': 'EBD metrics',
-    'src/rift/evaluation/power.py': 'Power analysis',
-    'src/rift/evaluation/held_out_guard.py': 'Held-out guard',
-    'src/rift/artifacts/writer.py': 'Artifact writer',
-    'docs/CLAIMS_REGISTRY.yaml': 'Claims registry',
-    'docs/PAPER_EVIDENCE_MATRIX.md': 'Evidence matrix',
-    'docs/SYSTEM_COMPLETENESS_MATRIX.md': 'Completeness matrix',
-    'docs/telemetry/ARCHITECTURE.md': 'Telemetry architecture',
-    'experiments/REGISTRY.yaml': 'Experiment registry',
-    'configs/development.yaml': 'Development config',
-    'configs/held_out.yaml': 'Held-out config',
-    'docs/SECURITY_AUDIT.md': 'Security audit',
-}
-all_pass = True
-for path, name in checks.items():
-    exists = Path(path).exists()
-    status = 'PASS' if exists else 'FAIL'
-    if not exists:
-        all_pass = False
-    print(f'  [{status}] {name}: {path}')
-print()
-if all_pass:
-    print('PRE-LINUX GATE: ALL CHECKS PASSED')
-else:
-    print('PRE-LINUX GATE: SOME CHECKS FAILED')
-    sys.exit(1)
+	@$(PYTHON) -c "\
+import json, sys;\
+from pathlib import Path;\
+checks = {\
+	   'src/rift/pipeline/e2e_runner.py': 'RIFT-FULL pipeline',\
+	   'src/rift/baselines/rift_obs.py': 'RIFT-OBS',\
+	   'src/rift/baselines/rift_random.py': 'RIFT-RANDOM',\
+	   'src/rift/baselines/sieve_like.py': 'Sieve-like',\
+	   'src/rift/baselines/oracle.py': 'Oracle',\
+	   'src/rift/evaluation/attribution_metrics.py': 'Attribution metrics',\
+	   'src/rift/evaluation/divergence_metrics.py': 'Divergence metrics',\
+	   'src/rift/evaluation/ebd_metrics.py': 'EBD metrics',\
+	   'src/rift/evaluation/power.py': 'Power analysis',\
+	   'src/rift/evaluation/held_out_guard.py': 'Held-out guard',\
+	   'src/rift/artifacts/writer.py': 'Artifact writer',\
+	   'docs/CLAIMS_REGISTRY.yaml': 'Claims registry',\
+	   'docs/PAPER_EVIDENCE_MATRIX.md': 'Evidence matrix',\
+	   'docs/SYSTEM_COMPLETENESS_MATRIX.md': 'Completeness matrix',\
+	   'docs/telemetry/ARCHITECTURE.md': 'Telemetry architecture',\
+	   'experiments/REGISTRY.yaml': 'Experiment registry',\
+	   'configs/development.yaml': 'Development config',\
+	   'configs/held_out.yaml': 'Held-out config',\
+	   'docs/SECURITY_AUDIT.md': 'Security audit',\
+};\
+all_pass = True;\
+for path, name in checks.items():\
+	   exists = Path(path).exists();\
+	   status = 'PASS' if exists else 'FAIL';\
+	   if not exists: all_pass = False;\
+	   print(f'  [{status}] {name}: {path}');\
+print();\
+if all_pass:\
+	   print('PRE-LINUX GATE: ALL CHECKS PASSED');\
+else:\
+	   print('PRE-LINUX GATE: SOME CHECKS FAILED');\
+	   sys.exit(1)\
 "
 
 # ---------------------------------------------------------------------------

@@ -1,0 +1,5 @@
+{
+  "n_scenarios": 36,
+  "dry_run": true,
+  "note": "DRY_RUN: metrics are not evidence of live system performance."
+}

@@ -375,3 +375,31 @@ class TestInvalidStateHandling:
         rec = engine.verify(rec, measured_latency_ms=300.0)
         assert rec.precision_check_pass is False
         assert rec.status == NetworkInterventionStatus.CONFOUNDED
+
+
+# ---------------------------------------------------------------------------
+# S-1 Safety Regression Tests
+# ---------------------------------------------------------------------------
+
+class TestSafetyHostInterventionGate:
+    def test_init_raises_value_error_if_live_and_no_namespace(self):
+        with pytest.raises(ValueError, match="Host network namespace intervention forbidden"):
+            NetworkInterventionEngine(dry_run=False)
+
+    @pytest.mark.parametrize("bad_ns", ["host", "root", "default", "prod-payments", " ", ""])
+    def test_init_raises_value_error_if_live_and_invalid_namespace(self, bad_ns):
+        with pytest.raises(ValueError, match="Host network namespace intervention forbidden"):
+            NetworkInterventionEngine(dry_run=False, sandbox_namespace=bad_ns)
+
+    def test_init_succeeds_if_live_and_valid_evaluation_namespace(self):
+        # rift-eval-payments matches the required evaluation pattern
+        engine = NetworkInterventionEngine(dry_run=False, sandbox_namespace="rift-eval-payments")
+        assert engine.sandbox_namespace == "rift-eval-payments"
+        assert engine.dry_run is False
+
+    def test_run_cmd_fails_closed_if_namespace_cleared_during_live_run(self):
+        engine = NetworkInterventionEngine(dry_run=False, sandbox_namespace="rift-eval-payments")
+        # Artificially clear the namespace
+        engine.sandbox_namespace = None
+        with pytest.raises(ValueError, match="Host network namespace intervention forbidden"):
+            engine._run_cmd(["tc", "qdisc", "show"])

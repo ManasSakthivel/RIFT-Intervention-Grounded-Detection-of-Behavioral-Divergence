@@ -1,0 +1,27 @@
+{
+ "chain A->B->C": {
+  "A-B": "xo-oy",
+  "B-C": "xo-oy"
+ },
+ "fork A<-B->C": {
+  "A-B": "xo-oy",
+  "B-C": "xo-oy"
+ },
+ "collider A->C<-B": {
+  "A-C": "xo->y",
+  "B-C": "xo->y"
+ },
+ "hub root->{x,y,z}": {
+  "R-X": "xo-oy",
+  "R-Y": "xo-oy",
+  "R-Z": "xo-oy"
+ },
+ "latent  A<-H->B (H hidden)": {
+  "A-B": "xo-oy"
+ },
+ "latent + collider A<-H->B->C<-D": {
+  "A-B": "xo-oy",
+  "B-C": "xo->y",
+  "C-D": "x<-oy"
+ }
+}

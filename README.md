@@ -4,7 +4,7 @@ A prototype for exploring whether controlled interventions can improve root-caus
 
 Standard observability (metrics, traces, logs) tells you what changed around the same time a failure occurred — it's correlation. RIFT explores whether deliberately perturbing a service — injecting latency via `tc netem` — and measuring what happens downstream gives better signal for identifying what actually *caused* the problem.
 
-> **Status:** Research prototype. Implementation complete; live empirical evaluation on the Linux testbed is pending. A synthetic-benchmark study (Sprints 4.3–4.5) is documented below: it has produced **no positive attribution result**, and a confirmatory experiment has been designed but **not yet run**. See [Current Status](#current-status) and [Research status](#research-status-synthetic-benchmark-sprints-4345).
+> **Status:** Research prototype. Implementation complete; live empirical evaluation on the Linux testbed is pending (one N=1 feasibility trial exists). A synthetic-benchmark study (Sprints 4.3–4.5) is documented below: it has produced **no positive result against a trivial always-abstain policy**; its only positive finding is that the later version (V3) makes fewer unsafe attributions than the earlier one (V2), on scenarios V3 was developed on. A confirmatory experiment has been designed but **not yet run**. Every number in this README is tied to a claim status in [`docs/recovery/SPRINT7_FINAL_CLAIMS_LEDGER.md`](docs/recovery/SPRINT7_FINAL_CLAIMS_LEDGER.md). See [Current Status](#current-status) and [Research status](#research-status-synthetic-benchmark-sprints-4345).
 
 ---
 
@@ -36,6 +36,24 @@ The pipeline:
 
 ---
 
+## Claims at a glance
+
+Statuses are defined in [`docs/recovery/SPRINT7_FINAL_CLAIMS_LEDGER.md`](docs/recovery/SPRINT7_FINAL_CLAIMS_LEDGER.md). Figures that have circulated informally but have no source are listed so nobody repeats them.
+
+| Claim | Status | One-line truth |
+|---|---|---|
+| "P@1 = 0.875 (35/40)" | WITHDRAWN | Appears in no file; no 40-scenario set exists. |
+| "3 testbeds" | WITHDRAWN | One testbed (Online Boutique), one N=1 trial; results come from a simulator. |
+| "25/25 negative-control abstentions" | WITHDRAWN | Appears in no file. |
+| "24/24 confounded abstentions" | QUALIFIED | Oracle graph is handed the confounder flag; 4 distinct scenarios; learned graph abstains on 0/24. |
+| "Beats 7/8 baselines" | QUALIFIED | Higher utility than 7 comparators on simulated dev/val (the 8th is the oracle); B6 and B7 are outcome-identical; does not beat always-abstain. |
+| "39.2% fewer unsafe attributions" | QUALIFIED | V3 vs V2 (79 → 48 of 252), on scenarios V3 was developed on, partly via abstaining more; not reproduced on a re-opened held-out set. |
+| "MSIS cuts intervention overhead >50% vs random" | WITHDRAWN | Hard-coded constants; V3 uses ~2.2× more interventions than the random baseline. |
+| Utility bounds | QUALIFIED | U ∈ [−3, 1] (not [0, 1]); ceiling 0.393; V3 mean −0.338 vs always-abstain 0; point break-even λ\* = 0.94 at κ = 0, significant only for λ ≤ 0.61. |
+| H1–H4 (live hypotheses), confirmatory run | BLOCKED | Not run. |
+
+---
+
 ## Research questions
 
 | RQ | Question |
@@ -55,31 +73,34 @@ These correspond to hypotheses H1–H4. None of them are confirmed yet — the l
   <img src="docs/figures/testbed_topology.svg" alt="Testbed Topology" width="640"/>
 </p>
 
-[Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo) v0.9.0 — 14 containerised microservices on an isolated Docker bridge network. No production data or real traffic.
+[Online Boutique](https://github.com/GoogleCloudPlatform/microservices-demo) — **one** testbed. The only executed live trial used the 14-container stack in `deploy/podman-compose.yaml` (Boutique images tagged v0.8.1, Podman on RHEL 9.6, 11 Boutique services incl. load generator + `redis-cart` + OTel Collector + Prometheus); the Docker stack in `docker/` (v0.9.0, with Jaeger) has not been the subject of a live trial. Synthetic load only; no production data or real traffic. There is no second or third testbed: all quantitative results below come from a simulator, not from any testbed.
 
-Observability: Prometheus (metrics), Jaeger (traces), OTel Collector (OTLP bridge).
+Observability: Prometheus (metrics) and OTel Collector (spanmetrics bridge) in the executed trial; Jaeger (traces) in the `docker/` stack only.
 
 Fault injection: `tc netem` with per-destination `u32` filters. Requires Linux `CAP_NET_ADMIN`.
 
-**Fault scenarios:**
+**Synthetic benchmark scenarios** (`datasets/rift_v2/`; simulator-generated, authored faults — not live incidents):
 
 | Split | Scenarios | Notes |
 |-------|-----------|-------|
-| Development | 50 | includes 24 confounded + 12 multi-cause |
-| Validation | 18 | — |
-| Held-out | 15 | sealed until final evaluation |
+| Development | 180 | 68 ATTRIBUTE + 112 ABSTAIN_REQUIRED |
+| Validation | 72 | 31 ATTRIBUTE + 41 ABSTAIN_REQUIRED |
+| Held-out | 108 | 45 ATTRIBUTE + 63 ABSTAIN_REQUIRED (spent under V2) |
 
 ---
 
 ## Current status
 
 ```
-Implementation                COMPLETE
-Automated tests (CI, py3.11)  664 passed, 2 protected-material checks UNAVAILABLE (not verified in CI), 0 failures
-Linux environment             PASS (RHEL 9.6, Docker, tc/netem confirmed)
-Online Boutique testbed       PASS (14/14 containers healthy)
-Safety hard stops             PASS (all 8 validated)
-tc/netem injection            PASS (latency injection + rollback confirmed)
+Implementation                COMPLETE (known defects tracked in docs/recovery/ALGORITHM_AUDIT.md)
+Automated tests (local run)   1,017 passed, 8 failed (all 8 = installed library versions differ from the
+                              canonical Python 3.9 lock in tests/unit/test_final_reproducibility.py), 0 other failures
+Automated tests (CI, py3.11)  earlier figure: 664 passed, 2 protected-material checks UNAVAILABLE (not a pass); not re-verified
+Linux environment             PASS (RHEL 9.6, Podman, tc/netem confirmed) - single host
+Online Boutique testbed       PASS (14/14 containers healthy) - one feasibility trial
+Safety hard stops             IMPLEMENTED + unit/dry-run tested; NOT enforced on the executed live path (see audit SF-1)
+tc/netem injection            PASS for one N=1 trial (inline commands, 50 ms on cartservice, rollback confirmed);
+                              the library backend has a known qdisc-handle defect and was never run live
 
 Live telemetry pipeline       PENDING (Prometheus client + OTel wiring)
 Full live evaluation          PENDING
@@ -91,13 +112,25 @@ Three known blockers (Prometheus client wiring, OTel integration, tc band index)
 
 ### Development-set numbers *(synthetic, not final)*
 
-These are from the pre-Linux synthetic benchmark using oracle PAG and mock telemetry. They don't represent live system performance.
+None of these represent live system performance. Two different synthetic benchmarks are involved; do not mix them.
+
+**(a) v2 benchmark, learned graph (the benchmark used for all V2/V3 comparisons):**
 
 | Metric | Value |
 |--------|-------|
-| Raw Precision@1 | 50% (36-scenario dev set, synthetic) |
-| Conditional Precision@1 | 60% (excluding non-identifiable confounded scenarios) |
-| Abstention accuracy | 100% (all 24 confounded scenarios correctly flagged as non-identifiable) |
+| V3 correct root on ATTRIBUTE scenarios | 32/68 = 47.1% (dev, 180 scenarios); 13/31 = 41.9% (val, 72); pooled 45/99 = 45.5% |
+| V3 answers on abstain-required scenarios | 38 of 153 pooled (25%); i.e. correct abstention on 115/153 = 75.2% |
+| Unsafe attributions, V2 → V3 (strict, pooled N=252) | 79 → 48 (−39%, cluster 95% CI −23% to −54%); development evidence, V3 was tuned on these scenarios. On the spent held-out set (re-opened once in Sprint 7; not valid for final claims) V3 showed no advantage over V2 (utility −0.664 vs −0.594) |
+| V3 mean utility vs always-abstain (λ=2, κ=0.05) | −0.338 strict [−0.46, −0.22], −0.195 operational; always-abstain = 0. V3 does **not** beat always-abstain |
+
+**(b) legacy 36-scenario harness with an oracle graph (upper-bound consistency check only):**
+
+| Metric | Value |
+|--------|-------|
+| P@1 on non-confounded scenarios | 10/12 = 83.3% with a ground-truth PAG built from the data-generating path |
+| Confounded scenarios flagged | 24/24, **because the oracle graph is given the confounder flag**; they are 4 distinct scenarios, and the simulator does not put confounding in the data. With a learned graph the same pipeline abstains on 0/24. This is not evidence that RIFT detects confounding. |
+
+Figures `analysis/figures/*` and tables `analysis/tables/*` are empty templates (marked "RESULTS NOT YET AVAILABLE" / `PENDING`); they contain no results.
 
 ---
 
@@ -105,10 +138,10 @@ These are from the pre-Linux synthetic benchmark using oracle PAG and mock telem
 
 Everything in this section comes from a **synthetic** simulator benchmark, not from the live testbed or production telemetry. It must not be read as evidence of real-world effectiveness.
 
-- **Sprint 4.3 held-out (spent, V2 only):** V2 attributed correctly in 60/108 scenarios versus 63/108 for an always-abstain baseline. It did not beat always-abstain.
+- **Sprint 4.3 held-out (spent):** V2 attributed correctly in 60/108 scenarios versus 63/108 for an always-abstain baseline. It did not beat always-abstain. In Sprint 7 the frozen V3 was run once on the same set as a re-opening (flagged not valid for final claims): mean utility −0.664 vs V2 −0.594, below always-abstain, no advantage over V2.
 - **V3 (development/validation only, non-confirmatory):** mean utility U = C − 2.0·S − 1.0·(n_do/20) was −0.338 against always-abstain (U ≡ 0); V2 was −0.562. V3 improves on V2 but does not beat always-abstain on dev/val. The utility weights are normative choices, not calibrated constants.
 - **Known validity concerns:** the ground-truth label reuses part of RIFT's own detection vocabulary (partial circularity); scenarios are not independent (template groups nested in 16 fixed structural strata); CID can show spurious divergence under time-varying faults.
-- **Confirmatory experiment:** preregistered but **not run**. No confirmatory data exist. Required human decisions (including an independent human scientific review) are still open.
+- **Confirmatory experiment:** protocol drafted and committed but **not recorded or approved** (no preregistration hash; no named independent reviewer) and **not run**. No confirmatory data exist. Required human decisions (including an independent human scientific review) are still open.
 - **CI:** two tests guard protected material that is deliberately not in Git. In CI they are reported as *unavailable*, which is **not** a pass.
 
 Details: [`docs/FINAL_PREPUBLICATION_STATUS.md`](docs/FINAL_PREPUBLICATION_STATUS.md) · [`docs/FINAL_APPROVAL_MATRIX.md`](docs/FINAL_APPROVAL_MATRIX.md) · [`docs/FINAL_SCIENTIFIC_VALIDITY_CLOSURE.md`](docs/FINAL_SCIENTIFIC_VALIDITY_CLOSURE.md) · [`docs/FINAL_INDEPENDENT_REVIEW_PACKAGE.md`](docs/FINAL_INDEPENDENT_REVIEW_PACKAGE.md) · [`docs/IEEE_ACCESS_MANUSCRIPT_BLUEPRINT.md`](docs/IEEE_ACCESS_MANUSCRIPT_BLUEPRINT.md)
@@ -125,7 +158,7 @@ python3.11 -m pip install -r requirements.txt
 
 # Run the test suite (Mac/Linux — no testbed required)
 python3.11 -m pytest tests/ -q
-# Expected in a clean checkout: 664 pass; two protected-material tests cannot run (their inputs are
+# CI (earlier figure): 664 pass; two protected-material tests cannot run in a clean checkout (their inputs are
 # not in Git). Use the reproducibility-aware runner to see them reported as UNAVAILABLE, not as passes:
 python3.11 scripts/sprint442_run_tests.py tests
 
@@ -133,7 +166,7 @@ python3.11 scripts/sprint442_run_tests.py tests
 make reproduce-all
 
 # List registered experiments
-python3.11 -m rift.experiments.run --list
+PYTHONPATH=src python3.11 -m rift.experiments.run --list   # PYTHONPATH=src is required unless the package is installed
 
 # Run a single experiment in dry-run mode
 make experiment EXP=EXP-001
@@ -164,7 +197,7 @@ src/rift/
   evaluation/       # attribution metrics, power analysis
 
 experiments/        # registered experiment configs
-tests/              # unit and integration tests (664 reproducible in CI)
+tests/              # unit and integration tests (see Current status for the measured count)
 docs/               # formal model, hypotheses, intervention semantics, limitations
 artifacts/          # frozen state manifests
 ```

@@ -1,0 +1,66 @@
+{
+ "split": "held_out",
+ "status": "VALID",
+ "n_scenarios": 108,
+ "dataset_sha256": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce",
+ "n_templates": 71,
+ "methods": [
+  "B0-EARLIEST",
+  "B0-HIGHEST",
+  "B1-LATENCY-CORR",
+  "B3-SIEVE-LIKE",
+  "B5-RIFT-OBS",
+  "B6-RIFT-RANDOM",
+  "B7-RIFT-ONE-SHOT",
+  "RIFT-FULL-LEGACY",
+  "ORACLE:RIFT-FULL-LEGACY-ORACLE-PAG",
+  "ORACLE:UPPER-BOUND",
+  "RIFT-FULL-V2",
+  "RIFT-FULL-V2G",
+  "ORACLE:RIFT-FULL-V2-ORACLE-GRAPH",
+  "ABL:A2-NO-FCI",
+  "ABL:A3-NO-EBD",
+  "ABL:A4-NO-CID",
+  "ABL:A5-NO-IDENT",
+  "ABL:A6-NO-INTERVENTION",
+  "ABL:A7-NO-MSIS",
+  "ABL:A8-OBSERVATIONAL-ONLY",
+  "ABL:A9-ORACLE-GRAPH",
+  "ABL:A10-RANDOM-INTERVENTION"
+ ],
+ "excluded": [
+  {
+   "method_id": "B4-SAGE-CHAOS",
+   "reason": "deferred stub that always abstains; not a method"
+  }
+ ],
+ "id_notes": "RIFT-ONE-SHOT: class id B7-RIFT-ONE-SHOT, adversarial-script dict key B4-RIFT-ONE-SHOT; reported under the class id B7. B4-SAGE-CHAOS is excluded (stub).",
+ "ablations": true,
+ "config_hash": "5eef12cd4f39a29249474dd125a2fe9257168885df0de8a1e7f098a1c1a8f3b1",
+ "stat_seed": 430,
+ "bootstrap_B": 2000,
+ "permutations": 10000,
+ "git_commit": "cbc5ae5e78f0ca37f6129a7fb50d49e5581d213b",
+ "git_branch": "sprint-4.3.0-evaluation-independence",
+ "protocol_sha256": "745d3c7fb894395a4cebc17addd460d7b356258cd7bc438a5d4fd16de78bd8a5",
+ "source_hashes": {
+  "src/rift/evaluation/rift_v2.py": "9eeb80dad46d62bab35c5bc73fefaa9a1137c3b6d6f1dec7ba85a56734fb80bf",
+  "src/rift/evaluation/benchmark_v2.py": "efc5fcf4a947e12f608aa173f5f4f7d0d7b03f0a04120213c6f503e09eafce92",
+  "src/rift/evaluation/stats_v2.py": "762962f1664e9d79ebc4082279a6aa6833dcc7f46957588bc8a19da8d89e9d0e",
+  "scripts/sprint430_run_evaluation.py": "519eb6e2369789f764c46daacd795f734d3d656d7975c0984df68d349459443d"
+ },
+ "versions": {
+  "python": "3.9.6",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "2.0.2",
+  "scipy": "1.13.1",
+  "pandas": "2.3.3",
+  "networkx": "3.2.1",
+  "causallearn": "unknown"
+ },
+ "started_utc": "2026-11-03T04:06:00.427593+00:00",
+ "finished_utc": "2026-11-03T04:06:31.716054+00:00",
+ "wall_clock_s": 30.97,
+ "live_system_contacted": false,
+ "metric_definitions": "docs/EVALUATION_PROTOCOL_V2.md sections 3-4"
+}

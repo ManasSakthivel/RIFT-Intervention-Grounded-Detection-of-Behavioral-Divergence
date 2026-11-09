@@ -1,0 +1,32 @@
+{
+ "dev": {
+  "scenarios": 138,
+  "edges": 277,
+  "circle": 271,
+  "share": 0.9783393501805054,
+  "kinds": {
+   "xo-oy": 247,
+   "xo->y": 14,
+   "x<-oy": 9,
+   "x<-y": 1,
+   "x<->y": 1,
+   "x---y": 4,
+   "xo--y": 1
+  },
+  "mismatch_vs_saved_trace": 0
+ },
+ "val": {
+  "scenarios": 58,
+  "edges": 167,
+  "circle": 162,
+  "share": 0.9700598802395209,
+  "kinds": {
+   "xo-oy": 138,
+   "xo->y": 10,
+   "x<-oy": 14,
+   "x<-y": 2,
+   "x<->y": 3
+  },
+  "mismatch_vs_saved_trace": 0
+ }
+}

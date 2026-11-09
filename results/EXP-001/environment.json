@@ -1,0 +1,18 @@
+{
+  "experiment_id": "EXP-001",
+  "git_commit": "ebad911087942f257ba434f69816ed6d692be170",
+  "git_dirty": true,
+  "timestamp_utc": "2026-11-09T06:34:31Z",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "python_version": "3.11.15",
+  "software_versions": {
+    "python": "3.11.15",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "numpy": "1.25.2",
+    "scipy": "1.16.3",
+    "pandas": "2.1.0",
+    "pydantic": "2.13.4",
+    "networkx": "3.6.1",
+    "causal-learn": "unknown"
+  }
+}

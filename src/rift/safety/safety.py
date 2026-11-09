@@ -24,6 +24,9 @@ class HardStopReason(str, Enum):
     DATA_MUTATION_ATTEMPT = "DATA_MUTATION_ATTEMPT"
     CASCADE_FAILURE = "CASCADE_FAILURE"
     KILL_SWITCH = "KILL_SWITCH"
+    HOST_NAMESPACE_INTERVENTION = "HOST_NAMESPACE_INTERVENTION"
+    MISSING_NAMESPACE = "MISSING_NAMESPACE"
+    INVALID_NAMESPACE = "INVALID_NAMESPACE"
 
 
 @dataclass
@@ -83,7 +86,9 @@ class SafetyController:
 
     def is_production_namespace(self, namespace: str) -> bool:
         """Returns True if namespace is NOT a valid rift-eval-* namespace."""
-        if not namespace:
+        if not namespace or not str(namespace).strip():
+            return True
+        if str(namespace).lower() in ("host", "root", "default", "/proc/1/ns/net"):
             return True
         if not self._EVAL_NAMESPACE_PATTERN.match(namespace):
             return True
@@ -143,7 +148,7 @@ class SafetyController:
             )
         checks_passed.append("kill_switch")
 
-        # Hard stop 1: Production namespace
+        # Hard stop 1: Production / Host / Missing namespace check
         checks_performed.append("namespace_check")
         if self.is_production_namespace(namespace):
             checks_failed.append("namespace_check")
@@ -156,8 +161,8 @@ class SafetyController:
                 checks_failed=checks_failed,
                 rollback_required=False,
                 notes=(
-                    f"Namespace '{namespace}' does not match rift-eval-* pattern. "
-                    "All interventions blocked in non-evaluation namespaces."
+                    f"Namespace '{namespace}' is invalid, missing, or targets host/non-evaluation environment. "
+                    "All interventions blocked outside approved rift-eval-* namespaces."
                 ),
             )
         checks_passed.append("namespace_check")

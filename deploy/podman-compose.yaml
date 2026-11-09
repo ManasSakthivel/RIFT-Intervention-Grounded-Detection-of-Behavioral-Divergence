@@ -1,0 +1,248 @@
+version: '3.8'
+
+# RIFT Live Testbed Podman Compose Specification
+# All services operate inside isolated private bridge network 'rift-net'.
+# Loopback bindings only on host high-ports (18080, 19090, 18888, 14317).
+# Authority: docs/SPRINT4_1_1_INDEPENDENT_PLAN_AUDIT.md Findings F-01, F-03, F-05, F-06.
+
+networks:
+  rift-net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.89.100.0/24
+          gateway: 10.89.100.1
+
+services:
+  rift-redis-cart:
+    image: docker.io/library/redis:alpine
+    container_name: rift-redis-cart
+    networks:
+      - rift-net
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-emailservice:
+    image: gcr.io/google-samples/microservices-demo/emailservice:v0.8.1
+    container_name: rift-emailservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=8080
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-checkoutservice:
+    image: gcr.io/google-samples/microservices-demo/checkoutservice:v0.8.1
+    container_name: rift-checkoutservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=5050
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - PRODUCT_CATALOG_SERVICE_ADDR=rift-productcatalogservice:3550
+      - SHIPPING_SERVICE_ADDR=rift-shippingservice:50051
+      - PAYMENT_SERVICE_ADDR=rift-paymentservice:50051
+      - EMAIL_SERVICE_ADDR=rift-emailservice:8080
+      - CURRENCY_SERVICE_ADDR=rift-currencyservice:7000
+      - CART_SERVICE_ADDR=rift-cartservice:7070
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-recommendationservice:
+    image: gcr.io/google-samples/microservices-demo/recommendationservice:v0.8.1
+    container_name: rift-recommendationservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=8080
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - PRODUCT_CATALOG_SERVICE_ADDR=rift-productcatalogservice:3550
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-frontend:
+    image: gcr.io/google-samples/microservices-demo/frontend:v0.8.1
+    container_name: rift-frontend
+    networks:
+      - rift-net
+    ports:
+      - "127.0.0.1:18080:8080"
+    environment:
+      - PORT=8080
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - PRODUCT_CATALOG_SERVICE_ADDR=rift-productcatalogservice:3550
+      - CURRENCY_SERVICE_ADDR=rift-currencyservice:7000
+      - CART_SERVICE_ADDR=rift-cartservice:7070
+      - RECOMMENDATION_SERVICE_ADDR=rift-recommendationservice:8080
+      - SHIPPING_SERVICE_ADDR=rift-shippingservice:50051
+      - CHECKOUT_SERVICE_ADDR=rift-checkoutservice:5050
+      - AD_SERVICE_ADDR=rift-adservice:9555
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+  rift-paymentservice:
+    image: gcr.io/google-samples/microservices-demo/paymentservice:v0.8.1
+    container_name: rift-paymentservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=50051
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-productcatalogservice:
+    image: gcr.io/google-samples/microservices-demo/productcatalogservice:v0.8.1
+    container_name: rift-productcatalogservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=3550
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-cartservice:
+    image: gcr.io/google-samples/microservices-demo/cartservice:v0.8.1
+    container_name: rift-cartservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=7070
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - REDIS_ADDR=rift-redis-cart:6379
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-loadgenerator:
+    image: gcr.io/google-samples/microservices-demo/loadgenerator:v0.8.1
+    container_name: rift-loadgenerator
+    networks:
+      - rift-net
+    environment:
+      - FRONTEND_ADDR=rift-frontend:8080
+      - USERS=10
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+  rift-currencyservice:
+    image: gcr.io/google-samples/microservices-demo/currencyservice:v0.8.1
+    container_name: rift-currencyservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=7000
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-shippingservice:
+    image: gcr.io/google-samples/microservices-demo/shippingservice:v0.8.1
+    container_name: rift-shippingservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=50051
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-adservice:
+    image: gcr.io/google-samples/microservices-demo/adservice:v0.8.1
+    container_name: rift-adservice
+    networks:
+      - rift-net
+    environment:
+      - PORT=9555
+      - DISABLE_PROFILER=1
+      - ENABLE_TRACING=1
+      - COLLECTOR_SERVICE_ADDR=rift-otel-collector:4317
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: '0.5'
+
+  rift-otel-collector:
+    image: docker.io/otel/opentelemetry-collector-contrib:0.98.0
+    container_name: rift-otel-collector
+    networks:
+      - rift-net
+    volumes:
+      - ./otel-collector.yaml:/etc/otelcol-contrib/config.yaml:ro
+    ports:
+      - "127.0.0.1:18888:8888"
+      - "127.0.0.1:14317:4317"
+    deploy:
+      resources:
+        limits:
+          memory: 128M
+          cpus: '0.25'
+
+  rift-prometheus:
+    image: quay.io/prometheus/prometheus:v2.51.0
+    container_name: rift-prometheus
+    networks:
+      - rift-net
+    volumes:
+      - ./prometheus.yml:/etc/prometheus/prometheus.yml:ro
+    ports:
+      - "127.0.0.1:19090:9090"
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: '0.5'

@@ -1,0 +1,18 @@
+# Prometheus Scrape Configuration for RIFT Testbed
+# Scrapes OTel Collector Prometheus exporter and container stats.
+# Authority: docs/SPRINT4_1_1_INDEPENDENT_PLAN_AUDIT.md Finding F-03.
+
+global:
+  scrape_interval: 5s
+  evaluation_interval: 5s
+
+scrape_configs:
+  # Scrape spanmetrics generated from Online Boutique microservice calls
+  - job_name: 'rift-otel-spanmetrics'
+    static_configs:
+      - targets: ['rift-otel-collector:8889']
+    metric_relabel_configs:
+      - source_labels: [__name__]
+        regex: 'rift_.*'
+        action: keep
+

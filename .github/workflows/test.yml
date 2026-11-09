@@ -26,6 +26,22 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # Final execution (Agent 5): requirements.txt now pins exactly reproducibility/requirements-canonical-py39.lock.txt
+      # (causal-learn 0.1.4.8 etc.), so CI runs the stack that produced the committed dev/val results.
+      # This step regenerates the V3 dev/val records (dev+val only; scratch dir outside artifacts/) and FAILS if
+      # any record differs from artifacts/sprint4_4_0/v3_{dev,val}.json. It executes the pipeline; it is not an import check.
+      - name: Reproduce committed V3 dev/val records
+        run: |
+          python scripts/final_repro_check.py "$RUNNER_TEMP/repro" --report repro_report.json
+
+      - name: Upload reproduction report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: repro-report
+          path: repro_report.json
+          if-no-files-found: ignore
+
       # Sprint 4.4.2 reproducibility-aware harness. Two committed tests verify integrity of protected
       # materials that are deliberately NOT in git (sealed held-out candidate; historical Stage 4 artifact).
       # On a clean checkout they are reported as PROTECTED-MATERIAL-UNAVAILABLE (integrity NOT verified) --

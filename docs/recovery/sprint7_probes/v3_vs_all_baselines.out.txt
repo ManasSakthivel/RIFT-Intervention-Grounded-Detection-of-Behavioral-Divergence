@@ -1,0 +1,42 @@
+N=252 template clusters K=105 lambda=2.0 kappa=0.05 B=4000 seed=7
+
+[strict] mean U (V3-FULL) = -0.3377; always-abstain U = +0.0000
+  V3 - ALWAYS-ABSTAIN                     -0.338 [-0.464,-0.216]
+  V3 - V3-DEFINITIVE-ONLY                   -0.040 [-0.095,+0.012]
+  V3 - RIFT-FULL-V2                         +0.224 [+0.090,+0.367]
+  V3 - RIFT-FULL-LEGACY                     +0.439 [+0.275,+0.600]
+  V3 - B0-EARLIEST                          +0.960 [+0.781,+1.145]
+  V3 - B0-HIGHEST                           +1.281 [+1.125,+1.437]
+  V3 - B1-LATENCY-CORR                      +1.095 [+0.934,+1.253]
+  V3 - B3-SIEVE-LIKE                        +0.988 [+0.810,+1.163]
+  V3 - B5-RIFT-OBS                          +0.662 [+0.496,+0.824]
+  V3 - B6-RIFT-RANDOM                       +0.869 [+0.704,+1.032]
+  V3 - B7-RIFT-ONE-SHOT                     +0.869 [+0.704,+1.031]
+  V3 - ORACLE:UPPER-BOUND                   -0.731 [-0.848,-0.619]
+  V3 - ORACLE:RIFT-FULL-V2-ORACLE-GRAPH     +0.073 [-0.064,+0.213]
+
+[operational] mean U (V3-FULL) = -0.1948; always-abstain U = +0.0000
+  V3 - ALWAYS-ABSTAIN                     -0.195 [-0.300,-0.089]
+  V3 - V3-DEFINITIVE-ONLY                   -0.008 [-0.054,+0.036]
+  V3 - RIFT-FULL-V2                         +0.169 [+0.038,+0.307]
+  V3 - RIFT-FULL-LEGACY                     +0.391 [+0.232,+0.559]
+  V3 - B0-EARLIEST                          +0.809 [+0.625,+0.997]
+  V3 - B0-HIGHEST                           +1.202 [+1.038,+1.364]
+  V3 - B1-LATENCY-CORR                      +0.992 [+0.821,+1.163]
+  V3 - B3-SIEVE-LIKE                        +0.885 [+0.707,+1.067]
+  V3 - B5-RIFT-OBS                          +0.638 [+0.468,+0.811]
+  V3 - B6-RIFT-RANDOM                       +0.758 [+0.596,+0.926]
+  V3 - B7-RIFT-ONE-SHOT                     +0.758 [+0.595,+0.926]
+  V3 - ORACLE:UPPER-BOUND                   -0.588 [-0.694,-0.486]
+  V3 - ORACLE:RIFT-FULL-V2-ORACLE-GRAPH     -0.133 [-0.254,-0.017]
+
+unsafe V2=79 V3=48  relative reduction=0.3924
+template-cluster 95% CI of relative reduction: [0.229 0.543]
+McNemar discordant: V2-only-unsafe=46 V3-only-unsafe=15 exact two-sided p=8.838e-05 (unclustered, uncorrected)
+  dev: V2 unsafe 52 -> V3 35
+  val: V2 unsafe 27 -> V3 13
+coverage (answered rate) V2=0.456 V3=0.369
+B6 vs B7 identical on 'answered': 252/252
+B6 vs B7 identical on 'correct': 252/252
+B6 vs B7 identical on 'unsafe': 252/252
+n_do identical: 251 / 252

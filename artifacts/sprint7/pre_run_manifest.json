@@ -1,0 +1,60 @@
+{
+ "script_sha256": "e201c222be73e1f77b98b7b32d7df4357d126823cf9253ea4cec6bb78f4cd938",
+ "created_utc": "2026-11-09T06:40:44Z",
+ "datasets": {
+  "dev": {
+   "n": 180,
+   "sha256": "a833ad0ca1db0583a30bc4450f9f59b2984a5823702935ef59c6b037e026ef5f"
+  },
+  "val": {
+   "n": 72,
+   "sha256": "e82252b47f29dc1353586034b6fd8c3491df3221851f9c84c48bf717a944a1fb"
+  },
+  "held_out": {
+   "n": 108,
+   "sha256": "97b90fa424c3a7c0654d2fd8cde417f094c58931a527c8ce5023bafe5e8e69ce"
+  },
+  "adversarial_dev": {
+   "n": 112,
+   "sha256": "3525bc05ed8b9dd21dcc888181005af09e75f43396fb27a0ad6732588ea3c472"
+  }
+ },
+ "frozen_check": {
+  "sprint430_freeze_json_verifies": true,
+  "sprint430_freeze_detail": "ok",
+  "sprint450_manifest_files": 51,
+  "sprint450_manifest_mismatches": [],
+  "v3_full_config_in_manifest": {
+   "answer_statuses": [
+    "DEFINITIVE_ROOT",
+    "QUALIFIED_ROOT"
+   ],
+   "divergent_candidates": true,
+   "earlier_guard": true,
+   "manipulation_check": true,
+   "name": "RIFT-FULL-V3",
+   "test_explained": true
+  },
+  "v3_full_config_in_code": {
+   "name": "RIFT-FULL-V3",
+   "manipulation_check": true,
+   "earlier_guard": true,
+   "answer_statuses": [
+    "DEFINITIVE_ROOT",
+    "QUALIFIED_ROOT"
+   ],
+   "divergent_candidates": true,
+   "test_explained": true
+  }
+ },
+ "leakage_ok": {
+  "val_vs_dev": true,
+  "val_vs_dev_adv": true,
+  "held_out_vs_dev_val_adv": false,
+  "held_out_vs_dev_val_adv_at_0.85": false,
+  "adversarial_dev_vs_dev_val": false,
+  "verify_independence_dev_val_heldout_0.90": true
+ },
+ "git_head": "ebad911087942f257ba434f69816ed6d692be170",
+ "note": "written after leakage checks and before any V3 run on val/held-out"
+}

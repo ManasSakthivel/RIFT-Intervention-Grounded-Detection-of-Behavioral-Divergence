@@ -181,6 +181,17 @@ class NetworkInterventionEngine:
         self.sandbox_namespace = sandbox_namespace
         self._active_records: Dict[str, NetworkInterventionRecord] = {}
 
+        # S-1 live runner safety defect fix: Fail closed if targeting host namespace when running live commands.
+        if not dry_run:
+            from src.rift.safety.safety import SafetyController
+            controller = SafetyController(approved_namespaces=[sandbox_namespace] if sandbox_namespace else [])
+            if not sandbox_namespace or controller.is_production_namespace(sandbox_namespace):
+                raise ValueError(
+                    f"Host network namespace intervention forbidden: an explicit, "
+                    f"validated container network namespace (matching rift-eval-*) is required "
+                    f"when dry_run=False. Got sandbox_namespace={sandbox_namespace!r}"
+                )
+
     def _run_cmd(self, cmd: List[str]) -> subprocess.CompletedProcess:
         """Run a tc command. In dry_run mode: log only."""
         if self.dry_run:
@@ -190,6 +201,12 @@ class NetworkInterventionEngine:
             )
         if self.sandbox_namespace:
             cmd = ["ip", "netns", "exec", self.sandbox_namespace] + cmd
+        else:
+            # S-1 live runner safety defect fix: Fail closed if no namespace is set when running live commands.
+            raise ValueError(
+                "Host network namespace intervention forbidden: sandbox_namespace is missing "
+                "or invalid while attempting a live intervention."
+            )
         try:
             return subprocess.run(
                 cmd,

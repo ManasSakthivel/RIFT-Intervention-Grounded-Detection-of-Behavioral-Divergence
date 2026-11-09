@@ -1,0 +1,1751 @@
+{
+  "frozen_thresholds_sha256": "80063cce8150d4a1da589f66b7709390451cf5d4c2a7fd79f751e20c0a982f16",
+  "level_offset_ms": 100.0,
+  "final_n_series": 597,
+  "frozen_thresholds": {
+    "existing_stage4_rule": {},
+    "ebd_r1": {},
+    "absolute_threshold": {
+      "delta_abs": 40
+    },
+    "relative_increase": {
+      "pct": 0.5
+    },
+    "robust_z": {
+      "z_thr": 3
+    },
+    "persistence_z": {
+      "k": 2
+    },
+    "combined": {
+      "z_thr": 3,
+      "delta_abs": 15,
+      "pct": 0.1
+    }
+  },
+  "final_scores": {
+    "existing_stage4_rule": {
+      "params": {},
+      "tp": 131,
+      "fp": 4,
+      "fn": 38,
+      "tn": 424,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0093,
+      "fpr_ci95": [
+        0.0036,
+        0.0238
+      ],
+      "fnr": 0.2249,
+      "fnr_ci95": [
+        0.1684,
+        0.2935
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "tn": 16
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_D_MULTI": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 3,
+          "tn": 14
+        },
+        "FINAL_held_out": {
+          "tp": 28,
+          "fp": 0,
+          "fn": 4,
+          "tn": 133
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 55
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 48
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_pos": {
+          "tp": 78,
+          "fp": 0,
+          "fn": 27,
+          "tn": 0
+        }
+      }
+    },
+    "ebd_r1": {
+      "params": {},
+      "tp": 150,
+      "fp": 96,
+      "fn": 19,
+      "tn": 332,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.2243,
+      "fpr_ci95": [
+        0.1873,
+        0.2662
+      ],
+      "fnr": 0.1124,
+      "fnr_ci95": [
+        0.0732,
+        0.1689
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 1,
+          "fn": 0,
+          "tn": 17
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "tn": 15
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_D_MULTI": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 0,
+          "tn": 14
+        },
+        "ADV_E_NOISE": {
+          "tp": 4,
+          "fp": 3,
+          "fn": 0,
+          "tn": 15
+        },
+        "ADV_F_DEEP": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 1,
+          "tn": 13
+        },
+        "FINAL_held_out": {
+          "tp": 29,
+          "fp": 4,
+          "fn": 3,
+          "tn": 129
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 38,
+          "fn": 0,
+          "tn": 17
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 26,
+          "fn": 0,
+          "tn": 26
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 20,
+          "fn": 0,
+          "tn": 30
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_pos": {
+          "tp": 91,
+          "fp": 0,
+          "fn": 14,
+          "tn": 0
+        }
+      }
+    },
+    "absolute_threshold": {
+      "params": {
+        "delta_abs": 40
+      },
+      "tp": 127,
+      "fp": 28,
+      "fn": 42,
+      "tn": 400,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0654,
+      "fpr_ci95": [
+        0.0456,
+        0.0929
+      ],
+      "fnr": 0.2485,
+      "fnr_ci95": [
+        0.1894,
+        0.3188
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "tn": 16
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_D_MULTI": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 2,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 4,
+          "tn": 14
+        },
+        "FINAL_held_out": {
+          "tp": 26,
+          "fp": 0,
+          "fn": 6,
+          "tn": 133
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 54
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 42
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 17,
+          "fn": 0,
+          "tn": 21
+        },
+        "STRESS_pos": {
+          "tp": 81,
+          "fp": 0,
+          "fn": 24,
+          "tn": 0
+        }
+      }
+    },
+    "relative_increase": {
+      "params": {
+        "pct": 0.5
+      },
+      "tp": 106,
+      "fp": 41,
+      "fn": 63,
+      "tn": 387,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0958,
+      "fpr_ci95": [
+        0.0714,
+        0.1274
+      ],
+      "fnr": 0.3728,
+      "fnr_ci95": [
+        0.3035,
+        0.4478
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 2,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 4,
+          "tn": 16
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 1,
+          "tn": 18
+        },
+        "ADV_D_MULTI": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 3,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 3,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 7,
+          "tn": 14
+        },
+        "FINAL_held_out": {
+          "tp": 14,
+          "fp": 0,
+          "fn": 18,
+          "tn": 133
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 13,
+          "fn": 0,
+          "tn": 39
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 42
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 18,
+          "fn": 0,
+          "tn": 20
+        },
+        "STRESS_pos": {
+          "tp": 80,
+          "fp": 0,
+          "fn": 25,
+          "tn": 0
+        }
+      }
+    },
+    "robust_z": {
+      "params": {
+        "z_thr": 3
+      },
+      "tp": 148,
+      "fp": 35,
+      "fn": 21,
+      "tn": 393,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0818,
+      "fpr_ci95": [
+        0.0594,
+        0.1116
+      ],
+      "fnr": 0.1243,
+      "fnr_ci95": [
+        0.0827,
+        0.1825
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 1,
+          "tn": 14
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "tn": 17
+        },
+        "ADV_D_MULTI": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 1,
+          "tn": 13
+        },
+        "FINAL_held_out": {
+          "tp": 31,
+          "fp": 5,
+          "fn": 1,
+          "tn": 128
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 54
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 15,
+          "fn": 0,
+          "tn": 37
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 10,
+          "fn": 0,
+          "tn": 40
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_pos": {
+          "tp": 88,
+          "fp": 0,
+          "fn": 17,
+          "tn": 0
+        }
+      }
+    },
+    "persistence_z": {
+      "params": {
+        "k": 2
+      },
+      "tp": 149,
+      "fp": 13,
+      "fn": 20,
+      "tn": 415,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0304,
+      "fpr_ci95": [
+        0.0178,
+        0.0513
+      ],
+      "fnr": 0.1183,
+      "fnr_ci95": [
+        0.0779,
+        0.1757
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "tn": 16
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_D_MULTI": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 1,
+          "tn": 14
+        },
+        "FINAL_held_out": {
+          "tp": 29,
+          "fp": 1,
+          "fn": 3,
+          "tn": 132
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 52
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 49
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 44
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_pos": {
+          "tp": 90,
+          "fp": 0,
+          "fn": 15,
+          "tn": 0
+        }
+      }
+    },
+    "combined": {
+      "params": {
+        "z_thr": 3,
+        "delta_abs": 15,
+        "pct": 0.1
+      },
+      "tp": 148,
+      "fp": 20,
+      "fn": 21,
+      "tn": 408,
+      "n_pos": 169,
+      "n_neg": 428,
+      "fpr": 0.0467,
+      "fpr_ci95": [
+        0.0305,
+        0.0711
+      ],
+      "fnr": 0.1243,
+      "fnr_ci95": [
+        0.0827,
+        0.1825
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 2,
+          "fn": 1,
+          "tn": 14
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 3,
+          "fp": 1,
+          "fn": 1,
+          "tn": 17
+        },
+        "ADV_D_MULTI": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 16
+        },
+        "ADV_E_NOISE": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 0,
+          "tn": 18
+        },
+        "ADV_F_DEEP": {
+          "tp": 7,
+          "fp": 1,
+          "fn": 1,
+          "tn": 13
+        },
+        "FINAL_held_out": {
+          "tp": 31,
+          "fp": 5,
+          "fn": 1,
+          "tn": 128
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 54
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 42
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_pos": {
+          "tp": 88,
+          "fp": 0,
+          "fn": 17,
+          "tn": 0
+        }
+      }
+    }
+  },
+  "dev_scores": {
+    "existing_stage4_rule": {
+      "params": {},
+      "tp": 234,
+      "fp": 3,
+      "fn": 46,
+      "tn": 963,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0031,
+      "fpr_ci95": [
+        0.0011,
+        0.0091
+      ],
+      "fnr": 0.1643,
+      "fnr_ci95": [
+        0.1255,
+        0.2122
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 4,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_D_MULTI": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 1,
+          "tn": 24
+        },
+        "ADV_E_NOISE": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "tn": 26
+        },
+        "ADV_F_DEEP": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 4,
+          "tn": 21
+        },
+        "DEV_development": {
+          "tp": 92,
+          "fp": 1,
+          "fn": 14,
+          "tn": 443
+        },
+        "DEV_validation": {
+          "tp": 34,
+          "fp": 0,
+          "fn": 3,
+          "tn": 161
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 1,
+          "fn": 0,
+          "tn": 54
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 51
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 55
+        },
+        "STRESS_pos": {
+          "tp": 70,
+          "fp": 0,
+          "fn": 19,
+          "tn": 0
+        }
+      }
+    },
+    "ebd_r1": {
+      "params": {},
+      "tp": 253,
+      "fp": 116,
+      "fn": 27,
+      "tn": 850,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.1201,
+      "fpr_ci95": [
+        0.1011,
+        0.1421
+      ],
+      "fnr": 0.0964,
+      "fnr_ci95": [
+        0.0671,
+        0.1367
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "tn": 26
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 4,
+          "tn": 23
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 2,
+          "fn": 0,
+          "tn": 25
+        },
+        "ADV_D_MULTI": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 1,
+          "tn": 24
+        },
+        "ADV_E_NOISE": {
+          "tp": 5,
+          "fp": 6,
+          "fn": 1,
+          "tn": 21
+        },
+        "ADV_F_DEEP": {
+          "tp": 11,
+          "fp": 1,
+          "fn": 1,
+          "tn": 20
+        },
+        "DEV_development": {
+          "tp": 99,
+          "fp": 17,
+          "fn": 7,
+          "tn": 427
+        },
+        "DEV_validation": {
+          "tp": 37,
+          "fp": 6,
+          "fn": 0,
+          "tn": 155
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 46,
+          "fn": 0,
+          "tn": 9
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 19,
+          "fn": 0,
+          "tn": 31
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 13,
+          "fn": 0,
+          "tn": 38
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 51
+        },
+        "STRESS_pos": {
+          "tp": 76,
+          "fp": 0,
+          "fn": 13,
+          "tn": 0
+        }
+      }
+    },
+    "absolute_threshold": {
+      "params": {
+        "delta_abs": 40
+      },
+      "tp": 241,
+      "fp": 45,
+      "fn": 39,
+      "tn": 921,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0466,
+      "fpr_ci95": [
+        0.035,
+        0.0618
+      ],
+      "fnr": 0.1393,
+      "fnr_ci95": [
+        0.1036,
+        0.1847
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_B_RETRY": {
+          "tp": 4,
+          "fp": 0,
+          "fn": 5,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_D_MULTI": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 3,
+          "tn": 24
+        },
+        "ADV_E_NOISE": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_F_DEEP": {
+          "tp": 11,
+          "fp": 0,
+          "fn": 1,
+          "tn": 21
+        },
+        "DEV_development": {
+          "tp": 95,
+          "fp": 0,
+          "fn": 11,
+          "tn": 444
+        },
+        "DEV_validation": {
+          "tp": 34,
+          "fp": 0,
+          "fn": 3,
+          "tn": 161
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 47
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 7,
+          "fn": 0,
+          "tn": 44
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 33,
+          "fn": 0,
+          "tn": 22
+        },
+        "STRESS_pos": {
+          "tp": 73,
+          "fp": 0,
+          "fn": 16,
+          "tn": 0
+        }
+      },
+      "feasible_under_fpr_cap": true
+    },
+    "relative_increase": {
+      "params": {
+        "pct": 0.5
+      },
+      "tp": 147,
+      "fp": 34,
+      "fn": 133,
+      "tn": 932,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0352,
+      "fpr_ci95": [
+        0.0253,
+        0.0488
+      ],
+      "fnr": 0.475,
+      "fnr_ci95": [
+        0.4172,
+        0.5334
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "tn": 27
+        },
+        "ADV_B_RETRY": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 6,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 1,
+          "tn": 27
+        },
+        "ADV_D_MULTI": {
+          "tp": 3,
+          "fp": 0,
+          "fn": 6,
+          "tn": 24
+        },
+        "ADV_E_NOISE": {
+          "tp": 1,
+          "fp": 0,
+          "fn": 5,
+          "tn": 27
+        },
+        "ADV_F_DEEP": {
+          "tp": 2,
+          "fp": 0,
+          "fn": 10,
+          "tn": 21
+        },
+        "DEV_development": {
+          "tp": 44,
+          "fp": 0,
+          "fn": 62,
+          "tn": 444
+        },
+        "DEV_validation": {
+          "tp": 15,
+          "fp": 0,
+          "fn": 22,
+          "tn": 161
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 42
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 48
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 21,
+          "fn": 0,
+          "tn": 34
+        },
+        "STRESS_pos": {
+          "tp": 69,
+          "fp": 0,
+          "fn": 20,
+          "tn": 0
+        }
+      },
+      "feasible_under_fpr_cap": true
+    },
+    "robust_z": {
+      "params": {
+        "z_thr": 3
+      },
+      "tp": 257,
+      "fp": 43,
+      "fn": 23,
+      "tn": 923,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0445,
+      "fpr_ci95": [
+        0.0332,
+        0.0594
+      ],
+      "fnr": 0.0821,
+      "fnr_ci95": [
+        0.0554,
+        0.1202
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "tn": 26
+        },
+        "ADV_B_RETRY": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 2,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "tn": 26
+        },
+        "ADV_D_MULTI": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 1,
+          "tn": 23
+        },
+        "ADV_E_NOISE": {
+          "tp": 5,
+          "fp": 3,
+          "fn": 1,
+          "tn": 24
+        },
+        "ADV_F_DEEP": {
+          "tp": 12,
+          "fp": 1,
+          "fn": 0,
+          "tn": 20
+        },
+        "DEV_development": {
+          "tp": 100,
+          "fp": 14,
+          "fn": 6,
+          "tn": 430
+        },
+        "DEV_validation": {
+          "tp": 36,
+          "fp": 4,
+          "fn": 1,
+          "tn": 157
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 8,
+          "fn": 0,
+          "tn": 42
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 6,
+          "fn": 0,
+          "tn": 45
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_pos": {
+          "tp": 77,
+          "fp": 0,
+          "fn": 12,
+          "tn": 0
+        }
+      },
+      "feasible_under_fpr_cap": true
+    },
+    "persistence_z": {
+      "params": {
+        "k": 2
+      },
+      "tp": 253,
+      "fp": 15,
+      "fn": 27,
+      "tn": 951,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0155,
+      "fpr_ci95": [
+        0.0094,
+        0.0255
+      ],
+      "fnr": 0.0964,
+      "fnr_ci95": [
+        0.0671,
+        0.1367
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_B_RETRY": {
+          "tp": 5,
+          "fp": 0,
+          "fn": 4,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 0,
+          "fn": 0,
+          "tn": 27
+        },
+        "ADV_D_MULTI": {
+          "tp": 8,
+          "fp": 0,
+          "fn": 1,
+          "tn": 24
+        },
+        "ADV_E_NOISE": {
+          "tp": 5,
+          "fp": 1,
+          "fn": 1,
+          "tn": 26
+        },
+        "ADV_F_DEEP": {
+          "tp": 11,
+          "fp": 1,
+          "fn": 1,
+          "tn": 20
+        },
+        "DEV_development": {
+          "tp": 99,
+          "fp": 2,
+          "fn": 7,
+          "tn": 442
+        },
+        "DEV_validation": {
+          "tp": 37,
+          "fp": 2,
+          "fn": 0,
+          "tn": 159
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 4,
+          "fn": 0,
+          "tn": 47
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 52
+        },
+        "STRESS_pos": {
+          "tp": 76,
+          "fp": 0,
+          "fn": 13,
+          "tn": 0
+        }
+      },
+      "feasible_under_fpr_cap": true
+    },
+    "combined": {
+      "params": {
+        "z_thr": 3,
+        "delta_abs": 15,
+        "pct": 0.1
+      },
+      "tp": 257,
+      "fp": 31,
+      "fn": 23,
+      "tn": 935,
+      "n_pos": 280,
+      "n_neg": 966,
+      "fpr": 0.0321,
+      "fpr_ci95": [
+        0.0227,
+        0.0452
+      ],
+      "fnr": 0.0821,
+      "fnr_ci95": [
+        0.0554,
+        0.1202
+      ],
+      "by_group": {
+        "ADV_A_INVERTED": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "tn": 26
+        },
+        "ADV_B_RETRY": {
+          "tp": 7,
+          "fp": 0,
+          "fn": 2,
+          "tn": 24
+        },
+        "ADV_C_CONFOUNDED": {
+          "tp": 6,
+          "fp": 1,
+          "fn": 0,
+          "tn": 26
+        },
+        "ADV_D_MULTI": {
+          "tp": 8,
+          "fp": 1,
+          "fn": 1,
+          "tn": 23
+        },
+        "ADV_E_NOISE": {
+          "tp": 5,
+          "fp": 3,
+          "fn": 1,
+          "tn": 24
+        },
+        "ADV_F_DEEP": {
+          "tp": 12,
+          "fp": 1,
+          "fn": 0,
+          "tn": 20
+        },
+        "DEV_development": {
+          "tp": 100,
+          "fp": 14,
+          "fn": 6,
+          "tn": 430
+        },
+        "DEV_validation": {
+          "tp": 36,
+          "fp": 3,
+          "fn": 1,
+          "tn": 158
+        },
+        "STRESS_neg_down": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_neg_drift": {
+          "tp": 0,
+          "fp": 0,
+          "fn": 0,
+          "tn": 50
+        },
+        "STRESS_neg_null": {
+          "tp": 0,
+          "fp": 3,
+          "fn": 0,
+          "tn": 48
+        },
+        "STRESS_neg_switch": {
+          "tp": 0,
+          "fp": 2,
+          "fn": 0,
+          "tn": 53
+        },
+        "STRESS_pos": {
+          "tp": 77,
+          "fp": 0,
+          "fn": 12,
+          "tn": 0
+        }
+      },
+      "feasible_under_fpr_cap": true
+    }
+  },
+  "stage4_saved_telemetry_NOT_USED_FOR_SELECTION": {
+    "frontend": {
+      "pre_mean_ms": 230.62,
+      "pre_median_ms": 231.79,
+      "act_mean_ms": 446.25,
+      "post_median_ms": 216.14,
+      "existing_stage4_rule": {
+        "active": true,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": true,
+        "post_recovery": true
+      },
+      "absolute_threshold": {
+        "active": true,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": true,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": true,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": true,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": true,
+        "post_recovery": false
+      }
+    },
+    "cartservice": {
+      "pre_mean_ms": 6.25,
+      "pre_median_ms": 4.99,
+      "act_mean_ms": 236.15,
+      "post_median_ms": 4.99,
+      "existing_stage4_rule": {
+        "active": true,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": true,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": true,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": true,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": true,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": true,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": true,
+        "post_recovery": false
+      }
+    },
+    "productcatalogservice": {
+      "pre_mean_ms": 4.1,
+      "pre_median_ms": 4.17,
+      "act_mean_ms": 4.01,
+      "post_median_ms": 4.09,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "currencyservice": {
+      "pre_mean_ms": 65.82,
+      "pre_median_ms": 68.06,
+      "act_mean_ms": 70.04,
+      "post_median_ms": 47.5,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "paymentservice": {
+      "pre_mean_ms": 15.53,
+      "pre_median_ms": 9.93,
+      "act_mean_ms": 9.9,
+      "post_median_ms": 9.9,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "shippingservice": {
+      "pre_mean_ms": 4.26,
+      "pre_median_ms": 4.31,
+      "act_mean_ms": 1.98,
+      "post_median_ms": 4.25,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": true,
+        "post_recovery": true
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "emailservice": {
+      "pre_mean_ms": 7.82,
+      "pre_median_ms": 9.5,
+      "act_mean_ms": 4.94,
+      "post_median_ms": 4.94,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "checkoutservice": {
+      "pre_mean_ms": 128.3,
+      "pre_median_ms": 99.25,
+      "act_mean_ms": 245.88,
+      "post_median_ms": 99.17,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": true,
+        "post_recovery": true
+      },
+      "relative_increase": {
+        "active": true,
+        "post_recovery": true
+      },
+      "robust_z": {
+        "active": true,
+        "post_recovery": true
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": true,
+        "post_recovery": true
+      }
+    },
+    "recommendationservice": {
+      "pre_mean_ms": 10.64,
+      "pre_median_ms": 9.94,
+      "act_mean_ms": 9.88,
+      "post_median_ms": 9.93,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": false,
+        "post_recovery": false
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": false,
+        "post_recovery": false
+      },
+      "robust_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    },
+    "adservice": {
+      "pre_mean_ms": 5.67,
+      "pre_median_ms": 4.97,
+      "act_mean_ms": 8.61,
+      "post_median_ms": 10.6,
+      "existing_stage4_rule": {
+        "active": false,
+        "post_recovery": false
+      },
+      "ebd_r1": {
+        "active": true,
+        "post_recovery": true
+      },
+      "absolute_threshold": {
+        "active": false,
+        "post_recovery": false
+      },
+      "relative_increase": {
+        "active": true,
+        "post_recovery": true
+      },
+      "robust_z": {
+        "active": true,
+        "post_recovery": true
+      },
+      "persistence_z": {
+        "active": false,
+        "post_recovery": false
+      },
+      "combined": {
+        "active": false,
+        "post_recovery": false
+      }
+    }
+  },
+  "caveats": [
+    "Synthetic data only; labels come from the generators' own injection rules.",
+    "Existing-dataset series use a documented +100 ms level offset (relative detectors depend on it).",
+    "Held-out json has 15 scenarios (12 confounded); series are autocorrelated within scenario.",
+    "Stage 4 telemetry is n=1 trial, 60 s plateau-structured; not used for selection."
+  ]
+}

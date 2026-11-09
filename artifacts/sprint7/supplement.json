@@ -1,0 +1,111 @@
+{
+ "note": "post-hoc exploratory diagnostics; no method run",
+ "val": {
+  "n": 72,
+  "mean_n_do": 3.1944444444444446,
+  "cost_term": 0.1597222222222222,
+  "unsafe_term_strict": 0.3611111111111111,
+  "U_strict": -0.3402777777777778,
+  "U_operational_unsafe_only_if_named_service_not_a_true_root": -0.2013888888888889,
+  "unsafe_strict": 13,
+  "unsafe_operational": 8,
+  "wrong_root_geometry": {
+   "wrong_root_is_descendant_of_true_root": 3
+  },
+  "status_vs_outcome": {
+   "DEFINITIVE_ROOT|answered_on_abstain_required": 9,
+   "DEFINITIVE_ROOT|correct": 10,
+   "DEFINITIVE_ROOT|wrong_root": 3,
+   "QUALIFIED_ROOT|answered_on_abstain_required": 1,
+   "QUALIFIED_ROOT|correct": 3
+  },
+  "mean_nodes": 6.125
+ },
+ "held_out": {
+  "n": 108,
+  "mean_n_do": 3.8425925925925926,
+  "cost_term": 0.19212962962962962,
+  "unsafe_term_strict": 0.6111111111111112,
+  "U_strict": -0.6643518518518519,
+  "U_operational_unsafe_only_if_named_service_not_a_true_root": -0.5347222222222222,
+  "unsafe_strict": 33,
+  "unsafe_operational": 26,
+  "wrong_root_geometry": {
+   "wrong_root_unrelated": 2,
+   "wrong_root_is_descendant_of_true_root": 10
+  },
+  "status_vs_outcome": {
+   "DEFINITIVE_ROOT|answered_on_abstain_required": 8,
+   "DEFINITIVE_ROOT|correct": 9,
+   "DEFINITIVE_ROOT|wrong_root": 8,
+   "QUALIFIED_ROOT|answered_on_abstain_required": 13,
+   "QUALIFIED_ROOT|correct": 6,
+   "QUALIFIED_ROOT|wrong_root": 4
+  },
+  "mean_nodes": 6.888888888888889
+ },
+ "dev_mean_nodes": 4.477777777777778,
+ "fisher_exact_two_sided_uncorrected": {
+  "wrong_root_on_ATTRIBUTE: held_out 12/45 vs val 3/31": 0.08370006632125859,
+  "wrong_root_on_ATTRIBUTE: held_out 12/45 vs dev+val 10/99 (dev 7/68 from saved Sprint 4.4.0)": 0.022233026946269035,
+  "unsafe_on_ABSTAIN_REQUIRED: held_out 21/63 vs val 10/41": 0.38486657305504135,
+  "P1: held_out 15/45 vs val 13/31": 0.47657236608763304
+ },
+ "held_out_val_pairs_ge_0.88": [
+  {
+   "held_out": "V2H-0062",
+   "val": "V2V-0070",
+   "similarity": 0.8978,
+   "held_dims": {
+    "family": "resource_saturation",
+    "intervention": "delayed",
+    "negative": null,
+    "observability": "insufficient_samples",
+    "size_extra": 3,
+    "structure": "parallel_independent",
+    "temporal": "intermittent_degradation",
+    "workload": "high_baseline_variance"
+   },
+   "val_dims": {
+    "family": "resource_saturation",
+    "intervention": "delayed",
+    "negative": null,
+    "observability": "insufficient_samples",
+    "size_extra": 2,
+    "structure": "diamond",
+    "temporal": "intermittent_degradation",
+    "workload": "high_baseline_variance"
+   }
+  },
+  {
+   "held_out": "V2H-0082",
+   "val": "V2V-0059",
+   "similarity": 0.896,
+   "held_dims": {
+    "family": "network_degradation",
+    "intervention": "low_magnitude",
+    "negative": null,
+    "observability": "missing_windows",
+    "size_extra": 3,
+    "structure": "branching",
+    "temporal": "intermittent_degradation",
+    "workload": "skewed_requests"
+   },
+   "val_dims": {
+    "family": "network_degradation",
+    "intervention": "low_magnitude",
+    "negative": null,
+    "observability": "missing_windows",
+    "size_extra": 2,
+    "structure": "confounding",
+    "temporal": "intermittent_degradation",
+    "workload": "skewed_requests"
+   }
+  }
+ ],
+ "max_pairwise_similarity": {
+  "held_out_vs_dev": 0.8043,
+  "held_out_vs_val": 0.8978,
+  "val_vs_dev": 0.8216
+ }
+}

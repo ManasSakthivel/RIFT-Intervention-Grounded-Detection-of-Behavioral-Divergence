@@ -1,0 +1,48 @@
+{
+ "environment": {
+  "python": "3.11.15",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "scikit-learn": "1.5.0",
+  "networkx": "3.3",
+  "pandas": "2.2.2",
+  "causal-learn": "0.1.3.8",
+  "momentchi2": "NOT INSTALLED",
+  "joblib": "1.6.0",
+  "statsmodels": "0.14.2"
+ },
+ "files": {
+  "v3_dev.json": {
+   "status": "DIFFERENT",
+   "n_differences": 6,
+   "first_differences": [
+    "[116]/methods/V3-DEFINITIVE-ONLY/record/ident_status: 'IDENTIFIABLE' != 'CONDITIONALLY_IDENTIFIABLE'",
+    "[116]/methods/V3-FULL/record/ident_status: 'IDENTIFIABLE' != 'CONDITIONALLY_IDENTIFIABLE'",
+    "[116]/methods/V3-NO-EARLIER-GUARD/record/ident_status: 'IDENTIFIABLE' != 'CONDITIONALLY_IDENTIFIABLE'",
+    "[116]/methods/V3-NO-MANIPULATION-CHECK/record/ident_status: 'IDENTIFIABLE' != 'CONDITIONALLY_IDENTIFIABLE'",
+    "[116]/methods/V3-NO-SYMMETRY-CHECK/record/ident_status: 'IDENTIFIABLE' != 'CONDITIONALLY_IDENTIFIABLE'"
+   ]
+  },
+  "v3_val.json": {
+   "status": "IDENTICAL",
+   "n_differences": 0,
+   "first_differences": []
+  }
+ },
+ "field_drift": {
+  "dev": {
+   "ident_status": 6,
+   "abstained": 0,
+   "top": 0,
+   "score": 0
+  },
+  "val": {
+   "ident_status": 0,
+   "abstained": 0,
+   "top": 0,
+   "score": 0
+  }
+ },
+ "verdict": "DIFFERS_FROM_COMMITTED_RECORDS"
+}

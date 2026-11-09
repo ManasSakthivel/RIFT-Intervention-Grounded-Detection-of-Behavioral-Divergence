@@ -1,0 +1,9121 @@
+{
+ "n": 252,
+ "methods": {
+  "ALL": {
+   "V2_learned": {
+    "N": 252,
+    "n_attribute": 99,
+    "n_abstain_required": 153,
+    "P1_k": 36,
+    "answered_k": 115,
+    "answered_on_attribute": 63,
+    "wrong_root_k": 27,
+    "abstained_on_attribute": 36,
+    "abstain_required_correctly_abstained_k": 101,
+    "abstain_required_answered_k": 52,
+    "unsafe_k": 79,
+    "FAR_unsafe_over_answered": 0.6869565217391305,
+    "unsafe_over_N": 0.3134920634920635,
+    "P2_k": 137
+   },
+   "V2_oracle": {
+    "N": 252,
+    "n_attribute": 99,
+    "n_abstain_required": 153,
+    "P1_k": 58,
+    "answered_k": 131,
+    "answered_on_attribute": 65,
+    "wrong_root_k": 7,
+    "abstained_on_attribute": 34,
+    "abstain_required_correctly_abstained_k": 87,
+    "abstain_required_answered_k": 66,
+    "unsafe_k": 73,
+    "FAR_unsafe_over_answered": 0.5572519083969466,
+    "unsafe_over_N": 0.2896825396825397,
+    "P2_k": 145
+   },
+   "V3_learned": {
+    "N": 252,
+    "n_attribute": 99,
+    "n_abstain_required": 153,
+    "P1_k": 45,
+    "answered_k": 93,
+    "answered_on_attribute": 55,
+    "wrong_root_k": 10,
+    "abstained_on_attribute": 44,
+    "abstain_required_correctly_abstained_k": 115,
+    "abstain_required_answered_k": 38,
+    "unsafe_k": 48,
+    "FAR_unsafe_over_answered": 0.5161290322580645,
+    "unsafe_over_N": 0.19047619047619047,
+    "P2_k": 160
+   },
+   "V3_oracle": {
+    "N": 252,
+    "n_attribute": 99,
+    "n_abstain_required": 153,
+    "P1_k": 46,
+    "answered_k": 99,
+    "answered_on_attribute": 56,
+    "wrong_root_k": 10,
+    "abstained_on_attribute": 43,
+    "abstain_required_correctly_abstained_k": 110,
+    "abstain_required_answered_k": 43,
+    "unsafe_k": 53,
+    "FAR_unsafe_over_answered": 0.5353535353535354,
+    "unsafe_over_N": 0.21031746031746032,
+    "P2_k": 156
+   }
+  },
+  "dev": {
+   "V2_learned": {
+    "N": 180,
+    "n_attribute": 68,
+    "n_abstain_required": 112,
+    "P1_k": 28,
+    "answered_k": 80,
+    "answered_on_attribute": 42,
+    "wrong_root_k": 14,
+    "abstained_on_attribute": 26,
+    "abstain_required_correctly_abstained_k": 74,
+    "abstain_required_answered_k": 38,
+    "unsafe_k": 52,
+    "FAR_unsafe_over_answered": 0.65,
+    "unsafe_over_N": 0.28888888888888886,
+    "P2_k": 102
+   },
+   "V2_oracle": {
+    "N": 180,
+    "n_attribute": 68,
+    "n_abstain_required": 112,
+    "P1_k": 39,
+    "answered_k": 90,
+    "answered_on_attribute": 43,
+    "wrong_root_k": 4,
+    "abstained_on_attribute": 25,
+    "abstain_required_correctly_abstained_k": 65,
+    "abstain_required_answered_k": 47,
+    "unsafe_k": 51,
+    "FAR_unsafe_over_answered": 0.5666666666666667,
+    "unsafe_over_N": 0.2833333333333333,
+    "P2_k": 104
+   },
+   "V3_learned": {
+    "N": 180,
+    "n_attribute": 68,
+    "n_abstain_required": 112,
+    "P1_k": 32,
+    "answered_k": 67,
+    "answered_on_attribute": 39,
+    "wrong_root_k": 7,
+    "abstained_on_attribute": 29,
+    "abstain_required_correctly_abstained_k": 84,
+    "abstain_required_answered_k": 28,
+    "unsafe_k": 35,
+    "FAR_unsafe_over_answered": 0.5223880597014925,
+    "unsafe_over_N": 0.19444444444444445,
+    "P2_k": 116
+   },
+   "V3_oracle": {
+    "N": 180,
+    "n_attribute": 68,
+    "n_abstain_required": 112,
+    "P1_k": 32,
+    "answered_k": 70,
+    "answered_on_attribute": 39,
+    "wrong_root_k": 7,
+    "abstained_on_attribute": 29,
+    "abstain_required_correctly_abstained_k": 81,
+    "abstain_required_answered_k": 31,
+    "unsafe_k": 38,
+    "FAR_unsafe_over_answered": 0.5428571428571428,
+    "unsafe_over_N": 0.2111111111111111,
+    "P2_k": 113
+   }
+  },
+  "val": {
+   "V2_learned": {
+    "N": 72,
+    "n_attribute": 31,
+    "n_abstain_required": 41,
+    "P1_k": 8,
+    "answered_k": 35,
+    "answered_on_attribute": 21,
+    "wrong_root_k": 13,
+    "abstained_on_attribute": 10,
+    "abstain_required_correctly_abstained_k": 27,
+    "abstain_required_answered_k": 14,
+    "unsafe_k": 27,
+    "FAR_unsafe_over_answered": 0.7714285714285715,
+    "unsafe_over_N": 0.375,
+    "P2_k": 35
+   },
+   "V2_oracle": {
+    "N": 72,
+    "n_attribute": 31,
+    "n_abstain_required": 41,
+    "P1_k": 19,
+    "answered_k": 41,
+    "answered_on_attribute": 22,
+    "wrong_root_k": 3,
+    "abstained_on_attribute": 9,
+    "abstain_required_correctly_abstained_k": 22,
+    "abstain_required_answered_k": 19,
+    "unsafe_k": 22,
+    "FAR_unsafe_over_answered": 0.5365853658536586,
+    "unsafe_over_N": 0.3055555555555556,
+    "P2_k": 41
+   },
+   "V3_learned": {
+    "N": 72,
+    "n_attribute": 31,
+    "n_abstain_required": 41,
+    "P1_k": 13,
+    "answered_k": 26,
+    "answered_on_attribute": 16,
+    "wrong_root_k": 3,
+    "abstained_on_attribute": 15,
+    "abstain_required_correctly_abstained_k": 31,
+    "abstain_required_answered_k": 10,
+    "unsafe_k": 13,
+    "FAR_unsafe_over_answered": 0.5,
+    "unsafe_over_N": 0.18055555555555555,
+    "P2_k": 44
+   },
+   "V3_oracle": {
+    "N": 72,
+    "n_attribute": 31,
+    "n_abstain_required": 41,
+    "P1_k": 14,
+    "answered_k": 29,
+    "answered_on_attribute": 17,
+    "wrong_root_k": 3,
+    "abstained_on_attribute": 14,
+    "abstain_required_correctly_abstained_k": 29,
+    "abstain_required_answered_k": 12,
+    "unsafe_k": 15,
+    "FAR_unsafe_over_answered": 0.5172413793103449,
+    "unsafe_over_N": 0.20833333333333334,
+    "P2_k": 43
+   }
+  },
+  "CONFOUNDING_FAMILY(confounding+hidden_common_cause)": {
+   "V2_learned": {
+    "N": 53,
+    "n_attribute": 15,
+    "n_abstain_required": 38,
+    "P1_k": 4,
+    "answered_k": 19,
+    "answered_on_attribute": 8,
+    "wrong_root_k": 4,
+    "abstained_on_attribute": 7,
+    "abstain_required_correctly_abstained_k": 27,
+    "abstain_required_answered_k": 11,
+    "unsafe_k": 15,
+    "FAR_unsafe_over_answered": 0.7894736842105263,
+    "unsafe_over_N": 0.2830188679245283,
+    "P2_k": 31
+   },
+   "V2_oracle": {
+    "N": 53,
+    "n_attribute": 15,
+    "n_abstain_required": 38,
+    "P1_k": 6,
+    "answered_k": 19,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 26,
+    "abstain_required_answered_k": 12,
+    "unsafe_k": 13,
+    "FAR_unsafe_over_answered": 0.6842105263157895,
+    "unsafe_over_N": 0.24528301886792453,
+    "P2_k": 32
+   },
+   "V3_learned": {
+    "N": 53,
+    "n_attribute": 15,
+    "n_abstain_required": 38,
+    "P1_k": 6,
+    "answered_k": 17,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 28,
+    "abstain_required_answered_k": 10,
+    "unsafe_k": 11,
+    "FAR_unsafe_over_answered": 0.6470588235294118,
+    "unsafe_over_N": 0.20754716981132076,
+    "P2_k": 34
+   },
+   "V3_oracle": {
+    "N": 53,
+    "n_attribute": 15,
+    "n_abstain_required": 38,
+    "P1_k": 6,
+    "answered_k": 17,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 28,
+    "abstain_required_answered_k": 10,
+    "unsafe_k": 11,
+    "FAR_unsafe_over_answered": 0.6470588235294118,
+    "unsafe_over_N": 0.20754716981132076,
+    "P2_k": 34
+   }
+  },
+  "hidden_common_cause(ROOT_UNOBSERVED,abstain_required)": {
+   "V2_learned": {
+    "N": 31,
+    "n_attribute": 0,
+    "n_abstain_required": 31,
+    "P1_k": 0,
+    "answered_k": 9,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 22,
+    "abstain_required_answered_k": 9,
+    "unsafe_k": 9,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.2903225806451613,
+    "P2_k": 22
+   },
+   "V2_oracle": {
+    "N": 31,
+    "n_attribute": 0,
+    "n_abstain_required": 31,
+    "P1_k": 0,
+    "answered_k": 9,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 22,
+    "abstain_required_answered_k": 9,
+    "unsafe_k": 9,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.2903225806451613,
+    "P2_k": 22
+   },
+   "V3_learned": {
+    "N": 31,
+    "n_attribute": 0,
+    "n_abstain_required": 31,
+    "P1_k": 0,
+    "answered_k": 8,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 23,
+    "abstain_required_answered_k": 8,
+    "unsafe_k": 8,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.25806451612903225,
+    "P2_k": 23
+   },
+   "V3_oracle": {
+    "N": 31,
+    "n_attribute": 0,
+    "n_abstain_required": 31,
+    "P1_k": 0,
+    "answered_k": 8,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 23,
+    "abstain_required_answered_k": 8,
+    "unsafe_k": 8,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.25806451612903225,
+    "P2_k": 23
+   }
+  },
+  "confounding(structure label)": {
+   "V2_learned": {
+    "N": 22,
+    "n_attribute": 15,
+    "n_abstain_required": 7,
+    "P1_k": 4,
+    "answered_k": 10,
+    "answered_on_attribute": 8,
+    "wrong_root_k": 4,
+    "abstained_on_attribute": 7,
+    "abstain_required_correctly_abstained_k": 5,
+    "abstain_required_answered_k": 2,
+    "unsafe_k": 6,
+    "FAR_unsafe_over_answered": 0.6,
+    "unsafe_over_N": 0.2727272727272727,
+    "P2_k": 9
+   },
+   "V2_oracle": {
+    "N": 22,
+    "n_attribute": 15,
+    "n_abstain_required": 7,
+    "P1_k": 6,
+    "answered_k": 10,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 4,
+    "abstain_required_answered_k": 3,
+    "unsafe_k": 4,
+    "FAR_unsafe_over_answered": 0.4,
+    "unsafe_over_N": 0.18181818181818182,
+    "P2_k": 10
+   },
+   "V3_learned": {
+    "N": 22,
+    "n_attribute": 15,
+    "n_abstain_required": 7,
+    "P1_k": 6,
+    "answered_k": 9,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 5,
+    "abstain_required_answered_k": 2,
+    "unsafe_k": 3,
+    "FAR_unsafe_over_answered": 0.3333333333333333,
+    "unsafe_over_N": 0.13636363636363635,
+    "P2_k": 11
+   },
+   "V3_oracle": {
+    "N": 22,
+    "n_attribute": 15,
+    "n_abstain_required": 7,
+    "P1_k": 6,
+    "answered_k": 9,
+    "answered_on_attribute": 7,
+    "wrong_root_k": 1,
+    "abstained_on_attribute": 8,
+    "abstain_required_correctly_abstained_k": 5,
+    "abstain_required_answered_k": 2,
+    "unsafe_k": 3,
+    "FAR_unsafe_over_answered": 0.3333333333333333,
+    "unsafe_over_N": 0.13636363636363635,
+    "P2_k": 11
+   }
+  },
+  "ABSTAIN_REQUIRED_all": {
+   "V2_learned": {
+    "N": 153,
+    "n_attribute": 0,
+    "n_abstain_required": 153,
+    "P1_k": 0,
+    "answered_k": 52,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 101,
+    "abstain_required_answered_k": 52,
+    "unsafe_k": 52,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.33986928104575165,
+    "P2_k": 101
+   },
+   "V2_oracle": {
+    "N": 153,
+    "n_attribute": 0,
+    "n_abstain_required": 153,
+    "P1_k": 0,
+    "answered_k": 66,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 87,
+    "abstain_required_answered_k": 66,
+    "unsafe_k": 66,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.43137254901960786,
+    "P2_k": 87
+   },
+   "V3_learned": {
+    "N": 153,
+    "n_attribute": 0,
+    "n_abstain_required": 153,
+    "P1_k": 0,
+    "answered_k": 38,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 115,
+    "abstain_required_answered_k": 38,
+    "unsafe_k": 38,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.24836601307189543,
+    "P2_k": 115
+   },
+   "V3_oracle": {
+    "N": 153,
+    "n_attribute": 0,
+    "n_abstain_required": 153,
+    "P1_k": 0,
+    "answered_k": 43,
+    "answered_on_attribute": 0,
+    "wrong_root_k": 0,
+    "abstained_on_attribute": 0,
+    "abstain_required_correctly_abstained_k": 110,
+    "abstain_required_answered_k": 43,
+    "unsafe_k": 43,
+    "FAR_unsafe_over_answered": 1.0,
+    "unsafe_over_N": 0.28104575163398693,
+    "P2_k": 110
+   }
+  }
+ },
+ "confusion_ALL": {
+  "V2_learned": {
+   "ATTRIBUTE": {
+    "ABSTAINED": 36,
+    "CORRECT_ROOT": 36,
+    "WRONG_ROOT": 27
+   },
+   "ABSTAIN_REQUIRED": {
+    "ANSWERED_WHEN_ABSTAIN_REQUIRED": 52,
+    "ABSTAINED": 101
+   }
+  },
+  "V2_oracle": {
+   "ATTRIBUTE": {
+    "WRONG_ROOT": 7,
+    "CORRECT_ROOT": 58,
+    "ABSTAINED": 34
+   },
+   "ABSTAIN_REQUIRED": {
+    "ANSWERED_WHEN_ABSTAIN_REQUIRED": 66,
+    "ABSTAINED": 87
+   }
+  },
+  "V3_learned": {
+   "ATTRIBUTE": {
+    "CORRECT_ROOT": 45,
+    "ABSTAINED": 44,
+    "WRONG_ROOT": 10
+   },
+   "ABSTAIN_REQUIRED": {
+    "ANSWERED_WHEN_ABSTAIN_REQUIRED": 38,
+    "ABSTAINED": 115
+   }
+  },
+  "V3_oracle": {
+   "ATTRIBUTE": {
+    "CORRECT_ROOT": 46,
+    "ABSTAINED": 43,
+    "WRONG_ROOT": 10
+   },
+   "ABSTAIN_REQUIRED": {
+    "ANSWERED_WHEN_ABSTAIN_REQUIRED": 43,
+    "ABSTAINED": 110
+   }
+  }
+ },
+ "reason_census": {
+  "V2_learned": {
+   "INTERVENTION_NOT_VERIFIED": 48,
+   "ANSWERED": 115,
+   "NO_CANDIDATES": 30,
+   "INSUFFICIENT_BASELINE": 26,
+   "INSUFFICIENT_SAMPLES": 30,
+   "NOT_IDENTIFIABLE": 3
+  },
+  "V2_oracle": {
+   "ANSWERED": 131,
+   "NO_CANDIDATES": 58,
+   "INSUFFICIENT_BASELINE": 26,
+   "INTERVENTION_NOT_VERIFIED": 37
+  },
+  "V3_learned": {
+   "ANSWERED": 93,
+   "NO_CANDIDATES": 8,
+   "AMBIGUOUS_ATTRIBUTION": 33,
+   "INSUFFICIENT_BASELINE": 26,
+   "INSUFFICIENT_SAMPLES": 30,
+   "INTERVENTION_UNINFORMATIVE": 14,
+   "INTERVENTION_NOT_VERIFIED": 31,
+   "UNRESOLVED_EARLIER_DIVERGENCE": 4,
+   "SOLE_DIVERGENCE_NO_CORROBORATION": 10,
+   "NOT_IDENTIFIABLE": 3
+  },
+  "V3_oracle": {
+   "ANSWERED": 99,
+   "NO_CANDIDATES": 27,
+   "AMBIGUOUS_ATTRIBUTION": 33,
+   "INSUFFICIENT_BASELINE": 26,
+   "SOLE_DIVERGENCE_NO_CORROBORATION": 15,
+   "INTERVENTION_UNINFORMATIVE": 15,
+   "INTERVENTION_NOT_VERIFIED": 33,
+   "UNRESOLVED_EARLIER_DIVERGENCE": 4
+  }
+ },
+ "per_scenario": [
+  {
+   "id": "V2D-0001",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0002",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dune",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0003",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0004",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0005",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0006",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "jasmine",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0007",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0008",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0009",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0010",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0011",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0012",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0013",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0014",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0015",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0016",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0017",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0018",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0019",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0020",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0021",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0022",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0023",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0024",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0025",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0026",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0027",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0028",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0029",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kale",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kale",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kale",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0030",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0031",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0032",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0033",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0034",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "wisteria",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "wisteria",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0035",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0036",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0037",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0038",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0039",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0040",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0041",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0042",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0043",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0044",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "iris",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0045",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0046",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0047",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0048",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0049",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0050",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0051",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0052",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0053",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0054",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "iris",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kale",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kale",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0055",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0056",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0057",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0058",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0059",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0060",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0061",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0062",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0063",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0064",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0065",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0066",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0067",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0068",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zinnia",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0069",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0070",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0071",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0072",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0073",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0074",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0075",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "alder",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "alder",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0076",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "iris",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "iris",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0077",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0078",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0079",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0080",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0081",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0082",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0083",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0084",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0085",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0086",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0087",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0088",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0089",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0090",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0091",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0092",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0093",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0094",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0095",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nettle",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0096",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0097",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0098",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0099",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0100",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0101",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "heath",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "heath",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "heath",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "heath",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0102",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0103",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0104",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0105",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0106",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0107",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0108",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0109",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yucca",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nutmeg",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nutmeg",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0110",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0111",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0112",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0113",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0114",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0115",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0116",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0117",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "wisteria",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "wisteria",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0118",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0119",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0120",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0121",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0122",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0123",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0124",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0125",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0126",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "oak",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0127",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "wisteria",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0128",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0129",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0130",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0131",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0132",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0133",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0134",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dune",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0135",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0136",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0137",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0138",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0139",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0140",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0141",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0142",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0143",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0144",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0145",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0146",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0147",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dill",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0148",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0149",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0150",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0151",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dune",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dune",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "dune",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0152",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0153",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "lotus",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0154",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0155",
+   "split": "dev",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0156",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0157",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0158",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0159",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0160",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0161",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0162",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0163",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0164",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0165",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0166",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "thorn",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0167",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0168",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0169",
+   "split": "dev",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0170",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2D-0171",
+   "split": "dev",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0172",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0173",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0174",
+   "split": "dev",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0175",
+   "split": "dev",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0176",
+   "split": "dev",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0177",
+   "split": "dev",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0178",
+   "split": "dev",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0179",
+   "split": "dev",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "kelp",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2D-0180",
+   "split": "dev",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0001",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0002",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0003",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "umber",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0004",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0005",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0006",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0007",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quill",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0008",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0009",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0010",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0011",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "quince",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "olive",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0012",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0013",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "birch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "moss",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0014",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0015",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "rowan",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0016",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ginger",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0017",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yucca",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yucca",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yucca",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yucca",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0018",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0019",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0020",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "violet",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0021",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0022",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0023",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0024",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0025",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "larch",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0026",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "yarrow",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0027",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ulex",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0028",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0029",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "vale",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0030",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "tansy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "cedar",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0031",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0032",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0033",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0034",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0035",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0036",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0037",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0038",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0039",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0040",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0041",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "aspen",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "xylia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "xylia",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "xylia",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0042",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fennel",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0043",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0044",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0045",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "poppy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "pine",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0046",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "jasmine",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "jasmine",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0047",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0048",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "clover",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0049",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0050",
+   "split": "val",
+   "structure": "ambiguous",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "alder",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0051",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "juniper",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0052",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0053",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0054",
+   "split": "val",
+   "structure": "multiple_upstream",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "nutmeg",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sorrel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0055",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "jasmine",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "jasmine",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0056",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0057",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "UNRESOLVED_EARLIER_DIVERGENCE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0058",
+   "split": "val",
+   "structure": "branching",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "sage",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0059",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "reed",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0060",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_BASELINE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0061",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0062",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0063",
+   "split": "val",
+   "structure": "confounding",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "mint",
+    "correct": true,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0064",
+   "split": "val",
+   "structure": "parallel_independent",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0065",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0066",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_UNINFORMATIVE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0067",
+   "split": "val",
+   "structure": "hidden_common_cause",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "willow",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "basil",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0068",
+   "split": "val",
+   "structure": "converging",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "hazel",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "zest",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "AMBIGUOUS_ATTRIBUTION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0069",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "NOT_IDENTIFIABLE",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "INTERVENTION_NOT_VERIFIED",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0070",
+   "split": "val",
+   "structure": "diamond",
+   "expected": "ABSTAIN_REQUIRED",
+   "V2_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": true,
+    "reason": "NO_CANDIDATES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": true,
+    "reason": "INSUFFICIENT_SAMPLES",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": true,
+    "reason": "SOLE_DIVERGENCE_NO_CORROBORATION",
+    "top1": null,
+    "correct": false,
+    "unsafe": false
+   }
+  },
+  {
+   "id": "V2V-0071",
+   "split": "val",
+   "structure": "shared_dependency",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": false,
+    "unsafe": true
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "ivy",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": false,
+    "unsafe": true
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "fjord",
+    "correct": false,
+    "unsafe": true
+   }
+  },
+  {
+   "id": "V2V-0072",
+   "split": "val",
+   "structure": "linear_chain",
+   "expected": "ATTRIBUTE",
+   "V2_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   },
+   "V2_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_learned": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   },
+   "V3_oracle": {
+    "abstained": false,
+    "reason": null,
+    "top1": "elm",
+    "correct": true,
+    "unsafe": false
+   }
+  }
+ ]
+}

@@ -48,7 +48,10 @@ from src.rift.intervention.network_intervention import (
 # Manifest constants (must match datasets/rift_faults/manifest.json exactly)
 # ---------------------------------------------------------------------------
 MANIFEST_SEED: int = 42
-MANIFEST_SPLIT_DEVELOPMENT: int = 36
+# Sprint 4.2.4: the canonical manifest (schema rift.dataset_manifest/2) describes the DEPLOYED corpus.
+# DEVELOPMENT is 50 = 36 generator-produced + 14 hand-added (P0-02). The original generator-only
+# manifest (36/18/15 = 69) is preserved byte-for-byte as manifest.v1_generator_69.json.
+MANIFEST_SPLIT_DEVELOPMENT: int = 50
 MANIFEST_SPLIT_VALIDATION: int = 18
 MANIFEST_SPLIT_HELD_OUT_TEST: int = 15
 _MANIFEST_PATH = (

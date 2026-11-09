@@ -80,21 +80,59 @@ class LinuxTcNetemBackend:
     name: str = "LINUX_TC_NETEM"
     is_live: bool = True
 
-    def __init__(self, sandbox_namespace: Optional[str] = None):
+    def __init__(
+        self,
+        sandbox_namespace: Optional[str] = None,
+        container_pid: Optional[int] = None,
+        netns_path: Optional[str] = None,
+    ):
         """
         Parameters
         ----------
         sandbox_namespace : Linux network namespace name (optional).
-            If set, all commands are prefixed with 'ip netns exec {ns}'.
+            If set and valid, commands are prefixed with 'ip netns exec {ns}'.
             Must match rift-eval-* pattern (validated by safety controller).
+        container_pid : Container process ID (optional).
+            If set, commands are wrapped with 'nsenter -t {pid} -n'.
+        netns_path : Direct path to network namespace descriptor (optional).
+            If set, commands are wrapped with 'nsenter --net={netns_path}'.
         """
         self.sandbox_namespace = sandbox_namespace
+        self.container_pid = container_pid
+        self.netns_path = netns_path
         self._active: dict = {}
 
+        # Validate that a namespace wrapper is present and does not target host
+        self._validate_isolation_target()
+
+    def _validate_isolation_target(self) -> None:
+        """Fail closed if targeting host namespace or no namespace provided."""
+        if self.container_pid is not None and self.container_pid in (0, 1):
+            raise ValueError(
+                f"Invalid container_pid={self.container_pid}: targeting host PID namespace is forbidden."
+            )
+        if self.sandbox_namespace and self.sandbox_namespace.lower() in ("host", "root", "default"):
+            raise ValueError(
+                f"Invalid sandbox_namespace='{self.sandbox_namespace}': targeting host namespace is forbidden."
+            )
+        if self.netns_path and self.netns_path in ("/proc/1/ns/net", "/proc/self/ns/net"):
+            raise ValueError(
+                f"Invalid netns_path='{self.netns_path}': targeting host namespace descriptor is forbidden."
+            )
+
     def _wrap_ns(self, cmd: List[str]) -> List[str]:
-        if self.sandbox_namespace:
+        if self.container_pid is not None and self.container_pid > 1:
+            return ["nsenter", "-t", str(self.container_pid), "-n"] + cmd
+        elif self.netns_path:
+            return ["nsenter", f"--net={self.netns_path}"] + cmd
+        elif self.sandbox_namespace:
             return ["ip", "netns", "exec", self.sandbox_namespace] + cmd
-        return cmd
+        else:
+            raise ValueError(
+                "Host network namespace intervention forbidden: an explicit, "
+                "validated container network namespace (container_pid, netns_path, "
+                "or sandbox_namespace) is required."
+            )
 
     def apply(self, record: NetworkInterventionRecord) -> NetworkInterventionRecord:
         """Apply per-destination netem. Requires Linux+CAP_NET_ADMIN."""
@@ -174,7 +212,7 @@ class LinuxTcNetemBackend:
         return record
 
     def rollback(self, record: NetworkInterventionRecord) -> NetworkInterventionRecord:
-        """Remove the per-destination netem rule. Always attempted."""
+        """Remove the per-destination netem rule and root handle. Always attempted."""
         iface = record.interface
         handle = record.tc_handle.rstrip(":")
         dest_ip = record.destination_ip
@@ -186,6 +224,7 @@ class LinuxTcNetemBackend:
              "flowid", f"1:{handle}"],
             ["tc", "qdisc", "del", "dev", iface, "parent", f"1:{handle}",
              "handle", f"{handle}:"],
+            ["tc", "qdisc", "del", "dev", iface, "root", "handle", "1:"],
         ]
 
         record.rollback_attempts += 1
